@@ -1,0 +1,15 @@
+.Text {
+  font-family: var(--default-font);
+}
+
+.select {
+  user-select: text;
+}
+
+.light {
+  opacity: 0.6;
+}
+
+.caps {
+  text-transform: uppercase;
+}

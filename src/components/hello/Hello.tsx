@@ -1,6 +1,6 @@
 function Hello() {
   return (
-    <div>Bye</div>
+    <div>Hello</div>
   );
 }
 

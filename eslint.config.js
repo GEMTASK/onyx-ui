@@ -26,7 +26,29 @@ export default defineConfig([
     rules: {
       '@typescript-eslint/no-unused-vars': 'off',
       '@stylistic/quotes': ['error', 'double'],
-      '@stylistic/semi': 'error'
+      '@stylistic/semi': 'error',
+      '@stylistic/comma-dangle': ['error', 'never'],
+      "@stylistic/member-delimiter-style": [
+        "error",
+        {
+          "multiline": {
+            "delimiter": "comma",
+            "requireLast": false
+          },
+          "singleline": {
+            "delimiter": "comma",
+            "requireLast": false
+          },
+          "overrides": {
+            "interface": {
+              "multiline": {
+                "delimiter": "semi",
+                "requireLast": true
+              }
+            }
+          }
+        }
+      ]
     }
-  },
+  }
 ]);
