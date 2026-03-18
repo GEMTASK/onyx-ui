@@ -13,4 +13,5 @@ export { Select } from "./components";
 export { Form } from "./components";
 export { Label } from "./components";
 
-export type { FieldValue } from "./components";
+export type { Delegate } from "./types/Delegate";
+export type { FieldValue } from "./types/FieldValue";

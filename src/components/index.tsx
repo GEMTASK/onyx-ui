@@ -10,5 +10,3 @@ export { default as Checkbox } from "./checkbox";
 export { default as Select } from "./select";
 export { default as Form } from "./form";
 export { default as Label } from "./label";
-
-export type { FieldValue } from "./form/FieldValue";

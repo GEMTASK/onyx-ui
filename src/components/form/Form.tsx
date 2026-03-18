@@ -1,9 +1,9 @@
 import React, { createContext, useContext } from "react";
 
-import { View } from "..";
 import type { Delegate } from "../../types/Delegate";
+import type { FieldValue } from "../../types/FieldValue";
 
-import type { FieldValue } from "./FieldValue";
+import { View } from "..";
 
 function noop() { }
 
