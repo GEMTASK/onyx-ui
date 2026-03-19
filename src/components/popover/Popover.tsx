@@ -34,10 +34,10 @@ function Popover({
 
       if (anchor === "top right") {
         popoverElementRef.current.style.left = `${childClientRect.right - overlayClientRect.left}px`;
-        popoverElementRef.current.style.top = `${childClientRect.top - 7 - overlayClientRect.top}px`;
+        popoverElementRef.current.style.top = `${childClientRect.top - 8 - overlayClientRect.top}px`;
       } else {
         popoverElementRef.current.style.left = `${childClientRect.left + 1 - overlayClientRect.left}px`;
-        popoverElementRef.current.style.top = `${childClientRect.bottom + 5 - overlayClientRect.top}px`;
+        popoverElementRef.current.style.top = `${childClientRect.bottom + 0 - overlayClientRect.top}px`;
       }
     }
   }, [anchor, isVisible]);

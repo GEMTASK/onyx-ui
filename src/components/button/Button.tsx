@@ -19,6 +19,8 @@ const getFillColor = ({ parentFillColor, solid, primary, hover, selected }: Butt
       return "selected";
     case !hover && solid && primary:
       return "primary";
+    // case solid && parentFillColor === "divider":
+    //   return "gutter";
     case solid:
       return parentFillColor === "panel" ? "divider" : "panel";
     case hover:
