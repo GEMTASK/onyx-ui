@@ -12,7 +12,8 @@
   }
 
   &.hover:hover {
-    background: hsl(210, 15%, 93%);
+    // background: hsl(210, 15%, 93%);
+    background: var(--hover-color);
   }
 
   &:active {

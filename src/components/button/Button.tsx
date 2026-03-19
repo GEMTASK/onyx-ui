@@ -3,7 +3,7 @@ import type { Delegate } from "../../types/Delegate";
 import { View, Text, Icon } from "..";
 
 import styles from "./Button.module.scss";
-import { useContext } from "react";
+import { useContext, useLayoutEffect, useRef } from "react";
 import { ViewContext } from "../view/View";
 
 type ButtonStyle = {
@@ -63,6 +63,8 @@ function Button({
   fontWeight?: React.ComponentProps<typeof Text<"div">>["fontWeight"],
   selected?: boolean
 } & ButtonStyle, typeof View<"button">>) {
+  const buttonElementRef = useRef<HTMLButtonElement>(null);
+
   const buttonClassName = [
     styles.Button,
     solid && styles.solid,
@@ -75,11 +77,18 @@ function Button({
   const fillColor = getFillColor({ parentFillColor, solid, primary, hover, selected });
   const textColor = getTextColor({ solid, primary, hover, selected });
 
+  useLayoutEffect(() => {
+    if (buttonElementRef.current) {
+      buttonElementRef.current.style.setProperty("--hover-color", `var(--${parentFillColor === "panel" ? "divider" : "panel"}-color)`);
+    }
+  }, [fillColor, parentFillColor]);
+
   return (
     <View
       horizontal
       as="button"
       type="button"
+      ref={buttonElementRef}
       padding={children ? "8px 16px" : "8px"}
       spacing="8px"
       align="middle center"
