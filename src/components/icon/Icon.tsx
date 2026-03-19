@@ -6,6 +6,7 @@ function Icon({
   icon: Component = CameraIcon,
   color = "gray-7",
   size,
+  style,
   ...props
 }: {
   icon: typeof CameraIcon,
@@ -16,8 +17,13 @@ function Icon({
     color && textColorStyles[color]
   ].filter(className => className).join(" ");
 
+  const iconStyle = {
+    ...style,
+    flexShrink: 0
+  };
+
   return (
-    <Component size={size} className={iconClassName} {...props} />
+    <Component size={size} className={iconClassName} style={iconStyle} {...props} />
   );
 }
 
