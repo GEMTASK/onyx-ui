@@ -3,12 +3,21 @@
   // margin: -1px;
   // padding: 9px 16px;
 
-  &:not(.solid):not(.hover) {
+  &:not(.primary):not(.solid):not(.hover) {
     box-shadow: inset 0 0 0 1px hsl(210, 15%, 88%);
+
+    &:active {
+      background: white;
+      box-shadow: none;
+    }
   }
 
   &.primary:not(.solid):not(.hover) {
     box-shadow: inset 0 0 0 1px hsl(210, 85%, 60%);
+
+    &:active {
+      background: hsl(210, 100%, 93%);
+    }
   }
 
   &.hover:hover {
@@ -17,6 +26,10 @@
   }
 
   &:active {
-    filter: brightness(0.90);
+    filter: brightness(0.93);
+  }
+
+  &.primary.solid:active {
+    filter: brightness(0.80);
   }
 }
