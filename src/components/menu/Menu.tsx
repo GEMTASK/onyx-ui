@@ -62,6 +62,7 @@ function Menu({
   children: React.ReactElement<{
     ref: React.RefObject<HTMLElement | null>,
     style: React.CSSProperties,
+    solid?: boolean,
     onClick: React.PointerEventHandler
   }>,
   onSelect?: (value: string | undefined) => void
@@ -91,6 +92,7 @@ function Menu({
         style: {
           cursor: "pointer"
         },
+        solid: isPopoverVisible,
         onClick: () => {
           setIsPopoverVisible(isPopoverVisible => !isPopoverVisible);
         }
