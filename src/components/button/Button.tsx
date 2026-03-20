@@ -1,10 +1,11 @@
+import { useContext, useImperativeHandle, useLayoutEffect, useRef } from "react";
+
 import type { Delegate } from "../../types/Delegate";
+import { ViewContext } from "../view/View";
 
 import { View, Text, Icon } from "..";
 
 import styles from "./Button.module.scss";
-import { useContext, useLayoutEffect, useRef } from "react";
-import { ViewContext } from "../view/View";
 
 type ButtonStyle = {
   solid?: boolean,
@@ -42,6 +43,7 @@ const getTextColor = ({ primary, solid }: ButtonStyle) => {
 };
 
 function Button({
+  ref,
   solid,
   primary,
   hover,
@@ -77,6 +79,8 @@ function Button({
   const fillColor = getFillColor({ parentFillColor, solid, primary, hover, selected });
   const textColor = getTextColor({ solid, primary, hover, selected });
 
+  useImperativeHandle(ref, () => buttonElementRef.current!);
+
   useLayoutEffect(() => {
     if (buttonElementRef.current) {
       buttonElementRef.current.style.setProperty("--hover-color", `var(--${parentFillColor === "panel" ? "divider" : "panel"}-color)`);
@@ -85,10 +89,10 @@ function Button({
 
   return (
     <View
+      ref={buttonElementRef}
       horizontal
       as="button"
       type="button"
-      ref={buttonElementRef}
       padding={children ? "8px 16px" : "8px"}
       spacing="8px"
       align="middle center"
