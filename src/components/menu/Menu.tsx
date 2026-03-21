@@ -92,7 +92,7 @@ function Menu({
         style: {
           cursor: "pointer"
         },
-        solid: isPopoverVisible,
+        solid: isPopoverVisible || onlyChild.props.solid,
         onClick: () => {
           setIsPopoverVisible(isPopoverVisible => !isPopoverVisible);
         }

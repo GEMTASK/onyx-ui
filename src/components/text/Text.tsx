@@ -6,6 +6,15 @@ import styles from "./Text.module.css";
 import fontSizeStyles from "../../styles/fontSize.module.scss";
 import fontWeightStyles from "../../styles/fontWeight.module.scss";
 import textColorStyles from "../../styles/textColor.module.scss";
+import React, { useContext } from "react";
+
+type TextContext = {
+  textParent: boolean
+};
+
+const TextContext = React.createContext<TextContext>({
+  textParent: false
+});
 
 function Text<TDelegate extends React.ElementType = "div">({
   as,
@@ -26,10 +35,38 @@ function Text<TDelegate extends React.ElementType = "div">({
   bold?: boolean,
   select?: boolean,
   fontSize?: "12px" | "14px" | "18px" | "24px" | "32px",
-  fontWeight?: "500" | "600" | "700",
+  fontWeight?: "300" | "400" | "500" | "600" | "700",
   textColor?: Color,
   innerStyle?: React.ComponentProps<"span">["style"]
 } & React.ComponentProps<typeof View<TDelegate>>) {
+  const { textParent } = useContext(TextContext);
+
+  //   const innerClassName = clsx(
+  //   fontSize && fontSizeStyles[`_${fontSize}`] || fontSizeStyles["_14px"],
+  // );
+
+  const spanClassName = [
+    // thin && fontWeightStyles.thin,
+    bold && fontWeightStyles.bold,
+    light && styles.light,
+    caps && styles.caps,
+    // highlight && textStyles.highlight,
+    fontSize && fontSizeStyles[`_${fontSize}`],
+    fontWeight && fontWeightStyles[`_${fontWeight}`],
+    textColor && textColorStyles[textColor]
+  ].filter(className => className).join(" ");
+
+  if (textParent) {
+    const Component = as ?? "span";
+
+    console.log("here", fontWeight);
+    return (
+      <Component className={spanClassName} {...props}>
+        {children}
+      </Component>
+    );
+  }
+
   const textClassName = [
     styles.Text,
     select && styles.select,
@@ -44,7 +81,11 @@ function Text<TDelegate extends React.ElementType = "div">({
   return (
     <View as={as as React.ElementType} {...props}>
       <span className={textClassName} style={innerStyle}>
-        {children}
+        <span className={spanClassName}>
+          <TextContext value={{ textParent: true }}>
+            {children}
+          </TextContext>
+        </span>
       </span>
     </View>
   );
