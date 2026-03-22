@@ -35,8 +35,8 @@ function Text<TDelegate extends React.ElementType = "div">({
   bold?: boolean,
   select?: boolean,
   fontSize?: "12px" | "14px" | "18px" | "24px" | "32px",
-  fontWeight?: "300" | "400" | "500" | "600" | "700",
-  textColor?: Color,
+  fontWeight?: false | "300" | "400" | "500" | "600" | "700",
+  textColor?: false | Color,
   innerStyle?: React.ComponentProps<"span">["style"]
 } & React.ComponentProps<typeof View<TDelegate>>) {
   const { textParent } = useContext(TextContext);
@@ -59,7 +59,6 @@ function Text<TDelegate extends React.ElementType = "div">({
   if (textParent) {
     const Component = as ?? "span";
 
-    console.log("here", fontWeight);
     return (
       <Component className={spanClassName} {...props}>
         {children}
@@ -80,13 +79,13 @@ function Text<TDelegate extends React.ElementType = "div">({
 
   return (
     <View as={as as React.ElementType} {...props}>
-      <span className={textClassName} style={innerStyle}>
+      <div className={textClassName} style={innerStyle}>
         <span className={spanClassName}>
           <TextContext value={{ textParent: true }}>
             {children}
           </TextContext>
         </span>
-      </span>
+      </div>
     </View>
   );
 }

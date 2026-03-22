@@ -16,7 +16,7 @@ import alignVerticalStyles from "../../styles/alignVertical.module.scss";
 import borderColorStyles from "../../styles/borderColor.module.scss";
 
 type ViewContext = {
-  parentFillColor?: Color
+  parentFillColor?: false | Color
 };
 
 const ViewContext = React.createContext<ViewContext>({
@@ -50,7 +50,7 @@ function View<TDelegate extends React.ElementType = "div">({
   spacing?: Padding,
   border?: true | "top" | "bottom",
   align?: Align,
-  fillColor?: Color,
+  fillColor?: false | Color,
   borderColor?: Color,
   cornerRadius?: "0px" | "2px" | "4px" | "max"
 }, TDelegate>) {

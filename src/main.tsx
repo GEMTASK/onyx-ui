@@ -12,6 +12,7 @@ export { Checkbox } from "./components";
 export { Select } from "./components";
 export { Form } from "./components";
 export { Label } from "./components";
+export { Markdown } from "./components";
 
 export type { Delegate } from "./types/Delegate";
 export type { FieldValue } from "./types/FieldValue";
