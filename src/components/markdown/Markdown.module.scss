@@ -1,13 +1,15 @@
 .Markdown {
   display: block;
-  margin: 0;
+  // margin: 0;
+  overflow: auto;
+  // min-height: 0;
 
   h1 {
     margin: 0;
     margin-bottom: 32px;
   }
 
-  .h2 {
+  h2 {
     margin: 0;
 
     &:not(:first-child) {
@@ -52,7 +54,7 @@
   }
 
   code * {
-    font-family: 'Iosevka';
+    font-family: 'JetBrains Mono';
   }
 
   // &p + &p {

@@ -79,12 +79,10 @@ function Text<TDelegate extends React.ElementType = "div">({
 
   return (
     <View as={as as React.ElementType} {...props}>
-      <div className={textClassName} style={innerStyle}>
-        <span className={spanClassName}>
-          <TextContext value={{ textParent: true }}>
-            {children}
-          </TextContext>
-        </span>
+      <div className={textClassName + " " + spanClassName} style={innerStyle}>
+        <TextContext value={{ textParent: true }}>
+          {children}
+        </TextContext>
       </div>
     </View>
   );
