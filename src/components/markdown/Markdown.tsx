@@ -1,7 +1,6 @@
 import ReactMarkdown, { type Components } from "react-markdown";
 
-import View from "../view";
-import Text from "../text";
+import { View, Text } from "..";
 
 import styles from "./Markdown.module.scss";
 import { useEffect, useState } from "react";
@@ -51,7 +50,7 @@ const components: Components = {
   },
   code({ node, className, children, ...props }) {
     return (
-      <Text border as="code" fillColor="panel" cornerRadius="2px" padding="16px" {...props}>
+      <Text border as="code" fillColor="panel" cornerRadius="2px" padding="16px">
         {children}
       </Text>
     );
