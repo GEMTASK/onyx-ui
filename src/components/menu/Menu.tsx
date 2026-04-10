@@ -1,4 +1,4 @@
-import React, { cloneElement, isValidElement, useState } from "react";
+import React, { cloneElement, isValidElement, useEffect, useRef, useState } from "react";
 
 import type { Delegate } from "../../types/Delegate";
 
@@ -6,7 +6,7 @@ import { Button, Divider, Popover, Text, View } from "..";
 
 function MenuGroup({ label }: { label: string }) {
   return (
-    <Text light caps style={{ margin: "8px 16px" }} innerStyle={{ fontSize: 11, lineHeight: "17px" }}>
+    <Text light caps style={{ margin: "8px 16px" }} innerStyle={{ fontSize: 11, lineHeight: "17px", whiteSpace: "nowrap" }}>
       {label}
     </Text>
   );
@@ -25,6 +25,7 @@ function MenuDivider() {
 function MenuItem({
   title,
   value,
+  style,
   onClick,
   onSelect,
   ...props
@@ -40,7 +41,7 @@ function MenuItem({
   };
 
   return (
-    <Button hover align="middle left" cornerRadius="0px" {...props} onClick={handleClick}>
+    <Button hover align="middle left" cornerRadius="0px" style={{ whiteSpace: "nowrap", ...style }} {...props} onClick={handleClick}>
       {title}
     </Button>
   );
@@ -67,7 +68,22 @@ function Menu({
   }>,
   onSelect?: (value: string | undefined) => void
 }, typeof Popover, "isVisible" | "content">) {
+  const menuElementRef = useRef<HTMLDivElement>(null);
   const [isPopoverVisible, setIsPopoverVisible] = useState(false);
+
+  const handleDocumentPointerDown = (event: PointerEvent) => {
+    if (!menuElementRef.current?.contains(event.target as HTMLElement)) {
+      setIsPopoverVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("pointerdown", handleDocumentPointerDown);
+
+    return () => {
+      document.removeEventListener("pointerdown", handleDocumentPointerDown);
+    };
+  }, []);
 
   const handleItemSelect = (value: string | undefined) => {
     setIsPopoverVisible(false);
@@ -76,7 +92,7 @@ function Menu({
   };
 
   const popoverContent = (
-    <View padding="8px 0px">
+    <View ref={menuElementRef} padding="8px 0px">
       {items.map((item, index) => isValidElement(item) && cloneElement(item, {
         key: index,
         onSelect: (...args) => { handleItemSelect(...args); item.props.onSelect?.(...args); }
