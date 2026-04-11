@@ -26,6 +26,7 @@ const ViewContext = React.createContext<ViewContext>({
 function View<TDelegate extends React.ElementType = "div">({
   as,
   flex,
+  wrap,
   absolute,
   horizontal,
   shadow,
@@ -43,6 +44,7 @@ function View<TDelegate extends React.ElementType = "div">({
 }: Delegate<{
   as?: TDelegate,
   flex?: boolean,
+  wrap?: boolean,
   absolute?: boolean,
   horizontal?: boolean,
   shadow?: boolean,
@@ -59,6 +61,7 @@ function View<TDelegate extends React.ElementType = "div">({
   const viewClassName = [
     styles.View,
     flex && styles.flex,
+    wrap && styles.wrap,
     absolute && styles.absolute,
     horizontal && styles.horizontal,
     shadow && styles.shadow,
