@@ -60,7 +60,7 @@ function Text<TDelegate extends React.ElementType = "div">({
     const Component = as ?? "span";
 
     return (
-      <Component className={spanClassName}>
+      <Component className={spanClassName} {...props}>
         {children}
       </Component>
     );
