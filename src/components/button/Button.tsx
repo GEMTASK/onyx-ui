@@ -84,7 +84,10 @@ function Button({
 
   useLayoutEffect(() => {
     if (buttonElementRef.current) {
-      buttonElementRef.current.style.setProperty("--hover-color", `var(--${parentFillColor === "panel" ? "divider" : "panel"}-color)`);
+      buttonElementRef.current.style.setProperty(
+        "--hover-color",
+        `var(--${parentFillColor === "panel" ? "divider" : "panel"}-color)`
+      );
     }
   }, [fillColor, parentFillColor]);
 
