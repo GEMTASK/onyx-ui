@@ -26,11 +26,12 @@ function MenuItem({
   title,
   value,
   style,
+  children,
   onClick,
   onSelect,
   ...props
 }: Delegate<{
-  title: React.ComponentProps<typeof Button>["children"],
+  title?: React.ComponentProps<typeof Button>["children"],
   value?: string,
   onSelect?: (value: string | undefined) => void
 }, typeof Button>) {
@@ -42,7 +43,7 @@ function MenuItem({
 
   return (
     <Button hover align="middle left" cornerRadius="0px" style={{ whiteSpace: "nowrap", ...style }} {...props} onClick={handleClick}>
-      {title}
+      {title ?? children}
     </Button>
   );
 }

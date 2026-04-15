@@ -102,7 +102,7 @@ function Button({
       {...props}
     >
       {icon && (
-        <Icon icon={icon} size={16} color={textColor} style={{ strokeWidth: 2.5, marginTop: -2, marginBottom: -2, marginLeft: children ? -3 : -2, marginRight: -2 }} />
+        <Icon icon={icon} size={16} color={textColor} style={{ strokeWidth: 2.5, marginTop: -2, marginBottom: -2, xmarginLeft: children ? -3 : -2, xmarginRight: -2 }} />
       )}
       {typeof children !== "string" ? children : (
         <Text bold={bold} fontWeight={fontWeight} textColor={textColor} style={{ textAlign: "left" }}>
