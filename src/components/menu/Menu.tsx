@@ -107,6 +107,7 @@ function Menu({
     <Popover isVisible={isPopoverVisible} content={popoverContent} {...props}>
       {React.isValidElement(onlyChild) && React.cloneElement(onlyChild, {
         style: {
+          ...onlyChild.props.style,
           cursor: "pointer"
         },
         solid: isPopoverVisible || onlyChild.props.solid,
