@@ -1,4 +1,4 @@
-type Theme = "primary" | "content" | "panel" | "gutter" | "icon" | "divider" | "text" | "selected";
+type Theme = "primary" | "content" | "panel" | "gutter" | "icon" | "divider" | "text" | "selected" | "highlight";
 type Gray = "gray-0" | "gray-1" | "gray-2";
 type Blue = "blue-5";
 

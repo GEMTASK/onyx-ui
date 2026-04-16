@@ -7,5 +7,6 @@
   --divider-color: hsl(210, 15%, 88%);
   --text-color: hsla(210, 0%, 0%, 0.7);
   --selected-color: hsl(210, 100%, 93%);
+  --highlight-color: #fff3bf;
   --default-font: 'New Times Roman';
 }
