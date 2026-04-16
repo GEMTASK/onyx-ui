@@ -23,7 +23,7 @@ const getFillColor = ({ parentFillColor, solid, primary, hover, selected }: Butt
     // case solid && parentFillColor === "divider":
     //   return "gutter";
     case solid:
-      return parentFillColor === "panel" ? "divider" : "panel";
+      return parentFillColor === "panel" ? "icon" : "gutter";
     case hover:
       return undefined;
   }
@@ -83,7 +83,10 @@ function Button({
 
   useLayoutEffect(() => {
     if (buttonElementRef.current) {
-      buttonElementRef.current.style.setProperty("--hover-color", `var(--${parentFillColor === "panel" ? "divider" : "panel"}-color)`);
+      buttonElementRef.current.style.setProperty(
+        "--hover-color",
+        `var(--${parentFillColor === "panel" ? "icon" : "gutter"}-color)`
+      );
     }
   }, [fillColor, parentFillColor]);
 
