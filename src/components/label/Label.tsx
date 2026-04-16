@@ -17,12 +17,12 @@ function Label({
   return (
     <View as="label" spacing="8px" style={{ cursor: "pointer" }} onClick={onClick}>
       {label && (
-        <View horizontal align="middle left">
+        <View horizontal spacing="4px" align="middle left">
           <Text light caps innerStyle={{ fontSize: 11, lineHeight: "17px" }}>
             {label}
           </Text>
           {chevron && (
-            <Icon icon={ChevronDownIcon} size={16} style={{ opacity: 0.6, margin: "-4px 0", strokeWidth: 1 }} />
+            <Icon icon={ChevronDownIcon} size={16} style={{ opacity: 0.6, margin: -4, strokeWidth: 1 }} />
           )}
         </View>
       )}

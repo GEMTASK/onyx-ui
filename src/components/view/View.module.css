@@ -24,6 +24,18 @@
   z-index: 1;
 }
 
+.zindex_1 {
+  z-index: 1;
+}
+
+.zindex_2 {
+  z-index: 2;
+}
+
+.zindex_3 {
+  z-index: 3;
+}
+
 .flex {
   flex: 1;
 }
