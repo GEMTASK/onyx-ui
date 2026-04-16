@@ -1,9 +1,17 @@
 .top {
   border-top: 1px solid var(--divider-color);
+
+  &.negative {
+    margin-top: -1px;
+  }
 }
 
 .bottom {
   border-bottom: 1px solid var(--divider-color);
+
+  &.negative {
+    margin-bottom: -1px;
+  }
 }
 
 .left {
@@ -17,6 +25,11 @@
 .top_bottom {
   border-top: 1px solid var(--divider-color);
   border-bottom: 1px solid var(--divider-color);
+
+  &.negative {
+    margin-top: -1px;
+    margin-bottom: -1px;
+  }
 }
 
 .top_right_bottom_left {

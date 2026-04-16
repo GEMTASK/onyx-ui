@@ -35,6 +35,7 @@ function View<TDelegate extends React.ElementType = "div">({
   padding,
   spacing,
   border,
+  negativeBorder,
   align,
   fillColor,
   borderColor,
@@ -55,6 +56,7 @@ function View<TDelegate extends React.ElementType = "div">({
   padding?: Padding,
   spacing?: Padding,
   border?: true | "top" | "bottom" | "left" | "right" | "top bottom",
+  negativeBorder?: boolean,
   align?: Align,
   fillColor?: false | Color,
   borderColor?: Color,
@@ -74,6 +76,7 @@ function View<TDelegate extends React.ElementType = "div">({
     padding && paddingStyles[`_${padding.replace(/ /, "_")}`],
     spacing && spacingStyles[`_${spacing.replace(/ /, "_")}`],
     border && borderStyles[border === true ? "top_right_bottom_left" : border.replace(/ /, "_")],
+    negativeBorder && borderStyles.negative,
     align && (
       horizontal
         ? alignHorizontalStyles[align.replace(/ /, "_")]
