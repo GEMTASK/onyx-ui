@@ -57,7 +57,7 @@ function View<TDelegate extends React.ElementType = "div">({
   cursor?: "pointer",
   padding?: Padding,
   spacing?: Padding,
-  border?: true | "top" | "bottom" | "left" | "right" | "top bottom",
+  border?: true | "top" | "bottom" | "left" | "right" | "top bottom" | "none",
   negativeBorder?: boolean,
   align?: Align,
   fillColor?: false | Color,
