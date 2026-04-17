@@ -4,6 +4,7 @@ export { default as Text } from "./text";
 export { default as Button } from "./button";
 export { default as Icon } from "./icon";
 export { default as Divider } from "./divider";
+export { default as List } from "./list";
 export { default as Popover } from "./popover";
 export { default as Menu } from "./menu";
 export { default as Checkbox } from "./checkbox";

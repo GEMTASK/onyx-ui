@@ -76,7 +76,7 @@ function Select({
         <Text>
           {options.reduce((acc, option) => (
             option.value === value ? option : option.options?.find(option => option?.value === value) ?? acc
-          ), "").label}
+          ), {} as OptionValueBase).label}
         </Text>
       </Label>
     </Menu>
