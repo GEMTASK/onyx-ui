@@ -13,7 +13,7 @@ function Avatar({
 }: Delegate<{
   name?: string,
   label?: string,
-  imageOnly?: boolean
+  imageOnly?: boolean,
 }, typeof View<"div">>) {
   return (
     <View horizontal spacing="8px" {...props}>
@@ -37,8 +37,8 @@ Avatar.Stack = function ({
   ...props
 }: Delegate<{
   children: React.ReactElement<{
-    className: string
-  }>[]
+    className: string,
+  }>[],
 }, typeof View<"div">>) {
   return (
     <View horizontal {...props}>

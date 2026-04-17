@@ -9,7 +9,7 @@ import textColorStyles from "../../styles/textColor.module.scss";
 import React, { useContext } from "react";
 
 type TextContext = {
-  textParent: boolean
+  textParent: boolean,
 };
 
 const TextContext = React.createContext<TextContext>({
@@ -37,7 +37,7 @@ function Text<TDelegate extends React.ElementType = "div">({
   fontSize?: "12px" | "14px" | "18px" | "24px" | "32px",
   fontWeight?: false | "300" | "400" | "500" | "600" | "700",
   textColor?: false | Color,
-  innerStyle?: React.ComponentProps<"span">["style"]
+  innerStyle?: React.ComponentProps<"span">["style"],
 } & React.ComponentProps<typeof View<TDelegate>>) {
   const { textParent } = useContext(TextContext);
 

@@ -5,11 +5,11 @@ import { Label, Menu, Text } from "..";
 type OptionValueBase = {
   icon?: React.ComponentProps<typeof Menu.Item>["icon"],
   label: React.ComponentProps<typeof Menu.Item>["title"],
-  value: string | undefined
+  value: string | undefined,
 };
 
 type OptionValue = OptionValueBase & {
-  options?: OptionValueBase[]
+  options?: OptionValueBase[],
 };
 
 function SelectOption({
@@ -21,7 +21,7 @@ function SelectOption({
 }: Delegate<{
   label: React.ComponentProps<typeof Menu.Item>["title"],
   value: string | undefined,
-  onSelect: (value: string | undefined) => void
+  onSelect: (value: string | undefined) => void,
 }, typeof Menu.Item, "title">) {
   const handleItemClick = () => {
     onSelect?.(value);
@@ -46,7 +46,7 @@ function Select({
   label?: string,
   value?: string,
   options: OptionValue[],
-  onValueChange?: (value: string | undefined) => void
+  onValueChange?: (value: string | undefined) => void,
 }, typeof Menu, "items" | "children">) {
   const handleOptionSelect = (value: string | undefined) => {
     onValueChange?.(value);

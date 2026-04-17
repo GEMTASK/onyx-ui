@@ -12,4 +12,5 @@ export { default as Select } from "./select";
 export { default as Form } from "./form";
 export { default as Label } from "./label";
 export { default as Avatar } from "./avatar";
+export { default as Chip } from "./chip";
 export { default as Markdown } from "./markdown";

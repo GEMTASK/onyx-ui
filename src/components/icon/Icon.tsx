@@ -3,7 +3,7 @@ import { Camera as CameraIcon } from "lucide-react";
 import textColorStyles from "../../styles/textColor.module.scss";
 
 function Icon({
-  icon: Component = CameraIcon,
+  icon: Component,
   color = "gray-7",
   size,
   style,
@@ -11,7 +11,7 @@ function Icon({
 }: {
   icon: typeof CameraIcon,
   color?: React.ComponentProps<typeof CameraIcon>["color"],
-  size?: React.ComponentProps<typeof CameraIcon>["size"]
+  size?: React.ComponentProps<typeof CameraIcon>["size"],
 } & React.ComponentProps<typeof CameraIcon>) {
   const iconClassName = [
     color && textColorStyles[color]

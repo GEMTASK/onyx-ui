@@ -9,7 +9,7 @@ function noop() { }
 
 type FormContext = {
   fields: { [name: string]: FieldValue },
-  onFieldChange: (name: string, value: FieldValue) => void
+  onFieldChange: (name: string, value: FieldValue) => void,
 };
 
 const FormContext = createContext<FormContext>({
@@ -28,8 +28,8 @@ function FormField({
   name: string,
   children: React.ReactElement<{
     value: FieldValue,
-    onValueChange: (value: FieldValue) => void
-  }>
+    onValueChange: (value: FieldValue) => void,
+  }>,
 }) {
   const { fields, onFieldChange } = useContext(FormContext);
 
@@ -51,7 +51,7 @@ FormField.withComponent = <TProps extends object>(Component: React.ComponentType
   name,
   ...props
 }: {
-  name: string
+  name: string,
 } & TProps) => {
   return (
     <Form.Field name={name}>
@@ -71,7 +71,7 @@ function Form({
   ...props
 }: Delegate<{
   fields: Record<string, FieldValue>,
-  onFieldChange?: (name: string, value: FieldValue) => void
+  onFieldChange?: (name: string, value: FieldValue) => void,
 }, typeof View<"form">>) {
   const formContextValue = {
     fields,

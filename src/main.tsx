@@ -14,6 +14,7 @@ export { Select } from "./components";
 export { Form } from "./components";
 export { Label } from "./components";
 export { Avatar } from "./components";
+export { Chip } from "./components";
 export { Markdown } from "./components";
 
 export type { Delegate } from "./types/Delegate";

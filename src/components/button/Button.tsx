@@ -11,7 +11,7 @@ type ButtonStyle = {
   solid?: boolean,
   primary?: boolean,
   hover?: boolean,
-  selected?: boolean
+  selected?: boolean,
 };
 
 const getFillColor = ({ parentFillColor, solid, primary, hover, selected }: ButtonStyle & ViewContext) => {
@@ -63,7 +63,7 @@ function Button({
   round?: boolean,
   bold?: boolean,
   fontWeight?: React.ComponentProps<typeof Text<"div">>["fontWeight"],
-  selected?: boolean
+  selected?: boolean,
 } & ButtonStyle, typeof View<"button">>) {
   const buttonElementRef = useRef<HTMLButtonElement>(null);
 

@@ -12,7 +12,7 @@ function Label({
   ...props
 }: Delegate<{
   label?: string,
-  chevron?: boolean
+  chevron?: boolean,
 }, typeof View<"label">>) {
   return (
     <View as="label" cursor="pointer" spacing="8px" onClick={onClick}>
