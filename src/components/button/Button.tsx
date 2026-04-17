@@ -97,6 +97,7 @@ function Button({
       horizontal
       as="button"
       type="button"
+      cursor="pointer"
       padding={children ? "8px 16px" : "8px"}
       spacing="8px"
       align="middle center"

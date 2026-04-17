@@ -15,7 +15,7 @@ function Label({
   chevron?: boolean
 }, typeof View<"label">>) {
   return (
-    <View as="label" spacing="8px" style={{ cursor: "pointer" }} onClick={onClick}>
+    <View as="label" cursor="pointer" spacing="8px" onClick={onClick}>
       {label && (
         <View horizontal spacing="4px" align="middle left">
           <Text light caps innerStyle={{ fontSize: 11, lineHeight: "17px" }}>
