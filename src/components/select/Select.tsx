@@ -8,8 +8,9 @@ type OptionValueBase = {
   value: string | undefined,
 };
 
-type OptionValue = OptionValueBase & {
-  options?: OptionValueBase[],
+type OptionValue = OptionValueBase | {
+  label?: React.ComponentProps<typeof Menu.Item>["title"],
+  options: OptionValueBase[],
 };
 
 function SelectOption({
@@ -52,19 +53,31 @@ function Select({
     onValueChange?.(value);
   };
 
-  const menuItems = options.flatMap(({ icon, label, value: _value, options }) => {
+  const menuItems = options.flatMap(option => {
     switch (true) {
-      case options !== undefined:
+      case "options" in option:
         return [
           <Menu.Divider />,
-          ...(label ? [<Menu.Group label={label as string} />] : []),
-          ...options.map(({ icon, label, value: _value }) => (
-            <SelectOption selected={_value === value} icon={icon} label={label} value={_value} onSelect={handleOptionSelect} />
+          ...(option.label ? [<Menu.Group label={option.label as string} />] : []),
+          ...option.options.map((option) => (
+            <SelectOption
+              selected={option.value === value}
+              icon={option.icon}
+              label={option.label}
+              value={option.value}
+              onSelect={handleOptionSelect}
+            />
           ))
         ];
       default: {
         return (
-          <SelectOption selected={_value === value} icon={icon} label={label} value={_value} onSelect={handleOptionSelect} />
+          <SelectOption
+            selected={option.value === value}
+            icon={option.icon}
+            label={option.label}
+            value={option.value}
+            onSelect={handleOptionSelect}
+          />
         );
       }
     }
@@ -74,9 +87,11 @@ function Select({
     <View style={{ marginBottom: -9 }}>
       <Menu items={menuItems} {...props}>
         <Label chevron label={label}>
-          <Text xborder="bottom" style={{ padding: "0 0 8px 0" }}>
+          <Text style={{ padding: "0 0 8px 0" }}>
             {options.reduce((acc, option) => (
-              option.value === value ? option : option.options?.find(option => option?.value === value) ?? acc
+              "options" in option
+                ? option.options.find(option => option.value === value) ?? acc
+                : option.value === value ? option : acc
             ), {} as OptionValueBase).label}
           </Text>
         </Label>
