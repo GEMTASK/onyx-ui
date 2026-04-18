@@ -1,6 +1,6 @@
 import type { Delegate } from "../../types/Delegate";
 
-import { Label, Menu, Text } from "..";
+import { Label, Menu, Text, View } from "..";
 
 type OptionValueBase = {
   icon?: React.ComponentProps<typeof Menu.Item>["icon"],
@@ -71,15 +71,17 @@ function Select({
   });
 
   return (
-    <Menu items={menuItems} {...props}>
-      <Label chevron label={label}>
-        <Text>
-          {options.reduce((acc, option) => (
-            option.value === value ? option : option.options?.find(option => option?.value === value) ?? acc
-          ), {} as OptionValueBase).label}
-        </Text>
-      </Label>
-    </Menu>
+    <View style={{ marginBottom: -9 }}>
+      <Menu items={menuItems} {...props}>
+        <Label chevron label={label}>
+          <Text xborder="bottom" style={{ padding: "0 0 8px 0" }}>
+            {options.reduce((acc, option) => (
+              option.value === value ? option : option.options?.find(option => option?.value === value) ?? acc
+            ), {} as OptionValueBase).label}
+          </Text>
+        </Label>
+      </Menu>
+    </View>
   );
 }
 
