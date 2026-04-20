@@ -55,6 +55,7 @@ function Button({
   fontWeight,
   selected,
   //
+  className,
   children,
   ...props
 }: Delegate<{
@@ -72,7 +73,8 @@ function Button({
     solid && styles.solid,
     primary && styles.primary,
     hover && styles.hover,
-    selected && styles.selected
+    selected && styles.selected,
+    className
   ].filter(className => className).join(" ");
 
   const { parentFillColor } = useContext(ViewContext);

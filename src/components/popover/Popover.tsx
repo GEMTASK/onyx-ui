@@ -77,7 +77,7 @@ function Popover({
     <>
       {React.isValidElement(onlyChild) && React.cloneElement(onlyChild, {
         ref: childElementRef,
-        className: styles.children
+        className: [styles.children, onlyChild.props.className].filter(className => className).join(" ")
       })}
       {noPortal && isVisible && overlayElement && (
         popoverContent

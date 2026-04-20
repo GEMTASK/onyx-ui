@@ -1,6 +1,7 @@
 .Button {
   // margin: -1px;
   // padding: 9px 16px;
+  opacity: 1.0 !important;
 
   &.hover:hover:not(.selected) {
     // background: hsl(210, 15%, 93%);

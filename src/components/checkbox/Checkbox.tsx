@@ -9,7 +9,7 @@ function Checkbox({
 }: {
   label?: string,
   value?: boolean,
-  onValueChange?: (value: boolean) => void
+  onValueChange?: (value: boolean) => void,
 }) {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     onValueChange?.(event.currentTarget.checked);
