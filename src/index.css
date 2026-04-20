@@ -6,7 +6,8 @@
   --icon-color: hsl(210, 15.79%, 92.55%);
   --divider-color: hsl(210, 15%, 88%);
   --text-color: hsla(210, 0%, 0%, 0.7);
-  --selected-color: hsl(210, 100%, 93%);
+  /* --selected-color: hsl(210, 100%, 93%); */
+  --selected-color: hsl(205, 100%, 95.29%);
   --highlight-color: #fff3bf;
   --default-font: 'New Times Roman';
 }

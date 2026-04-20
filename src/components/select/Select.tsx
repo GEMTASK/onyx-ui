@@ -53,22 +53,27 @@ function Select({
     onValueChange?.(value);
   };
 
-  const menuItems = options.flatMap(option => {
+  const menuItems = options.flatMap((option, index) => {
     switch (true) {
       case "options" in option:
         return [
-          <Menu.Divider />,
+          index !== 0 && (
+            <Menu.Divider />
+          ),
           ...(option.label ? [<Menu.Group label={option.label as string} />] : []),
-          ...option.options.map((option) => (
+          ...option.options.map((innerOption) => (
             <SelectOption
-              selected={option.value === value}
-              icon={option.icon}
-              label={option.label}
-              value={option.value}
+              selected={innerOption.value === value}
+              icon={innerOption.icon}
+              label={innerOption.label}
+              value={innerOption.value}
               onSelect={handleOptionSelect}
             />
-          ))
-        ];
+          )),
+          index !== options.length - 1 && !("options" in options[index]) && (
+            <Menu.Divider />
+          )
+        ].filter(item => item !== false);
       default: {
         return (
           <SelectOption
