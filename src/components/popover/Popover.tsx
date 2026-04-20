@@ -4,8 +4,9 @@ import React, { useEffect, useLayoutEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 
 import type { Delegate } from "../../types/Delegate";
-
 import { View } from "..";
+
+import styles from "./Popover.module.scss";
 
 function Popover({
   content,
@@ -20,8 +21,8 @@ function Popover({
   noPortal?: boolean,
   children: React.ReactElement<{
     ref: React.RefObject<HTMLElement | null>,
-    className?: string
-  }> | boolean
+    className?: string,
+  }> | boolean,
 }, typeof View<"div">>) {
   const childElementRef = useRef<HTMLDivElement>(null);
   const popoverElementRef = useRef<HTMLDivElement>(null);
@@ -75,7 +76,8 @@ function Popover({
   return (
     <>
       {React.isValidElement(onlyChild) && React.cloneElement(onlyChild, {
-        ref: childElementRef
+        ref: childElementRef,
+        className: styles.children
       })}
       {noPortal && isVisible && overlayElement && (
         popoverContent

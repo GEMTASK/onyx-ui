@@ -1,7 +1,6 @@
 import React, { cloneElement, isValidElement, useEffect, useRef, useState } from "react";
 
 import type { Delegate } from "../../types/Delegate";
-
 import { Button, Divider, Popover, Text, View } from "..";
 
 function MenuGroup({ label }: { label: string }) {
@@ -63,7 +62,7 @@ function Menu({
   }>)[],
   children: React.ReactElement<{
     ref: React.RefObject<HTMLElement | null>,
-    style: React.CSSProperties,
+    cursor?: string,
     solid?: boolean,
     onClick: React.PointerEventHandler,
   }>,
@@ -106,10 +105,7 @@ function Menu({
   return (
     <Popover isVisible={isPopoverVisible} content={popoverContent} {...props}>
       {React.isValidElement(onlyChild) && React.cloneElement(onlyChild, {
-        style: {
-          ...onlyChild.props.style,
-          cursor: "pointer"
-        },
+        cursor: "pointer",
         solid: isPopoverVisible || onlyChild.props.solid,
         onClick: () => {
           setIsPopoverVisible(isPopoverVisible => !isPopoverVisible);

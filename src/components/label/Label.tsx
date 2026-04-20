@@ -8,14 +8,13 @@ function Label({
   label,
   chevron,
   children,
-  onClick,
   ...props
 }: Delegate<{
   label?: string,
   chevron?: boolean,
 }, typeof View<"label">>) {
   return (
-    <View as="label" cursor="pointer" spacing="8px" onClick={onClick}>
+    <View as="label" cursor="pointer" spacing="8px" {...props}>
       {label && (
         <View horizontal spacing="4px" align="middle left">
           <Text light caps innerStyle={{ fontSize: 11, lineHeight: "17px" }}>
@@ -26,7 +25,7 @@ function Label({
           )}
         </View>
       )}
-      <View {...props}>
+      <View>
         {children}
       </View>
     </View>

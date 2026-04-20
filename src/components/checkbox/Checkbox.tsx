@@ -16,14 +16,18 @@ function Checkbox({
   };
 
   return (
-    <Label horizontal spacing="8px" align="middle left">
-      <View fillColor={value ? "primary" : "divider"} cornerRadius="2px" align="middle center" style={{ width: 24, height: 24 }}>
-        <View absolute as="input" type="checkbox" checked={value} onChange={handleChange} />
-        {value && (
-          <Icon icon={CheckIcon} size={20} color="white" />
-        )}
+    <Label>
+      <View horizontal spacing="8px" align="middle left">
+        <View fillColor={value ? "primary" : "divider"} cornerRadius="2px" align="middle center" style={{ width: 24, height: 24 }}>
+          <View absolute as="input" type="checkbox" checked={value} onChange={handleChange} />
+          {value && (
+            <Icon icon={CheckIcon} size={20} color="white" />
+          )}
+        </View>
+        <Text>
+          {label}
+        </Text>
       </View>
-      <Text>{label}</Text>
     </Label>
   );
 }
