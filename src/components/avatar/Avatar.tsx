@@ -23,7 +23,7 @@ function Avatar({
         </Text>
       </View>
       {!imageOnly && (
-        <View spacing="8px">
+        <View spacing="8px" align="middle left" style={{ gap: 6 }}>
           <Text>{name}</Text>
           <Text light fontSize="12px">{label}</Text>
         </View>

@@ -69,7 +69,7 @@ function Text<TDelegate extends React.ElementType = "div">({
   const textClassName = [
     styles.Text,
     select && styles.select,
-    light && styles.light,
+    light && fontSize === "18px" ? styles.lighter : light && styles.light,
     caps && styles.caps,
     bold && fontWeightStyles._600,
     fontSize && fontSizeStyles[`_${fontSize}`] || fontSizeStyles._14px,
