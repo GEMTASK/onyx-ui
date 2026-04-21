@@ -1,9 +1,10 @@
 import { useContext, useImperativeHandle, useLayoutEffect, useRef } from "react";
+import { ChevronDownIcon } from "lucide-react";
 
 import type { Delegate } from "../../types/Delegate";
 import { ViewContext } from "../view/View";
 
-import { View, Text, Icon } from "..";
+import { View, Text, Icon, Menu } from "..";
 
 import styles from "./Button.module.scss";
 
@@ -124,5 +125,23 @@ function Button({
     </View>
   );
 }
+
+Button.Menu = function ActionMenu({
+  solid,
+  cornerRadius,
+  children,
+  ...props
+}: Delegate<{
+  solid?: React.ComponentProps<typeof Button>["solid"],
+  children: React.ComponentProps<typeof Button>["children"],
+}, typeof Menu>) {
+  return (
+    <Menu anchor="bottom left" {...props}>
+      <Button solid={solid} rightIcon={ChevronDownIcon} cornerRadius={cornerRadius}>
+        {children}
+      </Button>
+    </Menu>
+  );
+};
 
 export default Button;
