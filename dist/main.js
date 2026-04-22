@@ -2,7 +2,7 @@ import * as e from "react";
 import t, { cloneElement as n, createContext as r, createElement as i, forwardRef as a, isValidElement as o, useContext as s, useEffect as c, useImperativeHandle as l, useLayoutEffect as u, useRef as d, useState as f } from "react";
 import { createPortal as p } from "react-dom";
 //#region \0rolldown/runtime.js
-var m = Object.create, h = Object.defineProperty, g = Object.getOwnPropertyDescriptor, _ = Object.getOwnPropertyNames, v = Object.getPrototypeOf, y = Object.prototype.hasOwnProperty, b = (e, t) => () => (t || e((t = { exports: {} }).exports, t), t.exports), x = (e, t) => {
+var m = Object.create, h = Object.defineProperty, g = Object.getOwnPropertyDescriptor, _ = Object.getOwnPropertyNames, v = Object.getPrototypeOf, y = Object.prototype.hasOwnProperty, b = (e, t) => () => (t || (e((t = { exports: {} }).exports, t), e = null), t.exports), x = (e, t) => {
 	let n = {};
 	for (var r in e) h(n, r, {
 		get: e[r],
@@ -838,20 +838,23 @@ function Ae(e) {
 //#endregion
 //#region src/components/list/List.tsx
 function je(e) {
-	let n = (0, j.c)(5), { children: r } = e, i;
-	n[0] === Symbol.for("react.memo_cache_sentinel") ? (i = { overflow: "hidden" }, n[0] = i) : i = n[0];
+	let n = (0, j.c)(9), r, i;
+	n[0] === e ? (r = n[1], i = n[2]) : ({children: r, ...i} = e, n[0] = e, n[1] = r, n[2] = i);
 	let a;
-	n[1] === r ? a = n[2] : (a = t.Children.map(r, Me), n[1] = r, n[2] = a);
+	n[3] === Symbol.for("react.memo_cache_sentinel") ? (a = { overflow: "hidden" }, n[3] = a) : a = n[3];
 	let o;
-	return n[3] === a ? o = n[4] : (o = /* @__PURE__ */ (0, M.jsx)(z, {
+	n[4] === r ? o = n[5] : (o = t.Children.map(r, Me), n[4] = r, n[5] = o);
+	let s;
+	return n[6] !== i || n[7] !== o ? (s = /* @__PURE__ */ (0, M.jsx)(z, {
 		border: !0,
 		cornerRadius: "4px",
-		style: i,
-		children: a
-	}), n[3] = a, n[4] = o), o;
+		style: a,
+		...i,
+		children: o
+	}), n[6] = i, n[7] = o, n[8] = s) : s = n[8], s;
 }
 function Me(e, n) {
-	return /* @__PURE__ */ (0, M.jsxs)(t.Fragment, { children: [n > 0 && /* @__PURE__ */ (0, M.jsx)(Ae, {}), e] }, n);
+	return t.isValidElement(e) && /* @__PURE__ */ (0, M.jsxs)(t.Fragment, { children: [n > 0 && /* @__PURE__ */ (0, M.jsx)(Ae, {}), e] }, n);
 }
 var Ne = { children: "_onyx-ui_children_QPhbX" };
 //#endregion
@@ -3545,6 +3548,7 @@ function jr(e) {
 	return e !== 96 || this.events[this.events.length - 1][1].type === "characterEscape";
 }
 function Mr(e, t, n) {
+	this;
 	let r = 0, i, a;
 	return o;
 	function o(t) {
@@ -5430,13 +5434,13 @@ function ya(e, t) {
 	}
 }
 function ba(e, t) {
-	throw e ? Error("Cannot close `" + e.type + "` (" + Gt({
+	throw Error(e ? "Cannot close `" + e.type + "` (" + Gt({
 		start: e.start,
 		end: e.end
 	}) + "): a different token (`" + t.type + "`, " + Gt({
 		start: t.start,
 		end: t.end
-	}) + ") is open") : Error("Cannot close document, a token (`" + t.type + "`, " + Gt({
+	}) + ") is open" : "Cannot close document, a token (`" + t.type + "`, " + Gt({
 		start: t.start,
 		end: t.end
 	}) + ") is still open");

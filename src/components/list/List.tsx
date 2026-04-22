@@ -9,7 +9,7 @@ function List({
 }: Delegate<object, typeof View<"div">>) {
   return (
     <View border cornerRadius="4px" style={{ overflow: "hidden" }} {...props}>
-      {React.Children.map(children, (child, index) => (
+      {React.Children.map(children, (child, index) => React.isValidElement(child) && (
         <React.Fragment key={index}>
           {index > 0 && (
             <Divider />
