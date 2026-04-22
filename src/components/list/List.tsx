@@ -4,10 +4,11 @@ import type { Delegate } from "../../types/Delegate";
 import { View, Divider } from "..";
 
 function List({
-  children
+  children,
+  ...props
 }: Delegate<object, typeof View<"div">>) {
   return (
-    <View border cornerRadius="4px" style={{ overflow: "hidden" }}>
+    <View border cornerRadius="4px" style={{ overflow: "hidden" }} {...props}>
       {React.Children.map(children, (child, index) => (
         <React.Fragment key={index}>
           {index > 0 && (
