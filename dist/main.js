@@ -838,20 +838,23 @@ function Ae(e) {
 //#endregion
 //#region src/components/list/List.tsx
 function je(e) {
-	let n = (0, j.c)(5), { children: r } = e, i;
-	n[0] === Symbol.for("react.memo_cache_sentinel") ? (i = { overflow: "hidden" }, n[0] = i) : i = n[0];
+	let n = (0, j.c)(9), r, i;
+	n[0] === e ? (r = n[1], i = n[2]) : ({children: r, ...i} = e, n[0] = e, n[1] = r, n[2] = i);
 	let a;
-	n[1] === r ? a = n[2] : (a = t.Children.map(r, Me), n[1] = r, n[2] = a);
+	n[3] === Symbol.for("react.memo_cache_sentinel") ? (a = { overflow: "hidden" }, n[3] = a) : a = n[3];
 	let o;
-	return n[3] === a ? o = n[4] : (o = /* @__PURE__ */ (0, M.jsx)(z, {
+	n[4] === r ? o = n[5] : (o = t.Children.map(r, Me), n[4] = r, n[5] = o);
+	let s;
+	return n[6] !== i || n[7] !== o ? (s = /* @__PURE__ */ (0, M.jsx)(z, {
 		border: !0,
 		cornerRadius: "4px",
-		style: i,
-		children: a
-	}), n[3] = a, n[4] = o), o;
+		style: a,
+		...i,
+		children: o
+	}), n[6] = i, n[7] = o, n[8] = s) : s = n[8], s;
 }
 function Me(e, n) {
-	return /* @__PURE__ */ (0, M.jsxs)(t.Fragment, { children: [n > 0 && /* @__PURE__ */ (0, M.jsx)(Ae, {}), e] }, n);
+	return t.isValidElement(e) && /* @__PURE__ */ (0, M.jsxs)(t.Fragment, { children: [n > 0 && /* @__PURE__ */ (0, M.jsx)(Ae, {}), e] }, n);
 }
 var Ne = { children: "_onyx-ui_children_QPhbX" };
 //#endregion
