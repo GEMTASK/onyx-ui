@@ -817,7 +817,7 @@ var Te = {
 	Input: "_onyx-ui_Input_MpxTL",
 	flush: "_onyx-ui_flush_4zQD9"
 }, Ee = (e) => {
-	let t = (0, D.c)(38), n, r, i, a, o, s, c, l, p, m;
+	let t = (0, D.c)(37), n, r, i, a, o, s, c, l, p, m;
 	if (t[0] !== e) {
 		let { label: u, value: d, lines: f, border: h, flush: g, icon: _, placeholder: v, changeOnEnter: y, innerStyle: b, onValueChange: x, ...S } = e;
 		s = u, n = d, m = h, i = g, a = _, l = v, r = y, o = b, c = x, p = S, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o, t[6] = s, t[7] = c, t[8] = l, t[9] = p, t[10] = m;
@@ -848,7 +848,7 @@ var Te = {
 		...o
 	}, t[21] = o, t[22] = k);
 	let A;
-	t[23] !== n || t[24] !== b || t[25] !== l || t[26] !== k || t[27] !== g ? (A = /* @__PURE__ */ (0, z.jsx)("textarea", {
+	t[23] !== b || t[24] !== l || t[25] !== k || t[26] !== g ? (A = /* @__PURE__ */ (0, z.jsx)("textarea", {
 		ref: v,
 		value: g,
 		name: "textarea",
@@ -856,9 +856,9 @@ var Te = {
 		style: k,
 		onKeyDown: b,
 		onChange: S
-	}, n), t[23] = n, t[24] = b, t[25] = l, t[26] = k, t[27] = g, t[28] = A) : A = t[28];
+	}), t[23] = b, t[24] = l, t[25] = k, t[26] = g, t[27] = A) : A = t[27];
 	let j;
-	t[29] !== h || t[30] !== E || t[31] !== p || t[32] !== O || t[33] !== A ? (j = /* @__PURE__ */ (0, z.jsxs)(B, {
+	t[28] !== h || t[29] !== E || t[30] !== p || t[31] !== O || t[32] !== A ? (j = /* @__PURE__ */ (0, z.jsxs)(B, {
 		horizontal: !0,
 		border: h,
 		align: "middle left",
@@ -867,13 +867,13 @@ var Te = {
 		className: E,
 		...p,
 		children: [O, A]
-	}), t[29] = h, t[30] = E, t[31] = p, t[32] = O, t[33] = A, t[34] = j) : j = t[34];
+	}), t[28] = h, t[29] = E, t[30] = p, t[31] = O, t[32] = A, t[33] = j) : j = t[33];
 	let M;
-	return t[35] !== s || t[36] !== j ? (M = /* @__PURE__ */ (0, z.jsx)(Ge, {
+	return t[34] !== s || t[35] !== j ? (M = /* @__PURE__ */ (0, z.jsx)(Ge, {
 		flex: !0,
 		label: s,
 		children: j
-	}), t[35] = s, t[36] = j, t[37] = M) : M = t[37], M;
+	}), t[34] = s, t[35] = j, t[36] = M) : M = t[36], M;
 };
 function De(e) {
 	return e;
