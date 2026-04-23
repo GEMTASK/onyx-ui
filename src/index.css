@@ -10,4 +10,6 @@
   --selected-color: hsl(205, 100%, 95.29%);
   --highlight-color: #fff3bf;
   --default-font: 'New Times Roman';
+
+  --_14px-font-margin: -4px 0 -4px 0;
 }

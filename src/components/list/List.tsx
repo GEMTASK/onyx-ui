@@ -4,11 +4,12 @@ import type { Delegate } from "../../types/Delegate";
 import { View, Divider } from "..";
 
 function List({
-  children
+  children,
+  ...props
 }: Delegate<object, typeof View<"div">>) {
   return (
-    <View border cornerRadius="4px" style={{ overflow: "hidden" }}>
-      {React.Children.map(children, (child, index) => (
+    <View border cornerRadius="4px" style={{ overflow: "hidden" }} {...props}>
+      {React.Children.map(children, (child, index) => React.isValidElement(child) && (
         <React.Fragment key={index}>
           {index > 0 && (
             <Divider />
