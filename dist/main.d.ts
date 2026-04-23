@@ -1,8 +1,8 @@
-export { Hello } from './components';
 export { View } from './components';
 export { Text } from './components';
-export { Button } from './components';
 export { Icon } from './components';
+export { Button } from './components';
+export { Input } from './components';
 export { Divider } from './components';
 export { List } from './components';
 export { Popover } from './components';
