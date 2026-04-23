@@ -6,8 +6,6 @@ import { createPortal } from "react-dom";
 import type { Delegate } from "../../types/Delegate";
 import { View } from "..";
 
-import styles from "./Popover.module.scss";
-
 function Popover({
   content,
   isVisible,
@@ -21,7 +19,7 @@ function Popover({
   noPortal?: boolean,
   children: React.ReactElement<{
     ref: React.RefObject<HTMLElement | null>,
-    className?: string,
+    opacityOnPress?: boolean,
   }> | boolean,
 }, typeof View<"div">>) {
   const childElementRef = useRef<HTMLDivElement>(null);
@@ -77,7 +75,7 @@ function Popover({
     <>
       {React.isValidElement(onlyChild) && React.cloneElement(onlyChild, {
         ref: childElementRef,
-        className: [styles.children, onlyChild.props.className].filter(className => className).join(" ")
+        opacityOnPress: true
       })}
       {noPortal && isVisible && overlayElement && (
         popoverContent

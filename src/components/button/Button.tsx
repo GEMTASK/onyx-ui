@@ -56,6 +56,7 @@ function Button({
   fontWeight,
   selected,
   //
+  opacityOnPress,
   className,
   children,
   ...props
