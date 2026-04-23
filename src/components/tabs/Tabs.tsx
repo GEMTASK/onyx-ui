@@ -64,4 +64,20 @@ function Tabs({
   );
 }
 
+Tabs.Panel = function ({
+  active,
+  children,
+  ...props
+}: Delegate<{
+  active: boolean,
+}, typeof View<"div">>) {
+  return (
+    <View padding="16px" style={{ flexShrink: 0, flexBasis: "100%", overflowY: "auto", scrollSnapAlign: "start" }} {...props}>
+      {active && (
+        children
+      )}
+    </View>
+  );
+};
+
 export default Tabs;

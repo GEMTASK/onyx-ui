@@ -1385,6 +1385,19 @@ function Ze(e) {
 		children: o
 	}), t[12] = i, t[13] = o, t[14] = s) : s = t[14], s;
 }
+Ze.Panel = function({ active: e, children: t, ...n }) {
+	return /* @__PURE__ */ (0, z.jsx)(B, {
+		padding: "16px",
+		style: {
+			flexShrink: 0,
+			flexBasis: "100%",
+			overflowY: "auto",
+			scrollSnapAlign: "start"
+		},
+		...n,
+		children: e && t
+	});
+};
 //#endregion
 //#region node_modules/comma-separated-tokens/index.js
 function Qe(e, t) {
