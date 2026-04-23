@@ -66,6 +66,7 @@ const Input = ({
           <Icon icon={icon} size={20} />
         )}
         <textarea
+          key={_value}
           ref={textAreaElementRef}
           value={value}
           name="textarea"
