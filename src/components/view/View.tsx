@@ -5,7 +5,7 @@ import type { Padding } from "../../types/Padding";
 import type { Delegate } from "../../types/Delegate";
 import type { Color } from "../../types/Color";
 
-import styles from "./View.module.css";
+import styles from "./View.module.scss";
 import fillColorStyles from "../../styles/fillColor.module.scss";
 import paddingStyles from "../../styles/padding.module.scss";
 import spacingStyles from "../../styles/spacing.module.scss";
@@ -30,6 +30,7 @@ function View<TDelegate extends React.ElementType = "div">({
   horizontal,
   absolute,
   sticky,
+  opacityOnPress,
   zIndex,
   shadow,
   cursor,
@@ -52,6 +53,7 @@ function View<TDelegate extends React.ElementType = "div">({
   horizontal?: boolean,
   absolute?: boolean,
   sticky?: boolean,
+  opacityOnPress?: boolean,
   zIndex?: 1 | 2 | 3,
   shadow?: boolean | "light" | "heavy",
   cursor?: "pointer",
@@ -72,6 +74,7 @@ function View<TDelegate extends React.ElementType = "div">({
     wrap && styles.wrap,
     absolute && styles.absolute,
     sticky && styles.sticky,
+    opacityOnPress && styles.opacityOnPress,
     zIndex && styles[`zindex_${zIndex}`],
     horizontal && styles.horizontal,
     shadow === "heavy" ? styles.heavyShadow : shadow && styles.shadow,

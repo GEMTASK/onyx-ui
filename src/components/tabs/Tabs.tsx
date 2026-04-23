@@ -18,6 +18,7 @@ function Tab({
 
   return (
     <Text
+      opacityOnPress
       light={!selected}
       fontSize="18px"
       cursor="pointer"

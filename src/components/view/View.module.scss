@@ -26,6 +26,12 @@
   z-index: 1;
 }
 
+.opacityOnPress {
+  &:active {
+    opacity: 0.6;
+  }
+}
+
 .zindex_1 {
   z-index: 1;
 }
