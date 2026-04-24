@@ -47,6 +47,12 @@ const Input = ({
     setValue(event.currentTarget.value);
   };
 
+  const handleBlur = () => {
+    if (value) {
+      onValueChange?.(value);
+    }
+  };
+
   useLayoutEffect(() => {
     if (textAreaElementRef.current) {
       textAreaElementRef.current.style.height = "";
@@ -73,6 +79,7 @@ const Input = ({
           style={{ background: "transparent", ...innerStyle }}
           onKeyDown={handleKeyDown}
           onChange={handleChange}
+          onBlur={handleBlur}
         />
       </View>
     </Label>

@@ -2,7 +2,7 @@ import * as e from "react";
 import t, { cloneElement as n, createContext as r, createElement as i, forwardRef as a, isValidElement as o, useContext as s, useEffect as c, useImperativeHandle as l, useLayoutEffect as u, useRef as d, useState as f } from "react";
 import { createPortal as p } from "react-dom";
 //#region \0rolldown/runtime.js
-var m = Object.create, h = Object.defineProperty, g = Object.getOwnPropertyDescriptor, _ = Object.getOwnPropertyNames, v = Object.getPrototypeOf, y = Object.prototype.hasOwnProperty, b = (e, t) => () => (t || (e((t = { exports: {} }).exports, t), e = null), t.exports), x = (e, t) => {
+var m = Object.create, h = Object.defineProperty, g = Object.getOwnPropertyDescriptor, _ = Object.getOwnPropertyNames, v = Object.getPrototypeOf, y = Object.prototype.hasOwnProperty, b = (e, t) => () => (t || e((t = { exports: {} }).exports, t), t.exports), x = (e, t) => {
 	let n = {};
 	for (var r in e) h(n, r, {
 		get: e[r],
@@ -824,7 +824,7 @@ var Ee = {
 	Input: "_onyx-ui_Input_MpxTL",
 	flush: "_onyx-ui_flush_4zQD9"
 }, De = (e) => {
-	let t = (0, D.c)(37), n, r, i, a, o, s, c, l, p, m;
+	let t = (0, D.c)(41), n, r, i, a, o, s, c, l, p, m;
 	if (t[0] !== e) {
 		let { label: u, value: d, lines: f, border: h, flush: g, icon: _, placeholder: v, changeOnEnter: y, innerStyle: b, onValueChange: x, ...S } = e;
 		s = u, n = d, m = h, i = g, a = _, l = v, r = y, o = b, c = x, p = S, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o, t[6] = s, t[7] = c, t[8] = l, t[9] = p, t[10] = m;
@@ -839,48 +839,53 @@ var Ee = {
 		_(e.currentTarget.value);
 	}, t[15] = x) : x = t[15];
 	let S = x, C;
-	t[16] === Symbol.for("react.memo_cache_sentinel") ? (C = () => {
+	t[16] !== c || t[17] !== g ? (C = () => {
+		g && c?.(g);
+	}, t[16] = c, t[17] = g, t[18] = C) : C = t[18];
+	let w = C, T;
+	t[19] === Symbol.for("react.memo_cache_sentinel") ? (T = () => {
 		v.current && (v.current.style.height = "", v.current.style.height = `${v.current.scrollHeight}px`);
-	}, t[16] = C) : C = t[16], u(C);
-	let w = i && Ee.flush, T;
-	t[17] === w ? T = t[18] : (T = [Ee.Input, w].filter(Oe), t[17] = w, t[18] = T);
-	let E = T.join(" "), O;
-	t[19] === a ? O = t[20] : (O = a && /* @__PURE__ */ (0, z.jsx)(ye, {
+	}, t[19] = T) : T = t[19], u(T);
+	let E = i && Ee.flush, O;
+	t[20] === E ? O = t[21] : (O = [Ee.Input, E].filter(Oe), t[20] = E, t[21] = O);
+	let k = O.join(" "), A;
+	t[22] === a ? A = t[23] : (A = a && /* @__PURE__ */ (0, z.jsx)(ye, {
 		icon: a,
 		size: 20
-	}), t[19] = a, t[20] = O);
-	let k;
-	t[21] === o ? k = t[22] : (k = {
+	}), t[22] = a, t[23] = A);
+	let j;
+	t[24] === o ? j = t[25] : (j = {
 		background: "transparent",
 		...o
-	}, t[21] = o, t[22] = k);
-	let A;
-	t[23] !== b || t[24] !== l || t[25] !== k || t[26] !== g ? (A = /* @__PURE__ */ (0, z.jsx)("textarea", {
+	}, t[24] = o, t[25] = j);
+	let M;
+	t[26] !== w || t[27] !== b || t[28] !== l || t[29] !== j || t[30] !== g ? (M = /* @__PURE__ */ (0, z.jsx)("textarea", {
 		ref: v,
 		value: g,
 		name: "textarea",
 		placeholder: l,
-		style: k,
+		style: j,
 		onKeyDown: b,
-		onChange: S
-	}), t[23] = b, t[24] = l, t[25] = k, t[26] = g, t[27] = A) : A = t[27];
-	let j;
-	t[28] !== h || t[29] !== E || t[30] !== p || t[31] !== O || t[32] !== A ? (j = /* @__PURE__ */ (0, z.jsxs)(B, {
+		onChange: S,
+		onBlur: w
+	}), t[26] = w, t[27] = b, t[28] = l, t[29] = j, t[30] = g, t[31] = M) : M = t[31];
+	let N;
+	t[32] !== h || t[33] !== k || t[34] !== p || t[35] !== M || t[36] !== A ? (N = /* @__PURE__ */ (0, z.jsxs)(B, {
 		horizontal: !0,
 		border: h,
 		align: "middle left",
 		padding: "4px 8px",
 		spacing: "4px",
-		className: E,
+		className: k,
 		...p,
-		children: [O, A]
-	}), t[28] = h, t[29] = E, t[30] = p, t[31] = O, t[32] = A, t[33] = j) : j = t[33];
-	let M;
-	return t[34] !== s || t[35] !== j ? (M = /* @__PURE__ */ (0, z.jsx)(Ge, {
+		children: [A, M]
+	}), t[32] = h, t[33] = k, t[34] = p, t[35] = M, t[36] = A, t[37] = N) : N = t[37];
+	let P;
+	return t[38] !== s || t[39] !== N ? (P = /* @__PURE__ */ (0, z.jsx)(Ge, {
 		flex: !0,
 		label: s,
-		children: j
-	}), t[34] = s, t[35] = j, t[36] = M) : M = t[36], M;
+		children: N
+	}), t[38] = s, t[39] = N, t[40] = P) : P = t[40], P;
 };
 function Oe(e) {
 	return e;
@@ -3631,7 +3636,6 @@ function Mr(e) {
 	return e !== 96 || this.events[this.events.length - 1][1].type === "characterEscape";
 }
 function Nr(e, t, n) {
-	this;
 	let r = 0, i, a;
 	return o;
 	function o(t) {
@@ -5517,13 +5521,13 @@ function ba(e, t) {
 	}
 }
 function xa(e, t) {
-	throw Error(e ? "Cannot close `" + e.type + "` (" + Gt({
+	throw e ? Error("Cannot close `" + e.type + "` (" + Gt({
 		start: e.start,
 		end: e.end
 	}) + "): a different token (`" + t.type + "`, " + Gt({
 		start: t.start,
 		end: t.end
-	}) + ") is open" : "Cannot close document, a token (`" + t.type + "`, " + Gt({
+	}) + ") is open") : Error("Cannot close document, a token (`" + t.type + "`, " + Gt({
 		start: t.start,
 		end: t.end
 	}) + ") is still open");
