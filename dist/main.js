@@ -2,7 +2,7 @@ import * as e from "react";
 import t, { cloneElement as n, createContext as r, createElement as i, forwardRef as a, isValidElement as o, useContext as s, useEffect as c, useImperativeHandle as l, useLayoutEffect as u, useRef as d, useState as f } from "react";
 import { createPortal as p } from "react-dom";
 //#region \0rolldown/runtime.js
-var m = Object.create, h = Object.defineProperty, g = Object.getOwnPropertyDescriptor, _ = Object.getOwnPropertyNames, v = Object.getPrototypeOf, y = Object.prototype.hasOwnProperty, b = (e, t) => () => (t || e((t = { exports: {} }).exports, t), t.exports), x = (e, t) => {
+var m = Object.create, h = Object.defineProperty, g = Object.getOwnPropertyDescriptor, _ = Object.getOwnPropertyNames, v = Object.getPrototypeOf, y = Object.prototype.hasOwnProperty, b = (e, t) => () => (t || (e((t = { exports: {} }).exports, t), e = null), t.exports), x = (e, t) => {
 	let n = {};
 	for (var r in e) h(n, r, {
 		get: e[r],
@@ -3636,6 +3636,7 @@ function Mr(e) {
 	return e !== 96 || this.events[this.events.length - 1][1].type === "characterEscape";
 }
 function Nr(e, t, n) {
+	this;
 	let r = 0, i, a;
 	return o;
 	function o(t) {
@@ -5521,13 +5522,13 @@ function ba(e, t) {
 	}
 }
 function xa(e, t) {
-	throw e ? Error("Cannot close `" + e.type + "` (" + Gt({
+	throw Error(e ? "Cannot close `" + e.type + "` (" + Gt({
 		start: e.start,
 		end: e.end
 	}) + "): a different token (`" + t.type + "`, " + Gt({
 		start: t.start,
 		end: t.end
-	}) + ") is open") : Error("Cannot close document, a token (`" + t.type + "`, " + Gt({
+	}) + ") is open" : "Cannot close document, a token (`" + t.type + "`, " + Gt({
 		start: t.start,
 		end: t.end
 	}) + ") is still open");
