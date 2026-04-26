@@ -1,9 +1,10 @@
-import { Camera as CameraIcon } from "lucide-react";
+import { type LucideIcon } from "lucide-react";
 
 import styles from "./Icon.module.scss";
 import textColorStyles from "../../styles/textColor.module.scss";
 
 function Icon({
+  ref,
   light,
   icon: Component,
   color = "gray-7",
@@ -12,10 +13,10 @@ function Icon({
   ...props
 }: {
   light?: boolean,
-  icon: typeof CameraIcon,
-  color?: React.ComponentProps<typeof CameraIcon>["color"],
-  size?: React.ComponentProps<typeof CameraIcon>["size"],
-} & React.ComponentProps<typeof CameraIcon>) {
+  icon: LucideIcon,
+  color?: React.ComponentProps<LucideIcon>["color"],
+  size?: React.ComponentProps<LucideIcon>["size"],
+} & React.ComponentProps<LucideIcon>) {
   const iconClassName = [
     styles.Icon,
     color && textColorStyles[color],

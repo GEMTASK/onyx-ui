@@ -20,7 +20,7 @@ export default defineConfig({
       // ]
       plugins: [
         esmExternalRequirePlugin({
-          external: ["react", "react-dom"]
+          external: ["react", "react-dom", "lucide-react"]
         })
       ]
     }
