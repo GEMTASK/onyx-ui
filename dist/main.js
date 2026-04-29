@@ -533,7 +533,8 @@ var V = {
 	select: "_onyx-ui_select_ky1qN",
 	light: "_onyx-ui_light_IbzVh",
 	lighter: "_onyx-ui_lighter_DTRvS",
-	caps: "_onyx-ui_caps_Gy2yt"
+	caps: "_onyx-ui_caps_Gy2yt",
+	ellipsis: "_onyx-ui_ellipsis_31RAb"
 }, ne = {
 	_12px: "_onyx-ui__12px_BF6bk",
 	_14px: "_onyx-ui__14px_3aMJ0",
@@ -565,56 +566,57 @@ var V = {
 	"blue-5": "_onyx-ui_blue-5_t3PoA"
 }, ae = t.createContext({ textParent: !1 });
 function H(e) {
-	let t = (0, D.c)(43), n, r, i, o, s, c, l, u, d, f, p;
-	t[0] === e ? (n = t[1], r = t[2], i = t[3], o = t[4], s = t[5], c = t[6], l = t[7], u = t[8], d = t[9], f = t[10], p = t[11]) : ({as: n, select: f, light: u, caps: i, bold: r, fontSize: s, fontWeight: c, textColor: p, innerStyle: l, children: o, ...d} = e, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = o, t[5] = s, t[6] = c, t[7] = l, t[8] = u, t[9] = d, t[10] = f, t[11] = p);
-	let { textParent: m } = a(ae), h = r && re.bold, g = u && V.light, _ = i && V.caps, v = s && ne[`_${s}`], y = c && re[`_${c}`], b = p && ie[p], x;
-	t[12] !== h || t[13] !== g || t[14] !== _ || t[15] !== v || t[16] !== y || t[17] !== b ? (x = [
-		h,
+	let t = (0, D.c)(45), n, r, i, o, s, c, l, u, d, f, p, m;
+	t[0] === e ? (n = t[1], r = t[2], i = t[3], o = t[4], s = t[5], c = t[6], l = t[7], u = t[8], d = t[9], f = t[10], p = t[11], m = t[12]) : ({as: n, light: d, caps: i, bold: r, select: p, ellipsis: s, fontSize: c, fontWeight: l, textColor: m, innerStyle: u, children: o, ...f} = e, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = o, t[5] = s, t[6] = c, t[7] = l, t[8] = u, t[9] = d, t[10] = f, t[11] = p, t[12] = m);
+	let { textParent: h } = a(ae), g = r && re.bold, _ = d && V.light, v = i && V.caps, y = c && ne[`_${c}`], b = l && re[`_${l}`], x = m && ie[m], S;
+	t[13] !== g || t[14] !== _ || t[15] !== v || t[16] !== y || t[17] !== b || t[18] !== x ? (S = [
 		g,
 		_,
 		v,
 		y,
-		b
-	].filter(se), t[12] = h, t[13] = g, t[14] = _, t[15] = v, t[16] = y, t[17] = b, t[18] = x) : x = t[18];
-	let S = x.join(" ");
-	if (m) {
+		b,
+		x
+	].filter(se), t[13] = g, t[14] = _, t[15] = v, t[16] = y, t[17] = b, t[18] = x, t[19] = S) : S = t[19];
+	let C = S.join(" ");
+	if (h) {
 		let e = n ?? "span", r;
-		return t[19] !== e || t[20] !== o || t[21] !== d || t[22] !== S ? (r = /* @__PURE__ */ (0, z.jsx)(e, {
-			className: S,
-			...d,
+		return t[20] !== e || t[21] !== o || t[22] !== f || t[23] !== C ? (r = /* @__PURE__ */ (0, z.jsx)(e, {
+			className: C,
+			...f,
 			children: o
-		}), t[19] = e, t[20] = o, t[21] = d, t[22] = S, t[23] = r) : r = t[23], r;
+		}), t[20] = e, t[21] = o, t[22] = f, t[23] = C, t[24] = r) : r = t[24], r;
 	}
-	let C = f && V.select, w = u && s === "18px" ? V.lighter : u && V.light, T = i && V.caps, E = r && re._600, O = s && ne[`_${s}`] || ne._14px, k = c && re[`_${c}`], A = p && ie[p] || ie.text, j;
-	t[24] !== T || t[25] !== E || t[26] !== O || t[27] !== k || t[28] !== A || t[29] !== C || t[30] !== w ? (j = [
+	let w = p && V.select, T = s && V.ellipsis, E = d && c === "18px" ? V.lighter : d && V.light, O = i && V.caps, k = r && re._600, A = c && ne[`_${c}`] || ne._14px, j = l && re[`_${l}`], M = m && ie[m] || ie.text, N;
+	t[25] !== E || t[26] !== O || t[27] !== k || t[28] !== A || t[29] !== j || t[30] !== M || t[31] !== w || t[32] !== T ? (N = [
 		V.Text,
-		C,
 		w,
 		T,
 		E,
 		O,
 		k,
-		A
-	].filter(oe), t[24] = T, t[25] = E, t[26] = O, t[27] = k, t[28] = A, t[29] = C, t[30] = w, t[31] = j) : j = t[31];
-	let M = j.join(" "), N = n, P = M + " " + S, F;
-	t[32] === Symbol.for("react.memo_cache_sentinel") ? (F = { textParent: !0 }, t[32] = F) : F = t[32];
-	let I;
-	t[33] === o ? I = t[34] : (I = /* @__PURE__ */ (0, z.jsx)(ae, {
-		value: F,
-		children: o
-	}), t[33] = o, t[34] = I);
-	let L;
-	t[35] !== l || t[36] !== P || t[37] !== I ? (L = /* @__PURE__ */ (0, z.jsx)("span", {
-		className: P,
-		style: l,
-		children: I
-	}), t[35] = l, t[36] = P, t[37] = I, t[38] = L) : L = t[38];
+		A,
+		j,
+		M
+	].filter(oe), t[25] = E, t[26] = O, t[27] = k, t[28] = A, t[29] = j, t[30] = M, t[31] = w, t[32] = T, t[33] = N) : N = t[33];
+	let P = N.join(" "), F = n, I = P + " " + C, L;
+	t[34] === Symbol.for("react.memo_cache_sentinel") ? (L = { textParent: !0 }, t[34] = L) : L = t[34];
 	let R;
-	return t[39] !== d || t[40] !== N || t[41] !== L ? (R = /* @__PURE__ */ (0, z.jsx)(B, {
-		as: N,
-		...d,
-		children: L
-	}), t[39] = d, t[40] = N, t[41] = L, t[42] = R) : R = t[42], R;
+	t[35] === o ? R = t[36] : (R = /* @__PURE__ */ (0, z.jsx)(ae, {
+		value: L,
+		children: o
+	}), t[35] = o, t[36] = R);
+	let ee;
+	t[37] !== u || t[38] !== I || t[39] !== R ? (ee = /* @__PURE__ */ (0, z.jsx)("span", {
+		className: I,
+		style: u,
+		children: R
+	}), t[37] = u, t[38] = I, t[39] = R, t[40] = ee) : ee = t[40];
+	let te;
+	return t[41] !== f || t[42] !== F || t[43] !== ee ? (te = /* @__PURE__ */ (0, z.jsx)(B, {
+		as: F,
+		...f,
+		children: ee
+	}), t[41] = f, t[42] = F, t[43] = ee, t[44] = te) : te = t[44], te;
 }
 function oe(e) {
 	return e;
@@ -3597,6 +3599,7 @@ function Cr(e) {
 	return e !== 96 || this.events[this.events.length - 1][1].type === "characterEscape";
 }
 function wr(e, t, n) {
+	this;
 	let r = 0, i, a;
 	return o;
 	function o(t) {

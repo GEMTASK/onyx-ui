@@ -18,10 +18,11 @@ const TextContext = React.createContext<TextContext>({
 
 function Text<TDelegate extends React.ElementType = "div">({
   as,
-  select,
   light,
   caps,
   bold,
+  select,
+  ellipsis,
   fontSize,
   fontWeight,
   textColor,
@@ -34,6 +35,7 @@ function Text<TDelegate extends React.ElementType = "div">({
   caps?: boolean,
   bold?: boolean,
   select?: boolean,
+  ellipsis?: boolean,
   fontSize?: "12px" | "14px" | "18px" | "24px" | "32px",
   fontWeight?: false | "300" | "400" | "500" | "600" | "700",
   textColor?: false | Color,
@@ -69,6 +71,7 @@ function Text<TDelegate extends React.ElementType = "div">({
   const textClassName = [
     styles.Text,
     select && styles.select,
+    ellipsis && styles.ellipsis,
     light && fontSize === "18px" ? styles.lighter : light && styles.light,
     caps && styles.caps,
     bold && fontWeightStyles._600,
