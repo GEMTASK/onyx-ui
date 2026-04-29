@@ -15,11 +15,13 @@ function Avatar({
   label?: string,
   imageOnly?: boolean,
 }, typeof View<"div">>) {
+  const initials = name?.split(" ").map(name => name[0].toUpperCase()).join("");
+
   return (
     <View horizontal spacing="8px" {...props}>
       <View cornerRadius="max" fillColor="icon" align="middle center" className={styles.Image}>
-        <Text fontWeight="500">
-          SC
+        <Text fontSize="12px" fontWeight="600">
+          {initials}
         </Text>
       </View>
       {!imageOnly && (
@@ -40,13 +42,18 @@ Avatar.Stack = function ({
     className: string,
   }>[],
 }, typeof View<"div">>) {
+  const avatarCount = React.Children.count(children);
+
   return (
-    <View horizontal {...props}>
+    <View horizontal className={styles.Stack} {...props}>
       {React.Children.map(children, child => (
         React.isValidElement(child) && React.cloneElement(child, {
           className: styles.StackItem
         })
       ))}
+      {avatarCount === 0 && (
+        <View cornerRadius="max" className={styles.Image} style={{ border: "1px dashed var(--divider-color)" }} />
+      )}
     </View>
   );
 };
