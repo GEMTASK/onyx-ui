@@ -572,7 +572,8 @@ var V = {
 	"violet-2": "_onyx-ui_violet-2_Rb1tU",
 	"blue-2": "_onyx-ui_blue-2_9hso7",
 	"teal-2": "_onyx-ui_teal-2_jHoty",
-	"lime-3": "_onyx-ui_lime-3_H6TLo"
+	"lime-3": "_onyx-ui_lime-3_H6TLo",
+	"orange-4": "_onyx-ui_orange-4_vZWWW"
 }, ie = t.createContext({ textParent: !1 });
 function U(e) {
 	let t = (0, D.c)(45), n, r, i, o, s, c, l, u, d, f, p, m;
