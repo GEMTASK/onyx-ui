@@ -1268,7 +1268,7 @@ function Le(e) {
 	let p;
 	t[12] !== n || t[13] !== d || t[14] !== f ? (p = /* @__PURE__ */ (0, z.jsx)(B, {
 		border: n,
-		borderColor: "divider",
+		borderColor: "primary",
 		cornerRadius: "max",
 		fillColor: "icon",
 		align: "middle center",

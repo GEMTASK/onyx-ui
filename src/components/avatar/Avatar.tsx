@@ -26,7 +26,7 @@ function Avatar({
 
   return (
     <View horizontal spacing="8px" {...props}>
-      <View border={imageBorder} borderColor="divider" cornerRadius="max" fillColor="icon" align="middle center" className={imageClassName}>
+      <View border={imageBorder} borderColor="primary" cornerRadius="max" fillColor="icon" align="middle center" className={imageClassName}>
         <Text fontSize="12px" fontWeight="600">
           {initials}
         </Text>
