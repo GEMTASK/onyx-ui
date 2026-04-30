@@ -9,9 +9,10 @@ declare function Avatar({ name, label, imageOnly, imageBorder, ...props }: Deleg
 }, typeof View<"div">>): import("react/jsx-runtime").JSX.Element;
 declare namespace Avatar {
     var Stack: ({ children, ...props }: Delegate<{
-        children: React.ReactElement<{
-            className: string;
-        }>[];
+        children: Children;
     }, typeof View<"div">>) => import("react/jsx-runtime").JSX.Element;
 }
+type Children = boolean | React.ReactElement<{
+    className: string;
+}> | Children[];
 export default Avatar;

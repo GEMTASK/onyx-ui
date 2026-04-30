@@ -41,13 +41,15 @@ function Avatar({
   );
 }
 
+type Children = boolean | React.ReactElement<{
+  className: string,
+}> | Children[];
+
 Avatar.Stack = function ({
   children,
   ...props
 }: Delegate<{
-  children: React.ReactElement<{
-    className: string,
-  }>[],
+  children: Children,
 }, typeof View<"div">>) {
   const childrenArray = React.Children.toArray(children);
 
