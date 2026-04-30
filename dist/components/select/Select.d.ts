@@ -2,6 +2,7 @@ import { Delegate } from '../../types/Delegate';
 import { Menu } from '..';
 type OptionValueBase = {
     icon?: React.ComponentProps<typeof Menu.Item>["icon"];
+    iconColor?: React.ComponentProps<typeof Menu.Item>["iconColor"];
     label: React.ComponentProps<typeof Menu.Item>["title"];
     value: string | null | undefined;
 };

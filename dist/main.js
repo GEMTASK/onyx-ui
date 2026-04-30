@@ -563,7 +563,12 @@ var V = {
 	"gray-7": "_onyx-ui_gray-7_rSy7P",
 	"gray-8": "_onyx-ui_gray-8_JlZRp",
 	"gray-9": "_onyx-ui_gray-9_goyha",
-	"blue-5": "_onyx-ui_blue-5_t3PoA"
+	"blue-5": "_onyx-ui_blue-5_t3PoA",
+	"indigo-4": "_onyx-ui_indigo-4_vZJ3E",
+	"green-4": "_onyx-ui_green-4_Nb9c2",
+	"red-4": "_onyx-ui_red-4_ng-uw",
+	"grape-4": "_onyx-ui_grape-4_Vu5AE",
+	"cyan-4": "_onyx-ui_cyan-4_ewydl"
 }, ae = t.createContext({ textParent: !1 });
 function H(e) {
 	let t = (0, D.c)(45), n, r, i, o, s, c, l, u, d, f, p, m;
@@ -673,48 +678,48 @@ var de = {
 	}
 };
 function me(e) {
-	let t = (0, D.c)(59), n, r, i, o, u, d, f, p, m, h, g, _, v;
+	let t = (0, D.c)(61), n, r, i, o, u, d, f, p, m, h, g, _, v, y;
 	if (t[0] !== e) {
-		let { ref: a, solid: s, primary: c, hover: l, icon: y, rightIcon: b, round: x, bold: S, fontWeight: C, selected: w, opacityOnPress: T, className: E, children: D, ...O } = e;
-		p = a, _ = s, d = c, o = l, u = y, m = b, h = x, v = S, i = C, g = w, r = E, n = D, f = O, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = o, t[5] = u, t[6] = d, t[7] = f, t[8] = p, t[9] = m, t[10] = h, t[11] = g, t[12] = _, t[13] = v;
-	} else n = t[1], r = t[2], i = t[3], o = t[4], u = t[5], d = t[6], f = t[7], p = t[8], m = t[9], h = t[10], g = t[11], _ = t[12], v = t[13];
-	let y = v === void 0 ? !0 : v, b = l(null), x = _ && de.solid, S = d && de.primary, C = o && de.hover, w = g && de.selected, T;
-	t[14] !== r || t[15] !== x || t[16] !== S || t[17] !== C || t[18] !== w ? (T = [
+		let { ref: a, solid: s, primary: c, hover: l, icon: b, iconColor: x, rightIcon: S, round: C, bold: w, fontWeight: T, selected: E, opacityOnPress: D, className: O, children: k, ...A } = e;
+		m = a, v = s, f = c, o = l, u = b, d = x, h = S, g = C, y = w, i = T, _ = E, r = O, n = k, p = A, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = o, t[5] = u, t[6] = d, t[7] = f, t[8] = p, t[9] = m, t[10] = h, t[11] = g, t[12] = _, t[13] = v, t[14] = y;
+	} else n = t[1], r = t[2], i = t[3], o = t[4], u = t[5], d = t[6], f = t[7], p = t[8], m = t[9], h = t[10], g = t[11], _ = t[12], v = t[13], y = t[14];
+	let b = y === void 0 ? !0 : y, x = l(null), S = v && de.solid, C = f && de.primary, w = o && de.hover, T = _ && de.selected, E;
+	t[15] !== r || t[16] !== S || t[17] !== C || t[18] !== w || t[19] !== T ? (E = [
 		de.Button,
-		x,
 		S,
 		C,
 		w,
+		T,
 		r
-	].filter(he), t[14] = r, t[15] = x, t[16] = S, t[17] = C, t[18] = w, t[19] = T) : T = t[19];
-	let E = T.join(" "), { parentFillColor: O } = a(ee), k;
-	t[20] !== o || t[21] !== O || t[22] !== d || t[23] !== g || t[24] !== _ ? (k = fe({
-		parentFillColor: O,
-		solid: _,
-		primary: d,
+	].filter(he), t[15] = r, t[16] = S, t[17] = C, t[18] = w, t[19] = T, t[20] = E) : E = t[20];
+	let O = E.join(" "), { parentFillColor: k } = a(ee), A;
+	t[21] !== o || t[22] !== k || t[23] !== f || t[24] !== _ || t[25] !== v ? (A = fe({
+		parentFillColor: k,
+		solid: v,
+		primary: f,
 		hover: o,
-		selected: g
-	}), t[20] = o, t[21] = O, t[22] = d, t[23] = g, t[24] = _, t[25] = k) : k = t[25];
-	let A = k, j;
-	t[26] !== o || t[27] !== d || t[28] !== g || t[29] !== _ ? (j = pe({
-		solid: _,
-		primary: d,
+		selected: _
+	}), t[21] = o, t[22] = k, t[23] = f, t[24] = _, t[25] = v, t[26] = A) : A = t[26];
+	let j = A, M;
+	t[27] !== o || t[28] !== f || t[29] !== _ || t[30] !== v ? (M = pe({
+		solid: v,
+		primary: f,
 		hover: o,
-		selected: g
-	}), t[26] = o, t[27] = d, t[28] = g, t[29] = _, t[30] = j) : j = t[30];
-	let M = j, N;
-	t[31] === Symbol.for("react.memo_cache_sentinel") ? (N = () => b.current, t[31] = N) : N = t[31], s(p, N);
-	let P;
-	t[32] === O ? P = t[33] : (P = () => {
-		b.current && b.current.style.setProperty("--hover-color", `var(--${O === "panel" ? "icon" : "gutter"}-color)`);
-	}, t[32] = O, t[33] = P);
+		selected: _
+	}), t[27] = o, t[28] = f, t[29] = _, t[30] = v, t[31] = M) : M = t[31];
+	let N = M, P;
+	t[32] === Symbol.for("react.memo_cache_sentinel") ? (P = () => x.current, t[32] = P) : P = t[32], s(m, P);
 	let F;
-	t[34] !== A || t[35] !== O ? (F = [A, O], t[34] = A, t[35] = O, t[36] = F) : F = t[36], c(P, F);
-	let I = n ? "8px 12px" : "8px", L = h ? "max" : "2px", R;
-	t[37] !== n || t[38] !== u || t[39] !== M ? (R = u && /* @__PURE__ */ (0, z.jsx)(le, {
+	t[33] === k ? F = t[34] : (F = () => {
+		x.current && x.current.style.setProperty("--hover-color", `var(--${k === "panel" ? "icon" : "gutter"}-color)`);
+	}, t[33] = k, t[34] = F);
+	let I;
+	t[35] !== j || t[36] !== k ? (I = [j, k], t[35] = j, t[36] = k, t[37] = I) : I = t[37], c(F, I);
+	let L = n ? "8px 12px" : "8px", R = g ? "max" : "2px", te;
+	t[38] !== n || t[39] !== u || t[40] !== d || t[41] !== N ? (te = u && /* @__PURE__ */ (0, z.jsx)(le, {
 		icon: u,
 		size: 16,
-		color: M,
+		color: d ?? N,
 		style: {
 			strokeWidth: 2.5,
 			marginTop: -2,
@@ -722,23 +727,23 @@ function me(e) {
 			marginLeft: n ? 0 : -2,
 			marginRight: 0
 		}
-	}), t[37] = n, t[38] = u, t[39] = M, t[40] = R) : R = t[40];
-	let te;
-	t[41] !== y || t[42] !== n || t[43] !== i || t[44] !== M ? (te = typeof n == "string" ? /* @__PURE__ */ (0, z.jsx)(H, {
-		bold: y,
+	}), t[38] = n, t[39] = u, t[40] = d, t[41] = N, t[42] = te) : te = t[42];
+	let V;
+	t[43] !== b || t[44] !== n || t[45] !== i || t[46] !== N ? (V = typeof n == "string" ? /* @__PURE__ */ (0, z.jsx)(H, {
+		bold: b,
 		fontWeight: i,
-		textColor: M,
+		textColor: N,
 		style: { textAlign: "left" },
 		children: n
-	}) : n, t[41] = y, t[42] = n, t[43] = i, t[44] = M, t[45] = te) : te = t[45];
-	let V;
-	t[46] !== n || t[47] !== m || t[48] !== M ? (V = m && /* @__PURE__ */ (0, z.jsx)(B, {
+	}) : n, t[43] = b, t[44] = n, t[45] = i, t[46] = N, t[47] = V) : V = t[47];
+	let ne;
+	t[48] !== n || t[49] !== h || t[50] !== N ? (ne = h && /* @__PURE__ */ (0, z.jsx)(B, {
 		flex: !0,
 		align: "middle right",
 		children: /* @__PURE__ */ (0, z.jsx)(le, {
-			icon: m,
+			icon: h,
 			size: 16,
-			color: M,
+			color: N,
 			style: {
 				strokeWidth: 2.5,
 				marginTop: -2,
@@ -747,27 +752,27 @@ function me(e) {
 				justifySelf: "flex-end"
 			}
 		})
-	}), t[46] = n, t[47] = m, t[48] = M, t[49] = V) : V = t[49];
-	let ne;
-	return t[50] !== E || t[51] !== A || t[52] !== f || t[53] !== I || t[54] !== L || t[55] !== R || t[56] !== te || t[57] !== V ? (ne = /* @__PURE__ */ (0, z.jsxs)(B, {
-		ref: b,
+	}), t[48] = n, t[49] = h, t[50] = N, t[51] = ne) : ne = t[51];
+	let re;
+	return t[52] !== O || t[53] !== j || t[54] !== p || t[55] !== L || t[56] !== R || t[57] !== te || t[58] !== V || t[59] !== ne ? (re = /* @__PURE__ */ (0, z.jsxs)(B, {
+		ref: x,
 		horizontal: !0,
 		as: "button",
 		type: "button",
 		cursor: "pointer",
-		padding: I,
+		padding: L,
 		spacing: "8px",
 		align: "middle center",
-		cornerRadius: L,
-		fillColor: A,
-		className: E,
-		...f,
+		cornerRadius: R,
+		fillColor: j,
+		className: O,
+		...p,
 		children: [
-			R,
 			te,
-			V
+			V,
+			ne
 		]
-	}), t[50] = E, t[51] = A, t[52] = f, t[53] = I, t[54] = L, t[55] = R, t[56] = te, t[57] = V, t[58] = ne) : ne = t[58], ne;
+	}), t[52] = O, t[53] = j, t[54] = p, t[55] = L, t[56] = R, t[57] = te, t[58] = V, t[59] = ne, t[60] = re) : re = t[60], re;
 }
 function he(e) {
 	return e;
@@ -968,8 +973,8 @@ function Ee(e) {
 		align: "middle left",
 		cornerRadius: "0px",
 		style: d,
-		...a,
 		onClick: u,
+		...a,
 		children: f
 	}), t[14] = u, t[15] = a, t[16] = d, t[17] = f, t[18] = p) : p = t[18], p;
 }
@@ -1105,6 +1110,7 @@ function je({ label: e, value: t, options: n, onValueChange: r, ...i }) {
 						...e.options.map((e) => /* @__PURE__ */ (0, z.jsx)(Ae, {
 							selected: e.value === t,
 							icon: e.icon,
+							iconColor: e.iconColor,
 							label: e.label,
 							value: e.value,
 							onSelect: a
@@ -1114,6 +1120,7 @@ function je({ label: e, value: t, options: n, onValueChange: r, ...i }) {
 					default: return /* @__PURE__ */ (0, z.jsx)(Ae, {
 						selected: e.value === t,
 						icon: e.icon,
+						iconColor: e.iconColor,
 						label: e.label,
 						value: e.value,
 						onSelect: a

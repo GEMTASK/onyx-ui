@@ -6,8 +6,9 @@ type ButtonStyle = {
     hover?: boolean;
     selected?: boolean;
 };
-declare function Button({ ref, solid, primary, hover, icon, rightIcon, round, bold, fontWeight, selected, opacityOnPress, className, children, ...props }: Delegate<{
+declare function Button({ ref, solid, primary, hover, icon, iconColor, rightIcon, round, bold, fontWeight, selected, opacityOnPress, className, children, ...props }: Delegate<{
     icon?: React.ComponentProps<typeof Icon>["icon"];
+    iconColor?: React.ComponentProps<typeof Icon>["color"];
     rightIcon?: React.ComponentProps<typeof Icon>["icon"];
     round?: boolean;
     bold?: boolean;

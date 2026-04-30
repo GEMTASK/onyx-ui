@@ -4,6 +4,7 @@ import { Label, Menu, Text, View } from "..";
 
 type OptionValueBase = {
   icon?: React.ComponentProps<typeof Menu.Item>["icon"],
+  iconColor?: React.ComponentProps<typeof Menu.Item>["iconColor"],
   label: React.ComponentProps<typeof Menu.Item>["title"],
   value: string | null | undefined,
 };
@@ -65,6 +66,7 @@ function Select({
             <SelectOption
               selected={innerOption.value === value}
               icon={innerOption.icon}
+              iconColor={innerOption.iconColor}
               label={innerOption.label}
               value={innerOption.value}
               onSelect={handleOptionSelect}
@@ -79,6 +81,7 @@ function Select({
           <SelectOption
             selected={option.value === value}
             icon={option.icon}
+            iconColor={option.iconColor}
             label={option.label}
             value={option.value}
             onSelect={handleOptionSelect}

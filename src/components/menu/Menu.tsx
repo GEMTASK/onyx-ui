@@ -3,7 +3,11 @@ import React, { cloneElement, isValidElement, useEffect, useRef, useState } from
 import type { Delegate } from "../../types/Delegate";
 import { Button, Divider, Popover, Text, View } from "..";
 
-function MenuGroup({ label }: { label: string }) {
+function MenuGroup({
+  label
+}: {
+  label: string,
+}) {
   return (
     <Text light caps style={{ margin: "8px 16px" }} innerStyle={{ fontSize: 11, lineHeight: "17px", whiteSpace: "nowrap" }}>
       {label}
@@ -41,7 +45,7 @@ function MenuItem({
   };
 
   return (
-    <Button hover align="middle left" cornerRadius="0px" style={{ whiteSpace: "nowrap", ...style }} {...props} onClick={handleClick}>
+    <Button hover align="middle left" cornerRadius="0px" style={{ whiteSpace: "nowrap", ...style }} onClick={handleClick} {...props}>
       {title ?? children}
     </Button>
   );

@@ -50,6 +50,7 @@ function Button({
   hover,
   //
   icon,
+  iconColor,
   rightIcon,
   round,
   bold = true,
@@ -62,6 +63,7 @@ function Button({
   ...props
 }: Delegate<{
   icon?: React.ComponentProps<typeof Icon>["icon"],
+  iconColor?: React.ComponentProps<typeof Icon>["color"],
   rightIcon?: React.ComponentProps<typeof Icon>["icon"],
   round?: boolean,
   bold?: boolean,
@@ -111,7 +113,12 @@ function Button({
       {...props}
     >
       {icon && (
-        <Icon icon={icon} size={16} color={textColor} style={{ strokeWidth: 2.5, marginTop: -2, marginBottom: -2, marginLeft: children ? 0 : -2, marginRight: 0 }} />
+        <Icon
+          icon={icon}
+          size={16}
+          color={iconColor ?? textColor}
+          style={{ strokeWidth: 2.5, marginTop: -2, marginBottom: -2, marginLeft: children ? 0 : -2, marginRight: 0 }}
+        />
       )}
       {typeof children !== "string" ? children : (
         <Text bold={bold} fontWeight={fontWeight} textColor={textColor} style={{ textAlign: "left" }}>
@@ -120,7 +127,12 @@ function Button({
       )}
       {rightIcon && (
         <View flex align="middle right">
-          <Icon icon={rightIcon} size={16} color={textColor} style={{ strokeWidth: 2.5, marginTop: -2, marginBottom: -2, marginRight: children ? -3 : 0, justifySelf: "flex-end" }} />
+          <Icon
+            icon={rightIcon}
+            size={16}
+            color={textColor}
+            style={{ strokeWidth: 2.5, marginTop: -2, marginBottom: -2, marginRight: children ? -3 : 0, justifySelf: "flex-end" }}
+          />
         </View>
       )}
     </View>
