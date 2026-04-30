@@ -3,6 +3,7 @@ import { Menu } from '..';
 type OptionValueBase = {
     icon?: React.ComponentProps<typeof Menu.Item>["icon"];
     iconColor?: React.ComponentProps<typeof Menu.Item>["iconColor"];
+    iconFill?: React.ComponentProps<typeof Menu.Item>["iconFill"];
     label: React.ComponentProps<typeof Menu.Item>["title"];
     value: string | null | undefined;
 };

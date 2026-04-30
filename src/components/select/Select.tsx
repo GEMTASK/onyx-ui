@@ -1,10 +1,11 @@
 import type { Delegate } from "../../types/Delegate";
 
-import { Label, Menu, Text, View } from "..";
+import { Icon, Label, Menu, Text, View } from "..";
 
 type OptionValueBase = {
   icon?: React.ComponentProps<typeof Menu.Item>["icon"],
   iconColor?: React.ComponentProps<typeof Menu.Item>["iconColor"],
+  iconFill?: React.ComponentProps<typeof Menu.Item>["iconFill"],
   label: React.ComponentProps<typeof Menu.Item>["title"],
   value: string | null | undefined,
 };
@@ -67,6 +68,7 @@ function Select({
               selected={innerOption.value === value}
               icon={innerOption.icon}
               iconColor={innerOption.iconColor}
+              iconFill={innerOption.iconFill}
               label={innerOption.label}
               value={innerOption.value}
               onSelect={handleOptionSelect}
@@ -82,6 +84,7 @@ function Select({
             selected={option.value === value}
             icon={option.icon}
             iconColor={option.iconColor}
+            iconFill={option.iconFill}
             label={option.label}
             value={option.value}
             onSelect={handleOptionSelect}
@@ -91,17 +94,24 @@ function Select({
     }
   });
 
+  const option = options.reduce((acc, option) => (
+    "options" in option
+      ? option.options.find(option => option.value === value) ?? acc
+      : option.value === value ? option : acc
+  ), {} as OptionValueBase);
+
   return (
     <View style={{ marginBottom: -9 }}>
       <Menu items={menuItems} {...props}>
         <Label chevron label={label}>
-          <Text style={{ padding: "0 0 8px 0" }}>
-            {options.reduce((acc, option) => (
-              "options" in option
-                ? option.options.find(option => option.value === value) ?? acc
-                : option.value === value ? option : acc
-            ), {} as OptionValueBase).label}
-          </Text>
+          <View horizontal spacing="4px" align="middle left" style={{ padding: "0 0 8px 0" }}>
+            {"icon" in option && option.icon && (
+              <Icon icon={option.icon} color={option.iconColor} fill={option.iconFill ? "currentColor" : "none"} size={14} style={{ margin: "-2px 0" }} />
+            )}
+            <Text>
+              {option.label}
+            </Text>
+          </View>
         </Label>
       </Menu>
     </View>

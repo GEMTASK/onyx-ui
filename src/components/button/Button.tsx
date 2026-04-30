@@ -51,6 +51,7 @@ function Button({
   //
   icon,
   iconColor,
+  iconFill,
   rightIcon,
   round,
   bold = true,
@@ -64,6 +65,7 @@ function Button({
 }: Delegate<{
   icon?: React.ComponentProps<typeof Icon>["icon"],
   iconColor?: React.ComponentProps<typeof Icon>["color"],
+  iconFill?: boolean,
   rightIcon?: React.ComponentProps<typeof Icon>["icon"],
   round?: boolean,
   bold?: boolean,
@@ -117,6 +119,7 @@ function Button({
           icon={icon}
           size={16}
           color={iconColor ?? textColor}
+          fill={iconFill ? "currentColor" : "none"}
           style={{ strokeWidth: 2.5, marginTop: -2, marginBottom: -2, marginLeft: children ? 0 : -2, marginRight: 0 }}
         />
       )}
