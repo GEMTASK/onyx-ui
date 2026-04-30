@@ -9,17 +9,24 @@ function Avatar({
   name,
   label,
   imageOnly,
+  imageBorder,
   ...props
 }: Delegate<{
   name?: string,
   label?: string,
   imageOnly?: boolean,
+  imageBorder?: true,
 }, typeof View<"div">>) {
   const initials = name?.split(" ").map(name => name[0].toUpperCase()).join("");
 
+  const imageClassName = [
+    styles.Image,
+    imageBorder && styles.border
+  ].filter(className => className).join(" ");
+
   return (
     <View horizontal spacing="8px" {...props}>
-      <View cornerRadius="max" fillColor="icon" align="middle center" className={styles.Image}>
+      <View border={imageBorder} borderColor="divider" cornerRadius="max" fillColor="icon" align="middle center" className={imageClassName}>
         <Text fontSize="12px" fontWeight="600">
           {initials}
         </Text>
@@ -42,7 +49,7 @@ Avatar.Stack = function ({
     className: string,
   }>[],
 }, typeof View<"div">>) {
-  const avatarCount = React.Children.count(children);
+  const childrenArray = React.Children.toArray(children);
 
   return (
     <View horizontal className={styles.Stack} {...props}>
@@ -51,7 +58,7 @@ Avatar.Stack = function ({
           className: styles.StackItem
         })
       ))}
-      {avatarCount === 0 && (
+      {childrenArray.length === 0 && (
         <View cornerRadius="max" className={styles.Image} style={{ border: "1px dashed var(--divider-color)" }} />
       )}
     </View>
