@@ -486,12 +486,11 @@ var m = Object.create, h = Object.defineProperty, g = Object.getOwnPropertyDescr
 	process.env.NODE_ENV === "production" ? t.exports = L() : t.exports = R();
 })))(), ee = t.createContext({ parentFillColor: void 0 });
 function B(e) {
-	let t = (0, D.c)(55), n, r, i, a, o, s, c, l, u, d, f, p, m, h, g, _, v, y, b, x, S, C;
-	t[0] === e ? (n = t[1], r = t[2], i = t[3], a = t[4], o = t[5], s = t[6], c = t[7], l = t[8], u = t[9], d = t[10], f = t[11], p = t[12], m = t[13], h = t[14], g = t[15], _ = t[16], v = t[17], y = t[18], b = t[19], x = t[20], S = t[21], C = t[22]) : ({as: i, flex: f, wrap: S, horizontal: p, absolute: n, sticky: b, opacityOnPress: h, zIndex: C, shadow: v, cursor: u, padding: g, spacing: y, border: a, negativeBorder: m, align: r, fillColor: d, borderColor: o, cornerRadius: l, style: x, className: c, children: s, ..._} = e, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o, t[6] = s, t[7] = c, t[8] = l, t[9] = u, t[10] = d, t[11] = f, t[12] = p, t[13] = m, t[14] = h, t[15] = g, t[16] = _, t[17] = v, t[18] = y, t[19] = b, t[20] = x, t[21] = S, t[22] = C);
-	let w = i ?? "div", T = f && O.flex, E = S && O.wrap, L = n && O.absolute, R = b && O.sticky, B = h && O.opacityOnPress, V = C && O[`zindex_${C}`], ne = p && O.horizontal, H = v === "heavy" ? O.heavyShadow : v && O.shadow, re = u && O[u], ie = g && A[`_${g.replace(/ /, "_")}`], U = y && j[`_${y.replace(/ /, "_")}`], ae = a && M[a === !0 ? "top_right_bottom_left" : a.replace(/ /, "_")], oe = m && M.negative, se = r && (p ? P[r.replace(/ /, "_")] : F[r.replace(/ /, "_")]), ce = d && k[d], le = l && N[`_${l}`], ue = o && I[o], de;
-	t[23] !== c || t[24] !== T || t[25] !== ie || t[26] !== U || t[27] !== ae || t[28] !== oe || t[29] !== se || t[30] !== ce || t[31] !== le || t[32] !== ue || t[33] !== E || t[34] !== L || t[35] !== R || t[36] !== B || t[37] !== V || t[38] !== ne || t[39] !== H || t[40] !== re ? (de = [
+	let t = (0, D.c)(57), n, r, i, a, o, s, c, l, u, d, f, p, m, h, g, _, v, y, b, x, S, C, w;
+	t[0] === e ? (n = t[1], r = t[2], i = t[3], a = t[4], o = t[5], s = t[6], c = t[7], l = t[8], u = t[9], d = t[10], f = t[11], p = t[12], m = t[13], h = t[14], g = t[15], _ = t[16], v = t[17], y = t[18], b = t[19], x = t[20], S = t[21], C = t[22], w = t[23]) : ({as: i, flex: f, wrap: C, horizontal: p, absolute: n, sticky: b, opacityOnPress: h, zIndex: w, shadow: v, cursor: u, padding: g, spacing: y, border: a, negativeBorder: m, align: r, fillColor: d, borderColor: o, cornerRadius: l, tooltip: S, style: x, className: c, children: s, ..._} = e, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o, t[6] = s, t[7] = c, t[8] = l, t[9] = u, t[10] = d, t[11] = f, t[12] = p, t[13] = m, t[14] = h, t[15] = g, t[16] = _, t[17] = v, t[18] = y, t[19] = b, t[20] = x, t[21] = S, t[22] = C, t[23] = w);
+	let T = i ?? "div", E = f && O.flex, L = C && O.wrap, R = n && O.absolute, B = b && O.sticky, V = h && O.opacityOnPress, ne = w && O[`zindex_${w}`], H = p && O.horizontal, re = v === "heavy" ? O.heavyShadow : v && O.shadow, ie = u && O[u], U = g && A[`_${g.replace(/ /, "_")}`], ae = y && j[`_${y.replace(/ /, "_")}`], oe = a && M[a === !0 ? "top_right_bottom_left" : a.replace(/ /, "_")], se = m && M.negative, ce = r && (p ? P[r.replace(/ /, "_")] : F[r.replace(/ /, "_")]), le = d && k[d], ue = l && N[`_${l}`], de = o && I[o], fe;
+	t[24] !== c || t[25] !== E || t[26] !== U || t[27] !== ae || t[28] !== oe || t[29] !== se || t[30] !== ce || t[31] !== le || t[32] !== ue || t[33] !== de || t[34] !== L || t[35] !== R || t[36] !== B || t[37] !== V || t[38] !== ne || t[39] !== H || t[40] !== re || t[41] !== ie ? (fe = [
 		O.View,
-		T,
 		E,
 		L,
 		R,
@@ -508,24 +507,26 @@ function B(e) {
 		ce,
 		le,
 		ue,
+		de,
 		c
-	].filter(te), t[23] = c, t[24] = T, t[25] = ie, t[26] = U, t[27] = ae, t[28] = oe, t[29] = se, t[30] = ce, t[31] = le, t[32] = ue, t[33] = E, t[34] = L, t[35] = R, t[36] = B, t[37] = V, t[38] = ne, t[39] = H, t[40] = re, t[41] = de) : de = t[41];
-	let fe = de.join(" "), pe;
-	t[42] === x ? pe = t[43] : (pe = { ...x }, t[42] = x, t[43] = pe);
-	let me = pe, he;
-	t[44] === d ? he = t[45] : (he = { parentFillColor: d }, t[44] = d, t[45] = he);
-	let ge = he, _e;
-	t[46] !== w || t[47] !== s || t[48] !== _ || t[49] !== fe || t[50] !== me ? (_e = /* @__PURE__ */ (0, z.jsx)(w, {
-		className: fe,
-		style: me,
+	].filter(te), t[24] = c, t[25] = E, t[26] = U, t[27] = ae, t[28] = oe, t[29] = se, t[30] = ce, t[31] = le, t[32] = ue, t[33] = de, t[34] = L, t[35] = R, t[36] = B, t[37] = V, t[38] = ne, t[39] = H, t[40] = re, t[41] = ie, t[42] = fe) : fe = t[42];
+	let pe = fe.join(" "), me;
+	t[43] === x ? me = t[44] : (me = { ...x }, t[43] = x, t[44] = me);
+	let he = me, ge;
+	t[45] === d ? ge = t[46] : (ge = { parentFillColor: d }, t[45] = d, t[46] = ge);
+	let _e = ge, ve;
+	t[47] !== T || t[48] !== s || t[49] !== _ || t[50] !== S || t[51] !== pe || t[52] !== he ? (ve = /* @__PURE__ */ (0, z.jsx)(T, {
+		className: pe,
+		style: he,
+		title: S,
 		..._,
 		children: s
-	}), t[46] = w, t[47] = s, t[48] = _, t[49] = fe, t[50] = me, t[51] = _e) : _e = t[51];
-	let ve;
-	return t[52] !== _e || t[53] !== ge ? (ve = /* @__PURE__ */ (0, z.jsx)(ee, {
-		value: ge,
-		children: _e
-	}), t[52] = _e, t[53] = ge, t[54] = ve) : ve = t[54], ve;
+	}), t[47] = T, t[48] = s, t[49] = _, t[50] = S, t[51] = pe, t[52] = he, t[53] = ve) : ve = t[53];
+	let ye;
+	return t[54] !== ve || t[55] !== _e ? (ye = /* @__PURE__ */ (0, z.jsx)(ee, {
+		value: _e,
+		children: ve
+	}), t[54] = ve, t[55] = _e, t[56] = ye) : ye = t[56], ye;
 }
 function te(e) {
 	return e;
@@ -553,6 +554,7 @@ var V = {
 	primary: "_onyx-ui_primary_2fg9l",
 	content: "_onyx-ui_content_j0S5i",
 	text: "_onyx-ui_text_ir-25",
+	highlight: "_onyx-ui_highlight_i7woj",
 	black: "_onyx-ui_black_Kk3sT",
 	white: "_onyx-ui_white_fi2iy",
 	"gray-0": "_onyx-ui_gray-0_B2s7p",
@@ -1118,6 +1120,7 @@ function Ae({ label: e, value: t, options: n, onValueChange: r, ...i }) {
 					iconFill: e.iconFill,
 					label: e.label,
 					value: e.value,
+					tooltip: e.tooltip,
 					onSelect: a
 				})),
 				r !== n.length - 1 && !("options" in n[r]) && /* @__PURE__ */ (0, z.jsx)(Ee.Divider, {})
@@ -1129,6 +1132,7 @@ function Ae({ label: e, value: t, options: n, onValueChange: r, ...i }) {
 				iconFill: e.iconFill,
 				label: e.label,
 				value: e.value,
+				tooltip: e.tooltip,
 				onSelect: a
 			});
 		}
@@ -1317,40 +1321,41 @@ var Be = { text: "_onyx-ui_text_-bQVx" };
 //#endregion
 //#region src/components/chip/Chip.tsx
 function Ve(e) {
-	let t = (0, D.c)(23), n, r, i, a, o, s;
-	t[0] === e ? (n = t[1], r = t[2], i = t[3], a = t[4], o = t[5], s = t[6]) : ({light: a, icon: i, fillColor: r, children: n, style: s, ...o} = e, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o, t[6] = s);
-	let c;
-	t[7] !== i || t[8] !== a ? (c = i && /* @__PURE__ */ (0, z.jsx)(ce, {
+	let t = (0, D.c)(27), n, r, i, a, o, s, c, l;
+	t[0] === e ? (n = t[1], r = t[2], i = t[3], a = t[4], o = t[5], s = t[6], c = t[7], l = t[8]) : ({light: s, icon: i, iconSize: o, iconColor: a, fillColor: r, children: n, style: l, ...c} = e, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o, t[6] = s, t[7] = c, t[8] = l);
+	let u;
+	t[9] !== i || t[10] !== a || t[11] !== o || t[12] !== s ? (u = i && /* @__PURE__ */ (0, z.jsx)(ce, {
 		icon: i,
-		size: 14,
+		size: o ?? 14,
+		color: a,
 		style: {
 			margin: "-2px 0",
-			opacity: a ? .6 : void 0
+			opacity: s ? .6 : void 0
 		}
-	}), t[7] = i, t[8] = a, t[9] = c) : c = t[9];
-	let l = r ? "2px 4px" : void 0, u = r ? "-2px 0" : void 0, d;
-	t[10] !== s || t[11] !== u ? (d = {
-		margin: u,
-		...s
-	}, t[10] = s, t[11] = u, t[12] = d) : d = t[12];
-	let f;
-	t[13] !== n || t[14] !== r || t[15] !== a || t[16] !== o || t[17] !== l || t[18] !== d ? (f = /* @__PURE__ */ (0, z.jsx)(U, {
-		light: a,
+	}), t[9] = i, t[10] = a, t[11] = o, t[12] = s, t[13] = u) : u = t[13];
+	let d = r ? "2px 4px" : void 0, f = r ? "-2px 0" : void 0, p;
+	t[14] !== l || t[15] !== f ? (p = {
+		margin: f,
+		...l
+	}, t[14] = l, t[15] = f, t[16] = p) : p = t[16];
+	let m;
+	t[17] !== n || t[18] !== r || t[19] !== s || t[20] !== c || t[21] !== d || t[22] !== p ? (m = /* @__PURE__ */ (0, z.jsx)(U, {
+		light: s,
 		fillColor: r,
 		cornerRadius: "2px",
-		padding: l,
+		padding: d,
 		className: Be.text,
-		style: d,
-		...o,
+		style: p,
+		...c,
 		children: n
-	}), t[13] = n, t[14] = r, t[15] = a, t[16] = o, t[17] = l, t[18] = d, t[19] = f) : f = t[19];
-	let p;
-	return t[20] !== c || t[21] !== f ? (p = /* @__PURE__ */ (0, z.jsxs)(B, {
+	}), t[17] = n, t[18] = r, t[19] = s, t[20] = c, t[21] = d, t[22] = p, t[23] = m) : m = t[23];
+	let h;
+	return t[24] !== u || t[25] !== m ? (h = /* @__PURE__ */ (0, z.jsxs)(B, {
 		horizontal: !0,
 		spacing: "4px",
 		align: "middle left",
-		children: [c, f]
-	}), t[20] = c, t[21] = f, t[22] = p) : p = t[22], p;
+		children: [u, m]
+	}), t[24] = u, t[25] = m, t[26] = h) : h = t[26], h;
 }
 //#endregion
 //#region src/components/tabs/Tabs.tsx
@@ -3648,7 +3653,6 @@ function wr(e) {
 	return e !== 96 || this.events[this.events.length - 1][1].type === "characterEscape";
 }
 function Tr(e, t, n) {
-	this;
 	let r = 0, i, a;
 	return o;
 	function o(t) {

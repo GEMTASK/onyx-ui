@@ -8,6 +8,7 @@ type OptionValueBase = {
   iconFill?: React.ComponentProps<typeof Menu.Item>["iconFill"],
   label: React.ComponentProps<typeof Menu.Item>["title"],
   value: string | null | undefined,
+  tooltip?: string,
 };
 
 type OptionValue = OptionValueBase | {
@@ -71,6 +72,7 @@ function Select({
               iconFill={innerOption.iconFill}
               label={innerOption.label}
               value={innerOption.value}
+              tooltip={innerOption.tooltip}
               onSelect={handleOptionSelect}
             />
           )),
@@ -87,6 +89,7 @@ function Select({
             iconFill={option.iconFill}
             label={option.label}
             value={option.value}
+            tooltip={option.tooltip}
             onSelect={handleOptionSelect}
           />
         );

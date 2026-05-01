@@ -6,17 +6,21 @@ import styles from "./Chip.module.scss";
 function Chip({
   light,
   icon,
+  iconSize,
+  iconColor,
   fillColor,
   children,
   style,
   ...props
 }: Delegate<{
   icon?: React.ComponentProps<typeof Icon>["icon"],
+  iconSize?: React.ComponentProps<typeof Icon>["size"],
+  iconColor?: React.ComponentProps<typeof Icon>["color"],
 }, typeof Text>) {
   return (
     <View horizontal spacing="4px" align="middle left">
       {icon && (
-        <Icon icon={icon} size={14} style={{ margin: "-2px 0", opacity: light ? 0.6 : undefined }} />
+        <Icon icon={icon} size={iconSize ?? 14} color={iconColor} style={{ margin: "-2px 0", opacity: light ? 0.6 : undefined }} />
       )}
       <Text
         light={light}
