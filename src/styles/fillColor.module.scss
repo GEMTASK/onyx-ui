@@ -41,22 +41,73 @@
 }
 
 .gray-0 {
-  background: hsl(210, 15%, 95%);
+  background: hsl(210, 16.67%, 97.65%);
 }
 
 .gray-1 {
-  background: hsl(210, 15%, 90%);
-  background: hsl(210, 15%, 88%);
+  background: hsl(210, 16.67%, 95.29%);
 }
 
 .gray-2 {
-  background: hsl(210, 15%, 85%);
-  background: hsl(210, 15%, 83%);
+  background: hsl(210, 15.79%, 92.55%);
 }
+
+.gray-3 {
+  background: hsl(210, 13.79%, 88.63%);
+}
+
+.gray-4 {
+  background: hsl(210, 13.95%, 83.14%);
+}
+
+//
 
 .blue-5 {
   background: hsl(210, 85%, 60%);
-  background: red;
+}
+
+.indigo-4 {
+  background: hsl(228.09, 95.77%, 72.16%);
+}
+
+.green-4 {
+  background: hsl(130, 61.29%, 63.53%);
+}
+
+.red-4 {
+  background: hsl(0, 100%, 76.47%);
+}
+
+.grape-4 {
+  background: hsl(288.29, 82.55%, 70.78%);
+}
+
+.cyan-4 {
+  background: hsl(186.75, 68.97%, 54.51%);
+}
+
+//
+
+.violet-2 {
+  background: #d0bfff;
+}
+
+.blue-2 {
+  background: #a5d8ff;
+}
+
+.teal-2 {
+  background: #96f2d7;
+}
+
+.lime-3 {
+  background: #c0eb75;
+}
+
+//
+
+.orange-4 {
+  background: #ffa94d;
 }
 
 $hues: green;

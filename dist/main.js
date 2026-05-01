@@ -64,7 +64,19 @@ var m = Object.create, h = Object.defineProperty, g = Object.getOwnPropertyDescr
 	"gray-0": "_onyx-ui_gray-0_cNbkJ",
 	"gray-1": "_onyx-ui_gray-1_SZKzT",
 	"gray-2": "_onyx-ui_gray-2_3JetF",
-	"blue-5": "_onyx-ui_blue-5_WsXQB"
+	"gray-3": "_onyx-ui_gray-3_HFEgY",
+	"gray-4": "_onyx-ui_gray-4_LOWCM",
+	"blue-5": "_onyx-ui_blue-5_WsXQB",
+	"indigo-4": "_onyx-ui_indigo-4_XiJDJ",
+	"green-4": "_onyx-ui_green-4_G1TFI",
+	"red-4": "_onyx-ui_red-4_4jQqw",
+	"grape-4": "_onyx-ui_grape-4_PS8Hc",
+	"cyan-4": "_onyx-ui_cyan-4_uZ19N",
+	"violet-2": "_onyx-ui_violet-2_Gj3Id",
+	"blue-2": "_onyx-ui_blue-2_OvAbV",
+	"teal-2": "_onyx-ui_teal-2_NPdHu",
+	"lime-3": "_onyx-ui_lime-3_nEnqH",
+	"orange-4": "_onyx-ui_orange-4_m-giT"
 }, A = {
 	_0px: "_onyx-ui__0px_bYrmY",
 	_1px: "_onyx-ui__1px_fJLSW",
@@ -3653,6 +3665,7 @@ function wr(e) {
 	return e !== 96 || this.events[this.events.length - 1][1].type === "characterEscape";
 }
 function Tr(e, t, n) {
+	this;
 	let r = 0, i, a;
 	return o;
 	function o(t) {
