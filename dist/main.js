@@ -3665,7 +3665,6 @@ function wr(e) {
 	return e !== 96 || this.events[this.events.length - 1][1].type === "characterEscape";
 }
 function Tr(e, t, n) {
-	this;
 	let r = 0, i, a;
 	return o;
 	function o(t) {

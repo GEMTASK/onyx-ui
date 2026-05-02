@@ -1,0 +1,32 @@
+import { default as React } from 'react';
+import { Align } from '../../types/Align';
+import { Padding } from '../../types/Padding';
+import { Delegate } from '../../types/Delegate';
+import { Color } from '../../types/Color';
+type ViewContext = {
+    parentFillColor?: false | Color;
+};
+declare const ViewContext: React.Context<ViewContext>;
+declare function View<TDelegate extends React.ElementType = "div">({ as, flex, wrap, horizontal, absolute, sticky, opacityOnPress, zIndex, shadow, cursor, padding, spacing, border, negativeBorder, align, fillColor, borderColor, cornerRadius, tooltip, style, className, children, ...props }: Delegate<{
+    as?: TDelegate;
+    flex?: boolean;
+    wrap?: boolean;
+    horizontal?: boolean;
+    absolute?: boolean;
+    sticky?: boolean;
+    opacityOnPress?: boolean;
+    zIndex?: 1 | 2 | 3;
+    shadow?: boolean | "light" | "heavy";
+    cursor?: "pointer";
+    padding?: Padding;
+    spacing?: Padding;
+    border?: true | "top" | "bottom" | "left" | "right" | "top bottom" | "none";
+    negativeBorder?: boolean;
+    align?: Align;
+    fillColor?: false | Color;
+    borderColor?: Color;
+    cornerRadius?: "0px" | "2px" | "4px" | "max";
+    tooltip?: string;
+}, TDelegate>): import("react/jsx-runtime").JSX.Element;
+export { ViewContext };
+export default View;
