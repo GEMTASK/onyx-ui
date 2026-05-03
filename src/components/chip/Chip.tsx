@@ -16,7 +16,7 @@ function Chip({
   icon?: React.ComponentProps<typeof Icon>["icon"],
   iconSize?: React.ComponentProps<typeof Icon>["size"],
   iconColor?: React.ComponentProps<typeof Icon>["color"],
-}, typeof Text>) {
+}, typeof Text<"div">>) {
   return (
     <View horizontal spacing="4px" align="middle left">
       {icon && (
