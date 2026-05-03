@@ -9,13 +9,13 @@ import { View } from "..";
 function Popover({
   content,
   isVisible,
-  anchor,
+  anchor = "bottom left",
   noPortal,
   children
 }: Delegate<{
   content: React.ReactNode,
   isVisible: boolean,
-  anchor?: "bottom left" | "top right",
+  anchor?: "bottom left" | "bottom right" | "top right",
   noPortal?: boolean,
   children: React.ReactElement<{
     ref: React.RefObject<HTMLElement | null>,
@@ -42,13 +42,17 @@ function Popover({
       }
     } else if (isVisible && childElementRef.current && popoverElementRef.current) {
       const childClientRect = childElementRef.current.getBoundingClientRect();
-      // const popoverClientRect = popoverElementRef.current.getBoundingClientRect();
+      const popoverClientRect = popoverElementRef.current.getBoundingClientRect();
       const overlayClientRect = overlayElement.getBoundingClientRect();
 
       if (anchor === "top right") {
         popoverElementRef.current.style.left = `${childClientRect.right - overlayClientRect.left}px`;
         popoverElementRef.current.style.top = `${childClientRect.top - 8 - overlayClientRect.top}px`;
-      } else {
+      } else if (anchor === "bottom right") {
+        popoverElementRef.current.style.left = `${childClientRect.right - popoverClientRect.width}px`;
+        popoverElementRef.current.style.top = `${childClientRect.top + childClientRect.height}px`;
+
+      } else if (anchor === "bottom left") {
         popoverElementRef.current.style.left = `${childClientRect.left + 1 - overlayClientRect.left}px`;
         popoverElementRef.current.style.top = `${childClientRect.bottom + 0 - overlayClientRect.top}px`;
       }

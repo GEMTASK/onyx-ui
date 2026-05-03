@@ -15,7 +15,7 @@ function Avatar({
   name?: string,
   label?: string,
   imageOnly?: boolean,
-  imageBorder?: true,
+  imageBorder?: boolean,
 }, typeof View<"div">>) {
   const initials = name?.split(" ").map(name => name[0].toUpperCase()).join("");
 

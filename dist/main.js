@@ -921,7 +921,7 @@ function xe(e, n) {
 }
 //#endregion
 //#region src/components/popover/Popover.tsx
-function Se({ content: e, isVisible: n, anchor: r, noPortal: i, children: a }) {
+function Se({ content: e, isVisible: n, anchor: r = "bottom left", noPortal: i, children: a }) {
 	let o = l(null), s = l(null);
 	c(() => {
 		let e = o.current?.closest("#window")?.querySelector("#overlay");
@@ -929,8 +929,8 @@ function Se({ content: e, isVisible: n, anchor: r, noPortal: i, children: a }) {
 			let t = o.current.getBoundingClientRect(), n = s.current.getBoundingClientRect(), i = e.getBoundingClientRect();
 			r === "top right" ? (s.current.style.left = `${t.width}px`, s.current.style.top = `${t.top - n.top}px`) : (s.current.style.left = `${t.left + 1 - i.left}px`, s.current.style.top = `${t.bottom + 0 - i.top}px`);
 		} else if (n && o.current && s.current) {
-			let t = o.current.getBoundingClientRect(), n = e.getBoundingClientRect();
-			r === "top right" ? (s.current.style.left = `${t.right - n.left}px`, s.current.style.top = `${t.top - 8 - n.top}px`) : (s.current.style.left = `${t.left + 1 - n.left}px`, s.current.style.top = `${t.bottom + 0 - n.top}px`);
+			let t = o.current.getBoundingClientRect(), n = s.current.getBoundingClientRect(), i = e.getBoundingClientRect();
+			r === "top right" ? (s.current.style.left = `${t.right - i.left}px`, s.current.style.top = `${t.top - 8 - i.top}px`) : r === "bottom right" ? (s.current.style.left = `${t.right - n.width}px`, s.current.style.top = `${t.top + t.height}px`) : r === "bottom left" && (s.current.style.left = `${t.left + 1 - i.left}px`, s.current.style.top = `${t.bottom + 0 - i.top}px`);
 		}
 	}, [
 		r,

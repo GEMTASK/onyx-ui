@@ -5,7 +5,7 @@ declare function Avatar({ name, label, imageOnly, imageBorder, ...props }: Deleg
     name?: string;
     label?: string;
     imageOnly?: boolean;
-    imageBorder?: true;
+    imageBorder?: boolean;
 }, typeof View<"div">>): import("react/jsx-runtime").JSX.Element;
 declare namespace Avatar {
     var Stack: ({ children, ...props }: Delegate<{

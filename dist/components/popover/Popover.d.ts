@@ -4,7 +4,7 @@ import { View } from '..';
 declare function Popover({ content, isVisible, anchor, noPortal, children }: Delegate<{
     content: React.ReactNode;
     isVisible: boolean;
-    anchor?: "bottom left" | "top right";
+    anchor?: "bottom left" | "bottom right" | "top right";
     noPortal?: boolean;
     children: React.ReactElement<{
         ref: React.RefObject<HTMLElement | null>;
