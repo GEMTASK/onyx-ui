@@ -57,6 +57,8 @@ function MenuItem({
 
 function Menu({
   items,
+  header,
+  footer,
   children,
   onSelect,
   ...props
@@ -64,6 +66,8 @@ function Menu({
   items: (React.ReactElement<{
     onSelect?: (value: string | undefined) => void,
   }>)[],
+  header?: React.ReactNode,
+  footer?: React.ReactNode,
   children: React.ReactElement<{
     ref: React.RefObject<HTMLElement | null>,
     cursor?: string,
@@ -96,11 +100,25 @@ function Menu({
   };
 
   const popoverContent = (
-    <View ref={menuElementRef} padding="8px 0px">
-      {items.map((item, index) => isValidElement(item) && cloneElement(item, {
-        key: index,
-        onSelect: (...args) => { handleItemSelect(...args); item.props.onSelect?.(...args); }
-      }))}
+    <View>
+      {header && (
+        <>
+          {header}
+          <Divider />
+        </>
+      )}
+      <View ref={menuElementRef} padding="8px 0px">
+        {items.map((item, index) => isValidElement(item) && cloneElement(item, {
+          key: index,
+          onSelect: (...args) => { handleItemSelect(...args); item.props.onSelect?.(...args); }
+        }))}
+      </View>
+      {footer && (
+        <>
+          <Divider />
+          {footer}
+        </>
+      )}
     </View>
   );
 

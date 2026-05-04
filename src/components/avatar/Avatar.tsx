@@ -34,7 +34,9 @@ function Avatar({
       {!imageOnly && (
         <View spacing="8px" align="middle left" style={{ gap: 6 }}>
           <Text>{name}</Text>
-          <Text light fontSize="12px">{label}</Text>
+          {label && (
+            <Text light fontSize="12px">{label}</Text>
+          )}
         </View>
       )}
     </View>
