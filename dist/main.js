@@ -959,7 +959,7 @@ function Se({ content: e, isVisible: n, anchor: r = "bottom left", noPortal: i, 
 //#region src/components/menu/Menu.tsx
 function Ce(e) {
 	let t = (0, D.c)(4), { label: n } = e, r, i;
-	t[0] === Symbol.for("react.memo_cache_sentinel") ? (r = { margin: "8px 16px" }, i = {
+	t[0] === Symbol.for("react.memo_cache_sentinel") ? (r = { margin: "8px 12px" }, i = {
 		fontSize: 11,
 		lineHeight: "17px",
 		whiteSpace: "nowrap"
@@ -1001,54 +1001,66 @@ function Te(e) {
 	}), t[14] = u, t[15] = a, t[16] = d, t[17] = f, t[18] = p) : p = t[18], p;
 }
 function Ee(e) {
-	let r = (0, D.c)(22), a, s, c, d;
-	r[0] === e ? (a = r[1], s = r[2], c = r[3], d = r[4]) : ({items: s, children: a, onSelect: c, ...d} = e, r[0] = e, r[1] = a, r[2] = s, r[3] = c, r[4] = d);
-	let f = l(null), [p, m] = u(!1), h;
-	r[5] === Symbol.for("react.memo_cache_sentinel") ? (h = (e) => {
-		f.current?.contains(e.target) || m(!1);
-	}, r[5] = h) : h = r[5];
-	let g = h, _, v;
-	r[6] === Symbol.for("react.memo_cache_sentinel") ? (_ = () => (document.addEventListener("pointerdown", g), () => {
-		document.removeEventListener("pointerdown", g);
-	}), v = [], r[6] = _, r[7] = v) : (_ = r[6], v = r[7]), o(_, v);
-	let y;
-	r[8] === c ? y = r[9] : (y = (e) => {
-		m(!1), c?.(e);
-	}, r[8] = c, r[9] = y);
-	let b = y, x;
-	if (r[10] !== b || r[11] !== s) {
+	let r = (0, D.c)(36), a, s, c, d, f, p, m, h;
+	r[0] === e ? (a = r[1], s = r[2], c = r[3], d = r[4], f = r[5], p = r[6], m = r[7], h = r[8]) : ({items: p, header: d, headerDivider: f, footer: s, footerDivider: c, children: a, onSelect: m, ...h} = e, r[0] = e, r[1] = a, r[2] = s, r[3] = c, r[4] = d, r[5] = f, r[6] = p, r[7] = m, r[8] = h);
+	let g = l(null), [_, v] = u(!1), y;
+	r[9] === Symbol.for("react.memo_cache_sentinel") ? (y = (e) => {
+		g.current?.contains(e.target) || v(!1);
+	}, r[9] = y) : y = r[9];
+	let b = y, x, S;
+	r[10] === Symbol.for("react.memo_cache_sentinel") ? (x = () => (document.addEventListener("pointerdown", b), () => {
+		document.removeEventListener("pointerdown", b);
+	}), S = [], r[10] = x, r[11] = S) : (x = r[10], S = r[11]), o(x, S);
+	let C;
+	r[12] === m ? C = r[13] : (C = (e) => {
+		v(!1), m?.(e);
+	}, r[12] = m, r[13] = C);
+	let w = C, T;
+	r[14] !== d || r[15] !== f ? (T = d && /* @__PURE__ */ (0, z.jsxs)(z.Fragment, { children: [d, f && /* @__PURE__ */ (0, z.jsx)(ve, { style: { margin: "0px 8px" } })] }), r[14] = d, r[15] = f, r[16] = T) : T = r[16];
+	let E;
+	if (r[17] !== w || r[18] !== p) {
 		let e;
-		r[13] === b ? e = r[14] : (e = (e, t) => i(e) && n(e, {
+		r[20] === w ? e = r[21] : (e = (e, t) => i(e) && n(e, {
 			key: t,
 			onSelect: (...t) => {
 				let n = t;
-				b(...n), e.props.onSelect?.(...n);
+				w(...n), e.props.onSelect?.(...n);
 			}
-		}), r[13] = b, r[14] = e), x = s.map(e), r[10] = b, r[11] = s, r[12] = x;
-	} else x = r[12];
-	let S;
-	r[15] === x ? S = r[16] : (S = /* @__PURE__ */ (0, z.jsx)(B, {
-		ref: f,
+		}), r[20] = w, r[21] = e), E = p.map(e), r[17] = w, r[18] = p, r[19] = E;
+	} else E = r[19];
+	let O;
+	r[22] === E ? O = r[23] : (O = /* @__PURE__ */ (0, z.jsx)(B, {
 		padding: "8px 0px",
-		children: x
-	}), r[15] = x, r[16] = S);
-	let C = S, w;
-	if (r[17] !== a || r[18] !== p || r[19] !== C || r[20] !== d) {
+		children: E
+	}), r[22] = E, r[23] = O);
+	let k;
+	r[24] !== s || r[25] !== c ? (k = s && /* @__PURE__ */ (0, z.jsxs)(z.Fragment, { children: [c && /* @__PURE__ */ (0, z.jsx)(ve, { style: { margin: "0px 8px" } }), s] }), r[24] = s, r[25] = c, r[26] = k) : k = r[26];
+	let A;
+	r[27] !== T || r[28] !== O || r[29] !== k ? (A = /* @__PURE__ */ (0, z.jsxs)(B, {
+		ref: g,
+		children: [
+			T,
+			O,
+			k
+		]
+	}), r[27] = T, r[28] = O, r[29] = k, r[30] = A) : A = r[30];
+	let j = A, M;
+	if (r[31] !== a || r[32] !== _ || r[33] !== j || r[34] !== h) {
 		let e = t.Children.only(a);
-		w = /* @__PURE__ */ (0, z.jsx)(Se, {
-			isVisible: p,
-			content: C,
-			...d,
+		M = /* @__PURE__ */ (0, z.jsx)(Se, {
+			isVisible: _,
+			content: j,
+			...h,
 			children: t.isValidElement(e) && t.cloneElement(e, {
 				cursor: "pointer",
-				solid: p || e.props.solid,
+				solid: _ || e.props.solid,
 				onClick: () => {
-					m(De);
+					v(De);
 				}
 			})
-		}), r[17] = a, r[18] = p, r[19] = C, r[20] = d, r[21] = w;
-	} else w = r[21];
-	return w;
+		}), r[31] = a, r[32] = _, r[33] = j, r[34] = h, r[35] = M;
+	} else M = r[35];
+	return M;
 }
 function De(e) {
 	return !e;
@@ -1296,7 +1308,7 @@ function Le(e) {
 		spacing: "8px",
 		align: "middle left",
 		style: { gap: 6 },
-		children: [/* @__PURE__ */ (0, z.jsx)(U, { children: a }), /* @__PURE__ */ (0, z.jsx)(U, {
+		children: [/* @__PURE__ */ (0, z.jsx)(U, { children: a }), i && /* @__PURE__ */ (0, z.jsx)(U, {
 			light: !0,
 			fontSize: "12px",
 			children: i

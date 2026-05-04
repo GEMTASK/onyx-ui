@@ -9,7 +9,7 @@ function MenuGroup({
   label: string,
 }) {
   return (
-    <Text light caps style={{ margin: "8px 16px" }} innerStyle={{ fontSize: 11, lineHeight: "17px", whiteSpace: "nowrap" }}>
+    <Text light caps style={{ margin: "8px 12px" }} innerStyle={{ fontSize: 11, lineHeight: "17px", whiteSpace: "nowrap" }}>
       {label}
     </Text>
   );
@@ -58,7 +58,9 @@ function MenuItem({
 function Menu({
   items,
   header,
+  headerDivider,
   footer,
+  footerDivider,
   children,
   onSelect,
   ...props
@@ -67,7 +69,9 @@ function Menu({
     onSelect?: (value: string | undefined) => void,
   }>)[],
   header?: React.ReactNode,
+  headerDivider?: boolean,
   footer?: React.ReactNode,
+  footerDivider?: boolean,
   children: React.ReactElement<{
     ref: React.RefObject<HTMLElement | null>,
     cursor?: string,
@@ -100,14 +104,14 @@ function Menu({
   };
 
   const popoverContent = (
-    <View>
+    <View ref={menuElementRef}>
       {header && (
         <>
           {header}
-          <Divider />
+          {headerDivider && <Divider style={{ margin: "0px 8px" }} />}
         </>
       )}
-      <View ref={menuElementRef} padding="8px 0px">
+      <View padding="8px 0px">
         {items.map((item, index) => isValidElement(item) && cloneElement(item, {
           key: index,
           onSelect: (...args) => { handleItemSelect(...args); item.props.onSelect?.(...args); }
@@ -115,7 +119,7 @@ function Menu({
       </View>
       {footer && (
         <>
-          <Divider />
+          {footerDivider && <Divider style={{ margin: "0px 8px" }} />}
           {footer}
         </>
       )}
