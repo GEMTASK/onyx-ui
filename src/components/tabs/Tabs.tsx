@@ -72,7 +72,7 @@ Tabs.Panel = function ({
   active: boolean,
 }, typeof View<"div">>) {
   return (
-    <View style={{ flexShrink: 0, flexBasis: "100%", overflowY: "auto", scrollSnapAlign: "start" }} {...props}>
+    <View padding="16px" style={{ flexShrink: 0, flexBasis: "100%", overflowY: "auto", scrollSnapAlign: "start" }} {...props}>
       {active && (
         children
       )}
