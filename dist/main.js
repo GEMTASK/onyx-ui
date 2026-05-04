@@ -1421,7 +1421,6 @@ function Ue(e) {
 }
 Ue.Panel = function({ active: e, children: t, ...n }) {
 	return /* @__PURE__ */ (0, z.jsx)(B, {
-		padding: "16px",
 		style: {
 			flexShrink: 0,
 			flexBasis: "100%",
