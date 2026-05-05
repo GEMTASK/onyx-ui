@@ -17,7 +17,7 @@ function MenuGroup({
 
 function MenuDivider() {
   return (
-    <Divider style={{ margin: "8px" }} />
+    <Divider style={{ margin: "8px 12px" }} />
   );
 }
 
@@ -108,7 +108,7 @@ function Menu({
       {header && (
         <>
           {header}
-          {headerDivider && <Divider style={{ margin: "0px 8px" }} />}
+          {headerDivider && <Divider style={{ margin: "0px 12px" }} />}
         </>
       )}
       <View padding="8px 0px">
@@ -119,7 +119,7 @@ function Menu({
       </View>
       {footer && (
         <>
-          {footerDivider && <Divider style={{ margin: "0px 8px" }} />}
+          {footerDivider && <Divider style={{ margin: "0px 12px" }} />}
           {footer}
         </>
       )}
