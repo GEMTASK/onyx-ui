@@ -104,10 +104,10 @@ function Select({
   ), {} as OptionValueBase);
 
   return (
-    <View style={{ marginBottom: -9 }}>
-      <Menu items={menuItems} {...props}>
+    <View>
+      <Menu items={menuItems} offsetTop={8} {...props}>
         <Label chevron label={label}>
-          <View horizontal spacing="4px" align="middle left" style={{ padding: "0 0 8px 0" }}>
+          <View horizontal spacing="4px" align="middle left">
             {"icon" in option && option.icon && (
               <Icon icon={option.icon} color={option.iconColor} fill={option.iconFill ? "currentColor" : "none"} size={14} style={{ margin: "-2px 0" }} />
             )}

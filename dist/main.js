@@ -922,24 +922,25 @@ function xe(e, n) {
 }
 //#endregion
 //#region src/components/popover/Popover.tsx
-function Se({ content: e, isVisible: n, anchor: r = "bottom left", noPortal: i, children: a }) {
-	let o = l(null), s = l(null);
+function Se({ content: e, isVisible: n, anchor: r = "bottom left", offsetTop: i = 0, noPortal: a, children: o }) {
+	let s = l(null), u = l(null);
 	c(() => {
-		let e = o.current?.closest("#window")?.querySelector("#overlay");
-		if (i && n && o.current && s.current) {
-			let t = o.current.getBoundingClientRect(), n = s.current.getBoundingClientRect(), i = e.getBoundingClientRect();
-			r === "top right" ? (s.current.style.left = `${t.width}px`, s.current.style.top = `${t.top - n.top}px`) : (s.current.style.left = `${t.left + 1 - i.left}px`, s.current.style.top = `${t.bottom + 0 - i.top}px`);
-		} else if (n && o.current && s.current) {
-			let t = o.current.getBoundingClientRect(), n = s.current.getBoundingClientRect(), i = e.getBoundingClientRect();
-			r === "top right" ? (s.current.style.left = `${t.right - i.left}px`, s.current.style.top = `${t.top - 8 - i.top}px`) : r === "bottom right" ? (s.current.style.left = `${t.right - n.width}px`, s.current.style.top = `${t.top + t.height}px`) : r === "bottom left" && (s.current.style.left = `${t.left + 1 - i.left}px`, s.current.style.top = `${t.bottom + 0 - i.top}px`);
+		let e = s.current?.closest("#window")?.querySelector("#overlay");
+		if (a && n && s.current && u.current) {
+			let t = s.current.getBoundingClientRect(), n = u.current.getBoundingClientRect(), i = e.getBoundingClientRect();
+			r === "top right" ? (u.current.style.left = `${t.width}px`, u.current.style.top = `${t.top - n.top}px`) : (u.current.style.left = `${t.left + 1 - i.left}px`, u.current.style.top = `${t.bottom + 0 - i.top}px`);
+		} else if (n && s.current && u.current) {
+			let t = s.current.getBoundingClientRect(), n = u.current.getBoundingClientRect(), a = e.getBoundingClientRect();
+			r === "top right" ? (u.current.style.left = `${t.right - a.left}px`, u.current.style.top = `${t.top - 8 - a.top + i}px`) : r === "bottom right" ? (u.current.style.left = `${t.right - n.width}px`, u.current.style.top = `${t.top + t.height + i}px`) : r === "bottom left" && (u.current.style.left = `${t.left + 1 - a.left}px`, u.current.style.top = `${t.bottom + 0 - a.top + i}px`);
 		}
 	}, [
 		r,
 		n,
+		a,
 		i
 	]);
-	let u = o.current?.closest("#window")?.querySelector("#overlay"), d = t.Children.only(a), f = /* @__PURE__ */ (0, z.jsx)(B, {
-		ref: s,
+	let d = s.current?.closest("#window")?.querySelector("#overlay"), f = t.Children.only(o), m = /* @__PURE__ */ (0, z.jsx)(B, {
+		ref: u,
 		absolute: !0,
 		shadow: !0,
 		fillColor: "content",
@@ -948,12 +949,12 @@ function Se({ content: e, isVisible: n, anchor: r = "bottom left", noPortal: i, 
 		children: e
 	});
 	return /* @__PURE__ */ (0, z.jsxs)(z.Fragment, { children: [
-		t.isValidElement(d) && t.cloneElement(d, {
-			ref: o,
+		t.isValidElement(f) && t.cloneElement(f, {
+			ref: s,
 			opacityOnPress: !0
 		}),
-		i && n && u && f,
-		!i && n && u && p(f, u)
+		a && n && d && m,
+		!a && n && d && p(m, d)
 	] });
 }
 //#endregion
@@ -1165,30 +1166,27 @@ function Ae({ label: e, value: t, options: n, onValueChange: r, ...i }) {
 			});
 		}
 	}), s = n.reduce((e, n) => "options" in n ? n.options.find((e) => e.value === t) ?? e : n.value === t ? n : e, {});
-	return /* @__PURE__ */ (0, z.jsx)(B, {
-		style: { marginBottom: -9 },
-		children: /* @__PURE__ */ (0, z.jsx)(Ee, {
-			items: o,
-			...i,
-			children: /* @__PURE__ */ (0, z.jsx)(Fe, {
-				chevron: !0,
-				label: e,
-				children: /* @__PURE__ */ (0, z.jsxs)(B, {
-					horizontal: !0,
-					spacing: "4px",
-					align: "middle left",
-					style: { padding: "0 0 8px 0" },
-					children: ["icon" in s && s.icon && /* @__PURE__ */ (0, z.jsx)(ce, {
-						icon: s.icon,
-						color: s.iconColor,
-						fill: s.iconFill ? "currentColor" : "none",
-						size: 14,
-						style: { margin: "-2px 0" }
-					}), /* @__PURE__ */ (0, z.jsx)(U, { children: s.label })]
-				})
+	return /* @__PURE__ */ (0, z.jsx)(B, { children: /* @__PURE__ */ (0, z.jsx)(Ee, {
+		items: o,
+		offsetTop: 8,
+		...i,
+		children: /* @__PURE__ */ (0, z.jsx)(Fe, {
+			chevron: !0,
+			label: e,
+			children: /* @__PURE__ */ (0, z.jsxs)(B, {
+				horizontal: !0,
+				spacing: "4px",
+				align: "middle left",
+				children: ["icon" in s && s.icon && /* @__PURE__ */ (0, z.jsx)(ce, {
+					icon: s.icon,
+					color: s.iconColor,
+					fill: s.iconFill ? "currentColor" : "none",
+					size: 14,
+					style: { margin: "-2px 0" }
+				}), /* @__PURE__ */ (0, z.jsx)(U, { children: s.label })]
 			})
 		})
-	});
+	}) });
 }
 //#endregion
 //#region src/components/form/Form.tsx

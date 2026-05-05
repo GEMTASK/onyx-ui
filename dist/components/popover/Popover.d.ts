@@ -1,10 +1,11 @@
 import { default as React } from 'react';
 import { Delegate } from '../../types/Delegate';
 import { View } from '..';
-declare function Popover({ content, isVisible, anchor, noPortal, children }: Delegate<{
+declare function Popover({ content, isVisible, anchor, offsetTop, noPortal, children }: Delegate<{
     content: React.ReactNode;
     isVisible: boolean;
     anchor?: "bottom left" | "bottom right" | "top right";
+    offsetTop?: number;
     noPortal?: boolean;
     children: React.ReactElement<{
         ref: React.RefObject<HTMLElement | null>;

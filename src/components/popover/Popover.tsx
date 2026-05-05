@@ -10,12 +10,14 @@ function Popover({
   content,
   isVisible,
   anchor = "bottom left",
+  offsetTop = 0,
   noPortal,
   children
 }: Delegate<{
   content: React.ReactNode,
   isVisible: boolean,
   anchor?: "bottom left" | "bottom right" | "top right",
+  offsetTop?: number,
   noPortal?: boolean,
   children: React.ReactElement<{
     ref: React.RefObject<HTMLElement | null>,
@@ -47,17 +49,16 @@ function Popover({
 
       if (anchor === "top right") {
         popoverElementRef.current.style.left = `${childClientRect.right - overlayClientRect.left}px`;
-        popoverElementRef.current.style.top = `${childClientRect.top - 8 - overlayClientRect.top}px`;
+        popoverElementRef.current.style.top = `${childClientRect.top - 8 - overlayClientRect.top + offsetTop}px`;
       } else if (anchor === "bottom right") {
         popoverElementRef.current.style.left = `${childClientRect.right - popoverClientRect.width}px`;
-        popoverElementRef.current.style.top = `${childClientRect.top + childClientRect.height}px`;
-
+        popoverElementRef.current.style.top = `${childClientRect.top + childClientRect.height + offsetTop}px`;
       } else if (anchor === "bottom left") {
         popoverElementRef.current.style.left = `${childClientRect.left + 1 - overlayClientRect.left}px`;
-        popoverElementRef.current.style.top = `${childClientRect.bottom + 0 - overlayClientRect.top}px`;
+        popoverElementRef.current.style.top = `${childClientRect.bottom + 0 - overlayClientRect.top + offsetTop}px`;
       }
     }
-  }, [anchor, isVisible, noPortal]);
+  }, [anchor, isVisible, noPortal, offsetTop]);
 
   const overlayElement = childElementRef.current?.closest("#window")?.querySelector("#overlay");
   const onlyChild = React.Children.only(children);
