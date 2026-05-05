@@ -13,6 +13,7 @@ const Input = ({
   flush,
   icon,
   placeholder,
+  autoFocus,
   changeOnEnter,
   innerStyle,
   onValueChange,
@@ -24,6 +25,7 @@ const Input = ({
   flush?: boolean,
   icon?: React.ComponentProps<typeof Icon>["icon"],
   placeholder?: React.ComponentProps<"input">["placeholder"],
+  autoFocus?: React.ComponentProps<"input">["autoFocus"],
   innerStyle?: React.ComponentProps<"textarea">["style"],
   changeOnEnter?: boolean,
   onValueChange?: (value: string) => void,
@@ -72,6 +74,7 @@ const Input = ({
           <Icon icon={icon} size={20} />
         )}
         <textarea
+          autoFocus={autoFocus}
           ref={textAreaElementRef}
           value={value}
           name="textarea"

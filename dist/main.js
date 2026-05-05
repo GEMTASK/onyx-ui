@@ -815,68 +815,69 @@ var he = {
 	Input: "_onyx-ui_Input_MpxTL",
 	flush: "_onyx-ui_flush_4zQD9"
 }, ge = (e) => {
-	let t = (0, D.c)(41), n, r, i, a, o, s, d, f, p, m;
+	let t = (0, D.c)(43), n, r, i, a, o, s, d, f, p, m, h;
 	if (t[0] !== e) {
-		let { label: c, value: l, lines: u, border: h, flush: g, icon: _, placeholder: v, changeOnEnter: y, innerStyle: b, onValueChange: x, ...S } = e;
-		s = c, n = l, m = h, i = g, a = _, f = v, r = y, o = b, d = x, p = S, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o, t[6] = s, t[7] = d, t[8] = f, t[9] = p, t[10] = m;
-	} else n = t[1], r = t[2], i = t[3], a = t[4], o = t[5], s = t[6], d = t[7], f = t[8], p = t[9], m = t[10];
-	let h = m === void 0 ? !0 : m, [g, _] = u(n), v = l(null), y;
-	t[11] !== r || t[12] !== d || t[13] !== g ? (y = (e) => {
+		let { label: c, value: l, lines: u, border: g, flush: _, icon: v, placeholder: y, autoFocus: b, changeOnEnter: x, innerStyle: S, onValueChange: C, ...w } = e;
+		d = c, n = l, h = g, a = _, o = v, p = y, r = b, i = x, s = S, f = C, m = w, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o, t[6] = s, t[7] = d, t[8] = f, t[9] = p, t[10] = m, t[11] = h;
+	} else n = t[1], r = t[2], i = t[3], a = t[4], o = t[5], s = t[6], d = t[7], f = t[8], p = t[9], m = t[10], h = t[11];
+	let g = h === void 0 ? !0 : h, [_, v] = u(n), y = l(null), b;
+	t[12] !== i || t[13] !== f || t[14] !== _ ? (b = (e) => {
 		let t = e.currentTarget;
-		r && e.key === "Enter" && g && (e.preventDefault(), d?.(g), t.value = "");
-	}, t[11] = r, t[12] = d, t[13] = g, t[14] = y) : y = t[14];
-	let b = y, x;
-	t[15] === Symbol.for("react.memo_cache_sentinel") ? (x = (e) => {
-		_(e.currentTarget.value);
-	}, t[15] = x) : x = t[15];
-	let S = x, C;
-	t[16] !== d || t[17] !== g ? (C = () => {
-		g && d?.(g);
-	}, t[16] = d, t[17] = g, t[18] = C) : C = t[18];
-	let w = C, T;
-	t[19] === Symbol.for("react.memo_cache_sentinel") ? (T = () => {
-		v.current && (v.current.style.height = "", v.current.style.height = `${v.current.scrollHeight}px`);
-	}, t[19] = T) : T = t[19], c(T);
-	let E = i && he.flush, O;
-	t[20] === E ? O = t[21] : (O = [he.Input, E].filter(_e), t[20] = E, t[21] = O);
-	let k = O.join(" "), A;
-	t[22] === a ? A = t[23] : (A = a && /* @__PURE__ */ (0, z.jsx)(ce, {
-		icon: a,
+		i && e.key === "Enter" && _ && (e.preventDefault(), f?.(_), t.value = "");
+	}, t[12] = i, t[13] = f, t[14] = _, t[15] = b) : b = t[15];
+	let x = b, S;
+	t[16] === Symbol.for("react.memo_cache_sentinel") ? (S = (e) => {
+		v(e.currentTarget.value);
+	}, t[16] = S) : S = t[16];
+	let C = S, w;
+	t[17] !== f || t[18] !== _ ? (w = () => {
+		_ && f?.(_);
+	}, t[17] = f, t[18] = _, t[19] = w) : w = t[19];
+	let T = w, E;
+	t[20] === Symbol.for("react.memo_cache_sentinel") ? (E = () => {
+		y.current && (y.current.style.height = "", y.current.style.height = `${y.current.scrollHeight}px`);
+	}, t[20] = E) : E = t[20], c(E);
+	let O = a && he.flush, k;
+	t[21] === O ? k = t[22] : (k = [he.Input, O].filter(_e), t[21] = O, t[22] = k);
+	let A = k.join(" "), j;
+	t[23] === o ? j = t[24] : (j = o && /* @__PURE__ */ (0, z.jsx)(ce, {
+		icon: o,
 		size: 20
-	}), t[22] = a, t[23] = A);
-	let j;
-	t[24] === o ? j = t[25] : (j = {
-		background: "transparent",
-		...o
-	}, t[24] = o, t[25] = j);
+	}), t[23] = o, t[24] = j);
 	let M;
-	t[26] !== w || t[27] !== b || t[28] !== f || t[29] !== j || t[30] !== g ? (M = /* @__PURE__ */ (0, z.jsx)("textarea", {
-		ref: v,
-		value: g,
-		name: "textarea",
-		placeholder: f,
-		style: j,
-		onKeyDown: b,
-		onChange: S,
-		onBlur: w
-	}), t[26] = w, t[27] = b, t[28] = f, t[29] = j, t[30] = g, t[31] = M) : M = t[31];
+	t[25] === s ? M = t[26] : (M = {
+		background: "transparent",
+		...s
+	}, t[25] = s, t[26] = M);
 	let N;
-	t[32] !== h || t[33] !== k || t[34] !== p || t[35] !== M || t[36] !== A ? (N = /* @__PURE__ */ (0, z.jsxs)(B, {
+	t[27] !== r || t[28] !== T || t[29] !== x || t[30] !== p || t[31] !== M || t[32] !== _ ? (N = /* @__PURE__ */ (0, z.jsx)("textarea", {
+		autoFocus: r,
+		ref: y,
+		value: _,
+		name: "textarea",
+		placeholder: p,
+		style: M,
+		onKeyDown: x,
+		onChange: C,
+		onBlur: T
+	}), t[27] = r, t[28] = T, t[29] = x, t[30] = p, t[31] = M, t[32] = _, t[33] = N) : N = t[33];
+	let P;
+	t[34] !== g || t[35] !== A || t[36] !== m || t[37] !== N || t[38] !== j ? (P = /* @__PURE__ */ (0, z.jsxs)(B, {
 		horizontal: !0,
-		border: h,
+		border: g,
 		align: "middle left",
 		padding: "4px 8px",
 		spacing: "4px",
-		className: k,
-		...p,
-		children: [A, M]
-	}), t[32] = h, t[33] = k, t[34] = p, t[35] = M, t[36] = A, t[37] = N) : N = t[37];
-	let P;
-	return t[38] !== s || t[39] !== N ? (P = /* @__PURE__ */ (0, z.jsx)(Fe, {
+		className: A,
+		...m,
+		children: [j, N]
+	}), t[34] = g, t[35] = A, t[36] = m, t[37] = N, t[38] = j, t[39] = P) : P = t[39];
+	let F;
+	return t[40] !== d || t[41] !== P ? (F = /* @__PURE__ */ (0, z.jsx)(Fe, {
 		flex: !0,
-		label: s,
-		children: N
-	}), t[38] = s, t[39] = N, t[40] = P) : P = t[40], P;
+		label: d,
+		children: P
+	}), t[40] = d, t[41] = P, t[42] = F) : F = t[42], F;
 };
 function _e(e) {
 	return e;
