@@ -1,4 +1,4 @@
-import React, { cloneElement, isValidElement, useEffect, useRef, useState } from "react";
+import React, { cloneElement, isValidElement, useCallback, useEffect, useRef, useState } from "react";
 
 import type { Delegate } from "../../types/Delegate";
 import { Button, Divider, Popover, Text, View } from "..";
@@ -17,7 +17,7 @@ function MenuGroup({
 
 function MenuDivider() {
   return (
-    <Divider style={{ margin: "8px 12px" }} />
+    <Divider style={{ margin: "8px" }} />
   );
 }
 
@@ -63,6 +63,7 @@ function Menu({
   footerDivider,
   children,
   onSelect,
+  onVisibilityChange,
   ...props
 }: Delegate<{
   items: (React.ReactElement<{
@@ -79,15 +80,17 @@ function Menu({
     onClick: React.PointerEventHandler,
   }>,
   onSelect?: (value: string | undefined) => void,
+  onVisibilityChange?: (visible: boolean) => void,
 }, typeof Popover, "isVisible" | "content">) {
   const menuElementRef = useRef<HTMLDivElement>(null);
   const [isPopoverVisible, setIsPopoverVisible] = useState(false);
 
-  const handleDocumentPointerDown = (event: PointerEvent) => {
+  const handleDocumentPointerDown = useCallback((event: PointerEvent) => {
     if (!menuElementRef.current?.contains(event.target as HTMLElement)) {
       setIsPopoverVisible(false);
+      // onVisibilityChange?.(false);
     }
-  };
+  }, []);
 
   useEffect(() => {
     document.addEventListener("pointerdown", handleDocumentPointerDown);
@@ -95,10 +98,11 @@ function Menu({
     return () => {
       document.removeEventListener("pointerdown", handleDocumentPointerDown);
     };
-  }, []);
+  }, [handleDocumentPointerDown]);
 
   const handleItemSelect = (value: string | undefined) => {
     setIsPopoverVisible(false);
+    // onVisibilityChange?.(false);
 
     onSelect?.(value);
   };
@@ -108,7 +112,7 @@ function Menu({
       {header && (
         <>
           {header}
-          {headerDivider && <Divider style={{ margin: "0px 12px" }} />}
+          {headerDivider && <Divider style={{ margin: "0px 8px" }} />}
         </>
       )}
       <View padding="8px 0px">
@@ -119,7 +123,7 @@ function Menu({
       </View>
       {footer && (
         <>
-          {footerDivider && <Divider style={{ margin: "0px 12px" }} />}
+          {footerDivider && <Divider style={{ margin: "0px 8px" }} />}
           {footer}
         </>
       )}

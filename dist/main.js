@@ -976,7 +976,7 @@ function Ce(e) {
 }
 function we() {
 	let e = (0, D.c)(1), t;
-	return e[0] === Symbol.for("react.memo_cache_sentinel") ? (t = /* @__PURE__ */ (0, z.jsx)(ve, { style: { margin: "8px 12px" } }), e[0] = t) : t = e[0], t;
+	return e[0] === Symbol.for("react.memo_cache_sentinel") ? (t = /* @__PURE__ */ (0, z.jsx)(ve, { style: { margin: "8px" } }), e[0] = t) : t = e[0], t;
 }
 function Te(e) {
 	let t = (0, D.c)(19), n, r, i, a, o, s, c;
@@ -1003,7 +1003,10 @@ function Te(e) {
 }
 function Ee(e) {
 	let r = (0, D.c)(36), a, s, c, d, f, p, m, h;
-	r[0] === e ? (a = r[1], s = r[2], c = r[3], d = r[4], f = r[5], p = r[6], m = r[7], h = r[8]) : ({items: p, header: d, headerDivider: f, footer: s, footerDivider: c, children: a, onSelect: m, ...h} = e, r[0] = e, r[1] = a, r[2] = s, r[3] = c, r[4] = d, r[5] = f, r[6] = p, r[7] = m, r[8] = h);
+	if (r[0] !== e) {
+		let { items: t, header: n, headerDivider: i, footer: o, footerDivider: l, children: u, onSelect: g, onVisibilityChange: _, ...v } = e;
+		p = t, d = n, f = i, s = o, c = l, a = u, m = g, h = v, r[0] = e, r[1] = a, r[2] = s, r[3] = c, r[4] = d, r[5] = f, r[6] = p, r[7] = m, r[8] = h;
+	} else a = r[1], s = r[2], c = r[3], d = r[4], f = r[5], p = r[6], m = r[7], h = r[8];
 	let g = l(null), [_, v] = u(!1), y;
 	r[9] === Symbol.for("react.memo_cache_sentinel") ? (y = (e) => {
 		g.current?.contains(e.target) || v(!1);
@@ -1011,13 +1014,13 @@ function Ee(e) {
 	let b = y, x, S;
 	r[10] === Symbol.for("react.memo_cache_sentinel") ? (x = () => (document.addEventListener("pointerdown", b), () => {
 		document.removeEventListener("pointerdown", b);
-	}), S = [], r[10] = x, r[11] = S) : (x = r[10], S = r[11]), o(x, S);
+	}), S = [b], r[10] = x, r[11] = S) : (x = r[10], S = r[11]), o(x, S);
 	let C;
 	r[12] === m ? C = r[13] : (C = (e) => {
 		v(!1), m?.(e);
 	}, r[12] = m, r[13] = C);
 	let w = C, T;
-	r[14] !== d || r[15] !== f ? (T = d && /* @__PURE__ */ (0, z.jsxs)(z.Fragment, { children: [d, f && /* @__PURE__ */ (0, z.jsx)(ve, { style: { margin: "0px 12px" } })] }), r[14] = d, r[15] = f, r[16] = T) : T = r[16];
+	r[14] !== d || r[15] !== f ? (T = d && /* @__PURE__ */ (0, z.jsxs)(z.Fragment, { children: [d, f && /* @__PURE__ */ (0, z.jsx)(ve, { style: { margin: "0px 8px" } })] }), r[14] = d, r[15] = f, r[16] = T) : T = r[16];
 	let E;
 	if (r[17] !== w || r[18] !== p) {
 		let e;
@@ -1035,7 +1038,7 @@ function Ee(e) {
 		children: E
 	}), r[22] = E, r[23] = O);
 	let k;
-	r[24] !== s || r[25] !== c ? (k = s && /* @__PURE__ */ (0, z.jsxs)(z.Fragment, { children: [c && /* @__PURE__ */ (0, z.jsx)(ve, { style: { margin: "0px 12px" } }), s] }), r[24] = s, r[25] = c, r[26] = k) : k = r[26];
+	r[24] !== s || r[25] !== c ? (k = s && /* @__PURE__ */ (0, z.jsxs)(z.Fragment, { children: [c && /* @__PURE__ */ (0, z.jsx)(ve, { style: { margin: "0px 8px" } }), s] }), r[24] = s, r[25] = c, r[26] = k) : k = r[26];
 	let A;
 	r[27] !== T || r[28] !== O || r[29] !== k ? (A = /* @__PURE__ */ (0, z.jsxs)(B, {
 		ref: g,

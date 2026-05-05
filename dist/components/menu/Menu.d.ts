@@ -10,7 +10,7 @@ declare function MenuItem({ title, value, style, children, onClick, onSelect, ..
     value?: string;
     onSelect?: (value: string | undefined) => void;
 }, typeof Button>): import("react/jsx-runtime").JSX.Element;
-declare function Menu({ items, header, headerDivider, footer, footerDivider, children, onSelect, ...props }: Delegate<{
+declare function Menu({ items, header, headerDivider, footer, footerDivider, children, onSelect, onVisibilityChange, ...props }: Delegate<{
     items: (React.ReactElement<{
         onSelect?: (value: string | undefined) => void;
     }>)[];
@@ -25,6 +25,7 @@ declare function Menu({ items, header, headerDivider, footer, footerDivider, chi
         onClick: React.PointerEventHandler;
     }>;
     onSelect?: (value: string | undefined) => void;
+    onVisibilityChange?: (visible: boolean) => void;
 }, typeof Popover, "isVisible" | "content">): import("react/jsx-runtime").JSX.Element;
 declare namespace Menu {
     var Item: typeof MenuItem;
