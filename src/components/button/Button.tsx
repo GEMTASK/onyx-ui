@@ -124,7 +124,7 @@ function Button({
         />
       )}
       {typeof children !== "string" ? children : (
-        <Text bold={bold} fontWeight={fontWeight} textColor={textColor} style={{ textAlign: "left" }}>
+        <Text bold={!fontWeight && bold} fontWeight={fontWeight} textColor={textColor} style={{ textAlign: "left" }}>
           {children}
         </Text>
       )}

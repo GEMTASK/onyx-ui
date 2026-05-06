@@ -752,7 +752,7 @@ function pe(e) {
 	}), t[39] = n, t[40] = u, t[41] = d, t[42] = f, t[43] = P, t[44] = V) : V = t[44];
 	let ne;
 	t[45] !== x || t[46] !== n || t[47] !== i || t[48] !== P ? (ne = typeof n == "string" ? /* @__PURE__ */ (0, z.jsx)(U, {
-		bold: x,
+		bold: !i && x,
 		fontWeight: i,
 		textColor: P,
 		style: { textAlign: "left" },
@@ -995,6 +995,7 @@ function Te(e) {
 	return t[14] !== u || t[15] !== a || t[16] !== d || t[17] !== f ? (p = /* @__PURE__ */ (0, z.jsx)(pe, {
 		hover: !0,
 		align: "middle left",
+		fontWeight: "400",
 		cornerRadius: "0px",
 		style: d,
 		onClick: u,
