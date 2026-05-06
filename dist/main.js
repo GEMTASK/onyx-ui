@@ -1074,46 +1074,48 @@ Ee.Item = Te, Ee.Divider = we, Ee.Group = Ce;
 //#endregion
 //#region src/components/checkbox/Checkbox.tsx
 function Oe(e) {
-	let t = (0, D.c)(17), { label: n, value: r, onValueChange: i } = e, a;
+	let t = (0, D.c)(18), { label: n, value: r, onValueChange: i } = e, a;
 	t[0] === i ? a = t[1] : (a = (e) => {
 		i?.(e.currentTarget.checked);
 	}, t[0] = i, t[1] = a);
-	let o = a, s = r ? "primary" : "divider", c;
-	t[2] === Symbol.for("react.memo_cache_sentinel") ? (c = {
+	let o = a, s = !r, c = r ? "primary" : void 0, l;
+	t[2] === Symbol.for("react.memo_cache_sentinel") ? (l = {
 		width: 24,
 		height: 24
-	}, t[2] = c) : c = t[2];
-	let l;
-	t[3] !== o || t[4] !== r ? (l = /* @__PURE__ */ (0, z.jsx)(B, {
+	}, t[2] = l) : l = t[2];
+	let u;
+	t[3] !== o || t[4] !== r ? (u = /* @__PURE__ */ (0, z.jsx)(B, {
 		absolute: !0,
 		as: "input",
 		type: "checkbox",
 		checked: r,
 		onChange: o
-	}), t[3] = o, t[4] = r, t[5] = l) : l = t[5];
-	let u;
-	t[6] === r ? u = t[7] : (u = r && /* @__PURE__ */ (0, z.jsx)(ce, {
+	}), t[3] = o, t[4] = r, t[5] = u) : u = t[5];
+	let f;
+	t[6] === r ? f = t[7] : (f = r && /* @__PURE__ */ (0, z.jsx)(ce, {
 		icon: d,
 		size: 20,
 		color: "white"
-	}), t[6] = r, t[7] = u);
-	let f;
-	t[8] !== s || t[9] !== l || t[10] !== u ? (f = /* @__PURE__ */ (0, z.jsxs)(B, {
-		fillColor: s,
+	}), t[6] = r, t[7] = f);
+	let p;
+	t[8] !== s || t[9] !== c || t[10] !== u || t[11] !== f ? (p = /* @__PURE__ */ (0, z.jsxs)(B, {
+		border: s,
+		fillColor: c,
 		cornerRadius: "2px",
 		align: "middle center",
-		style: c,
-		children: [l, u]
-	}), t[8] = s, t[9] = l, t[10] = u, t[11] = f) : f = t[11];
-	let p;
-	t[12] === n ? p = t[13] : (p = /* @__PURE__ */ (0, z.jsx)(U, { children: n }), t[12] = n, t[13] = p);
+		style: l,
+		children: [u, f]
+	}), t[8] = s, t[9] = c, t[10] = u, t[11] = f, t[12] = p) : p = t[12];
 	let m;
-	return t[14] !== f || t[15] !== p ? (m = /* @__PURE__ */ (0, z.jsx)(Fe, { children: /* @__PURE__ */ (0, z.jsxs)(B, {
+	t[13] === n ? m = t[14] : (m = /* @__PURE__ */ (0, z.jsx)(U, { children: n }), t[13] = n, t[14] = m);
+	let h;
+	return t[15] !== p || t[16] !== m ? (h = /* @__PURE__ */ (0, z.jsx)(Fe, { children: /* @__PURE__ */ (0, z.jsxs)(B, {
 		horizontal: !0,
+		opacityOnPress: !0,
 		spacing: "8px",
 		align: "middle left",
-		children: [f, p]
-	}) }), t[14] = f, t[15] = p, t[16] = m) : m = t[16], m;
+		children: [p, m]
+	}) }), t[15] = p, t[16] = m, t[17] = h) : h = t[17], h;
 }
 //#endregion
 //#region src/components/select/Select.tsx
