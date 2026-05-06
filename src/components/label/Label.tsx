@@ -14,7 +14,7 @@ function Label({
   chevron?: boolean,
 }, typeof View<"label">>) {
   return (
-    <View as="label" cursor="pointer" spacing="8px" {...props}>
+    <View spacing="8px" {...props}>
       {label && (
         <View horizontal spacing="4px" align="middle left">
           <Text light caps innerStyle={{ fontSize: 11, lineHeight: "17px" }}>

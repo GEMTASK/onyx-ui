@@ -1269,8 +1269,6 @@ function Fe(e) {
 	t[8] === r ? s = t[9] : (s = /* @__PURE__ */ (0, z.jsx)(B, { children: r }), t[8] = r, t[9] = s);
 	let c;
 	return t[10] !== a || t[11] !== o || t[12] !== s ? (c = /* @__PURE__ */ (0, z.jsxs)(B, {
-		as: "label",
-		cursor: "pointer",
 		spacing: "8px",
 		...a,
 		children: [o, s]
