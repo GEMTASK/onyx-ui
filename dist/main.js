@@ -743,7 +743,6 @@ function pe(e) {
 		color: d ?? P,
 		fill: f ? "currentColor" : "none",
 		style: {
-			strokeWidth: 2.5,
 			marginTop: -2,
 			marginBottom: -2,
 			marginLeft: n ? 0 : -2,
