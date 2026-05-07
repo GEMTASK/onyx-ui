@@ -74,7 +74,7 @@ function Menu({
   footer?: React.ReactNode,
   footerDivider?: boolean,
   children: React.ReactElement<{
-    ref: React.RefObject<HTMLElement | null>,
+    ref: React.RefObject<HTMLDivElement | null> | React.RefObject<HTMLDivElement>,
     cursor?: string,
     solid?: boolean,
     onClick: React.PointerEventHandler,
@@ -87,8 +87,6 @@ function Menu({
   const [isPopoverVisible, setIsPopoverVisible] = useState(false);
 
   const handleDocumentPointerDown = useCallback((event: PointerEvent) => {
-    console.log(childElementRef.current);
-
     if (
       !childElementRef.current?.contains(event.target as HTMLElement)
       && !menuElementRef.current?.contains(event.target as HTMLElement)

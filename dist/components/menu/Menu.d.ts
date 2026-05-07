@@ -19,7 +19,7 @@ declare function Menu({ items, header, headerDivider, footer, footerDivider, chi
     footer?: React.ReactNode;
     footerDivider?: boolean;
     children: React.ReactElement<{
-        ref: React.RefObject<HTMLElement | null>;
+        ref: React.RefObject<HTMLDivElement | null> | React.RefObject<HTMLDivElement>;
         cursor?: string;
         solid?: boolean;
         onClick: React.PointerEventHandler;

@@ -84,14 +84,14 @@ function Popover({
       {React.isValidElement(onlyChild) && React.cloneElement(onlyChild, {
         // ref: childElementRef,
         ref: (node: HTMLDivElement | null) => {
-          // 1. Keep the original ref if it exists
-          const { ref } = onlyChild;
+          const ref = onlyChild.props.ref as React.RefCallback<HTMLDivElement> | React.RefObject<HTMLDivElement>;
+
           if (typeof ref === "function") {
             ref(node);
-          } else if (ref) {
+          } else if (ref && node !== null) {
             ref.current = node;
           }
-          // 2. Assign to your new local ref used for useImperativeHandle
+
           childElementRef.current = node;
         },
         opacityOnPress: true

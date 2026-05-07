@@ -950,8 +950,8 @@ function Ce({ ref: e, content: n, isVisible: r, anchor: i = "bottom left", offse
 	return /* @__PURE__ */ (0, B.jsxs)(B.Fragment, { children: [
 		t.isValidElement(h) && t.cloneElement(h, {
 			ref: (e) => {
-				let { ref: t } = h;
-				typeof t == "function" ? t(e) : t && (t.current = e), d.current = e;
+				let t = h.props.ref;
+				typeof t == "function" ? t(e) : t && e !== null && (t.current = e), d.current = e;
 			},
 			opacityOnPress: !0
 		}),
@@ -1007,7 +1007,7 @@ function Ee(e) {
 }
 function De({ items: e, header: r, headerDivider: o, footer: c, footerDivider: l, children: f, onSelect: p, onVisibilityChange: m, ...h }) {
 	let g = u(null), _ = u(null), [v, y] = d(!1), b = a((e) => {
-		console.log(g.current), !g.current?.contains(e.target) && !_.current?.contains(e.target) && (y(!1), m?.(!1));
+		!g.current?.contains(e.target) && !_.current?.contains(e.target) && (y(!1), m?.(!1));
 	}, [m]);
 	s(() => (document.addEventListener("pointerdown", b), () => {
 		document.removeEventListener("pointerdown", b);
