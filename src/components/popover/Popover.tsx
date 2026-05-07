@@ -1,12 +1,13 @@
 /* eslint-disable react-hooks/refs */
 
-import React, { useEffect, useLayoutEffect, useRef } from "react";
+import React, { useEffect, useImperativeHandle, useLayoutEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 
 import type { Delegate } from "../../types/Delegate";
 import { View } from "..";
 
 function Popover({
+  ref,
   content,
   isVisible,
   anchor = "bottom left",
@@ -20,12 +21,14 @@ function Popover({
   offsetTop?: number,
   noPortal?: boolean,
   children: React.ReactElement<{
-    ref: React.RefObject<HTMLElement | null>,
+    ref: React.RefCallback<HTMLDivElement | null>,
     opacityOnPress?: boolean,
   }> | boolean,
 }, typeof View<"div">>) {
   const childElementRef = useRef<HTMLDivElement>(null);
   const popoverElementRef = useRef<HTMLDivElement>(null);
+
+  useImperativeHandle(ref, () => childElementRef.current!);
 
   useLayoutEffect(() => {
     const overlayElement = childElementRef.current?.closest("#window")?.querySelector("#overlay") as HTMLElement;
@@ -79,7 +82,18 @@ function Popover({
   return (
     <>
       {React.isValidElement(onlyChild) && React.cloneElement(onlyChild, {
-        ref: childElementRef,
+        // ref: childElementRef,
+        ref: (node: HTMLDivElement | null) => {
+          // 1. Keep the original ref if it exists
+          const { ref } = onlyChild;
+          if (typeof ref === "function") {
+            ref(node);
+          } else if (ref) {
+            ref.current = node;
+          }
+          // 2. Assign to your new local ref used for useImperativeHandle
+          childElementRef.current = node;
+        },
         opacityOnPress: true
       })}
       {noPortal && isVisible && overlayElement && (

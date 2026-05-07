@@ -82,11 +82,17 @@ function Menu({
   onSelect?: (value: string | undefined) => void,
   onVisibilityChange?: (visible: boolean) => void,
 }, typeof Popover, "isVisible" | "content">) {
+  const childElementRef = useRef<HTMLDivElement>(null);
   const menuElementRef = useRef<HTMLDivElement>(null);
   const [isPopoverVisible, setIsPopoverVisible] = useState(false);
 
   const handleDocumentPointerDown = useCallback((event: PointerEvent) => {
-    if (!menuElementRef.current?.contains(event.target as HTMLElement)) {
+    console.log(childElementRef.current);
+
+    if (
+      !childElementRef.current?.contains(event.target as HTMLElement)
+      && !menuElementRef.current?.contains(event.target as HTMLElement)
+    ) {
       setIsPopoverVisible(false);
       // onVisibilityChange?.(false);
     }
@@ -135,6 +141,7 @@ function Menu({
   return (
     <Popover isVisible={isPopoverVisible} content={popoverContent} {...props}>
       {React.isValidElement(onlyChild) && React.cloneElement(onlyChild, {
+        ref: childElementRef,
         cursor: "pointer",
         solid: isPopoverVisible || onlyChild.props.solid,
         onClick: () => {

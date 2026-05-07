@@ -16,7 +16,7 @@ function Checkbox({
   };
 
   return (
-    <Label>
+    <Label as="label">
       <View horizontal opacityOnPress spacing="8px" align="middle left">
         <View border={!value} fillColor={value ? "primary" : undefined} cornerRadius="2px" align="middle center" style={{ width: 24, height: 24 }}>
           <View absolute as="input" type="checkbox" checked={value} onChange={handleChange} />

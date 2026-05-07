@@ -1,14 +1,14 @@
 import { default as React } from 'react';
 import { Delegate } from '../../types/Delegate';
 import { View } from '..';
-declare function Popover({ content, isVisible, anchor, offsetTop, noPortal, children }: Delegate<{
+declare function Popover({ ref, content, isVisible, anchor, offsetTop, noPortal, children }: Delegate<{
     content: React.ReactNode;
     isVisible: boolean;
     anchor?: "bottom left" | "bottom right" | "top right";
     offsetTop?: number;
     noPortal?: boolean;
     children: React.ReactElement<{
-        ref: React.RefObject<HTMLElement | null>;
+        ref: React.RefCallback<HTMLDivElement | null>;
         opacityOnPress?: boolean;
     }> | boolean;
 }, typeof View<"div">>): import("react/jsx-runtime").JSX.Element;
