@@ -94,9 +94,9 @@ function Menu({
       && !menuElementRef.current?.contains(event.target as HTMLElement)
     ) {
       setIsPopoverVisible(false);
-      // onVisibilityChange?.(false);
+      onVisibilityChange?.(false);
     }
-  }, []);
+  }, [onVisibilityChange]);
 
   useEffect(() => {
     document.addEventListener("pointerdown", handleDocumentPointerDown);
@@ -108,7 +108,7 @@ function Menu({
 
   const handleItemSelect = (value: string | undefined) => {
     setIsPopoverVisible(false);
-    // onVisibilityChange?.(false);
+    onVisibilityChange?.(false);
 
     onSelect?.(value);
   };

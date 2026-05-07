@@ -1007,13 +1007,13 @@ function Ee(e) {
 }
 function De({ items: e, header: r, headerDivider: o, footer: c, footerDivider: l, children: f, onSelect: p, onVisibilityChange: m, ...h }) {
 	let g = u(null), _ = u(null), [v, y] = d(!1), b = a((e) => {
-		console.log(g.current), !g.current?.contains(e.target) && !_.current?.contains(e.target) && y(!1);
-	}, []);
+		console.log(g.current), !g.current?.contains(e.target) && !_.current?.contains(e.target) && (y(!1), m?.(!1));
+	}, [m]);
 	s(() => (document.addEventListener("pointerdown", b), () => {
 		document.removeEventListener("pointerdown", b);
 	}), [b]);
 	let x = (e) => {
-		y(!1), p?.(e);
+		y(!1), m?.(!1), p?.(e);
 	}, S = /* @__PURE__ */ (0, B.jsxs)(V, {
 		ref: _,
 		children: [
