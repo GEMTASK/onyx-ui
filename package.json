@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "vite",
     "// build": "tsc -b && vite build --watch",
-    "build": "vite build --watch",
+    "build": "tsc -b && vite build --watch",
     "lint": "eslint .",
     "preview": "vite preview"
   },
