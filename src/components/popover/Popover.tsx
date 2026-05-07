@@ -21,7 +21,7 @@ function Popover({
   offsetTop?: number,
   noPortal?: boolean,
   children: React.ReactElement<{
-    ref: React.RefCallback<HTMLDivElement | null>,
+    ref: React.RefObject<HTMLDivElement | null>,
     opacityOnPress?: boolean,
   }> | boolean,
 }, typeof View<"div">>) {
@@ -82,18 +82,18 @@ function Popover({
   return (
     <>
       {React.isValidElement(onlyChild) && React.cloneElement(onlyChild, {
-        // ref: childElementRef,
-        ref: (node: HTMLDivElement | null) => {
-          const ref = onlyChild.props.ref as React.RefCallback<HTMLDivElement> | React.RefObject<HTMLDivElement>;
+        ref: childElementRef,
+        // ref: (node: HTMLDivElement | null) => {
+        //   const ref = onlyChild.props.ref as React.RefCallback<HTMLDivElement> | React.RefObject<HTMLDivElement>;
 
-          if (typeof ref === "function") {
-            ref(node);
-          } else if (ref && node !== null) {
-            ref.current = node;
-          }
+        //   if (typeof ref === "function") {
+        //     ref(node);
+        //   } else if (ref && node !== null) {
+        //     ref.current = node;
+        //   }
 
-          childElementRef.current = node;
-        },
+        //   childElementRef.current = node;
+        // },
         opacityOnPress: true
       })}
       {noPortal && isVisible && overlayElement && (

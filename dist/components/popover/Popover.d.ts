@@ -8,7 +8,7 @@ declare function Popover({ ref, content, isVisible, anchor, offsetTop, noPortal,
     offsetTop?: number;
     noPortal?: boolean;
     children: React.ReactElement<{
-        ref: React.RefCallback<HTMLDivElement | null>;
+        ref: React.RefObject<HTMLDivElement | null>;
         opacityOnPress?: boolean;
     }> | boolean;
 }, typeof View<"div">>): import("react/jsx-runtime").JSX.Element;

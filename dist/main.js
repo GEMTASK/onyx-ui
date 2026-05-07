@@ -949,10 +949,7 @@ function Ce({ ref: e, content: n, isVisible: r, anchor: i = "bottom left", offse
 	});
 	return /* @__PURE__ */ (0, B.jsxs)(B.Fragment, { children: [
 		t.isValidElement(h) && t.cloneElement(h, {
-			ref: (e) => {
-				let t = h.props.ref;
-				typeof t == "function" ? t(e) : t && e !== null && (t.current = e), d.current = e;
-			},
+			ref: d,
 			opacityOnPress: !0
 		}),
 		o && r && p && g,
