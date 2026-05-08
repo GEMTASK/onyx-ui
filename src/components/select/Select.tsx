@@ -97,22 +97,22 @@ function Select({
     }
   });
 
-  const option = options.reduce((acc, option) => (
+  const selectedOption = options.flatMap(option => (
     "options" in option
-      ? option.options.find(option => option.value === value) ?? acc
-      : option.value === value ? option : acc
-  ), {} as OptionValueBase);
+      ? option.options
+      : [option]
+  )).find(option => option.value === value)!;
 
   return (
     <View>
       <Menu items={menuItems} offsetTop={8} {...props}>
         <Label chevron label={label}>
           <View horizontal spacing="4px" align="middle left">
-            {"icon" in option && option.icon && (
-              <Icon icon={option.icon} color={option.iconColor} fill={option.iconFill ? "currentColor" : "none"} size={14} style={{ margin: "-2px 0" }} />
+            {"icon" in selectedOption && selectedOption.icon && (
+              <Icon icon={selectedOption.icon} color={selectedOption.iconColor} fill={selectedOption.iconFill ? "currentColor" : "none"} size={14} style={{ margin: "-2px 0" }} />
             )}
             <Text>
-              {option.label}
+              {selectedOption.label}
             </Text>
           </View>
         </Label>

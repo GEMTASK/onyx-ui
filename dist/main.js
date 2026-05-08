@@ -1141,7 +1141,7 @@ function ke({ label: e, value: t, options: n, onValueChange: r, ...i }) {
 				onSelect: a
 			});
 		}
-	}), s = n.reduce((e, n) => "options" in n ? n.options.find((e) => e.value === t) ?? e : n.value === t ? n : e, {});
+	}), s = n.flatMap((e) => "options" in e ? e.options : [e]).find((e) => e.value === t);
 	return /* @__PURE__ */ (0, B.jsx)(V, { children: /* @__PURE__ */ (0, B.jsx)(Ee, {
 		items: o,
 		offsetTop: 8,
