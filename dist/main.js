@@ -1160,7 +1160,10 @@ function ke({ label: e, value: t, options: n, onValueChange: r, ...i }) {
 					size: 14,
 					style: { margin: "-2px 0" }
 				}), /* @__PURE__ */ (0, B.jsx)(U, { children: s.label })]
-			}) : /* @__PURE__ */ (0, B.jsx)(U, { children: "\xA0" })
+			}) : /* @__PURE__ */ (0, B.jsx)(V, {
+				horizontal: !0,
+				children: /* @__PURE__ */ (0, B.jsxs)(U, { children: [t, " — Value"] })
+			})
 		})
 	}) });
 }

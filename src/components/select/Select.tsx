@@ -112,13 +112,25 @@ function Select({
           {selectedOption ? (
             <View horizontal spacing="4px" align="middle left">
               {"icon" in selectedOption && selectedOption.icon && (
-                <Icon icon={selectedOption.icon} color={selectedOption.iconColor} fill={selectedOption.iconFill ? "currentColor" : "none"} size={14} style={{ margin: "-2px 0" }} />
+                <Icon
+                  icon={selectedOption.icon}
+                  color={selectedOption.iconColor}
+                  fill={selectedOption.iconFill ? "currentColor" : "none"}
+                  size={14}
+                  style={{ margin: "-2px 0" }}
+                />
               )}
               <Text>
                 {selectedOption.label}
               </Text>
             </View>
-          ) : <Text>&nbsp;</Text>}
+          ) : (
+            <View horizontal>
+              <Text>
+                {value} — Value
+              </Text>
+            </View>
+          )}
         </Label>
       </Menu>
     </View>
