@@ -1112,7 +1112,7 @@ function Oe(e) {
 }
 function ke({ label: e, value: t, options: n, onValueChange: r, ...i }) {
 	let a = (e) => {
-		r?.(e);
+		e !== t && r?.(e);
 	}, o = n.flatMap((e, r) => {
 		switch (!0) {
 			case "options" in e: return [

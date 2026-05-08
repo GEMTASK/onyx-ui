@@ -52,8 +52,10 @@ function Select({
   options: OptionValue[],
   onValueChange?: (value: string | number | null | undefined) => void,
 }, typeof Menu, "items" | "children">) {
-  const handleOptionSelect = (value: string | number | null | undefined) => {
-    onValueChange?.(value);
+  const handleOptionSelect = (newValue: string | number | null | undefined) => {
+    if (newValue !== value) {
+      onValueChange?.(newValue);
+    }
   };
 
   const menuItems = options.flatMap((option, index) => {
