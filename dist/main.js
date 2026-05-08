@@ -976,7 +976,7 @@ function Ce(e) {
 }
 function we() {
 	let e = (0, O.c)(1), t;
-	return e[0] === Symbol.for("react.memo_cache_sentinel") ? (t = /* @__PURE__ */ (0, B.jsx)(ve, { style: { margin: "8px" } }), e[0] = t) : t = e[0], t;
+	return e[0] === Symbol.for("react.memo_cache_sentinel") ? (t = /* @__PURE__ */ (0, B.jsx)(ve, { style: { margin: "8px 12px" } }), e[0] = t) : t = e[0], t;
 }
 function Te(e) {
 	let t = (0, O.c)(19), n, r, i, a, o, s, c;

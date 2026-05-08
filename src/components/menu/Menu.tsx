@@ -17,7 +17,7 @@ function MenuGroup({
 
 function MenuDivider() {
   return (
-    <Divider style={{ margin: "8px" }} />
+    <Divider style={{ margin: "8px 12px" }} />
   );
 }
 
