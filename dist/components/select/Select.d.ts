@@ -5,7 +5,7 @@ type OptionValueBase = {
     iconColor?: React.ComponentProps<typeof Menu.Item>["iconColor"];
     iconFill?: React.ComponentProps<typeof Menu.Item>["iconFill"];
     label: React.ComponentProps<typeof Menu.Item>["title"];
-    value: string | null | undefined;
+    value: string | number | null | undefined;
     tooltip?: string;
 };
 type OptionValue = OptionValueBase | {
@@ -14,8 +14,8 @@ type OptionValue = OptionValueBase | {
 };
 declare function Select({ label, value, options, onValueChange, ...props }: Delegate<{
     label?: string;
-    value?: string | null;
+    value?: string | number | null | undefined;
     options: OptionValue[];
-    onValueChange?: (value: string | null | undefined) => void;
+    onValueChange?: (value: string | number | null | undefined) => void;
 }, typeof Menu, "items" | "children">): import("react/jsx-runtime").JSX.Element;
 export default Select;

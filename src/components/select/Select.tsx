@@ -7,7 +7,7 @@ type OptionValueBase = {
   iconColor?: React.ComponentProps<typeof Menu.Item>["iconColor"],
   iconFill?: React.ComponentProps<typeof Menu.Item>["iconFill"],
   label: React.ComponentProps<typeof Menu.Item>["title"],
-  value: string | null | undefined,
+  value: string | number | null | undefined,
   tooltip?: string,
 };
 
@@ -24,8 +24,8 @@ function SelectOption({
   ...props
 }: Delegate<{
   label: React.ComponentProps<typeof Menu.Item>["title"],
-  value: string | null | undefined,
-  onSelect: (value: string | null | undefined) => void,
+  value: string | number | null | undefined,
+  onSelect: (value: string | number | null | undefined) => void,
 }, typeof Menu.Item, "title">) {
   const handleItemClick = () => {
     onSelect?.(value);
@@ -48,11 +48,11 @@ function Select({
   ...props
 }: Delegate<{
   label?: string,
-  value?: string | null,
+  value?: string | number | null | undefined,
   options: OptionValue[],
-  onValueChange?: (value: string | null | undefined) => void,
+  onValueChange?: (value: string | number | null | undefined) => void,
 }, typeof Menu, "items" | "children">) {
-  const handleOptionSelect = (value: string | null | undefined) => {
+  const handleOptionSelect = (value: string | number | null | undefined) => {
     onValueChange?.(value);
   };
 

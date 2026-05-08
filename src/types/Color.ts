@@ -1,8 +1,14 @@
 type Theme = "primary" | "content" | "panel" | "gutter" | "icon" | "divider" | "text" | "selected" | "highlight";
-type Gray = "gray-0" | "gray-1" | "gray-2";
-type Blue = "blue-5";
+type Gray = "gray-0" | "gray-1" | "gray-2" | "gray-3" | "gray-4" | "gray-5" | "gray-6" | "gray-7" | "gray-8" | "gray-9";
+type Blue = "blue-0" | "blue-1" | "blue-2" | "blue-3" | "blue-4" | "blue-5" | "blue-6" | "blue-7" | "blue-8" | "blue-9";
+type Green = "green-0" | "green-1" | "green-2" | "green-3" | "green-4" | "green-5" | "green-6" | "green-7" | "green-8" | "green-9";
+type Red = "red-0" | "red-1" | "red-2" | "red-3" | "red-4" | "red-5" | "red-6" | "red-7" | "red-8" | "red-9";
+type Orange = "orange-0" | "orange-1" | "orange-2" | "orange-3" | "orange-4" | "orange-5" | "orange-6" | "orange-7" | "orange-8" | "orange-9";
+type Violet = "violet-0" | "violet-1" | "violet-2" | "violet-3" | "violet-4" | "violet-5" | "violet-6" | "violet-7" | "violet-8" | "violet-9";
+type Teal = "teal-0" | "teal-1" | "teal-2" | "teal-3" | "teal-4" | "teal-5" | "teal-6" | "teal-7" | "teal-8" | "teal-9";
+type Lime = "lime-0" | "lime-1" | "lime-2" | "lime-3" | "lime-4" | "lime-5" | "lime-6" | "lime-7" | "lime-8" | "lime-9";
 
-type Color = Theme | "black" | "white" | Gray | Blue;
+type Color = Theme | "black" | "white" | Gray | Blue | Green | Red | Orange | Violet | Teal | Lime;
 
 export type {
   Color
