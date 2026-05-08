@@ -9,6 +9,7 @@ function Icon({
   icon: Component,
   color = "gray-7",
   size,
+  bleed,
   className,
   ...props
 }: {
@@ -16,11 +17,13 @@ function Icon({
   icon: LucideIcon,
   color?: React.ComponentProps<LucideIcon>["color"],
   size?: React.ComponentProps<LucideIcon>["size"],
+  bleed?: boolean,
 } & React.ComponentProps<LucideIcon>) {
   const iconClassName = [
     styles.Icon,
     color && textColorStyles[color],
     light && styles.light,
+    bleed && styles.bleed,
     className
   ].filter(className => className).join(" ");
 

@@ -652,29 +652,31 @@ function se(e) {
 }
 var ce = {
 	Icon: "_onyx-ui_Icon_CezUJ",
-	light: "_onyx-ui_light_4wb4K"
+	light: "_onyx-ui_light_4wb4K",
+	bleed: "_onyx-ui_bleed_Gv7vD"
 };
 //#endregion
 //#region src/components/icon/Icon.tsx
 function W(e) {
-	let t = (0, O.c)(16), n, r, i, a, o, s;
+	let t = (0, O.c)(18), n, r, i, a, o, s, c;
 	if (t[0] !== e) {
-		let { ref: c, light: l, icon: u, color: d, size: f, className: p, ...m } = e;
-		i = l, n = u, s = d, o = f, r = p, a = m, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o, t[6] = s;
-	} else n = t[1], r = t[2], i = t[3], a = t[4], o = t[5], s = t[6];
-	let c = s === void 0 ? "gray-7" : s, l = c && ie[c], u = i && ce.light, d;
-	t[7] !== r || t[8] !== l || t[9] !== u ? (d = [
+		let { ref: l, light: u, icon: d, color: f, size: p, bleed: m, className: h, ...g } = e;
+		a = u, n = d, c = f, s = p, r = m, i = h, o = g, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o, t[6] = s, t[7] = c;
+	} else n = t[1], r = t[2], i = t[3], a = t[4], o = t[5], s = t[6], c = t[7];
+	let l = c === void 0 ? "gray-7" : c, u = l && ie[l], d = a && ce.light, f = r && ce.bleed, p;
+	t[8] !== i || t[9] !== u || t[10] !== d || t[11] !== f ? (p = [
 		ce.Icon,
-		l,
 		u,
-		r
-	].filter(le), t[7] = r, t[8] = l, t[9] = u, t[10] = d) : d = t[10];
-	let f = d.join(" "), p;
-	return t[11] !== n || t[12] !== f || t[13] !== a || t[14] !== o ? (p = /* @__PURE__ */ (0, B.jsx)(n, {
-		size: o,
-		className: f,
-		...a
-	}), t[11] = n, t[12] = f, t[13] = a, t[14] = o, t[15] = p) : p = t[15], p;
+		d,
+		f,
+		i
+	].filter(le), t[8] = i, t[9] = u, t[10] = d, t[11] = f, t[12] = p) : p = t[12];
+	let m = p.join(" "), h;
+	return t[13] !== n || t[14] !== m || t[15] !== o || t[16] !== s ? (h = /* @__PURE__ */ (0, B.jsx)(n, {
+		size: s,
+		className: m,
+		...o
+	}), t[13] = n, t[14] = m, t[15] = o, t[16] = s, t[17] = h) : h = t[17], h;
 }
 function le(e) {
 	return e;
@@ -738,13 +740,12 @@ function pe(e) {
 	t[36] !== M || t[37] !== A ? (L = [M, A], t[36] = M, t[37] = A, t[38] = L) : L = t[38], l(I, L);
 	let R = n ? "8px 12px" : "8px", z = _ ? "max" : "2px", te;
 	t[39] !== n || t[40] !== s || t[41] !== d || t[42] !== f || t[43] !== P ? (te = s && /* @__PURE__ */ (0, B.jsx)(W, {
+		bleed: !0,
 		icon: s,
 		size: 16,
 		color: d ?? P,
 		fill: f ? "currentColor" : "none",
 		style: {
-			marginTop: -2,
-			marginBottom: -2,
 			marginLeft: n ? 0 : -2,
 			marginRight: 0
 		}
@@ -762,13 +763,12 @@ function pe(e) {
 		flex: !0,
 		align: "middle right",
 		children: /* @__PURE__ */ (0, B.jsx)(W, {
+			bleed: !0,
 			icon: g,
 			size: 16,
 			color: P,
 			style: {
 				strokeWidth: 2.5,
-				marginTop: -2,
-				marginBottom: -2,
 				marginRight: n ? -3 : 0,
 				justifySelf: "flex-end"
 			}
@@ -1337,45 +1337,42 @@ var ze = { text: "_onyx-ui_text_-bQVx" };
 //#region src/components/chip/Chip.tsx
 function Be(e) {
 	let t = (0, O.c)(31), n, r, i, a, o, c, l, d, f;
-	t[0] === e ? (n = t[1], r = t[2], i = t[3], a = t[4], o = t[5], c = t[6], l = t[7], d = t[8], f = t[9]) : ({light: c, icon: i, iconSize: o, iconColor: a, fillColor: r, outlineColor: l, children: n, style: f, ...d} = e, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o, t[6] = c, t[7] = l, t[8] = d, t[9] = f);
-	let p = u(null), m, h;
-	t[10] === l ? (m = t[11], h = t[12]) : (m = () => {
-		p.current && p.current.style.setProperty("--outline-color", `var(--${l}-color)`);
-	}, h = [l], t[10] = l, t[11] = m, t[12] = h), s(m, h);
-	let g;
-	t[13] !== i || t[14] !== a || t[15] !== o || t[16] !== c ? (g = i && /* @__PURE__ */ (0, B.jsx)(W, {
+	t[0] === e ? (n = t[1], r = t[2], i = t[3], a = t[4], o = t[5], c = t[6], l = t[7], d = t[8], f = t[9]) : ({icon: i, iconSize: c, iconColor: a, iconLight: o, fillColor: r, outlineColor: f, children: n, style: d, ...l} = e, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o, t[6] = c, t[7] = l, t[8] = d, t[9] = f);
+	let p = f === void 0 ? "content" : f, m = u(null), h, g;
+	t[10] !== r || t[11] !== p ? (h = () => {
+		m.current && r && m.current.style.setProperty("--outline-color", `var(--${p}-color)`);
+	}, g = [r, p], t[10] = r, t[11] = p, t[12] = h, t[13] = g) : (h = t[12], g = t[13]), s(h, g);
+	let _;
+	t[14] !== i || t[15] !== a || t[16] !== o || t[17] !== c ? (_ = i && /* @__PURE__ */ (0, B.jsx)(W, {
+		bleed: !0,
 		icon: i,
-		size: o ?? 14,
+		size: c ?? 14,
 		color: a,
-		style: {
-			margin: "-2px 0",
-			opacity: c ? .6 : void 0
-		}
-	}), t[13] = i, t[14] = a, t[15] = o, t[16] = c, t[17] = g) : g = t[17];
-	let _ = r ? "2px 4px" : void 0, v = r ? "-2px 0" : void 0, y;
-	t[18] !== f || t[19] !== v ? (y = {
-		margin: v,
-		...f
-	}, t[18] = f, t[19] = v, t[20] = y) : y = t[20];
-	let b;
-	t[21] !== n || t[22] !== r || t[23] !== c || t[24] !== d || t[25] !== _ || t[26] !== y ? (b = /* @__PURE__ */ (0, B.jsx)(U, {
-		ref: p,
-		light: c,
+		style: { opacity: o ? .6 : void 0 }
+	}), t[14] = i, t[15] = a, t[16] = o, t[17] = c, t[18] = _) : _ = t[18];
+	let v = r ? "2px 4px" : void 0, y = r ? "-2px 0" : void 0, b;
+	t[19] !== d || t[20] !== y ? (b = {
+		margin: y,
+		...d
+	}, t[19] = d, t[20] = y, t[21] = b) : b = t[21];
+	let x;
+	t[22] !== n || t[23] !== r || t[24] !== l || t[25] !== v || t[26] !== b ? (x = /* @__PURE__ */ (0, B.jsx)(U, {
+		ref: m,
 		fillColor: r,
 		cornerRadius: "2px",
-		padding: _,
+		padding: v,
 		className: ze.text,
-		style: y,
-		...d,
+		style: b,
+		...l,
 		children: n
-	}), t[21] = n, t[22] = r, t[23] = c, t[24] = d, t[25] = _, t[26] = y, t[27] = b) : b = t[27];
-	let x;
-	return t[28] !== g || t[29] !== b ? (x = /* @__PURE__ */ (0, B.jsxs)(V, {
+	}), t[22] = n, t[23] = r, t[24] = l, t[25] = v, t[26] = b, t[27] = x) : x = t[27];
+	let S;
+	return t[28] !== _ || t[29] !== x ? (S = /* @__PURE__ */ (0, B.jsxs)(V, {
 		horizontal: !0,
 		spacing: "4px",
 		align: "middle left",
-		children: [g, b]
-	}), t[28] = g, t[29] = b, t[30] = x) : x = t[30], x;
+		children: [_, x]
+	}), t[28] = _, t[29] = x, t[30] = S) : S = t[30], S;
 }
 //#endregion
 //#region src/components/tabs/Tabs.tsx

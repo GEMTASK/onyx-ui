@@ -116,11 +116,12 @@ function Button({
     >
       {icon && (
         <Icon
+          bleed
           icon={icon}
           size={16}
           color={iconColor ?? textColor}
           fill={iconFill ? "currentColor" : "none"}
-          style={{ /* strokeWidth: 2.5, */ marginTop: -2, marginBottom: -2, marginLeft: children ? 0 : -2, marginRight: 0 }}
+          style={{ marginLeft: children ? 0 : -2, marginRight: 0 }}
         />
       )}
       {typeof children !== "string" ? children : (
@@ -131,10 +132,11 @@ function Button({
       {rightIcon && (
         <View flex align="middle right">
           <Icon
+            bleed
             icon={rightIcon}
             size={16}
             color={textColor}
-            style={{ strokeWidth: 2.5, marginTop: -2, marginBottom: -2, marginRight: children ? -3 : 0, justifySelf: "flex-end" }}
+            style={{ strokeWidth: 2.5, marginRight: children ? -3 : 0, justifySelf: "flex-end" }}
           />
         </View>
       )}

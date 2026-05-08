@@ -4,4 +4,8 @@
   &.light {
     opacity: 0.7;
   }
+
+  &.bleed {
+    margin: -2px 0;
+  }
 }
