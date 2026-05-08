@@ -1149,7 +1149,7 @@ function ke({ label: e, value: t, options: n, onValueChange: r, ...i }) {
 		children: /* @__PURE__ */ (0, B.jsx)(Pe, {
 			chevron: !0,
 			label: e,
-			children: /* @__PURE__ */ (0, B.jsxs)(V, {
+			children: s ? /* @__PURE__ */ (0, B.jsxs)(V, {
 				horizontal: !0,
 				spacing: "4px",
 				align: "middle left",
@@ -1160,7 +1160,7 @@ function ke({ label: e, value: t, options: n, onValueChange: r, ...i }) {
 					size: 14,
 					style: { margin: "-2px 0" }
 				}), /* @__PURE__ */ (0, B.jsx)(U, { children: s.label })]
-			})
+			}) : /* @__PURE__ */ (0, B.jsx)(U, { children: "\xA0" })
 		})
 	}) });
 }

@@ -103,20 +103,22 @@ function Select({
     "options" in option
       ? option.options
       : [option]
-  )).find(option => option.value === value)!;
+  )).find(option => option.value === value);
 
   return (
     <View>
       <Menu items={menuItems} offsetTop={8} {...props}>
         <Label chevron label={label}>
-          <View horizontal spacing="4px" align="middle left">
-            {"icon" in selectedOption && selectedOption.icon && (
-              <Icon icon={selectedOption.icon} color={selectedOption.iconColor} fill={selectedOption.iconFill ? "currentColor" : "none"} size={14} style={{ margin: "-2px 0" }} />
-            )}
-            <Text>
-              {selectedOption.label}
-            </Text>
-          </View>
+          {selectedOption ? (
+            <View horizontal spacing="4px" align="middle left">
+              {"icon" in selectedOption && selectedOption.icon && (
+                <Icon icon={selectedOption.icon} color={selectedOption.iconColor} fill={selectedOption.iconFill ? "currentColor" : "none"} size={14} style={{ margin: "-2px 0" }} />
+              )}
+              <Text>
+                {selectedOption.label}
+              </Text>
+            </View>
+          ) : <Text>&nbsp;</Text>}
         </Label>
       </Menu>
     </View>
