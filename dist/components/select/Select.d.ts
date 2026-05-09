@@ -6,7 +6,8 @@ type OptionValueBase = {
     iconFill?: React.ComponentProps<typeof Menu.Item>["iconFill"];
     label: React.ComponentProps<typeof Menu.Item>["title"];
     value: string | number | null | undefined;
-    tooltip?: string;
+    tooltip?: React.ComponentProps<typeof Menu.Item>["tooltip"];
+    tooltipAnchor?: React.ComponentProps<typeof Menu.Item>["tooltipAnchor"];
 };
 type OptionValue = OptionValueBase | {
     label?: React.ComponentProps<typeof Menu.Item>["title"];

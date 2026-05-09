@@ -38,6 +38,7 @@ var h = Object.create, g = Object.defineProperty, _ = Object.getOwnPropertyDescr
 	process.env.NODE_ENV === "production" ? t.exports = E() : t.exports = D();
 })))(), k = {
 	View: "_onyx-ui_View_-qlIB",
+	fadeIn: "_onyx-ui_fadeIn_rlN6H",
 	horizontal: "_onyx-ui_horizontal_PcIrb",
 	absolute: "_onyx-ui_absolute_MRtrq",
 	sticky: "_onyx-ui_sticky_N5dr-",
@@ -498,13 +499,11 @@ var h = Object.create, g = Object.defineProperty, _ = Object.getOwnPropertyDescr
 	process.env.NODE_ENV === "production" ? t.exports = R() : t.exports = z();
 })))(), ee = t.createContext({ parentFillColor: void 0 });
 function V(e) {
-	let t = (0, O.c)(57), n, r, i, a, o, s, c, l, u, d, f, p, m, h, g, _, v, y, b, x, S, C, w;
-	t[0] === e ? (n = t[1], r = t[2], i = t[3], a = t[4], o = t[5], s = t[6], c = t[7], l = t[8], u = t[9], d = t[10], f = t[11], p = t[12], m = t[13], h = t[14], g = t[15], _ = t[16], v = t[17], y = t[18], b = t[19], x = t[20], S = t[21], C = t[22], w = t[23]) : ({as: i, flex: f, wrap: C, horizontal: p, absolute: n, sticky: b, opacityOnPress: h, zIndex: w, shadow: v, cursor: u, padding: g, spacing: y, border: a, negativeBorder: m, align: r, fillColor: d, borderColor: o, cornerRadius: l, tooltip: S, style: x, className: c, children: s, ..._} = e, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o, t[6] = s, t[7] = c, t[8] = l, t[9] = u, t[10] = d, t[11] = f, t[12] = p, t[13] = m, t[14] = h, t[15] = g, t[16] = _, t[17] = v, t[18] = y, t[19] = b, t[20] = x, t[21] = S, t[22] = C, t[23] = w);
-	let T = i ?? "div", E = f && k.flex, D = C && k.wrap, R = n && k.absolute, z = b && k.sticky, V = h && k.opacityOnPress, H = w && k[`zindex_${w}`], ne = p && k.horizontal, re = v === "heavy" ? k.heavyShadow : v && k.shadow, ie = u && k[u], ae = g && j[`_${g.replace(/ /, "_")}`], U = y && M[`_${y.replace(/ /, "_")}`], oe = a && N[a === !0 ? "top_right_bottom_left" : a.replace(/ /, "_")], se = m && N.negative, ce = r && (p ? F[r.replace(/ /, "_")] : I[r.replace(/ /, "_")]), W = d && A[d], le = l && P[`_${l}`], ue = o && L[o], de;
-	t[24] !== c || t[25] !== E || t[26] !== ae || t[27] !== U || t[28] !== oe || t[29] !== se || t[30] !== ce || t[31] !== W || t[32] !== le || t[33] !== ue || t[34] !== D || t[35] !== R || t[36] !== z || t[37] !== V || t[38] !== H || t[39] !== ne || t[40] !== re || t[41] !== ie ? (de = [
+	let t = (0, O.c)(59), n, r, i, a, o, s, c, l, u, d, f, p, m, h, g, _, v, y, b, x, S, C, w, T;
+	t[0] === e ? (n = t[1], r = t[2], i = t[3], a = t[4], o = t[5], s = t[6], c = t[7], l = t[8], u = t[9], d = t[10], f = t[11], p = t[12], m = t[13], h = t[14], g = t[15], _ = t[16], v = t[17], y = t[18], b = t[19], x = t[20], S = t[21], C = t[22], w = t[23], T = t[24]) : ({as: i, flex: f, wrap: w, horizontal: p, absolute: n, sticky: b, opacityOnPress: h, zIndex: T, shadow: v, cursor: u, padding: g, spacing: y, border: a, negativeBorder: m, align: r, fillColor: d, borderColor: o, cornerRadius: l, tooltip: C, tooltipAnchor: S, style: x, className: c, children: s, ..._} = e, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o, t[6] = s, t[7] = c, t[8] = l, t[9] = u, t[10] = d, t[11] = f, t[12] = p, t[13] = m, t[14] = h, t[15] = g, t[16] = _, t[17] = v, t[18] = y, t[19] = b, t[20] = x, t[21] = S, t[22] = C, t[23] = w, t[24] = T);
+	let E = S === void 0 ? "top" : S, D = i ?? "div", R = f && k.flex, z = w && k.wrap, V = n && k.absolute, H = b && k.sticky, ne = h && k.opacityOnPress, re = T && k[`zindex_${T}`], ie = p && k.horizontal, ae = v === "heavy" ? k.heavyShadow : v && k.shadow, U = u && k[u], oe = g && j[`_${g.replace(/ /, "_")}`], se = y && M[`_${y.replace(/ /, "_")}`], ce = a && N[a === !0 ? "top_right_bottom_left" : a.replace(/ /, "_")], W = m && N.negative, le = r && (p ? F[r.replace(/ /, "_")] : I[r.replace(/ /, "_")]), ue = d && A[d], de = l && P[`_${l}`], fe = o && L[o], pe;
+	t[25] !== c || t[26] !== U || t[27] !== oe || t[28] !== se || t[29] !== ce || t[30] !== W || t[31] !== le || t[32] !== ue || t[33] !== de || t[34] !== fe || t[35] !== R || t[36] !== z || t[37] !== V || t[38] !== H || t[39] !== ne || t[40] !== re || t[41] !== ie || t[42] !== ae ? (pe = [
 		k.View,
-		E,
-		D,
 		R,
 		z,
 		V,
@@ -520,25 +519,28 @@ function V(e) {
 		W,
 		le,
 		ue,
+		de,
+		fe,
 		c
-	].filter(te), t[24] = c, t[25] = E, t[26] = ae, t[27] = U, t[28] = oe, t[29] = se, t[30] = ce, t[31] = W, t[32] = le, t[33] = ue, t[34] = D, t[35] = R, t[36] = z, t[37] = V, t[38] = H, t[39] = ne, t[40] = re, t[41] = ie, t[42] = de) : de = t[42];
-	let fe = de.join(" "), pe;
-	t[43] === x ? pe = t[44] : (pe = { ...x }, t[43] = x, t[44] = pe);
-	let me = pe, he;
-	t[45] === d ? he = t[46] : (he = { parentFillColor: d }, t[45] = d, t[46] = he);
+	].filter(te), t[25] = c, t[26] = U, t[27] = oe, t[28] = se, t[29] = ce, t[30] = W, t[31] = le, t[32] = ue, t[33] = de, t[34] = fe, t[35] = R, t[36] = z, t[37] = V, t[38] = H, t[39] = ne, t[40] = re, t[41] = ie, t[42] = ae, t[43] = pe) : pe = t[43];
+	let me = pe.join(" "), he;
+	t[44] === x ? he = t[45] : (he = { ...x }, t[44] = x, t[45] = he);
 	let ge = he, _e;
-	t[47] !== T || t[48] !== s || t[49] !== _ || t[50] !== S || t[51] !== fe || t[52] !== me ? (_e = /* @__PURE__ */ (0, B.jsx)(T, {
-		className: fe,
-		style: me,
-		title: S,
+	t[46] === d ? _e = t[47] : (_e = { parentFillColor: d }, t[46] = d, t[47] = _e);
+	let ve = _e, ye;
+	t[48] !== D || t[49] !== s || t[50] !== _ || t[51] !== C || t[52] !== E || t[53] !== me || t[54] !== ge ? (ye = /* @__PURE__ */ (0, B.jsx)(D, {
+		className: me,
+		style: ge,
+		"data-tooltip": C,
+		"data-tooltip-anchor": E,
 		..._,
 		children: s
-	}), t[47] = T, t[48] = s, t[49] = _, t[50] = S, t[51] = fe, t[52] = me, t[53] = _e) : _e = t[53];
-	let ve;
-	return t[54] !== _e || t[55] !== ge ? (ve = /* @__PURE__ */ (0, B.jsx)(ee, {
-		value: ge,
-		children: _e
-	}), t[54] = _e, t[55] = ge, t[56] = ve) : ve = t[56], ve;
+	}), t[48] = D, t[49] = s, t[50] = _, t[51] = C, t[52] = E, t[53] = me, t[54] = ge, t[55] = ye) : ye = t[55];
+	let be;
+	return t[56] !== ye || t[57] !== ve ? (be = /* @__PURE__ */ (0, B.jsx)(ee, {
+		value: ve,
+		children: ye
+	}), t[56] = ye, t[57] = ve, t[58] = be) : be = t[58], be;
 }
 function te(e) {
 	return e;
@@ -1126,6 +1128,7 @@ function ke({ label: e, value: t, options: n, onValueChange: r, ...i }) {
 					label: e.label,
 					value: e.value,
 					tooltip: e.tooltip,
+					tooltipAnchor: "right",
 					onSelect: a
 				})),
 				r !== n.length - 1 && !("options" in n[r]) && /* @__PURE__ */ (0, B.jsx)(Ee.Divider, {})
@@ -1138,6 +1141,7 @@ function ke({ label: e, value: t, options: n, onValueChange: r, ...i }) {
 				label: e.label,
 				value: e.value,
 				tooltip: e.tooltip,
+				tooltipAnchor: e.tooltipAnchor,
 				onSelect: a
 			});
 		}

@@ -43,6 +43,7 @@ function View<TDelegate extends React.ElementType = "div">({
   borderColor,
   cornerRadius,
   tooltip,
+  tooltipAnchor = "top",
   style,
   className,
   children,
@@ -67,6 +68,7 @@ function View<TDelegate extends React.ElementType = "div">({
   borderColor?: Color,
   cornerRadius?: "0px" | "2px" | "4px" | "max",
   tooltip?: string,
+  tooltipAnchor?: "top" | "right",
 }, TDelegate>) {
   const Component = as ?? "div";
 
@@ -106,7 +108,7 @@ function View<TDelegate extends React.ElementType = "div">({
 
   return (
     <ViewContext value={viewContextValue}>
-      <Component className={viewClassName} style={viewStyle} title={tooltip} {...props}>
+      <Component className={viewClassName} style={viewStyle} data-tooltip={tooltip} data-tooltip-anchor={tooltipAnchor} {...props}>
         {children}
       </Component>
     </ViewContext>
