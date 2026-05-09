@@ -68,7 +68,7 @@ function View<TDelegate extends React.ElementType = "div">({
   borderColor?: Color,
   cornerRadius?: "0px" | "2px" | "4px" | "max",
   tooltip?: string,
-  tooltipAnchor?: "top" | "right" | "left" | "bottom",
+  tooltipAnchor?: "top" | "right" | "left" | "bottom" | "top right",
 }, TDelegate>) {
   const Component = as ?? "div";
 

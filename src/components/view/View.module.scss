@@ -51,6 +51,11 @@
     transform: translate(-50%, 0);
   }
 
+  &[data-tooltip-anchor="top right"]:hover:before {
+    right: -16px;
+    bottom: calc(100% + 8px);
+  }
+
   &[data-tooltip-anchor="bottom"]:hover:before {
     left: calc(50%);
     top: calc(100% + 8px);

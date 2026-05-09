@@ -27,7 +27,7 @@ declare function View<TDelegate extends React.ElementType = "div">({ as, flex, w
     borderColor?: Color;
     cornerRadius?: "0px" | "2px" | "4px" | "max";
     tooltip?: string;
-    tooltipAnchor?: "top" | "right" | "left" | "bottom";
+    tooltipAnchor?: "top" | "right" | "left" | "bottom" | "top right";
 }, TDelegate>): import("react/jsx-runtime").JSX.Element;
 export { ViewContext };
 export default View;
