@@ -10,14 +10,12 @@ declare function MenuItem({ title, value, style, children, onClick, onSelect, ..
     value?: string;
     onSelect?: (value: string | undefined) => void;
 }, typeof Button>): import("react/jsx-runtime").JSX.Element;
-declare function Menu({ items, header, headerDivider, footer, footerDivider, children, onSelect, onVisibilityChange, ...props }: Delegate<{
+declare function Menu({ items, header, footer, children, onSelect, onVisibilityChange, ...props }: Delegate<{
     items: (React.ReactElement<{
         onSelect?: (value: string | undefined) => void;
     }>)[];
     header?: React.ReactNode;
-    headerDivider?: boolean;
     footer?: React.ReactNode;
-    footerDivider?: boolean;
     children: React.ReactElement<{
         ref: React.RefObject<HTMLDivElement | null> | React.RefObject<HTMLDivElement>;
         cursor?: string;

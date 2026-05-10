@@ -58,9 +58,7 @@ function MenuItem({
 function Menu({
   items,
   header,
-  headerDivider,
   footer,
-  footerDivider,
   children,
   onSelect,
   onVisibilityChange,
@@ -70,9 +68,7 @@ function Menu({
     onSelect?: (value: string | undefined) => void,
   }>)[],
   header?: React.ReactNode,
-  headerDivider?: boolean,
   footer?: React.ReactNode,
-  footerDivider?: boolean,
   children: React.ReactElement<{
     ref: React.RefObject<HTMLDivElement | null> | React.RefObject<HTMLDivElement>,
     cursor?: string,
@@ -116,7 +112,7 @@ function Menu({
       {header && (
         <>
           {header}
-          {headerDivider && <Divider style={{ margin: "0px 12px" }} />}
+          <Divider />
         </>
       )}
       <View padding="8px 0px">
@@ -127,7 +123,7 @@ function Menu({
       </View>
       {footer && (
         <>
-          {footerDivider && <Divider style={{ margin: "0px 12px" }} />}
+          {<Divider />}
           {footer}
         </>
       )}

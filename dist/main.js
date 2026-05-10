@@ -1004,41 +1004,41 @@ function Te(e) {
 		children: f
 	}), t[14] = u, t[15] = a, t[16] = d, t[17] = f, t[18] = p) : p = t[18], p;
 }
-function Ee({ items: e, header: r, headerDivider: o, footer: c, footerDivider: l, children: f, onSelect: p, onVisibilityChange: m, ...h }) {
-	let g = u(null), _ = u(null), [v, y] = d(!1), b = a((e) => {
-		!g.current?.contains(e.target) && !_.current?.contains(e.target) && (y(!1), m?.(!1));
-	}, [m]);
-	s(() => (document.addEventListener("pointerdown", b), () => {
-		document.removeEventListener("pointerdown", b);
-	}), [b]);
-	let x = (e) => {
-		y(!1), m?.(!1), p?.(e);
-	}, S = /* @__PURE__ */ (0, B.jsxs)(V, {
-		ref: _,
+function Ee({ items: e, header: r, footer: o, children: c, onSelect: l, onVisibilityChange: f, ...p }) {
+	let m = u(null), h = u(null), [g, _] = d(!1), v = a((e) => {
+		!m.current?.contains(e.target) && !h.current?.contains(e.target) && (_(!1), f?.(!1));
+	}, [f]);
+	s(() => (document.addEventListener("pointerdown", v), () => {
+		document.removeEventListener("pointerdown", v);
+	}), [v]);
+	let y = (e) => {
+		_(!1), f?.(!1), l?.(e);
+	}, b = /* @__PURE__ */ (0, B.jsxs)(V, {
+		ref: h,
 		children: [
-			r && /* @__PURE__ */ (0, B.jsxs)(B.Fragment, { children: [r, o && /* @__PURE__ */ (0, B.jsx)(ve, { style: { margin: "0px 12px" } })] }),
+			r && /* @__PURE__ */ (0, B.jsxs)(B.Fragment, { children: [r, /* @__PURE__ */ (0, B.jsx)(ve, {})] }),
 			/* @__PURE__ */ (0, B.jsx)(V, {
 				padding: "8px 0px",
 				children: e.map((e, t) => i(e) && n(e, {
 					key: t,
 					onSelect: (...t) => {
-						x(...t), e.props.onSelect?.(...t);
+						y(...t), e.props.onSelect?.(...t);
 					}
 				}))
 			}),
-			c && /* @__PURE__ */ (0, B.jsxs)(B.Fragment, { children: [l && /* @__PURE__ */ (0, B.jsx)(ve, { style: { margin: "0px 12px" } }), c] })
+			o && /* @__PURE__ */ (0, B.jsxs)(B.Fragment, { children: [/* @__PURE__ */ (0, B.jsx)(ve, {}), o] })
 		]
-	}), C = t.Children.only(f);
+	}), x = t.Children.only(c);
 	return /* @__PURE__ */ (0, B.jsx)(Se, {
-		isVisible: v,
-		content: S,
-		...h,
-		children: t.isValidElement(C) && t.cloneElement(C, {
-			ref: g,
+		isVisible: g,
+		content: b,
+		...p,
+		children: t.isValidElement(x) && t.cloneElement(x, {
+			ref: m,
 			cursor: "pointer",
-			solid: v || C.props.solid,
+			solid: g || x.props.solid,
 			onClick: () => {
-				y((e) => !e);
+				_((e) => !e);
 			}
 		})
 	});
