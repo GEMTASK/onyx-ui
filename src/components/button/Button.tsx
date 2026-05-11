@@ -45,6 +45,8 @@ const getTextColor = ({ primary, solid }: ButtonStyle) => {
 
 function Button({
   ref,
+  type = "button",
+  //
   solid,
   primary,
   hover,
@@ -104,7 +106,7 @@ function Button({
       ref={buttonElementRef}
       horizontal
       as="button"
-      type="button"
+      type={type}
       cursor="pointer"
       padding={children ? "8px 12px" : "8px"}
       spacing="8px"

@@ -31,7 +31,14 @@ const Input = ({
   onValueChange?: (value: string) => void,
 }, typeof View<"div">>) => {
   const [value, setValue] = useState(_value);
+  const [previousValue, setPreviousValue] = useState(_value);
+
   const textAreaElementRef = useRef<HTMLTextAreaElement>(null);
+
+  if (_value !== previousValue) {
+    setPreviousValue(value);
+    setValue(_value);
+  }
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
     const currentTarget = event.currentTarget;
