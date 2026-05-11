@@ -11,6 +11,7 @@ const Input = ({
   lines,
   border = true,
   flush,
+  multiline,
   icon,
   placeholder,
   autoFocus,
@@ -23,6 +24,7 @@ const Input = ({
   value?: string,
   lines?: number,
   flush?: boolean,
+  multiline?: boolean,
   icon?: React.ComponentProps<typeof Icon>["icon"],
   placeholder?: React.ComponentProps<"input">["placeholder"],
   autoFocus?: React.ComponentProps<"input">["autoFocus"],
@@ -33,14 +35,24 @@ const Input = ({
   const [value, setValue] = useState(_value);
   const [previousValue, setPreviousValue] = useState(_value);
 
-  const textAreaElementRef = useRef<HTMLTextAreaElement>(null);
+  const textAreaElementRef = useRef<HTMLInputElement & HTMLTextAreaElement>(null);
+
+  //
 
   if (_value !== previousValue) {
     setPreviousValue(value);
     setValue(_value);
   }
 
-  const handleKeyDown = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
+  const handleInputKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    const currentTarget = event.currentTarget;
+
+    if (event.key === "Enter" && value) {
+      onValueChange?.(value);
+    }
+  };
+
+  const handleTextAreaKeyDown = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
     const currentTarget = event.currentTarget;
 
     if (changeOnEnter && event.key === "Enter" && value) {
@@ -52,7 +64,7 @@ const Input = ({
     }
   };
 
-  const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement & HTMLTextAreaElement>) => {
     setValue(event.currentTarget.value);
   };
 
@@ -74,23 +86,37 @@ const Input = ({
     flush && styles.flush
   ].filter(className => className).join(" ");
 
+  const inputElement = multiline ? (
+    <textarea
+      ref={textAreaElementRef}
+      autoFocus={autoFocus}
+      value={value}
+      placeholder={placeholder}
+      style={{ background: "transparent", ...innerStyle }}
+      onKeyDown={handleTextAreaKeyDown}
+      onChange={handleChange}
+      onBlur={handleBlur}
+    />
+  ) : (
+    <input
+      ref={textAreaElementRef}
+      autoFocus={autoFocus}
+      value={value}
+      placeholder={placeholder}
+      style={{ background: "transparent", ...innerStyle }}
+      onKeyDown={handleInputKeyDown}
+      onChange={handleChange}
+      onBlur={handleBlur}
+    />
+  );
+
   return (
     <Label flex label={label}>
       <View horizontal border={border} align="middle left" padding="4px 8px" spacing="4px" className={inputClassName} {...props}>
         {icon && (
           <Icon icon={icon} size={20} />
         )}
-        <textarea
-          autoFocus={autoFocus}
-          ref={textAreaElementRef}
-          value={value}
-          name="textarea"
-          placeholder={placeholder}
-          style={{ background: "transparent", ...innerStyle }}
-          onKeyDown={handleKeyDown}
-          onChange={handleChange}
-          onBlur={handleBlur}
-        />
+        {inputElement}
       </View>
     </Label>
   );

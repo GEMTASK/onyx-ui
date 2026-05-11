@@ -55,7 +55,7 @@ FormField.withComponent = <TProps extends object>(Component: React.ComponentType
 } & TProps) => {
   return (
     <Form.Field name={name}>
-      <Component {...props as TProps} />
+      <Component name={name} {...props as TProps} />
     </Form.Field>
   );
 };
