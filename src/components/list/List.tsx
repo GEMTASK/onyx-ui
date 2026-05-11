@@ -12,7 +12,7 @@ function List({
   return (
     <View border cornerRadius="4px" className={styles.List} {...props}>
       {React.Children.map(children, (child, index) => React.isValidElement(child) && (
-        <React.Fragment key={index}>
+        <React.Fragment key={child.key}>
           {index > 0 && (
             <Divider />
           )}

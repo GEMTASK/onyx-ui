@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useState } from "react";
+import { useImperativeHandle, useLayoutEffect, useRef, useState } from "react";
 
 import { type Delegate } from "../../types/Delegate";
 import { Icon, Label, View } from "..";
@@ -13,6 +13,7 @@ const Input = ({
   flush,
   multiline,
   icon,
+  inputRef,
   placeholder,
   autoFocus,
   changeOnEnter,
@@ -26,6 +27,7 @@ const Input = ({
   flush?: boolean,
   multiline?: boolean,
   icon?: React.ComponentProps<typeof Icon>["icon"],
+  inputRef?: React.ComponentProps<"input">["ref"],
   placeholder?: React.ComponentProps<"input">["placeholder"],
   autoFocus?: React.ComponentProps<"input">["autoFocus"],
   innerStyle?: React.ComponentProps<"textarea">["style"],
@@ -36,6 +38,8 @@ const Input = ({
   const [previousValue, setPreviousValue] = useState(_value);
 
   const textAreaElementRef = useRef<HTMLInputElement & HTMLTextAreaElement>(null);
+
+  useImperativeHandle(inputRef, () => textAreaElementRef.current!);
 
   //
 
