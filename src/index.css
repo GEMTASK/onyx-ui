@@ -6,7 +6,7 @@
   --gutter-color: hsl(210, 16.67%, 95.29%);
   --icon-color: hsl(210, 15.79%, 92.55%);
   --divider-color: hsl(210, 13.79%, 88.63%);
-  
+
   --text-color: hsla(210, 0%, 0%, 0.7);
   /* --selected-color: hsl(210, 100%, 93%); */
   --selected-color: hsl(205, 100%, 95.29%);
@@ -14,4 +14,5 @@
   --default-font: 'New Times Roman';
 
   --_14px-font-margin: -4px 0 -4px 0;
+  --_12px-font-margin: -4px 0 -4px 0;
 }

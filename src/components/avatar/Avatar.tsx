@@ -29,7 +29,7 @@ function Avatar({
   ].filter(className => className).join(" ");
 
   return (
-    <View horizontal spacing="8px" {...props}>
+    <View horizontal spacing="8px" align="middle left" {...props}>
       <View
         border={imageBorder}
         borderColor="primary"
@@ -46,7 +46,7 @@ function Avatar({
         )}
       </View>
       {!imageOnly && (
-        <View spacing="8px" align="middle left" style={{ gap: 6 }}>
+        <View spacing="8px" align="middle left">
           <Text>{name}</Text>
           {label && (
             <Text light fontSize="12px">{label}</Text>

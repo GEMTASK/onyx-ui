@@ -1320,7 +1320,6 @@ function Fe(e) {
 	t[22] !== i || t[23] !== a || t[24] !== o ? (v = !i && /* @__PURE__ */ (0, B.jsxs)(V, {
 		spacing: "8px",
 		align: "middle left",
-		style: { gap: 6 },
 		children: [/* @__PURE__ */ (0, B.jsx)(G, { children: o }), a && /* @__PURE__ */ (0, B.jsx)(G, {
 			light: !0,
 			fontSize: "12px",
@@ -1331,6 +1330,7 @@ function Fe(e) {
 	return t[26] !== s || t[27] !== _ || t[28] !== v ? (y = /* @__PURE__ */ (0, B.jsxs)(V, {
 		horizontal: !0,
 		spacing: "8px",
+		align: "middle left",
 		...s,
 		children: [_, v]
 	}), t[26] = s, t[27] = _, t[28] = v, t[29] = y) : y = t[29], y;
