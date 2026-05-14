@@ -3,6 +3,7 @@ export { Text } from './components';
 export { Icon } from './components';
 export { Button } from './components';
 export { Input } from './components';
+export { Toggle } from './components';
 export { Divider } from './components';
 export { List } from './components';
 export { Popover } from './components';

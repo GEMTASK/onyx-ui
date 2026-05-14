@@ -3,6 +3,7 @@ export { default as Text } from "./text";
 export { default as Icon } from "./icon";
 export { default as Button } from "./button";
 export { default as Input } from "./input";
+export { default as Toggle } from "./toggle";
 export { default as Divider } from "./divider";
 export { default as List } from "./list";
 export { default as Popover } from "./popover";
