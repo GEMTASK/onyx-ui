@@ -33,7 +33,11 @@ export default defineConfig([
     rules: {
       "eqeqeq": "error",
       "@typescript-eslint/no-unused-vars": "off",
-      // "@typescript-eslint/strict-boolean-expressions": "error",
+      // "@typescript-eslint/strict-boolean-expressions": ["error", {
+      //   allowNullableBoolean: true,
+      //   "allowString": false,
+      //   "allowNullableString": true
+      // }],
       "@stylistic/quotes": ["error", "double"],
       "@stylistic/semi": "error",
       "@stylistic/comma-dangle": ["error", "never"],
