@@ -51,7 +51,7 @@ const Input = ({
   const handleInputKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     const currentTarget = event.currentTarget;
 
-    if (event.key === "Enter" && value) {
+    if (event.key === "Enter" && value !== undefined) {
       onValueChange?.(value);
     }
   };
@@ -59,7 +59,7 @@ const Input = ({
   const handleTextAreaKeyDown = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
     const currentTarget = event.currentTarget;
 
-    if (changeOnEnter && event.key === "Enter" && value) {
+    if (changeOnEnter === true && event.key === "Enter" && value !== undefined) {
       event.preventDefault();
 
       onValueChange?.(value);
@@ -73,13 +73,13 @@ const Input = ({
   };
 
   const handleBlur = () => {
-    if (value) {
+    if (value !== undefined) {
       onValueChange?.(value);
     }
   };
 
   useLayoutEffect(() => {
-    if (multiline && textAreaElementRef.current) {
+    if (multiline === true && textAreaElementRef.current) {
       textAreaElementRef.current.style.height = "";
       textAreaElementRef.current.style.height = `${textAreaElementRef.current.scrollHeight}px`;
     }
@@ -87,10 +87,10 @@ const Input = ({
 
   const inputClassName = [
     styles.Input,
-    flush && styles.flush
-  ].filter(className => className).join(" ");
+    flush === true && styles.flush
+  ].filter(className => className !== false).join(" ");
 
-  const inputElement = multiline ? (
+  const inputElement = multiline === true ? (
     <textarea
       ref={textAreaElementRef}
       autoFocus={autoFocus}

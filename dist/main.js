@@ -825,12 +825,12 @@ var me = {
 	t[14] === Symbol.for("react.memo_cache_sentinel") ? (T = () => w.current, t[14] = T) : T = t[14], c(f, T), n !== S && (C(b), x(n));
 	let E;
 	t[15] !== h || t[16] !== b ? (E = (e) => {
-		e.key === "Enter" && b && h?.(b);
+		e.key === "Enter" && b !== void 0 && h?.(b);
 	}, t[15] = h, t[16] = b, t[17] = E) : E = t[17];
 	let D = E, k;
 	t[18] !== i || t[19] !== h || t[20] !== b ? (k = (e) => {
 		let t = e.currentTarget;
-		i && e.key === "Enter" && b && (e.preventDefault(), h?.(b), t.value = "");
+		i === !0 && e.key === "Enter" && b !== void 0 && (e.preventDefault(), h?.(b), t.value = "");
 	}, t[18] = i, t[19] = h, t[20] = b, t[21] = k) : k = t[21];
 	let A = k, j;
 	t[22] === Symbol.for("react.memo_cache_sentinel") ? (j = (e) => {
@@ -838,16 +838,16 @@ var me = {
 	}, t[22] = j) : j = t[22];
 	let M = j, N;
 	t[23] !== h || t[24] !== b ? (N = () => {
-		b && h?.(b);
+		b !== void 0 && h?.(b);
 	}, t[23] = h, t[24] = b, t[25] = N) : N = t[25];
 	let P = N, F;
 	t[26] === m ? F = t[27] : (F = () => {
-		m && w.current && (w.current.style.height = "", w.current.style.height = `${w.current.scrollHeight}px`);
+		m === !0 && w.current && (w.current.style.height = "", w.current.style.height = `${w.current.scrollHeight}px`);
 	}, t[26] = m, t[27] = F), l(F);
-	let I = a && me.flush, L;
+	let I = a === !0 && me.flush, L;
 	t[28] === I ? L = t[29] : (L = [me.Input, I].filter(ge), t[28] = I, t[29] = L);
 	let R = L.join(" "), z;
-	t[30] !== r || t[31] !== P || t[32] !== D || t[33] !== A || t[34] !== s || t[35] !== m || t[36] !== g || t[37] !== b ? (z = m ? /* @__PURE__ */ (0, B.jsx)("textarea", {
+	t[30] !== r || t[31] !== P || t[32] !== D || t[33] !== A || t[34] !== s || t[35] !== m || t[36] !== g || t[37] !== b ? (z = m === !0 ? /* @__PURE__ */ (0, B.jsx)("textarea", {
 		ref: w,
 		autoFocus: r,
 		value: b,
@@ -896,7 +896,7 @@ var me = {
 	}), t[47] = p, t[48] = H, t[49] = U) : U = t[49], U;
 };
 function ge(e) {
-	return e;
+	return e !== !1;
 }
 //#endregion
 //#region src/components/toggle/Toggle.tsx
