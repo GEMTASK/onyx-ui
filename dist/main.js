@@ -816,7 +816,7 @@ var me = {
 	Input: "_onyx-ui_Input_MpxTL",
 	flush: "_onyx-ui_flush_4zQD9"
 }, he = (e) => {
-	let t = (0, O.c)(49), n, r, i, a, o, s, f, p, m, h, g, _, v;
+	let t = (0, O.c)(50), n, r, i, a, o, s, f, p, m, h, g, _, v;
 	if (t[0] !== e) {
 		let { label: c, value: l, lines: u, border: d, flush: y, multiline: b, icon: x, inputRef: S, placeholder: C, autoFocus: w, changeOnEnter: T, innerStyle: E, onValueChange: D, ...O } = e;
 		p = c, n = l, v = d, a = y, m = b, o = x, f = S, g = C, r = w, i = T, s = E, h = D, _ = O, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o, t[6] = s, t[7] = f, t[8] = p, t[9] = m, t[10] = h, t[11] = g, t[12] = _, t[13] = v;
@@ -841,13 +841,13 @@ var me = {
 		b && h?.(b);
 	}, t[23] = h, t[24] = b, t[25] = N) : N = t[25];
 	let P = N, F;
-	t[26] === Symbol.for("react.memo_cache_sentinel") ? (F = () => {
-		w.current && (w.current.style.height = "", w.current.style.height = `${w.current.scrollHeight}px`);
-	}, t[26] = F) : F = t[26], l(F);
+	t[26] === m ? F = t[27] : (F = () => {
+		m && w.current && (w.current.style.height = "", w.current.style.height = `${w.current.scrollHeight}px`);
+	}, t[26] = m, t[27] = F), l(F);
 	let I = a && me.flush, L;
-	t[27] === I ? L = t[28] : (L = [me.Input, I].filter(ge), t[27] = I, t[28] = L);
+	t[28] === I ? L = t[29] : (L = [me.Input, I].filter(ge), t[28] = I, t[29] = L);
 	let R = L.join(" "), z;
-	t[29] !== r || t[30] !== P || t[31] !== D || t[32] !== A || t[33] !== s || t[34] !== m || t[35] !== g || t[36] !== b ? (z = m ? /* @__PURE__ */ (0, B.jsx)("textarea", {
+	t[30] !== r || t[31] !== P || t[32] !== D || t[33] !== A || t[34] !== s || t[35] !== m || t[36] !== g || t[37] !== b ? (z = m ? /* @__PURE__ */ (0, B.jsx)("textarea", {
 		ref: w,
 		autoFocus: r,
 		value: b,
@@ -871,14 +871,14 @@ var me = {
 		onKeyDown: D,
 		onChange: M,
 		onBlur: P
-	}), t[29] = r, t[30] = P, t[31] = D, t[32] = A, t[33] = s, t[34] = m, t[35] = g, t[36] = b, t[37] = z) : z = t[37];
+	}), t[30] = r, t[31] = P, t[32] = D, t[33] = A, t[34] = s, t[35] = m, t[36] = g, t[37] = b, t[38] = z) : z = t[38];
 	let ee = z, te;
-	t[38] === o ? te = t[39] : (te = o && /* @__PURE__ */ (0, B.jsx)(se, {
+	t[39] === o ? te = t[40] : (te = o && /* @__PURE__ */ (0, B.jsx)(se, {
 		icon: o,
 		size: 20
-	}), t[38] = o, t[39] = te);
+	}), t[39] = o, t[40] = te);
 	let H;
-	t[40] !== y || t[41] !== R || t[42] !== ee || t[43] !== _ || t[44] !== te ? (H = /* @__PURE__ */ (0, B.jsxs)(V, {
+	t[41] !== y || t[42] !== R || t[43] !== ee || t[44] !== _ || t[45] !== te ? (H = /* @__PURE__ */ (0, B.jsxs)(V, {
 		horizontal: !0,
 		border: y,
 		align: "middle left",
@@ -887,13 +887,13 @@ var me = {
 		className: R,
 		..._,
 		children: [te, ee]
-	}), t[40] = y, t[41] = R, t[42] = ee, t[43] = _, t[44] = te, t[45] = H) : H = t[45];
+	}), t[41] = y, t[42] = R, t[43] = ee, t[44] = _, t[45] = te, t[46] = H) : H = t[46];
 	let U;
-	return t[46] !== p || t[47] !== H ? (U = /* @__PURE__ */ (0, B.jsx)(Pe, {
+	return t[47] !== p || t[48] !== H ? (U = /* @__PURE__ */ (0, B.jsx)(Pe, {
 		flex: !0,
 		label: p,
 		children: H
-	}), t[46] = p, t[47] = H, t[48] = U) : U = t[48], U;
+	}), t[47] = p, t[48] = H, t[49] = U) : U = t[49], U;
 };
 function ge(e) {
 	return e;

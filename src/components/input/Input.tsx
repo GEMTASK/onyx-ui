@@ -79,7 +79,7 @@ const Input = ({
   };
 
   useLayoutEffect(() => {
-    if (textAreaElementRef.current) {
+    if (multiline && textAreaElementRef.current) {
       textAreaElementRef.current.style.height = "";
       textAreaElementRef.current.style.height = `${textAreaElementRef.current.scrollHeight}px`;
     }
