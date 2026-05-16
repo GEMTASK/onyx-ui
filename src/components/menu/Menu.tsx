@@ -60,7 +60,7 @@ function Menu({
   header,
   footer,
   children,
-  onSelect,
+  onItemSelect,
   onVisibilityChange,
   ...props
 }: Delegate<{
@@ -75,7 +75,7 @@ function Menu({
     solid?: boolean,
     onClick: React.PointerEventHandler,
   }>,
-  onSelect?: (value: string | undefined) => void,
+  onItemSelect?: (value: string | undefined) => void,
   onVisibilityChange?: (visible: boolean) => void,
 }, typeof Popover, "isVisible" | "content">) {
   const childElementRef = useRef<HTMLDivElement>(null);
@@ -104,7 +104,7 @@ function Menu({
     setIsPopoverVisible(false);
     onVisibilityChange?.(false);
 
-    onSelect?.(value);
+    onItemSelect?.(value);
   };
 
   const popoverContent = (

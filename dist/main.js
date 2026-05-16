@@ -1051,7 +1051,7 @@ function Te(e) {
 		children: f
 	}), t[14] = u, t[15] = a, t[16] = d, t[17] = f, t[18] = p) : p = t[18], p;
 }
-function Ee({ items: e, header: r, footer: o, children: c, onSelect: l, onVisibilityChange: f, ...p }) {
+function Ee({ items: e, header: r, footer: o, children: c, onItemSelect: l, onVisibilityChange: f, ...p }) {
 	let m = u(null), h = u(null), [g, _] = d(!1), v = a((e) => {
 		!m.current?.contains(e.target) && !h.current?.contains(e.target) && (_(!1), f?.(!1));
 	}, [f]);
