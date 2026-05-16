@@ -24,6 +24,7 @@
   &[data-tooltip]:hover:before {
     position: absolute;
     content: attr(data-tooltip);
+    z-index: 1000;
     background: #495057;
     color: white;
     padding: 8px 12px;

@@ -7,14 +7,18 @@ import { View, Text, Icon } from "..";
 import styles from "./Chip.module.scss";
 
 function Chip({
+  ref,
   icon,
   iconSize,
   iconColor,
   iconLight,
   fillColor,
   outlineColor = "content",
+  opacityOnPress,
   children,
   style,
+  onPointerDown,
+  onClick,
   ...props
 }: Delegate<{
   icon?: React.ComponentProps<typeof Icon>["icon"],
@@ -32,7 +36,15 @@ function Chip({
   }, [fillColor, outlineColor]);
 
   return (
-    <View horizontal spacing="4px" align="middle left">
+    <View
+      horizontal
+      ref={ref}
+      spacing="4px"
+      align="middle left"
+      opacityOnPress={opacityOnPress}
+      onPointerDown={onPointerDown}
+      onClick={onClick}
+    >
       {icon && (
         <Icon bleed icon={icon} size={iconSize ?? 14} color={iconColor} style={{ opacity: iconLight ? 0.6 : undefined }} />
       )}

@@ -1390,43 +1390,47 @@ var ze = { text: "_onyx-ui_text_-bQVx" };
 //#endregion
 //#region src/components/chip/Chip.tsx
 function Be(e) {
-	let t = (0, O.c)(31), n, r, i, a, o, c, l, d, f;
-	t[0] === e ? (n = t[1], r = t[2], i = t[3], a = t[4], o = t[5], c = t[6], l = t[7], d = t[8], f = t[9]) : ({icon: i, iconSize: c, iconColor: a, iconLight: o, fillColor: r, outlineColor: f, children: n, style: d, ...l} = e, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o, t[6] = c, t[7] = l, t[8] = d, t[9] = f);
-	let p = f === void 0 ? "content" : f, m = u(null), h, g;
-	t[10] !== r || t[11] !== p ? (h = () => {
-		m.current && r && m.current.style.setProperty("--outline-color", `var(--${p}-color)`);
-	}, g = [r, p], t[10] = r, t[11] = p, t[12] = h, t[13] = g) : (h = t[12], g = t[13]), s(h, g);
-	let _;
-	t[14] !== i || t[15] !== a || t[16] !== o || t[17] !== c ? (_ = i && /* @__PURE__ */ (0, B.jsx)(se, {
+	let t = (0, O.c)(39), n, r, i, a, o, c, l, d, f, p, m, h, g;
+	t[0] === e ? (n = t[1], r = t[2], i = t[3], a = t[4], o = t[5], c = t[6], l = t[7], d = t[8], f = t[9], p = t[10], m = t[11], h = t[12], g = t[13]) : ({ref: m, icon: i, iconSize: c, iconColor: a, iconLight: o, fillColor: r, outlineColor: g, opacityOnPress: f, children: n, style: h, onPointerDown: d, onClick: l, ...p} = e, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o, t[6] = c, t[7] = l, t[8] = d, t[9] = f, t[10] = p, t[11] = m, t[12] = h, t[13] = g);
+	let _ = g === void 0 ? "content" : g, v = u(null), y, b;
+	t[14] !== r || t[15] !== _ ? (y = () => {
+		v.current && r && v.current.style.setProperty("--outline-color", `var(--${_}-color)`);
+	}, b = [r, _], t[14] = r, t[15] = _, t[16] = y, t[17] = b) : (y = t[16], b = t[17]), s(y, b);
+	let x;
+	t[18] !== i || t[19] !== a || t[20] !== o || t[21] !== c ? (x = i && /* @__PURE__ */ (0, B.jsx)(se, {
 		bleed: !0,
 		icon: i,
 		size: c ?? 14,
 		color: a,
 		style: { opacity: o ? .6 : void 0 }
-	}), t[14] = i, t[15] = a, t[16] = o, t[17] = c, t[18] = _) : _ = t[18];
-	let v = r ? "2px 4px" : void 0, y = r ? "-2px 0" : void 0, b;
-	t[19] !== d || t[20] !== y ? (b = {
-		margin: y,
-		...d
-	}, t[19] = d, t[20] = y, t[21] = b) : b = t[21];
-	let x;
-	t[22] !== n || t[23] !== r || t[24] !== l || t[25] !== v || t[26] !== b ? (x = /* @__PURE__ */ (0, B.jsx)(G, {
-		ref: m,
+	}), t[18] = i, t[19] = a, t[20] = o, t[21] = c, t[22] = x) : x = t[22];
+	let S = r ? "2px 4px" : void 0, C = r ? "-2px 0" : void 0, w;
+	t[23] !== h || t[24] !== C ? (w = {
+		margin: C,
+		...h
+	}, t[23] = h, t[24] = C, t[25] = w) : w = t[25];
+	let T;
+	t[26] !== n || t[27] !== r || t[28] !== p || t[29] !== S || t[30] !== w ? (T = /* @__PURE__ */ (0, B.jsx)(G, {
+		ref: v,
 		fillColor: r,
 		cornerRadius: "2px",
-		padding: v,
+		padding: S,
 		className: ze.text,
-		style: b,
-		...l,
+		style: w,
+		...p,
 		children: n
-	}), t[22] = n, t[23] = r, t[24] = l, t[25] = v, t[26] = b, t[27] = x) : x = t[27];
-	let S;
-	return t[28] !== _ || t[29] !== x ? (S = /* @__PURE__ */ (0, B.jsxs)(V, {
+	}), t[26] = n, t[27] = r, t[28] = p, t[29] = S, t[30] = w, t[31] = T) : T = t[31];
+	let E;
+	return t[32] !== l || t[33] !== d || t[34] !== f || t[35] !== m || t[36] !== x || t[37] !== T ? (E = /* @__PURE__ */ (0, B.jsxs)(V, {
 		horizontal: !0,
+		ref: m,
 		spacing: "4px",
 		align: "middle left",
-		children: [_, x]
-	}), t[28] = _, t[29] = x, t[30] = S) : S = t[30], S;
+		opacityOnPress: f,
+		onPointerDown: d,
+		onClick: l,
+		children: [x, T]
+	}), t[32] = l, t[33] = d, t[34] = f, t[35] = m, t[36] = x, t[37] = T, t[38] = E) : E = t[38], E;
 }
 //#endregion
 //#region src/components/tabs/Tabs.tsx
