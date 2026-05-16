@@ -905,30 +905,30 @@ function _e(e) {
 	t[0] !== o || t[1] !== n ? (s = () => {
 		o?.(!n);
 	}, t[0] = o, t[1] = n, t[2] = s) : s = t[2];
-	let c = s, l = !n, u;
-	t[3] !== r || t[4] !== i || t[5] !== l ? (u = /* @__PURE__ */ (0, B.jsx)(se, {
+	let c = s, l = !n, u = n ? i : void 0, d;
+	t[3] !== r || t[4] !== l || t[5] !== u ? (d = /* @__PURE__ */ (0, B.jsx)(se, {
 		bleed: !0,
 		light: l,
 		icon: r,
 		size: 14,
-		color: i
-	}), t[3] = r, t[4] = i, t[5] = l, t[6] = u) : u = t[6];
-	let d = !n, f;
-	t[7] !== a || t[8] !== d ? (f = /* @__PURE__ */ (0, B.jsx)(G, {
-		light: d,
+		color: u
+	}), t[3] = r, t[4] = l, t[5] = u, t[6] = d) : d = t[6];
+	let f = !n, p;
+	t[7] !== a || t[8] !== f ? (p = /* @__PURE__ */ (0, B.jsx)(G, {
+		light: f,
 		ellipsis: !0,
 		children: a
-	}), t[7] = a, t[8] = d, t[9] = f) : f = t[9];
-	let p;
-	return t[10] !== c || t[11] !== u || t[12] !== f ? (p = /* @__PURE__ */ (0, B.jsxs)(V, {
+	}), t[7] = a, t[8] = f, t[9] = p) : p = t[9];
+	let m;
+	return t[10] !== c || t[11] !== d || t[12] !== p ? (m = /* @__PURE__ */ (0, B.jsxs)(V, {
 		horizontal: !0,
 		opacityOnPress: !0,
 		spacing: "4px",
 		align: "middle left",
 		cursor: "pointer",
 		onClick: c,
-		children: [u, f]
-	}), t[10] = c, t[11] = u, t[12] = f, t[13] = p) : p = t[13], p;
+		children: [d, p]
+	}), t[10] = c, t[11] = d, t[12] = p, t[13] = m) : m = t[13], m;
 }
 //#endregion
 //#region src/components/divider/Divider.tsx

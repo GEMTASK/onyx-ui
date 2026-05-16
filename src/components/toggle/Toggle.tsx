@@ -26,7 +26,7 @@ function Toggle({
       cursor="pointer"
       onClick={handleClick}
     >
-      <Icon bleed light={!value} icon={icon} size={14} color={iconColor} />
+      <Icon bleed light={!value} icon={icon} size={14} color={value ? iconColor : undefined} />
       <Text light={!value} ellipsis>
         {children}
       </Text>
