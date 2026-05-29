@@ -18,6 +18,7 @@ const Input = ({
   autoFocus,
   changeOnEnter,
   innerStyle,
+  onKeyDown,
   onValueChange,
   ...props
 }: Delegate<{
@@ -50,6 +51,8 @@ const Input = ({
 
   const handleInputKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     const currentTarget = event.currentTarget;
+
+    onKeyDown?.(event);
 
     if (event.key === "Enter" && value !== undefined) {
       onValueChange?.(value);
