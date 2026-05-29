@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 import type { Align } from "../../types/Align";
 import type { Padding } from "../../types/Padding";
@@ -14,6 +14,7 @@ import cornerRadiusStyles from "../../styles/conerRadius.module.scss";
 import alignHorizontalStyles from "../../styles/alignHorizontal.module.scss";
 import alignVerticalStyles from "../../styles/alignVertical.module.scss";
 import borderColorStyles from "../../styles/borderColor.module.scss";
+import { createPortal } from "react-dom";
 
 type ViewContext = {
   parentFillColor?: false | Color,
@@ -72,6 +73,22 @@ function View<TDelegate extends React.ElementType = "div">({
   tooltipAnchor?: "top" | "right" | "left" | "bottom" | "top right",
   tooltipOffset?: number,
 }, TDelegate>) {
+  const [isTooltipVisible, setIstooltipVisible] = useState(false);
+  const viewElementRef = useRef<HTMLDivElement>(null);
+  const tooltipElementRef = useRef<HTMLDivElement>(null);
+
+  useLayoutEffect(() => {
+    if (isTooltipVisible && viewElementRef.current && tooltipElementRef.current) {
+      const viewClientRect = viewElementRef.current.getBoundingClientRect();
+      const tooltipClientRect = tooltipElementRef.current.getBoundingClientRect();
+
+      tooltipElementRef.current.style.left = `${(viewClientRect.left - (tooltipClientRect.width - viewClientRect.width) / 2)}px`;
+      tooltipElementRef.current.style.top = `${viewClientRect.top - tooltipClientRect.height - 8}px`;
+
+      console.log("here");
+    }
+  }, [isTooltipVisible]);
+
   const Component = as ?? "div";
 
   const viewClassName = [
@@ -101,27 +118,43 @@ function View<TDelegate extends React.ElementType = "div">({
   ].filter(className => className).join(" ");
 
   const viewStyle = {
-    ...style,
-    "--tooltip-offset": `${tooltipOffset}px`
+    ...style
+    // "--tooltip-offset": `${tooltipOffset}px`
   };
 
   const viewContextValue = {
     parentFillColor: fillColor
   };
 
+  const overlayElement = document.querySelector("#overlay");
+
+  const tooltipContent = (
+    <div ref={tooltipElementRef} className={styles.tooltip}>
+      {tooltip}
+    </div>
+  );
+
   return (
-    <ViewContext value={viewContextValue}>
-      <Component
-        className={viewClassName}
-        style={viewStyle}
-        data-tooltip={tooltip}
-        data-tooltip-anchor={tooltip && tooltipAnchor}
-        data-tooltip-offset={tooltip && tooltipOffset}
-        {...props}
-      >
-        {children}
-      </Component>
-    </ViewContext>
+    <>
+      <ViewContext value={viewContextValue}>
+        <Component
+          ref={viewElementRef}
+          className={viewClassName}
+          style={viewStyle}
+          // data-tooltip={tooltip}
+          // data-tooltip-anchor={tooltip && tooltipAnchor}
+          // data-tooltip-offset={tooltip && tooltipOffset}
+          onMouseEnter={() => tooltip && setIstooltipVisible(true)}
+          onMouseLeave={() => tooltip && setIstooltipVisible(false)}
+          {...props}
+        >
+          {children}
+        </Component>
+      </ViewContext>
+      {isTooltipVisible && overlayElement && (
+        createPortal(tooltipContent, overlayElement)
+      )}
+    </>
   );
 }
 

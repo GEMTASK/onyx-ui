@@ -21,47 +21,59 @@
   /* min-height: 0; */
   /* flex-shrink: 0; */
 
-  &[data-tooltip]:hover:before {
+  .tooltip {
     position: absolute;
-    content: attr(data-tooltip);
-    z-index: 1000;
+    font: 14px var(--default-font);
     background: #495057;
     color: white;
     padding: 8px 12px;
     border-radius: 4px;
     width: max-content;
-    font: 14px var(--default-font);
-    animation: 0.1s ease-in 0.3s backwards fadeIn;
+    left: 0;
+    top: 0;
   }
 
-  &[data-tooltip-anchor="right"]:hover:before {
-    left: calc(100% + 8px);
-    top: 50%;
-    transform: translate(0, -50%);
-  }
+  // &[data-tooltip]:hover:before {
+  //   position: absolute;
+  //   content: attr(data-tooltip);
+  //   z-index: 1000;
+  //   background: #495057;
+  //   color: white;
+  //   padding: 8px 12px;
+  //   border-radius: 4px;
+  //   width: max-content;
+  //   font: 14px var(--default-font);
+  //   animation: 0.1s ease-in 0.3s backwards fadeIn;
+  // }
 
-  &[data-tooltip-anchor="left"]:hover:before {
-    right: calc(100% + 8px);
-    top: 50%;
-    transform: translate(0, -50%);
-  }
+  // &[data-tooltip-anchor="right"]:hover:before {
+  //   left: calc(100% + 8px);
+  //   top: 50%;
+  //   transform: translate(0, -50%);
+  // }
 
-  &[data-tooltip-anchor="top"]:hover:before {
-    left: calc(50%);
-    bottom: calc(100% + calc(8px + var(--tooltip-offset)));
-    transform: translate(-50%, 0);
-  }
+  // &[data-tooltip-anchor="left"]:hover:before {
+  //   right: calc(100% + 8px);
+  //   top: 50%;
+  //   transform: translate(0, -50%);
+  // }
 
-  &[data-tooltip-anchor="top right"]:hover:before {
-    right: -16px;
-    bottom: calc(100% + 8px);
-  }
+  // &[data-tooltip-anchor="top"]:hover:before {
+  //   left: calc(50%);
+  //   bottom: calc(100% + calc(8px + var(--tooltip-offset)));
+  //   transform: translate(-50%, 0);
+  // }
 
-  &[data-tooltip-anchor="bottom"]:hover:before {
-    left: calc(50%);
-    top: calc(100% + 8px);
-    transform: translate(-50%, 0);
-  }
+  // &[data-tooltip-anchor="top right"]:hover:before {
+  //   right: -16px;
+  //   bottom: calc(100% + 8px);
+  // }
+
+  // &[data-tooltip-anchor="bottom"]:hover:before {
+  //   left: calc(50%);
+  //   top: calc(100% + 8px);
+  //   transform: translate(-50%, 0);
+  // }
 }
 
 .horizontal {
