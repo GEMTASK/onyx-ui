@@ -72,7 +72,7 @@ function Menu({
   children: React.ReactElement<{
     ref: React.RefObject<HTMLDivElement | null> | React.RefObject<HTMLDivElement>,
     cursor?: string,
-    solid?: boolean,
+    active?: boolean,
     onClick: React.PointerEventHandler,
   }>,
   onItemSelect?: (value: string | undefined) => void,
@@ -137,7 +137,7 @@ function Menu({
       {React.isValidElement(onlyChild) && React.cloneElement(onlyChild, {
         ref: childElementRef,
         cursor: "pointer",
-        solid: isPopoverVisible || onlyChild.props.solid,
+        active: isPopoverVisible || onlyChild.props.active,
         onClick: () => {
           setIsPopoverVisible(isPopoverVisible => !isPopoverVisible);
         }

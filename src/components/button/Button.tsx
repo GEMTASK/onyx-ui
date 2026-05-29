@@ -50,6 +50,7 @@ function Button({
   solid,
   primary,
   hover,
+  active,
   //
   icon,
   iconColor,
@@ -69,6 +70,7 @@ function Button({
   iconColor?: React.ComponentProps<typeof Icon>["color"],
   iconFill?: boolean,
   rightIcon?: React.ComponentProps<typeof Icon>["icon"],
+  active?: boolean,
   round?: boolean,
   bold?: boolean,
   fontWeight?: React.ComponentProps<typeof Text<"div">>["fontWeight"],
@@ -78,7 +80,7 @@ function Button({
 
   const buttonClassName = [
     styles.Button,
-    solid && styles.solid,
+    (solid || active) && styles.solid,
     primary && styles.primary,
     hover && styles.hover,
     selected && styles.selected,

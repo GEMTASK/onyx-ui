@@ -19,7 +19,7 @@ declare function Menu({ items, header, footer, children, onItemSelect, onVisibil
     children: React.ReactElement<{
         ref: React.RefObject<HTMLDivElement | null> | React.RefObject<HTMLDivElement>;
         cursor?: string;
-        solid?: boolean;
+        active?: boolean;
         onClick: React.PointerEventHandler;
     }>;
     onItemSelect?: (value: string | undefined) => void;
