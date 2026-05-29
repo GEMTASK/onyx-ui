@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+import React, { useEffect, useImperativeHandle, useLayoutEffect, useRef, useState } from "react";
 
 import type { Align } from "../../types/Align";
 import type { Padding } from "../../types/Padding";
@@ -25,6 +25,7 @@ const ViewContext = React.createContext<ViewContext>({
 });
 
 function View<TDelegate extends React.ElementType = "div">({
+  ref,
   as,
   flex,
   wrap,
@@ -77,17 +78,22 @@ function View<TDelegate extends React.ElementType = "div">({
   const viewElementRef = useRef<HTMLDivElement>(null);
   const tooltipElementRef = useRef<HTMLDivElement>(null);
 
+  useImperativeHandle(ref, () => viewElementRef.current!);
+
   useLayoutEffect(() => {
     if (isTooltipVisible && viewElementRef.current && tooltipElementRef.current) {
       const viewClientRect = viewElementRef.current.getBoundingClientRect();
       const tooltipClientRect = tooltipElementRef.current.getBoundingClientRect();
 
-      tooltipElementRef.current.style.left = `${(viewClientRect.left - (tooltipClientRect.width - viewClientRect.width) / 2)}px`;
-      tooltipElementRef.current.style.top = `${viewClientRect.top - tooltipClientRect.height - 8}px`;
-
-      console.log("here");
+      if (tooltipAnchor === "top") {
+        tooltipElementRef.current.style.left = `${viewClientRect.left - (tooltipClientRect.width - viewClientRect.width) / 2}px`;
+        tooltipElementRef.current.style.top = `${viewClientRect.top - tooltipClientRect.height - 8}px`;
+      } else if (tooltipAnchor === "right") {
+        tooltipElementRef.current.style.left = `${viewClientRect.right + 8}px`;
+        tooltipElementRef.current.style.top = `${viewClientRect.top - (tooltipClientRect.height - viewClientRect.height) / 2}px`;
+      }
     }
-  }, [isTooltipVisible]);
+  }, [isTooltipVisible, tooltipAnchor]);
 
   const Component = as ?? "div";
 
@@ -141,9 +147,6 @@ function View<TDelegate extends React.ElementType = "div">({
           ref={viewElementRef}
           className={viewClassName}
           style={viewStyle}
-          // data-tooltip={tooltip}
-          // data-tooltip-anchor={tooltip && tooltipAnchor}
-          // data-tooltip-offset={tooltip && tooltipOffset}
           onMouseEnter={() => tooltip && setIstooltipVisible(true)}
           onMouseLeave={() => tooltip && setIstooltipVisible(false)}
           {...props}
