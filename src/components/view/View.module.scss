@@ -48,7 +48,7 @@
 
   &[data-tooltip-anchor="top"]:hover:before {
     left: calc(50%);
-    bottom: calc(100% + 8px);
+    bottom: calc(100% + calc(8px + var(--tooltip-offset)));
     transform: translate(-50%, 0);
   }
 

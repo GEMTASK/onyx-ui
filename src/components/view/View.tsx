@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import type { Align } from "../../types/Align";
 import type { Padding } from "../../types/Padding";
@@ -44,6 +44,7 @@ function View<TDelegate extends React.ElementType = "div">({
   cornerRadius,
   tooltip,
   tooltipAnchor = "top",
+  tooltipOffset = 0,
   style,
   className,
   children,
@@ -69,6 +70,7 @@ function View<TDelegate extends React.ElementType = "div">({
   cornerRadius?: "0px" | "2px" | "4px" | "max",
   tooltip?: string,
   tooltipAnchor?: "top" | "right" | "left" | "bottom" | "top right",
+  tooltipOffset?: number,
 }, TDelegate>) {
   const Component = as ?? "div";
 
@@ -99,7 +101,8 @@ function View<TDelegate extends React.ElementType = "div">({
   ].filter(className => className).join(" ");
 
   const viewStyle = {
-    ...style
+    ...style,
+    "--tooltip-offset": `${tooltipOffset}px`
   };
 
   const viewContextValue = {
@@ -108,7 +111,14 @@ function View<TDelegate extends React.ElementType = "div">({
 
   return (
     <ViewContext value={viewContextValue}>
-      <Component className={viewClassName} style={viewStyle} data-tooltip={tooltip} data-tooltip-anchor={tooltipAnchor} {...props}>
+      <Component
+        className={viewClassName}
+        style={viewStyle}
+        data-tooltip={tooltip}
+        data-tooltip-anchor={tooltip && tooltipAnchor}
+        data-tooltip-offset={tooltip && tooltipOffset}
+        {...props}
+      >
         {children}
       </Component>
     </ViewContext>
