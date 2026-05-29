@@ -1,10 +1,11 @@
 import { default as React } from 'react';
 import { Delegate } from '../../types/Delegate';
 import { Icon, View } from '..';
-declare function Avatar({ name, label, badge, imageOnly, imageBorder, imageFillColor, ...props }: Delegate<{
+declare function Avatar({ name, label, badge, chevron, imageOnly, imageBorder, imageFillColor, ...props }: Delegate<{
     name?: string;
     label?: string;
     badge?: React.ComponentProps<typeof Icon>["icon"];
+    chevron?: boolean;
     imageOnly?: boolean;
     imageBorder?: boolean;
     imageFillColor?: React.ComponentProps<typeof View<"div">>["fillColor"];

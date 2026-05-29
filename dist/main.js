@@ -1353,20 +1353,20 @@ var Pe = {
 //#endregion
 //#region src/components/avatar/Avatar.tsx
 function Fe(e) {
-	let t = (0, O.c)(30), n, r, i, a, o, s, c;
-	t[0] === e ? (n = t[1], r = t[2], i = t[3], a = t[4], o = t[5], s = t[6], c = t[7]) : ({name: o, label: a, badge: n, imageOnly: i, imageBorder: r, imageFillColor: c, ...s} = e, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o, t[6] = s, t[7] = c);
-	let l = c === void 0 ? "icon" : c, u;
-	t[8] === o ? u = t[9] : (u = o?.split(" ").map(Le).join(""), t[8] = o, t[9] = u);
-	let d = u, f = r && Pe.border, p;
-	t[10] === f ? p = t[11] : (p = [Pe.Image, f].filter(Ie), t[10] = f, t[11] = p);
-	let m = p.join(" "), h;
-	t[12] === d ? h = t[13] : (h = /* @__PURE__ */ (0, z.jsx)(G, {
+	let t = (0, O.c)(32), n, r, i, a, o, s, c, l;
+	t[0] === e ? (n = t[1], r = t[2], i = t[3], a = t[4], o = t[5], s = t[6], c = t[7], l = t[8]) : ({name: s, label: o, badge: n, chevron: r, imageOnly: a, imageBorder: i, imageFillColor: l, ...c} = e, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o, t[6] = s, t[7] = c, t[8] = l);
+	let u = l === void 0 ? "icon" : l, d;
+	t[9] === s ? d = t[10] : (d = s?.split(" ").map(Le).join(""), t[9] = s, t[10] = d);
+	let f = d, p = i && Pe.border, h;
+	t[11] === p ? h = t[12] : (h = [Pe.Image, p].filter(Ie), t[11] = p, t[12] = h);
+	let g = h.join(" "), _;
+	t[13] === f ? _ = t[14] : (_ = /* @__PURE__ */ (0, z.jsx)(G, {
 		fontSize: "12px",
 		fontWeight: "600",
-		children: d
-	}), t[12] = d, t[13] = h);
-	let g;
-	t[14] === n ? g = t[15] : (g = n && /* @__PURE__ */ (0, z.jsx)(K, {
+		children: f
+	}), t[13] = f, t[14] = _);
+	let v;
+	t[15] === n ? v = t[16] : (v = n && /* @__PURE__ */ (0, z.jsx)(K, {
 		icon: n,
 		size: 14,
 		color: "primary",
@@ -1376,35 +1376,47 @@ function Fe(e) {
 			top: -1,
 			left: -1
 		}
-	}), t[14] = n, t[15] = g);
-	let _;
-	t[16] !== r || t[17] !== m || t[18] !== l || t[19] !== h || t[20] !== g ? (_ = /* @__PURE__ */ (0, z.jsxs)(B, {
-		border: r,
+	}), t[15] = n, t[16] = v);
+	let y;
+	t[17] !== i || t[18] !== g || t[19] !== u || t[20] !== _ || t[21] !== v ? (y = /* @__PURE__ */ (0, z.jsxs)(B, {
+		border: i,
 		borderColor: "primary",
 		cornerRadius: "max",
-		fillColor: l,
+		fillColor: u,
 		align: "middle center",
-		className: m,
-		children: [h, g]
-	}), t[16] = r, t[17] = m, t[18] = l, t[19] = h, t[20] = g, t[21] = _) : _ = t[21];
-	let v;
-	t[22] !== i || t[23] !== a || t[24] !== o ? (v = !i && /* @__PURE__ */ (0, z.jsxs)(B, {
+		className: g,
+		children: [_, v]
+	}), t[17] = i, t[18] = g, t[19] = u, t[20] = _, t[21] = v, t[22] = y) : y = t[22];
+	let b;
+	t[23] !== r || t[24] !== a || t[25] !== o || t[26] !== s ? (b = !a && /* @__PURE__ */ (0, z.jsxs)(B, {
 		spacing: "8px",
 		align: "middle left",
-		children: [/* @__PURE__ */ (0, z.jsx)(G, { children: o }), a && /* @__PURE__ */ (0, z.jsx)(G, {
+		children: [/* @__PURE__ */ (0, z.jsxs)(B, {
+			horizontal: !0,
+			spacing: "4px",
+			align: "middle left",
+			children: [/* @__PURE__ */ (0, z.jsx)(G, { children: s }), r && /* @__PURE__ */ (0, z.jsx)(K, {
+				icon: m,
+				size: 16,
+				style: {
+					margin: -4,
+					strokeWidth: 1
+				}
+			})]
+		}), o && /* @__PURE__ */ (0, z.jsx)(G, {
 			light: !0,
 			fontSize: "12px",
-			children: a
+			children: o
 		})]
-	}), t[22] = i, t[23] = a, t[24] = o, t[25] = v) : v = t[25];
-	let y;
-	return t[26] !== s || t[27] !== _ || t[28] !== v ? (y = /* @__PURE__ */ (0, z.jsxs)(B, {
+	}), t[23] = r, t[24] = a, t[25] = o, t[26] = s, t[27] = b) : b = t[27];
+	let x;
+	return t[28] !== c || t[29] !== y || t[30] !== b ? (x = /* @__PURE__ */ (0, z.jsxs)(B, {
 		horizontal: !0,
 		spacing: "8px",
 		align: "middle left",
-		...s,
-		children: [_, v]
-	}), t[26] = s, t[27] = _, t[28] = v, t[29] = y) : y = t[29], y;
+		...c,
+		children: [y, b]
+	}), t[28] = c, t[29] = y, t[30] = b, t[31] = x) : x = t[31], x;
 }
 function Ie(e) {
 	return e;

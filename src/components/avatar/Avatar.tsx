@@ -1,4 +1,5 @@
 import React from "react";
+import { ChevronDownIcon } from "lucide-react";
 
 import { type Delegate } from "../../types/Delegate";
 import { Icon, Text, View } from "..";
@@ -9,6 +10,7 @@ function Avatar({
   name,
   label,
   badge,
+  chevron,
   imageOnly,
   imageBorder,
   imageFillColor = "icon",
@@ -17,6 +19,7 @@ function Avatar({
   name?: string,
   label?: string,
   badge?: React.ComponentProps<typeof Icon>["icon"],
+  chevron?: boolean,
   imageOnly?: boolean,
   imageBorder?: boolean,
   imageFillColor?: React.ComponentProps<typeof View<"div">>["fillColor"],
@@ -47,7 +50,12 @@ function Avatar({
       </View>
       {!imageOnly && (
         <View spacing="8px" align="middle left">
-          <Text>{name}</Text>
+          <View horizontal spacing="4px" align="middle left">
+            <Text>{name}</Text>
+            {chevron && (
+              <Icon icon={ChevronDownIcon} size={16} style={{ margin: -4, strokeWidth: 1 }} />
+            )}
+          </View>
           {label && (
             <Text light fontSize="12px">{label}</Text>
           )}
