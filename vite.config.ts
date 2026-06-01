@@ -14,10 +14,11 @@ export default defineConfig({
       fileName: "main"
     },
     rolldownOptions: {
-      // external: [
-      //   'react',
-      //   'react-dom'
-      // ]
+      external: [
+        "react",
+        "react-dom",
+        "lucide-react"
+      ],
       plugins: [
         esmExternalRequirePlugin({
           external: ["react", "react-dom", "lucide-react"]
