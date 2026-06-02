@@ -1,2 +1,2 @@
-declare function Hello(): import("react/jsx-runtime").JSX.Element;
+declare function Hello(): import("react").JSX.Element;
 export default Hello;

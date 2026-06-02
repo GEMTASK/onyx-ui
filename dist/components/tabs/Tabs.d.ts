@@ -6,10 +6,10 @@ declare function Tabs({ selectedTabIndex, children, onTabSelect, ...props }: Del
         title: string;
     }[];
     onTabSelect: (index: number) => void;
-}, typeof View<"div">>): import("react/jsx-runtime").JSX.Element;
+}, typeof View<"div">>): import("react").JSX.Element;
 declare namespace Tabs {
     var Panel: ({ active, children, ...props }: Delegate<{
         active: boolean;
-    }, typeof View<"div">>) => import("react/jsx-runtime").JSX.Element;
+    }, typeof View<"div">>) => import("react").JSX.Element;
 }
 export default Tabs;

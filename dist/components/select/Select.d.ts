@@ -18,5 +18,5 @@ declare function Select({ label, value, options, onValueChange, ...props }: Dele
     value?: string | number | null | undefined;
     options: OptionValue[];
     onValueChange?: (value: string | number | null | undefined) => void;
-}, typeof Menu, "items" | "children">): import("react/jsx-runtime").JSX.Element;
+}, typeof Menu, "items" | "children">): import("react").JSX.Element;
 export default Select;
