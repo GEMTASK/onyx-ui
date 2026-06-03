@@ -15,12 +15,12 @@ declare function FormField({ name, children }: {
 declare namespace FormField {
     var withComponent: <TProps extends object>(Component: React.ComponentType<TProps>) => ({ name, ...props }: {
         name: string;
-    } & TProps) => React.JSX.Element;
+    } & TProps) => import("react/jsx-runtime").JSX.Element;
 }
 declare function Form({ fields, children, onFieldChange, ...props }: Delegate<{
     fields: Record<string, FieldValue>;
     onFieldChange?: (name: string, value: FieldValue) => void;
-}, typeof View<"form">>): React.JSX.Element;
+}, typeof View<"form">>): import("react/jsx-runtime").JSX.Element;
 declare namespace Form {
     var Field: typeof FormField;
 }

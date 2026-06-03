@@ -12,5 +12,5 @@ declare function Text<TDelegate extends React.ElementType = "div">({ as, light, 
     fontWeight?: false | "300" | "400" | "500" | "600" | "700";
     textColor?: false | Color;
     innerStyle?: React.ComponentProps<"span">["style"];
-} & React.ComponentProps<typeof View<TDelegate>>): React.JSX.Element;
+} & React.ComponentProps<typeof View<TDelegate>>): import("react/jsx-runtime").JSX.Element;
 export default Text;

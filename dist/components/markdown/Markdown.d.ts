@@ -1,2 +1,2 @@
-declare function Markdown(): import("react").JSX.Element;
+declare function Markdown(): import("react/jsx-runtime").JSX.Element;
 export default Markdown;

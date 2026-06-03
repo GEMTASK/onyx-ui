@@ -9,11 +9,11 @@ declare function Avatar({ name, label, badge, chevron, imageOnly, imageBorder, i
     imageOnly?: boolean;
     imageBorder?: boolean;
     imageFillColor?: React.ComponentProps<typeof View<"div">>["fillColor"];
-}, typeof View<"div">>): React.JSX.Element;
+}, typeof View<"div">>): import("react/jsx-runtime").JSX.Element;
 declare namespace Avatar {
     var Stack: ({ children, ...props }: Delegate<{
         children: Children;
-    }, typeof View<"div">>) => React.JSX.Element;
+    }, typeof View<"div">>) => import("react/jsx-runtime").JSX.Element;
 }
 type Children = boolean | React.ReactElement<{
     className: string;

@@ -7,5 +7,5 @@ declare function Chip({ ref, icon, iconSize, iconColor, iconLight, fillColor, ou
     iconColor?: React.ComponentProps<typeof Icon>["color"];
     iconLight?: React.ComponentProps<typeof Icon>["light"];
     outlineColor?: Color;
-}, typeof Text<"div">>): import("react").JSX.Element;
+}, typeof Text<"div">>): import("react/jsx-runtime").JSX.Element;
 export default Chip;

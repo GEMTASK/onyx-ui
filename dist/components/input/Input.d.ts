@@ -13,5 +13,5 @@ declare const Input: ({ label, value: _value, lines, border, flush, multiline, i
     innerStyle?: React.ComponentProps<"textarea">["style"];
     changeOnEnter?: boolean;
     onValueChange?: (value: string) => void;
-}, typeof View<"div">>) => import("react").JSX.Element;
+}, typeof View<"div">>) => import("react/jsx-runtime").JSX.Element;
 export default Input;

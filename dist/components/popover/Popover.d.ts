@@ -11,5 +11,5 @@ declare function Popover({ ref, content, isVisible, anchor, offsetTop, noPortal,
         ref: React.RefObject<HTMLDivElement | null>;
         opacityOnPress?: boolean;
     }> | boolean;
-}, typeof View<"div">>): React.JSX.Element;
+}, typeof View<"div">>): import("react/jsx-runtime").JSX.Element;
 export default Popover;

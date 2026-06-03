@@ -30,6 +30,6 @@ declare function View<TDelegate extends React.ElementType = "div">({ ref, as, fl
     tooltip?: string;
     tooltipAnchor?: "top" | "right" | "left" | "bottom" | "top right";
     tooltipOffset?: number;
-}, TDelegate>): React.JSX.Element;
+}, TDelegate>): import("react/jsx-runtime").JSX.Element;
 export { ViewContext };
 export default View;

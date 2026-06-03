@@ -3,13 +3,13 @@ import { Delegate } from '../../types/Delegate';
 import { Button, Popover } from '..';
 declare function MenuGroup({ label }: {
     label: string;
-}): React.JSX.Element;
-declare function MenuDivider(): React.JSX.Element;
+}): import("react/jsx-runtime").JSX.Element;
+declare function MenuDivider(): import("react/jsx-runtime").JSX.Element;
 declare function MenuItem({ title, value, style, children, onClick, onSelect, ...props }: Delegate<{
     title?: React.ComponentProps<typeof Button>["children"];
     value?: string;
     onSelect?: (value: string | undefined) => void;
-}, typeof Button>): React.JSX.Element;
+}, typeof Button>): import("react/jsx-runtime").JSX.Element;
 declare function Menu({ items, header, footer, children, onItemSelect, onVisibilityChange, ...props }: Delegate<{
     items: (React.ReactElement<{
         onSelect?: (value: string | undefined) => void;
@@ -24,7 +24,7 @@ declare function Menu({ items, header, footer, children, onItemSelect, onVisibil
     }>;
     onItemSelect?: (value: string | undefined) => void;
     onVisibilityChange?: (visible: boolean) => void;
-}, typeof Popover, "isVisible" | "content">): React.JSX.Element;
+}, typeof Popover, "isVisible" | "content">): import("react/jsx-runtime").JSX.Element;
 declare namespace Menu {
     var Item: typeof MenuItem;
     var Divider: typeof MenuDivider;
