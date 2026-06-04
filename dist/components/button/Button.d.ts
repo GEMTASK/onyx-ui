@@ -16,11 +16,11 @@ declare function Button({ ref, type, solid, primary, hover, active, icon, iconCo
     bold?: boolean;
     fontWeight?: React.ComponentProps<typeof Text<"div">>["fontWeight"];
     selected?: boolean;
-} & ButtonStyle, typeof View<"button">>): import("react/jsx-runtime").JSX.Element;
+} & ButtonStyle, typeof View<"button">>): import("react").JSX.Element;
 declare namespace Button {
     var Menu: ({ solid, cornerRadius, children, ...props }: Delegate<{
         solid?: React.ComponentProps<typeof Button>["solid"];
         children: React.ComponentProps<typeof Button>["children"];
-    }, typeof import("..").Menu>) => import("react/jsx-runtime").JSX.Element;
+    }, typeof import("..").Menu>) => import("react").JSX.Element;
 }
 export default Button;

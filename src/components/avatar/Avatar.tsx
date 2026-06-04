@@ -65,7 +65,7 @@ function Avatar({
   );
 }
 
-type Children = boolean | React.ReactElement<{
+type Children = boolean | null | React.ReactElement<{
   className: string,
 }> | Children[];
 
@@ -85,7 +85,7 @@ Avatar.Stack = function ({
         })
       ))}
       {childrenArray.length === 0 && (
-        <View cornerRadius="max" className={styles.Image} style={{ border: "1px dashed var(--divider-color)" }} />
+        <View cornerRadius="max" className={[styles.Image, styles.StackItem].join(" ")} style={{ border: "1px dashed var(--divider-color)" }} />
       )}
     </View>
   );

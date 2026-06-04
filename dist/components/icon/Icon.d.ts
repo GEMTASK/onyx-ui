@@ -5,5 +5,5 @@ declare function Icon({ ref, light, icon: Component, color, size, bleed, classNa
     color?: React.ComponentProps<LucideIcon>["color"];
     size?: React.ComponentProps<LucideIcon>["size"];
     bleed?: boolean;
-} & React.ComponentProps<LucideIcon>): import("react/jsx-runtime").JSX.Element;
+} & React.ComponentProps<LucideIcon>): import("react").JSX.Element;
 export default Icon;

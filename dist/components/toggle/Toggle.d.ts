@@ -5,5 +5,5 @@ declare function Toggle({ value, icon, iconColor, children, onValueChange }: {
     iconColor: React.ComponentProps<typeof Icon>["color"];
     children: React.ComponentProps<typeof Text<"div">>["children"];
     onValueChange?: (value: boolean) => void;
-}): import("react/jsx-runtime").JSX.Element;
+}): import("react").JSX.Element;
 export default Toggle;
