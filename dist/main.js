@@ -970,7 +970,7 @@ var fe = {
 	Input: "_onyx-ui_Input_MpxTL",
 	flush: "_onyx-ui_flush_4zQD9"
 }, pe = (e) => {
-	let t = (0, D.c)(52), n, r, i, a, o, d, f, p, m, h, g, _, v, y;
+	let t = (0, D.c)(53), n, r, i, a, o, d, f, p, m, h, g, _, v, y;
 	if (t[0] !== e) {
 		let { label: s, value: c, lines: l, border: u, flush: b, multiline: x, icon: S, inputRef: C, placeholder: w, autoFocus: T, changeOnEnter: E, innerStyle: D, onKeyDown: O, onValueChange: k, ...A } = e;
 		p = s, n = c, y = u, a = b, m = x, o = S, f = C, _ = w, r = T, i = E, d = D, h = O, g = k, v = A, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o, t[6] = d, t[7] = f, t[8] = p, t[9] = m, t[10] = h, t[11] = g, t[12] = _, t[13] = v, t[14] = y;
@@ -991,17 +991,17 @@ var fe = {
 		S(e.currentTarget.value);
 	}, t[24] = M) : M = t[24];
 	let N = M, P;
-	t[25] !== g || t[26] !== x ? (P = () => {
-		x !== void 0 && g?.(x);
-	}, t[25] = g, t[26] = x, t[27] = P) : P = t[27];
+	t[25] !== n || t[26] !== g || t[27] !== x ? (P = () => {
+		x !== void 0 && x !== n && g?.(x);
+	}, t[25] = n, t[26] = g, t[27] = x, t[28] = P) : P = t[28];
 	let F = P, I;
-	t[28] === m ? I = t[29] : (I = () => {
+	t[29] === m ? I = t[30] : (I = () => {
 		m === !0 && T.current && (T.current.style.height = "", T.current.style.height = `${T.current.scrollHeight}px`);
-	}, t[28] = m, t[29] = I), c(I);
+	}, t[29] = m, t[30] = I), c(I);
 	let L = a === !0 && fe.flush, R;
-	t[30] === L ? R = t[31] : (R = [fe.Input, L].filter(me), t[30] = L, t[31] = R);
+	t[31] === L ? R = t[32] : (R = [fe.Input, L].filter(me), t[31] = L, t[32] = R);
 	let ee = R.join(" "), te;
-	t[32] !== r || t[33] !== F || t[34] !== k || t[35] !== j || t[36] !== d || t[37] !== m || t[38] !== _ || t[39] !== x ? (te = m === !0 ? /* @__PURE__ */ (0, z.jsx)("textarea", {
+	t[33] !== r || t[34] !== F || t[35] !== k || t[36] !== j || t[37] !== d || t[38] !== m || t[39] !== _ || t[40] !== x ? (te = m === !0 ? /* @__PURE__ */ (0, z.jsx)("textarea", {
 		ref: T,
 		autoFocus: r,
 		value: x,
@@ -1025,14 +1025,14 @@ var fe = {
 		onKeyDown: k,
 		onChange: N,
 		onBlur: F
-	}), t[32] = r, t[33] = F, t[34] = k, t[35] = j, t[36] = d, t[37] = m, t[38] = _, t[39] = x, t[40] = te) : te = t[40];
+	}), t[33] = r, t[34] = F, t[35] = k, t[36] = j, t[37] = d, t[38] = m, t[39] = _, t[40] = x, t[41] = te) : te = t[41];
 	let V = te, ne;
-	t[41] === o ? ne = t[42] : (ne = o && /* @__PURE__ */ (0, z.jsx)(K, {
+	t[42] === o ? ne = t[43] : (ne = o && /* @__PURE__ */ (0, z.jsx)(K, {
 		icon: o,
 		size: 20
-	}), t[41] = o, t[42] = ne);
+	}), t[42] = o, t[43] = ne);
 	let H;
-	t[43] !== b || t[44] !== ee || t[45] !== V || t[46] !== v || t[47] !== ne ? (H = /* @__PURE__ */ (0, z.jsxs)(B, {
+	t[44] !== b || t[45] !== ee || t[46] !== V || t[47] !== v || t[48] !== ne ? (H = /* @__PURE__ */ (0, z.jsxs)(B, {
 		horizontal: !0,
 		border: b,
 		align: "middle left",
@@ -1041,13 +1041,13 @@ var fe = {
 		className: ee,
 		...v,
 		children: [ne, V]
-	}), t[43] = b, t[44] = ee, t[45] = V, t[46] = v, t[47] = ne, t[48] = H) : H = t[48];
+	}), t[44] = b, t[45] = ee, t[46] = V, t[47] = v, t[48] = ne, t[49] = H) : H = t[49];
 	let U;
-	return t[49] !== p || t[50] !== H ? (U = /* @__PURE__ */ (0, z.jsx)(Ne, {
+	return t[50] !== p || t[51] !== H ? (U = /* @__PURE__ */ (0, z.jsx)(Ne, {
 		flex: !0,
 		label: p,
 		children: H
-	}), t[49] = p, t[50] = H, t[51] = U) : U = t[51], U;
+	}), t[50] = p, t[51] = H, t[52] = U) : U = t[52], U;
 };
 function me(e) {
 	return e !== !1;

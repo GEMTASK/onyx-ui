@@ -76,7 +76,7 @@ const Input = ({
   };
 
   const handleBlur = () => {
-    if (value !== undefined) {
+    if (value !== undefined && value !== _value) {
       onValueChange?.(value);
     }
   };
