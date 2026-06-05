@@ -57,7 +57,7 @@ function Avatar({
             )}
           </View>
           {label && (
-            <Text light fontSize="12px">{label}</Text>
+            <Text light noWrap fontSize="12px">{label}</Text>
           )}
         </View>
       )}

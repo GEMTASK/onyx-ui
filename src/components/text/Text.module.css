@@ -23,3 +23,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+.noWrap {
+  white-space: nowrap;
+}
