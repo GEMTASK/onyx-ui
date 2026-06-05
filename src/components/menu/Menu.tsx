@@ -78,19 +78,27 @@ function Menu({
   onItemSelect?: (value: string | undefined) => void,
   onVisibilityChange?: (visible: boolean) => void,
 }, typeof Popover, "isVisible" | "content">) {
-  const childElementRef = useRef<HTMLDivElement>(null);
-  const menuElementRef = useRef<HTMLDivElement>(null);
   const [isPopoverVisible, setIsPopoverVisible] = useState(false);
 
+  const menuElementRef = useRef<HTMLDivElement>(null);
+
+  //
+
+  const handleItemSelect = (value: string | undefined) => {
+    setIsPopoverVisible(false);
+    onVisibilityChange?.(false);
+
+    onItemSelect?.(value);
+  };
+
   const handleDocumentPointerDown = useCallback((event: PointerEvent) => {
-    if (
-      !childElementRef.current?.contains(event.target as HTMLElement)
-      && !menuElementRef.current?.contains(event.target as HTMLElement)
-    ) {
+    if (!menuElementRef.current?.contains(event.target as HTMLElement)) {
       setIsPopoverVisible(false);
       onVisibilityChange?.(false);
     }
   }, [onVisibilityChange]);
+
+  //
 
   useEffect(() => {
     document.addEventListener("pointerdown", handleDocumentPointerDown);
@@ -100,12 +108,7 @@ function Menu({
     };
   }, [handleDocumentPointerDown]);
 
-  const handleItemSelect = (value: string | undefined) => {
-    setIsPopoverVisible(false);
-    onVisibilityChange?.(false);
-
-    onItemSelect?.(value);
-  };
+  //
 
   const popoverContent = (
     <View ref={menuElementRef}>
@@ -135,7 +138,6 @@ function Menu({
   return (
     <Popover isVisible={isPopoverVisible} content={popoverContent} {...props}>
       {React.isValidElement(onlyChild) && React.cloneElement(onlyChild, {
-        ref: childElementRef,
         cursor: "pointer",
         active: isPopoverVisible || onlyChild.props.active,
         onClick: () => {
