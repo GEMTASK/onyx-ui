@@ -17,7 +17,7 @@ function Label({
     <View spacing="8px" {...props}>
       {label && (
         <View horizontal spacing="4px" align="middle left">
-          <Text light caps innerStyle={{ fontSize: 11, lineHeight: "17px" }}>
+          <Text light caps noWrap innerStyle={{ fontSize: 11, lineHeight: "17px" }}>
             {label}
           </Text>
           {chevron && (

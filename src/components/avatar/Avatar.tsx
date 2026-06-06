@@ -51,7 +51,9 @@ function Avatar({
       {!imageOnly && (
         <View spacing="8px" align="middle left">
           <View horizontal spacing="4px" align="middle left">
-            <Text>{name}</Text>
+            <Text noWrap>
+              {name}
+            </Text>
             {chevron && (
               <Icon icon={ChevronDownIcon} size={16} style={{ margin: -4, strokeWidth: 1 }} />
             )}

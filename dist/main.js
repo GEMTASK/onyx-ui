@@ -1392,10 +1392,16 @@ function Oe({ label: e, value: t, options: n, onValueChange: r, ...i }) {
 					fill: s.iconFill ? "currentColor" : "none",
 					size: 14,
 					style: { margin: "-2px 0" }
-				}), /* @__PURE__ */ (0, z.jsx)(G, { children: s.label })]
+				}), /* @__PURE__ */ (0, z.jsx)(G, {
+					noWrap: !0,
+					children: s.label
+				})]
 			}) : /* @__PURE__ */ (0, z.jsx)(B, {
 				horizontal: !0,
-				children: /* @__PURE__ */ (0, z.jsxs)(G, { children: [t, " — Value"] })
+				children: /* @__PURE__ */ (0, z.jsxs)(G, {
+					noWrap: !0,
+					children: [t, " — Value"]
+				})
 			})
 		})
 	}) });
@@ -1463,6 +1469,7 @@ function Ne(e) {
 		children: [/* @__PURE__ */ (0, z.jsx)(G, {
 			light: !0,
 			caps: !0,
+			noWrap: !0,
 			innerStyle: {
 				fontSize: 11,
 				lineHeight: "17px"
@@ -1538,7 +1545,10 @@ function Fe(e) {
 			horizontal: !0,
 			spacing: "4px",
 			align: "middle left",
-			children: [/* @__PURE__ */ (0, z.jsx)(G, { children: s }), r && /* @__PURE__ */ (0, z.jsx)(K, {
+			children: [/* @__PURE__ */ (0, z.jsx)(G, {
+				noWrap: !0,
+				children: s
+			}), r && /* @__PURE__ */ (0, z.jsx)(K, {
 				icon: p,
 				size: 16,
 				style: {

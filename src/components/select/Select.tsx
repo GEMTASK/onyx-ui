@@ -123,13 +123,13 @@ function Select({
                   style={{ margin: "-2px 0" }}
                 />
               )}
-              <Text>
+              <Text noWrap>
                 {selectedOption.label}
               </Text>
             </View>
           ) : (
             <View horizontal>
-              <Text>
+              <Text noWrap>
                 {value} — Value
               </Text>
             </View>
