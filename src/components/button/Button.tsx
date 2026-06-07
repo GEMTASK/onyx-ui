@@ -55,6 +55,7 @@ function Button({
   icon,
   iconColor,
   iconFill,
+  iconSize,
   rightIcon,
   round,
   bold = true,
@@ -69,6 +70,7 @@ function Button({
   icon?: React.ComponentProps<typeof Icon>["icon"],
   iconColor?: React.ComponentProps<typeof Icon>["color"],
   iconFill?: boolean,
+  iconSize?: React.ComponentProps<typeof Icon>["size"],
   rightIcon?: React.ComponentProps<typeof Icon>["icon"],
   active?: boolean,
   round?: boolean,
@@ -121,8 +123,10 @@ function Button({
       {icon && (
         <Icon
           bleed
+          absoluteStrokeWidth
+          strokeWidth={1.25}
           icon={icon}
-          size={16}
+          size={iconSize ?? 16}
           color={iconColor ?? textColor}
           fill={iconFill ? "currentColor" : "none"}
           style={{ marginLeft: children ? 0 : -2, marginRight: 0 }}
@@ -140,7 +144,8 @@ function Button({
             icon={rightIcon}
             size={16}
             color={textColor}
-            style={{ strokeWidth: 2.5, marginRight: children ? -3 : 0, justifySelf: "flex-end" }}
+            strokeWidth={2.5}
+            style={{ marginRight: children ? -3 : 0, justifySelf: "flex-end" }}
           />
         </View>
       )}
