@@ -1,3 +1,4 @@
+import { default as React } from 'react';
 import { Delegate } from '../../types/Delegate';
 import { View, Text, Icon } from '..';
 type ButtonStyle = {
@@ -17,11 +18,17 @@ declare function Button({ ref, type, solid, primary, hover, active, icon, iconCo
     bold?: boolean;
     fontWeight?: React.ComponentProps<typeof Text<"div">>["fontWeight"];
     selected?: boolean;
-} & ButtonStyle, typeof View<"button">>): import("react").JSX.Element;
+} & ButtonStyle, typeof View<"button">>): React.JSX.Element;
 declare namespace Button {
     var Menu: ({ solid, cornerRadius, children, ...props }: Delegate<{
         solid?: React.ComponentProps<typeof Button>["solid"];
         children: React.ComponentProps<typeof Button>["children"];
-    }, typeof import("..").Menu>) => import("react").JSX.Element;
+    }, typeof import("..").Menu>) => React.JSX.Element;
+    var Group: ({ children, ...props }: Delegate<{
+        children: ChildProps;
+    }, typeof View<"div">>) => React.JSX.Element;
 }
+type ChildProps = React.ReactElement<{
+    style: React.CSSProperties;
+}> | ChildProps[];
 export default Button;

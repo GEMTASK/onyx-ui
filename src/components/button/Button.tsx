@@ -1,4 +1,4 @@
-import { useContext, useImperativeHandle, useLayoutEffect, useRef } from "react";
+import React, { useContext, useImperativeHandle, useLayoutEffect, useRef } from "react";
 import { ChevronDownIcon } from "lucide-react";
 
 import type { Delegate } from "../../types/Delegate";
@@ -168,6 +168,35 @@ Button.Menu = function ActionMenu({
         {children}
       </Button>
     </Menu>
+  );
+};
+
+type ChildProps = React.ReactElement<{
+  style: React.CSSProperties,
+}> | ChildProps[];
+
+Button.Group = function ButtonGroup({
+  children,
+  ...props
+}: Delegate<{
+  children: ChildProps,
+}, typeof View<"div">>) {
+  const childrenArray = React.Children.toArray(children) as ChildProps[];
+
+  return (
+    <View horizontal spacing="1px" {...props}>
+      {childrenArray.map((child, index) => (
+        React.isValidElement(child) && React.cloneElement(child, {
+          style: {
+            ...child.props.style,
+            borderTopLeftRadius: index > 0 ? 0 : undefined,
+            borderBottomLeftRadius: index > 0 ? 0 : undefined,
+            borderTopRightRadius: index < childrenArray.length - 1 ? 0 : undefined,
+            borderBottomRightRadius: index < childrenArray.length - 1 ? 0 : undefined
+          }
+        })
+      ))}
+    </View>
   );
 };
 
