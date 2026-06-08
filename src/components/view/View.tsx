@@ -48,7 +48,6 @@ function View<TDelegate extends React.ElementType = "div">({
   tooltip,
   tooltipAnchor = "top",
   tooltipOffset = 0,
-  style,
   className,
   children,
   ...props
@@ -125,11 +124,6 @@ function View<TDelegate extends React.ElementType = "div">({
     className
   ].filter(className => className).join(" ");
 
-  const viewStyle = {
-    ...style
-    // "--tooltip-offset": `${tooltipOffset}px`
-  };
-
   const viewContextValue = {
     parentFillColor: fillColor
   };
@@ -148,7 +142,6 @@ function View<TDelegate extends React.ElementType = "div">({
         <Component
           ref={viewElementRef}
           className={viewClassName}
-          style={viewStyle}
           onMouseEnter={() => tooltip && setIstooltipVisible(true)}
           onMouseLeave={() => tooltip && setIstooltipVisible(false)}
           {...props}

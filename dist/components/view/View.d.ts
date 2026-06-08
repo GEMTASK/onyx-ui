@@ -7,7 +7,7 @@ type ViewContext = {
     parentFillColor?: false | Color;
 };
 declare const ViewContext: React.Context<ViewContext>;
-declare function View<TDelegate extends React.ElementType = "div">({ ref, as, flex, wrap, horizontal, absolute, sticky, active, opacityOnPress, zIndex, shadow, cursor, padding, spacing, border, negativeBorder, align, fillColor, borderColor, cornerRadius, tooltip, tooltipAnchor, tooltipOffset, style, className, children, ...props }: Delegate<{
+declare function View<TDelegate extends React.ElementType = "div">({ ref, as, flex, wrap, horizontal, absolute, sticky, active, opacityOnPress, zIndex, shadow, cursor, padding, spacing, border, negativeBorder, align, fillColor, borderColor, cornerRadius, tooltip, tooltipAnchor, tooltipOffset, className, children, ...props }: Delegate<{
     as?: TDelegate;
     flex?: boolean;
     wrap?: boolean;

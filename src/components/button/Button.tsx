@@ -124,7 +124,7 @@ function Button({
         <Icon
           bleed
           absoluteStrokeWidth
-          strokeWidth={1.25}
+          strokeWidth={1.5}
           icon={icon}
           size={iconSize ?? 16}
           color={iconColor ?? textColor}
