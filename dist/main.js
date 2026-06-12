@@ -1289,51 +1289,57 @@ we.Item = Ce, we.Divider = Se, we.Group = xe;
 //#endregion
 //#region src/components/checkbox/Checkbox.tsx
 function Ee(e) {
-	let t = (0, D.c)(18), { label: n, value: r, onValueChange: i } = e, a;
-	t[0] === i ? a = t[1] : (a = (e) => {
-		i?.(e.currentTarget.checked);
-	}, t[0] = i, t[1] = a);
-	let o = a, s = !r, c = r ? "primary" : void 0, l;
-	t[2] === Symbol.for("react.memo_cache_sentinel") ? (l = {
+	let t = (0, D.c)(24), n, r, i, a, o;
+	if (t[0] !== e) {
+		let { label: s, value: c, icon: l, onValueChange: u, ...d } = e;
+		r = s, o = c, n = l, i = d, a = (e) => {
+			u?.(e.currentTarget.checked);
+		}, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o;
+	} else n = t[1], r = t[2], i = t[3], a = t[4], o = t[5];
+	let s = a;
+	console.log(n);
+	let c = !o, l = o ? "primary" : void 0, u;
+	t[6] === Symbol.for("react.memo_cache_sentinel") ? (u = {
 		width: 24,
 		height: 24
-	}, t[2] = l) : l = t[2];
-	let u;
-	t[3] !== o || t[4] !== r ? (u = /* @__PURE__ */ (0, z.jsx)(B, {
+	}, t[6] = u) : u = t[6];
+	let d;
+	t[7] !== s || t[8] !== i || t[9] !== o ? (d = /* @__PURE__ */ (0, z.jsx)(B, {
 		absolute: !0,
 		as: "input",
 		type: "checkbox",
-		checked: r,
-		onChange: o
-	}), t[3] = o, t[4] = r, t[5] = u) : u = t[5];
-	let d;
-	t[6] === r ? d = t[7] : (d = r && /* @__PURE__ */ (0, z.jsx)(K, {
-		icon: f,
+		checked: o,
+		onChange: s,
+		...i
+	}), t[7] = s, t[8] = i, t[9] = o, t[10] = d) : d = t[10];
+	let p;
+	t[11] !== n || t[12] !== o ? (p = o && /* @__PURE__ */ (0, z.jsx)(K, {
+		icon: n ?? f,
 		size: 20,
 		color: "white"
-	}), t[6] = r, t[7] = d);
-	let p;
-	t[8] !== s || t[9] !== c || t[10] !== u || t[11] !== d ? (p = /* @__PURE__ */ (0, z.jsxs)(B, {
-		border: s,
-		fillColor: c,
+	}), t[11] = n, t[12] = o, t[13] = p) : p = t[13];
+	let m;
+	t[14] !== c || t[15] !== l || t[16] !== d || t[17] !== p ? (m = /* @__PURE__ */ (0, z.jsxs)(B, {
+		border: c,
+		fillColor: l,
 		cornerRadius: "2px",
 		align: "middle center",
-		style: l,
-		children: [u, d]
-	}), t[8] = s, t[9] = c, t[10] = u, t[11] = d, t[12] = p) : p = t[12];
-	let m;
-	t[13] === n ? m = t[14] : (m = /* @__PURE__ */ (0, z.jsx)(G, { children: n }), t[13] = n, t[14] = m);
+		style: u,
+		children: [d, p]
+	}), t[14] = c, t[15] = l, t[16] = d, t[17] = p, t[18] = m) : m = t[18];
 	let h;
-	return t[15] !== p || t[16] !== m ? (h = /* @__PURE__ */ (0, z.jsx)(Ne, {
+	t[19] === r ? h = t[20] : (h = /* @__PURE__ */ (0, z.jsx)(G, { children: r }), t[19] = r, t[20] = h);
+	let g;
+	return t[21] !== m || t[22] !== h ? (g = /* @__PURE__ */ (0, z.jsx)(Ne, {
 		as: "label",
 		children: /* @__PURE__ */ (0, z.jsxs)(B, {
 			horizontal: !0,
 			opacityOnPress: !0,
 			spacing: "8px",
 			align: "middle left",
-			children: [p, m]
+			children: [m, h]
 		})
-	}), t[15] = p, t[16] = m, t[17] = h) : h = t[17], h;
+	}), t[21] = m, t[22] = h, t[23] = g) : g = t[23], g;
 }
 //#endregion
 //#region src/components/select/Select.tsx
