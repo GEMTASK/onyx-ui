@@ -1,3 +1,13 @@
+$hues: red, pink, grape, violet, indigo, blue, cyan, teal, green, lime, yellow, orange;
+
+@each $hue in $hues {
+  @for $level from 0 through 9 {
+    .#{$hue}-#{$level} {
+      color: var(--onyx-#{$hue}-#{$level});
+    }
+  }
+}
+
 .text {
   color: var(--text-color);
 }
@@ -86,43 +96,7 @@
   color: hsl(210, 10.81%, 14.51%);
 }
 
-$hues: green;
-
-// @each $colors, $hue in open-color.$oc-color-list {
-//   @each $level, $color in $colors {
-//     .#{$hue}-#{$level} {
-//       color: $color;
-//     }
-//   }
-// }
-
-/*
-
-#f1f3f5 hsl(210, 16.67%, 95.29%)
-#dee2e6 hsl(210, 13.79%, 88.63%)
-#ced4da hsl(210, 13.95%, 83.14%)
-
-*/
-
-.red-0 {
-  color: #fff5f5;
-}
-
-.red-1 {
-  color: #ffe3e3;
-}
-
-.red-2 {
-  color: #ffc9c9;
-}
-
-.red-3 {
-  color: #ffa8a8;
-}
-
-.red-4 {
-  color: #ff8787;
-}
+//
 
 .red-5 {
   color: #ff6b6b;
@@ -146,26 +120,6 @@ $hues: green;
 
 //
 
-.pink-0 {
-  color: #fff0f6;
-}
-
-.pink-1 {
-  color: #ffdeeb;
-}
-
-.pink-2 {
-  color: #fcc2d7;
-}
-
-.pink-3 {
-  color: #faa2c1;
-}
-
-.pink-4 {
-  color: #f783ac;
-}
-
 .pink-5 {
   color: #f06595;
 }
@@ -187,26 +141,6 @@ $hues: green;
 }
 
 //
-
-.grape-0 {
-  color: #f8f0fc;
-}
-
-.grape-1 {
-  color: #f3d9fa;
-}
-
-.grape-2 {
-  color: #eebefa;
-}
-
-.grape-3 {
-  color: #e599f7;
-}
-
-.grape-4 {
-  color: #da77f2;
-}
 
 .grape-5 {
   color: #cc5de8;
@@ -230,26 +164,6 @@ $hues: green;
 
 //
 
-.violet-0 {
-  color: #f3f0ff;
-}
-
-.violet-1 {
-  color: #e5dbff;
-}
-
-.violet-2 {
-  color: #d0bfff;
-}
-
-.violet-3 {
-  color: #b197fc;
-}
-
-.violet-4 {
-  color: #9775fa;
-}
-
 .violet-5 {
   color: #845ef7;
 }
@@ -271,26 +185,6 @@ $hues: green;
 }
 
 //
-
-.indigo-0 {
-  color: #edf2ff;
-}
-
-.indigo-1 {
-  color: #dbe4ff;
-}
-
-.indigo-2 {
-  color: #bac8ff;
-}
-
-.indigo-3 {
-  color: #91a7ff;
-}
-
-.indigo-4 {
-  color: #748ffc;
-}
 
 .indigo-5 {
   color: #5c7cfa;
@@ -314,26 +208,6 @@ $hues: green;
 
 //
 
-.blue-0 {
-  color: #e7f5ff;
-}
-
-.blue-1 {
-  color: #d0ebff;
-}
-
-.blue-2 {
-  color: #a5d8ff;
-}
-
-.blue-3 {
-  color: #74c0fc;
-}
-
-.blue-4 {
-  color: #4dabf7;
-}
-
 .blue-5 {
   color: #339af0;
 }
@@ -355,26 +229,6 @@ $hues: green;
 }
 
 //
-
-.cyan-0 {
-  color: #e3fafc;
-}
-
-.cyan-1 {
-  color: #c5f6fa;
-}
-
-.cyan-2 {
-  color: #99e9f2;
-}
-
-.cyan-3 {
-  color: #66d9e8;
-}
-
-.cyan-4 {
-  color: #3bc9db;
-}
 
 .cyan-5 {
   color: #22b8cf;
@@ -398,26 +252,6 @@ $hues: green;
 
 //
 
-.teal-0 {
-  color: #e6fcf5;
-}
-
-.teal-1 {
-  color: #c3fae8;
-}
-
-.teal-2 {
-  color: #96f2d7;
-}
-
-.teal-3 {
-  color: #63e6be;
-}
-
-.teal-4 {
-  color: #38d9a9;
-}
-
 .teal-5 {
   color: #20c997;
 }
@@ -439,26 +273,6 @@ $hues: green;
 }
 
 //
-
-.green-0 {
-  color: #ebfbee;
-}
-
-.green-1 {
-  color: #d3f9d8;
-}
-
-.green-2 {
-  color: #b2f2bb;
-}
-
-.green-3 {
-  color: #8ce99a;
-}
-
-.green-4 {
-  color: #69db7c;
-}
 
 .green-5 {
   color: #51cf66;
@@ -482,26 +296,6 @@ $hues: green;
 
 //
 
-.lime-0 {
-  color: #f4fce3;
-}
-
-.lime-1 {
-  color: #e9fac8;
-}
-
-.lime-2 {
-  color: #d8f5a2;
-}
-
-.lime-3 {
-  color: #c0eb75;
-}
-
-.lime-4 {
-  color: #a9e34b;
-}
-
 .lime-5 {
   color: #94d82d;
 }
@@ -524,26 +318,6 @@ $hues: green;
 
 //
 
-.yellow-0 {
-  color: #fff9db;
-}
-
-.yellow-1 {
-  color: #fff3bf;
-}
-
-.yellow-2 {
-  color: #ffec99;
-}
-
-.yellow-3 {
-  color: #ffe066;
-}
-
-.yellow-4 {
-  color: #ffd43b;
-}
-
 .yellow-5 {
   color: #fcc419;
 }
@@ -565,26 +339,6 @@ $hues: green;
 }
 
 //
-
-.orange-0 {
-  color: #fff4e6;
-}
-
-.orange-1 {
-  color: #ffe8cc;
-}
-
-.orange-2 {
-  color: #ffd8a8;
-}
-
-.orange-3 {
-  color: #ffc078;
-}
-
-.orange-4 {
-  color: #ffa94d;
-}
 
 .orange-5 {
   color: #ff922b;
