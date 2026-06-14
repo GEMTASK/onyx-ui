@@ -11,6 +11,7 @@ const Input = ({
   lines,
   border = true,
   flush,
+  borderOnFocus,
   multiline,
   icon,
   inputRef,
@@ -26,6 +27,7 @@ const Input = ({
   value?: string,
   lines?: number,
   flush?: boolean,
+  borderOnFocus?: boolean,
   multiline?: boolean,
   icon?: React.ComponentProps<typeof Icon>["icon"],
   inputRef?: React.ComponentProps<"input">["ref"],
@@ -90,7 +92,9 @@ const Input = ({
 
   const inputClassName = [
     styles.Input,
-    flush === true && styles.flush
+    flush === true && styles.flush,
+    border && styles[border === true ? "top_right_bottom_left" : border.replace(/ /, "_")],
+    borderOnFocus && styles.borderOnFocus
   ].filter(className => className !== false).join(" ");
 
   const inputElement = multiline === true ? (
@@ -119,9 +123,9 @@ const Input = ({
 
   return (
     <Label flex label={label}>
-      <View horizontal border={border} align="middle left" padding="4px 8px" spacing="4px" className={inputClassName} {...props}>
+      <View horizontal border={border} align="middle left" spacing="4px" className={inputClassName} {...props}>
         {icon && (
-          <Icon icon={icon} size={20} />
+          <Icon icon={icon} size={16} />
         )}
         {inputElement}
       </View>

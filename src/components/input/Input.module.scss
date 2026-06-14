@@ -1,12 +1,18 @@
 .Input {
-  &.flush {
-    padding-left: 0;
-    margin: -8px 0 -8px 0;
+  &.top_right_bottom_left {
+    padding: 3px 7px 3px 7px;
+  }
 
-    &:focus-within {
-      border-bottom: 1px solid var(--primary-color);
-      margin-bottom: -9px;
-    }
+  &.bottom {
+    padding: 4px 0 3px 0;
+  }
+
+  &:not(:focus-within).borderOnFocus {
+    border-color: transparent;
+  }
+
+  &.flush {
+    margin: -8px 0 -8px 0;
   }
 
   &:focus-within {
