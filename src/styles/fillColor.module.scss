@@ -1,4 +1,4 @@
-$hues: red, pink, grape, violet, indigo, blue, cyan, teal, green, lime, yellow, orange;
+$hues: "red", "pink", "grape", "violet", "indigo", "blue", "cyan", "teal", "green", "lime", "yellow", "orange";
 
 @each $hue in $hues {
   @for $level from 0 through 9 {
@@ -54,18 +54,22 @@ $hues: red, pink, grape, violet, indigo, blue, cyan, teal, green, lime, yellow, 
 
 .gray-0 {
   background: hsl(210, 16.67%, 97.65%);
+  background: oklch(0.9816 0.0017 247.84);
 }
 
 .gray-1 {
   background: hsl(210, 16.67%, 95.29%);
+  background: oklch(0.9632 0.0034 247.86);
 }
 
 .gray-2 {
   background: hsl(210, 15.79%, 92.55%);
+  background: oklch(0.9417 0.0052 247.88);
 }
 
 .gray-3 {
   background: hsl(210, 13.79%, 88.63%);
+  background: oklch(0.9109 0.007 247.9);
 }
 
 .gray-4 {

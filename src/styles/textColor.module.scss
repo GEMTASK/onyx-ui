@@ -1,4 +1,4 @@
-$hues: red, pink, grape, violet, indigo, blue, cyan, teal, green, lime, yellow, orange;
+$hues: "red", "pink", "grape", "violet", "indigo", "blue", "cyan", "teal", "green", "lime", "yellow", "orange";
 
 @each $hue in $hues {
   @for $level from 0 through 9 {

@@ -31,6 +31,10 @@
     width: max-content;
     animation: 0.1s ease-in 0.3s backwards fadeIn;
   }
+
+  &:not(:focus-within).borderOnFocus {
+    border-color: transparent;
+  }
 }
 
 .horizontal {
