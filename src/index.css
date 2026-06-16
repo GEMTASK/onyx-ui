@@ -63,18 +63,18 @@
   --onyx-yellow-2: oklch(0.87 0.1 96.83);
   --onyx-orange-2: oklch(0.87 0.1 72.42);
 
-  --onyx-red-3: oklch(0.80 0.11 19.5306);
-  --onyx-pink-3: oklch(0.80 0.11 357.15);
-  --onyx-grape-3: oklch(0.80 0.11 319.77);
-  --onyx-violet-3: oklch(0.80 0.11 294.45);
-  --onyx-indigo-3: oklch(0.80 0.11 272.27);
-  --onyx-blue-3: oklch(0.80 0.11 243.83);
-  --onyx-cyan-3: oklch(0.80 0.11 206.82);
-  --onyx-teal-3: oklch(0.80 0.11 170.11);
-  --onyx-green-3: oklch(0.80 0.11 147.8);
-  --onyx-lime-3: oklch(0.80 0.11 125.92);
-  --onyx-yellow-3: oklch(0.80 0.11 95.11);
-  --onyx-orange-3: oklch(0.80 0.11 68.95);
+  --onyx-red-3: oklch(0.80 0.15 19.5306);
+  --onyx-pink-3: oklch(0.80 0.15 357.15);
+  --onyx-grape-3: oklch(0.80 0.15 319.77);
+  --onyx-violet-3: oklch(0.80 0.15 294.45);
+  --onyx-indigo-3: oklch(0.80 0.15 272.27);
+  --onyx-blue-3: oklch(0.80 0.15 243.83);
+  --onyx-cyan-3: oklch(0.80 0.15 206.82);
+  --onyx-teal-3: oklch(0.80 0.15 170.11);
+  --onyx-green-3: oklch(0.80 0.15 147.8);
+  --onyx-lime-3: oklch(0.80 0.15 125.92);
+  --onyx-yellow-3: oklch(0.80 0.15 95.11);
+  --onyx-orange-3: oklch(0.80 0.15 68.95);
 
   --onyx-red-4: oklch(0.74 0.14 21.1);
   --onyx-pink-4: oklch(0.74 0.14 358.8);
