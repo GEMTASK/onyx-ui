@@ -1,5 +1,6 @@
 import { Delegate } from '../../types/Delegate';
 import { Menu } from '..';
+import { FieldValue } from '../../main';
 type OptionValueBase = {
     icon?: React.ComponentProps<typeof Menu.Item>["icon"];
     iconColor?: React.ComponentProps<typeof Menu.Item>["iconColor"];
@@ -13,10 +14,11 @@ type OptionValue = OptionValueBase | {
     label?: React.ComponentProps<typeof Menu.Item>["title"];
     options: OptionValueBase[];
 };
-declare function Select({ label, value, options, onValueChange, ...props }: Delegate<{
+declare function Select({ label, value, options, multiple, onValueChange, ...props }: Delegate<{
     label?: string;
-    value?: string | number | null | undefined;
+    value?: FieldValue;
     options: OptionValue[];
-    onValueChange?: (value: string | number | null | undefined) => void;
+    multiple?: boolean;
+    onValueChange?: (value: FieldValue) => void;
 }, typeof Menu, "items" | "children">): import("react").JSX.Element;
 export default Select;

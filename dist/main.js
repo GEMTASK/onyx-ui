@@ -1472,10 +1472,14 @@ function Oe(e) {
 		...i
 	}), t[8] = s, t[9] = n, t[10] = i, t[11] = c) : c = t[11], c;
 }
-function ke({ label: e, value: t, options: n, onValueChange: r, ...i }) {
-	let a = (e) => {
-		e !== t && r?.(e);
-	}, o = n.flatMap((e, r) => {
+function ke({ label: e, value: t, options: n, multiple: r, onValueChange: i, ...a }) {
+	let o = (e) => {
+		if (r) {
+			e === void 0 ? i?.(e) : i?.([...Array.isArray(t) ? t : t === void 0 ? [] : [t], e]);
+			return;
+		}
+		e !== t && i?.(e);
+	}, s = n.flatMap((e, r) => {
 		switch (!0) {
 			case "options" in e: return [
 				r !== 0 && /* @__PURE__ */ (0, z.jsx)(we.Divider, {}),
@@ -1489,7 +1493,7 @@ function ke({ label: e, value: t, options: n, onValueChange: r, ...i }) {
 					value: e.value,
 					tooltip: e.tooltip,
 					tooltipAnchor: "right",
-					onSelect: a
+					onSelect: o
 				})),
 				r !== n.length - 1 && !("options" in n[r]) && /* @__PURE__ */ (0, z.jsx)(we.Divider, {})
 			].filter((e) => e !== !1);
@@ -1502,31 +1506,35 @@ function ke({ label: e, value: t, options: n, onValueChange: r, ...i }) {
 				value: e.value,
 				tooltip: e.tooltip,
 				tooltipAnchor: e.tooltipAnchor,
-				onSelect: a
+				onSelect: o
 			});
 		}
-	}), s = n.flatMap((e) => "options" in e ? e.options : [e]).find((e) => e.value === t);
+	}), c = n.flatMap((e) => "options" in e ? e.options : [e]).filter((e) => Array.isArray(t) ? t.includes(e.value) : e.value === t);
 	return /* @__PURE__ */ (0, z.jsx)(B, { children: /* @__PURE__ */ (0, z.jsx)(we, {
-		items: o,
+		items: s,
 		offsetTop: 8,
-		...i,
+		...a,
 		children: /* @__PURE__ */ (0, z.jsx)(Pe, {
 			chevron: !0,
 			label: e,
-			children: s ? /* @__PURE__ */ (0, z.jsxs)(B, {
+			children: c.length > 0 ? /* @__PURE__ */ (0, z.jsx)(B, {
 				horizontal: !0,
-				spacing: "4px",
-				align: "middle left",
-				children: ["icon" in s && s.icon && /* @__PURE__ */ (0, z.jsx)(K, {
-					icon: s.icon,
-					color: s.iconColor,
-					fill: s.iconFill ? "currentColor" : "none",
-					size: 14,
-					style: { margin: "-2px 0" }
-				}), /* @__PURE__ */ (0, z.jsx)(W, {
-					noWrap: !0,
-					children: s.label
-				})]
+				spacing: "12px",
+				children: c.map((e) => (console.log(">>>", e.value), /* @__PURE__ */ (0, z.jsxs)(B, {
+					horizontal: !0,
+					spacing: "4px",
+					align: "middle left",
+					children: [e.icon && /* @__PURE__ */ (0, z.jsx)(K, {
+						icon: e.icon,
+						color: e.iconColor,
+						fill: e.iconFill ? "currentColor" : "none",
+						size: 14,
+						style: { margin: "-2px 0" }
+					}), /* @__PURE__ */ (0, z.jsx)(W, {
+						noWrap: !0,
+						children: e.label
+					})]
+				}, e.value)))
 			}) : /* @__PURE__ */ (0, z.jsx)(B, {
 				horizontal: !0,
 				children: /* @__PURE__ */ (0, z.jsxs)(W, {
