@@ -1485,7 +1485,7 @@ function ke({ label: e, value: t, options: n, multiple: r, onValueChange: i, ...
 				r !== 0 && /* @__PURE__ */ (0, z.jsx)(we.Divider, {}),
 				...e.label ? [/* @__PURE__ */ (0, z.jsx)(we.Group, { label: e.label })] : [],
 				...e.options.map((e) => /* @__PURE__ */ (0, z.jsx)(Oe, {
-					selected: e.value === t,
+					selected: Array.isArray(t) ? t.includes(e.value) : e.value === t,
 					icon: e.icon,
 					iconColor: e.iconColor,
 					iconFill: e.iconFill,
@@ -1520,7 +1520,7 @@ function ke({ label: e, value: t, options: n, multiple: r, onValueChange: i, ...
 			children: c.length > 0 ? /* @__PURE__ */ (0, z.jsx)(B, {
 				horizontal: !0,
 				spacing: "12px",
-				children: c.map((e) => (console.log(">>>", e.value), /* @__PURE__ */ (0, z.jsxs)(B, {
+				children: c.map((e) => /* @__PURE__ */ (0, z.jsxs)(B, {
 					horizontal: !0,
 					spacing: "4px",
 					align: "middle left",
@@ -1534,7 +1534,7 @@ function ke({ label: e, value: t, options: n, multiple: r, onValueChange: i, ...
 						noWrap: !0,
 						children: e.label
 					})]
-				}, e.value)))
+				}, String(e.value)))
 			}) : /* @__PURE__ */ (0, z.jsx)(B, {
 				horizontal: !0,
 				children: /* @__PURE__ */ (0, z.jsxs)(W, {

@@ -82,7 +82,7 @@ function Select({
           ...(option.label ? [<Menu.Group label={option.label as string} />] : []),
           ...option.options.map((innerOption) => (
             <SelectOption
-              selected={innerOption.value === value}
+              selected={Array.isArray(value) ? value.includes(innerOption.value) : innerOption.value === value}
               icon={innerOption.icon}
               iconColor={innerOption.iconColor}
               iconFill={innerOption.iconFill}
@@ -134,8 +134,7 @@ function Select({
           {selectedOptions.length > 0 ? (
             <View horizontal spacing="12px">
               {selectedOptions.map(selectedOption => (
-                console.log(">>>", selectedOption.value),
-                <View horizontal key={selectedOption.value} spacing="4px" align="middle left">
+                <View horizontal key={String(selectedOption.value)} spacing="4px" align="middle left">
                   {selectedOption.icon && (
                     <Icon
                       icon={selectedOption.icon}
