@@ -11,6 +11,7 @@ declare function Avatar({ name, label, badge, chevron, imageOnly, imageBorder, i
     imageFillColor?: React.ComponentProps<typeof View<"div">>["fillColor"];
 }, typeof View<"div">>): React.JSX.Element;
 declare namespace Avatar {
+    var Empty: ({ ...props }: React.ComponentProps<typeof View<"div">>) => React.JSX.Element;
     var Stack: ({ children, ...props }: Delegate<{
         children: Children;
     }, typeof View<"div">>) => React.JSX.Element;
