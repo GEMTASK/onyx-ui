@@ -10,14 +10,9 @@ function List({
   ...props
 }: Delegate<object, typeof View<"div">>) {
   return (
-    <View border cornerRadius="4px" className={styles.List} {...props}>
+    <View border spacing="1px" fillColor="divider" cornerRadius="4px" className={styles.List} {...props}>
       {React.Children.map(children, (child, index) => React.isValidElement(child) && (
-        <React.Fragment key={child.key}>
-          {index > 0 && (
-            <Divider />
-          )}
-          {child}
-        </React.Fragment>
+        child
       ))}
     </View>
   );

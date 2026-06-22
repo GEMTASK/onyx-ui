@@ -1246,6 +1246,8 @@ function ve(e) {
 	let o;
 	return n[5] !== i || n[6] !== a ? (o = /* @__PURE__ */ (0, z.jsx)(B, {
 		border: !0,
+		spacing: "1px",
+		fillColor: "divider",
 		cornerRadius: "4px",
 		className: _e.List,
 		...i,
@@ -1253,7 +1255,7 @@ function ve(e) {
 	}), n[5] = i, n[6] = a, n[7] = o) : o = n[7], o;
 }
 function ye(e, n) {
-	return t.isValidElement(e) && /* @__PURE__ */ (0, z.jsxs)(t.Fragment, { children: [n > 0 && /* @__PURE__ */ (0, z.jsx)(ge, {}), e] }, e.key);
+	return t.isValidElement(e) && e;
 }
 //#endregion
 //#region src/components/popover/Popover.tsx
