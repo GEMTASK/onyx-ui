@@ -35,8 +35,8 @@ function MenuItem({
   ...props
 }: Delegate<{
   title?: React.ComponentProps<typeof Button>["children"],
-  value?: string,
-  onSelect?: (value: string | undefined) => void,
+  value?: string | number,
+  onSelect?: (value: string | number | undefined) => void,
 }, typeof Button>) {
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     onClick?.(event);

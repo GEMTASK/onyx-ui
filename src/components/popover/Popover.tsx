@@ -42,7 +42,7 @@ function Popover({
         popoverElementRef.current.style.left = `${childClientRect.width}px`;
         popoverElementRef.current.style.top = `${childClientRect.top - popoverClientRect.top}px`;
       } else {
-        popoverElementRef.current.style.left = `${childClientRect.left + 1 - overlayClientRect.left}px`;
+        popoverElementRef.current.style.left = `${childClientRect.left + 0 - overlayClientRect.left}px`;
         popoverElementRef.current.style.top = `${childClientRect.bottom + 0 - overlayClientRect.top}px`;
       }
     } else if (isVisible && childElementRef.current && popoverElementRef.current) {
@@ -57,7 +57,7 @@ function Popover({
         popoverElementRef.current.style.left = `${childClientRect.right - popoverClientRect.width}px`;
         popoverElementRef.current.style.top = `${childClientRect.top + childClientRect.height + offsetTop}px`;
       } else if (anchor === "bottom left") {
-        popoverElementRef.current.style.left = `${childClientRect.left + 1 - overlayClientRect.left}px`;
+        popoverElementRef.current.style.left = `${childClientRect.left + 0 - overlayClientRect.left}px`;
         popoverElementRef.current.style.top = `${childClientRect.bottom + 0 - overlayClientRect.top + offsetTop}px`;
       }
     }

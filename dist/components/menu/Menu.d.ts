@@ -7,8 +7,8 @@ declare function MenuGroup({ label }: {
 declare function MenuDivider(): React.JSX.Element;
 declare function MenuItem({ title, value, style, children, onClick, onSelect, ...props }: Delegate<{
     title?: React.ComponentProps<typeof Button>["children"];
-    value?: string;
-    onSelect?: (value: string | undefined) => void;
+    value?: string | number;
+    onSelect?: (value: string | number | undefined) => void;
 }, typeof Button>): React.JSX.Element;
 declare function Menu({ items, header, footer, children, onItemSelect, onVisibilityChange, ...props }: Delegate<{
     items: (React.ReactElement<{
