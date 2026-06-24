@@ -1,4 +1,5 @@
-import React, { useEffect, useImperativeHandle, useLayoutEffect, useRef, useState } from "react";
+import React, { useImperativeHandle, useLayoutEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 
 import type { Align } from "../../types/Align";
 import type { Padding } from "../../types/Padding";
@@ -14,7 +15,6 @@ import cornerRadiusStyles from "../../styles/conerRadius.module.scss";
 import alignHorizontalStyles from "../../styles/alignHorizontal.module.scss";
 import alignVerticalStyles from "../../styles/alignVertical.module.scss";
 import borderColorStyles from "../../styles/borderColor.module.scss";
-import { createPortal } from "react-dom";
 
 type ViewContext = {
   parentFillColor?: false | Color,
@@ -81,6 +81,14 @@ function View<TDelegate extends React.ElementType = "div">({
   const viewElementRef = useRef<HTMLDivElement>(null);
   const tooltipElementRef = useRef<HTMLDivElement>(null);
 
+  const handlePointerEnter = () => {
+    if (tooltip) setIstooltipVisible(true);
+  };
+
+  const handlePointerLeave = () => {
+    if (tooltip) setIstooltipVisible(false);
+  };
+
   useImperativeHandle(ref, () => viewElementRef.current!);
 
   useLayoutEffect(() => {
@@ -145,8 +153,8 @@ function View<TDelegate extends React.ElementType = "div">({
         <Component
           ref={viewElementRef}
           className={viewClassName}
-          onMouseEnter={() => tooltip && setIstooltipVisible(true)}
-          onMouseLeave={() => tooltip && setIstooltipVisible(false)}
+          onPointerEnter={handlePointerEnter}
+          onPointerLeave={handlePointerLeave}
           {...props}
         >
           {children}
