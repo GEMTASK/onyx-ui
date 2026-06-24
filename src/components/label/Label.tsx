@@ -25,7 +25,7 @@ function Label({
           )}
         </View>
       )}
-      <View>
+      <View flex>
         {children}
       </View>
     </View>

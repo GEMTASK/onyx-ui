@@ -10,6 +10,7 @@ function Checkbox({
   label,
   value,
   icon,
+  opacityOnPress,
   fillColor = "primary",
   onValueChange,
   onClick,

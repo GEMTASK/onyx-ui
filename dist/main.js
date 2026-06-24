@@ -1411,7 +1411,10 @@ var Ee = { Checkbox: "_onyx-ui_Checkbox_KUpB2" };
 //#region src/components/checkbox/Checkbox.tsx
 function De(e) {
 	let t = (0, D.c)(32), n, r, i, a, o, s, c, l;
-	t[0] === e ? (n = t[1], r = t[2], i = t[3], a = t[4], o = t[5], s = t[6], c = t[7], l = t[8]) : ({ref: s, label: r, value: l, icon: n, fillColor: c, onValueChange: a, onClick: i, ...o} = e, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o, t[6] = s, t[7] = c, t[8] = l);
+	if (t[0] !== e) {
+		let { ref: u, label: d, value: f, icon: p, opacityOnPress: m, fillColor: h, onValueChange: g, onClick: _, ...v } = e;
+		s = u, r = d, l = f, n = p, c = h, a = g, i = _, o = v, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o, t[6] = s, t[7] = c, t[8] = l;
+	} else n = t[1], r = t[2], i = t[3], a = t[4], o = t[5], s = t[6], c = t[7], l = t[8];
 	let u = c === void 0 ? "primary" : c, d;
 	t[9] === a ? d = t[10] : (d = (e) => {
 		a?.(e.currentTarget.checked);
@@ -1633,7 +1636,10 @@ function Pe(e) {
 		})]
 	}), t[5] = n, t[6] = i, t[7] = o) : o = t[7];
 	let s;
-	t[8] === r ? s = t[9] : (s = /* @__PURE__ */ (0, z.jsx)(B, { children: r }), t[8] = r, t[9] = s);
+	t[8] === r ? s = t[9] : (s = /* @__PURE__ */ (0, z.jsx)(B, {
+		flex: !0,
+		children: r
+	}), t[8] = r, t[9] = s);
 	let c;
 	return t[10] !== a || t[11] !== o || t[12] !== s ? (c = /* @__PURE__ */ (0, z.jsxs)(B, {
 		spacing: "8px",

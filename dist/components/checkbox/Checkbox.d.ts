@@ -1,6 +1,6 @@
 import { Icon, View } from '..';
 import { Delegate } from '../../main';
-declare function Checkbox({ ref, label, value, icon, fillColor, onValueChange, onClick, ...props }: Delegate<{
+declare function Checkbox({ ref, label, value, icon, opacityOnPress, fillColor, onValueChange, onClick, ...props }: Delegate<{
     label?: string;
     value?: boolean;
     icon?: React.ComponentProps<typeof Icon>["icon"];
