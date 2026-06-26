@@ -25,11 +25,16 @@
     }
   }
 
-  &:active {
+  &:not(:disabled):active {
     filter: brightness(0.93);
   }
 
-  &.primary.solid:active {
+  &.primary.solid:not(:disabled):active {
     filter: brightness(0.80);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: default;
   }
 }
