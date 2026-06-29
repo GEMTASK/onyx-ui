@@ -59,6 +59,7 @@ function Menu({
   items,
   header,
   footer,
+  style,
   children,
   onItemSelect,
   onVisibilityChange,
@@ -71,6 +72,7 @@ function Menu({
   footer?: React.ReactNode,
   children: React.ReactElement<{
     ref: React.RefObject<HTMLDivElement | null> | React.RefObject<HTMLDivElement>,
+    style?: React.CSSProperties,
     cursor?: string,
     active?: boolean,
     onClick: React.PointerEventHandler,
@@ -138,6 +140,7 @@ function Menu({
   return (
     <Popover isVisible={isPopoverVisible} content={popoverContent} {...props}>
       {React.isValidElement(onlyChild) && React.cloneElement(onlyChild, {
+        style,
         cursor: "pointer",
         active: isPopoverVisible || onlyChild.props.active,
         onClick: () => {

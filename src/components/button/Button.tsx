@@ -59,6 +59,7 @@ function Button({
   rightIcon,
   round,
   bold = true,
+  titleColor,
   fontWeight,
   selected,
   //
@@ -75,6 +76,7 @@ function Button({
   active?: boolean,
   round?: boolean,
   bold?: boolean,
+  titleColor?: React.ComponentProps<typeof Text>["textColor"],
   fontWeight?: React.ComponentProps<typeof Text<"div">>["fontWeight"],
   selected?: boolean,
 } & ButtonStyle, typeof View<"button">>) {
@@ -92,7 +94,7 @@ function Button({
   const { parentFillColor } = useContext(ViewContext);
 
   const fillColor = getFillColor({ parentFillColor, solid, primary, hover, selected });
-  const textColor = getTextColor({ solid, primary, hover, selected });
+  const textColor = titleColor ?? getTextColor({ solid, primary, hover, selected });
 
   useImperativeHandle(ref, () => buttonElementRef.current!);
 

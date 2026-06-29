@@ -7,7 +7,7 @@ type ButtonStyle = {
     hover?: boolean;
     selected?: boolean;
 };
-declare function Button({ ref, type, solid, primary, hover, active, icon, iconColor, iconFill, iconSize, rightIcon, round, bold, fontWeight, selected, opacityOnPress, className, children, ...props }: Delegate<{
+declare function Button({ ref, type, solid, primary, hover, active, icon, iconColor, iconFill, iconSize, rightIcon, round, bold, titleColor, fontWeight, selected, opacityOnPress, className, children, ...props }: Delegate<{
     icon?: React.ComponentProps<typeof Icon>["icon"];
     iconColor?: React.ComponentProps<typeof Icon>["color"];
     iconFill?: boolean;
@@ -16,6 +16,7 @@ declare function Button({ ref, type, solid, primary, hover, active, icon, iconCo
     active?: boolean;
     round?: boolean;
     bold?: boolean;
+    titleColor?: React.ComponentProps<typeof Text>["textColor"];
     fontWeight?: React.ComponentProps<typeof Text<"div">>["fontWeight"];
     selected?: boolean;
 } & ButtonStyle, typeof View<"button">>): React.JSX.Element;
