@@ -1,4 +1,4 @@
-import React, { useImperativeHandle, useLayoutEffect, useRef, useState } from "react";
+import React, { useContext, useImperativeHandle, useLayoutEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
 import type { Align } from "../../types/Align";
@@ -81,6 +81,8 @@ function View<TDelegate extends React.ElementType = "div">({
   const viewElementRef = useRef<HTMLDivElement>(null);
   const tooltipElementRef = useRef<HTMLDivElement>(null);
 
+  const { parentFillColor } = useContext(ViewContext);
+
   const handlePointerEnter = () => {
     if (tooltip) setIstooltipVisible(true);
   };
@@ -136,7 +138,7 @@ function View<TDelegate extends React.ElementType = "div">({
   ].filter(className => className).join(" ");
 
   const viewContextValue = {
-    parentFillColor: fillColor
+    parentFillColor: fillColor || parentFillColor
   };
 
   const overlayElement = document.querySelector("#overlay");

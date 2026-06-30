@@ -1,5 +1,7 @@
 import { type LucideIcon } from "lucide-react";
 
+import type { Color } from "../../types/Color";
+
 import styles from "./Icon.module.scss";
 import textColorStyles from "../../styles/textColor.module.scss";
 
@@ -15,7 +17,7 @@ function Icon({
 }: {
   light?: boolean,
   icon: LucideIcon,
-  color?: React.ComponentProps<LucideIcon>["color"],
+  color?: Color,
   size?: React.ComponentProps<LucideIcon>["size"],
   bleed?: boolean,
 } & React.ComponentProps<LucideIcon>) {

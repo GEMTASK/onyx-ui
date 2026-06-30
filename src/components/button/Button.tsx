@@ -2,6 +2,7 @@ import React, { useContext, useImperativeHandle, useLayoutEffect, useRef } from 
 import { ChevronDownIcon } from "lucide-react";
 
 import type { Delegate } from "../../types/Delegate";
+import type { Color } from "../../types/Color";
 import { ViewContext } from "../view/View";
 
 import { View, Text, Icon, Menu } from "..";
@@ -129,7 +130,7 @@ function Button({
           strokeWidth={1.5}
           icon={icon}
           size={iconSize ?? 16}
-          color={iconColor ?? textColor}
+          color={iconColor ?? textColor as Color}
           fill={iconFill ? "currentColor" : "none"}
           style={{ marginLeft: children ? 0 : -2, marginRight: 0 }}
         />
@@ -145,7 +146,7 @@ function Button({
             bleed
             icon={rightIcon}
             size={16}
-            color={textColor}
+            color={textColor as Color}
             strokeWidth={2.5}
             style={{ marginRight: children ? -3 : 0, justifySelf: "flex-end" }}
           />
