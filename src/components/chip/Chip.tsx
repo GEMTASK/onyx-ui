@@ -14,6 +14,7 @@ function Chip({
   iconLight,
   fillColor,
   outlineColor = "content",
+  tooltip,
   opacityOnPress,
   children,
   style,
@@ -41,6 +42,7 @@ function Chip({
       ref={ref}
       spacing="4px"
       align="middle left"
+      tooltip={tooltip}
       opacityOnPress={opacityOnPress}
       onPointerDown={onPointerDown}
       onClick={onClick}
