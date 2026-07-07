@@ -30,6 +30,7 @@ declare namespace Button {
     }, typeof View<"div">>) => React.JSX.Element;
 }
 type ChildProps = React.ReactElement<{
+    solid?: boolean;
     style: React.CSSProperties;
 }> | ChildProps[];
 export default Button;

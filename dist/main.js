@@ -1087,10 +1087,10 @@ ue.Menu = function({ solid: e, cornerRadius: t, children: n, ...r }) {
 	let r = t.Children.toArray(e);
 	return /* @__PURE__ */ (0, z.jsx)(B, {
 		horizontal: !0,
-		spacing: "1px",
 		...n,
 		children: r.map((e, n) => t.isValidElement(e) && t.cloneElement(e, { style: {
 			...e.props.style,
+			marginLeft: e.props.solid ? 1 : -1,
 			borderTopLeftRadius: n > 0 ? 0 : void 0,
 			borderBottomLeftRadius: n > 0 ? 0 : void 0,
 			borderTopRightRadius: n < r.length - 1 ? 0 : void 0,

@@ -175,6 +175,7 @@ Button.Menu = function ActionMenu({
 };
 
 type ChildProps = React.ReactElement<{
+  solid?: boolean,
   style: React.CSSProperties,
 }> | ChildProps[];
 
@@ -187,11 +188,12 @@ Button.Group = function ButtonGroup({
   const childrenArray = React.Children.toArray(children) as ChildProps[];
 
   return (
-    <View horizontal spacing="1px" {...props}>
+    <View horizontal {...props}>
       {childrenArray.map((child, index) => (
         React.isValidElement(child) && React.cloneElement(child, {
           style: {
             ...child.props.style,
+            marginLeft: child.props.solid ? 1 : -1,
             borderTopLeftRadius: index > 0 ? 0 : undefined,
             borderBottomLeftRadius: index > 0 ? 0 : undefined,
             borderTopRightRadius: index < childrenArray.length - 1 ? 0 : undefined,
