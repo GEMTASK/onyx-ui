@@ -27,6 +27,7 @@ function Text<TDelegate extends React.ElementType = "div">({
   fontSize,
   fontWeight,
   textColor,
+  highlight,
   innerStyle,
   children,
   ...props
@@ -41,6 +42,7 @@ function Text<TDelegate extends React.ElementType = "div">({
   fontSize?: "12px" | "14px" | "18px" | "24px" | "32px",
   fontWeight?: false | "300" | "400" | "500" | "600" | "700",
   textColor?: false | Color,
+  highlight?: boolean,
   innerStyle?: React.ComponentProps<"span">["style"],
 } & React.ComponentProps<typeof View<TDelegate>>) {
   const { textParent } = useContext(TextContext);
@@ -57,7 +59,8 @@ function Text<TDelegate extends React.ElementType = "div">({
     // highlight && textStyles.highlight,
     fontSize && fontSizeStyles[`_${fontSize}`],
     fontWeight && fontWeightStyles[`_${fontWeight}`],
-    textColor && textColorStyles[textColor]
+    textColor && textColorStyles[textColor],
+    highlight && styles.highlight
   ].filter(className => className).join(" ");
 
   if (textParent) {

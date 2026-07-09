@@ -27,3 +27,7 @@
 .noWrap {
   white-space: nowrap;
 }
+
+.highlight {
+  background: var(--highlight-color);
+}
