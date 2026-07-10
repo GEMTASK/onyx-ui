@@ -28,7 +28,7 @@ declare function View<TDelegate extends React.ElementType = "div">({ ref, as, fl
     fillColor?: false | Color;
     borderColor?: Color;
     cornerRadius?: "0px" | "2px" | "4px" | "max";
-    tooltip?: string;
+    tooltip?: React.ReactNode;
     tooltipAnchor?: "top" | "right" | "left" | "bottom" | "top right";
     tooltipOffset?: number;
 }, TDelegate>): React.JSX.Element;
