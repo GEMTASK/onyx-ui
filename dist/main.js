@@ -1410,7 +1410,6 @@ function we(e) {
 					...h
 				},
 				cursor: "pointer",
-				active: g || e.props.active,
 				onClick: (t) => {
 					_(Te), e.props.onClick?.(t);
 				}

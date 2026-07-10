@@ -153,7 +153,7 @@ function Menu({
       {React.isValidElement(onlyChild) && React.cloneElement(onlyChild, {
         style: { ...onlyChild.props.style, ...style },
         cursor: "pointer",
-        active: isPopoverVisible || onlyChild.props.active,
+        // active: isPopoverVisible || onlyChild.props.active,
         onClick: (event: React.MouseEvent) => {
           setIsPopoverVisible(isPopoverVisible => !isPopoverVisible);
 
