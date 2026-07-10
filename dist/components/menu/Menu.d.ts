@@ -21,7 +21,7 @@ declare function Menu({ items, header, footer, style, children, onItemSelect, on
         style?: React.CSSProperties;
         cursor?: string;
         active?: boolean;
-        onClick: React.PointerEventHandler;
+        onClick: React.MouseEventHandler;
     }>;
     onItemSelect?: (value: string | undefined) => void;
     onVisibilityChange?: (visible: boolean) => void;

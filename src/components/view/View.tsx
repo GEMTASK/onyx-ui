@@ -91,7 +91,7 @@ function View<TDelegate extends React.ElementType = "div">({
     if (tooltip) setIstooltipVisible(false);
   };
 
-  useImperativeHandle(ref, () => viewElementRef.current!);
+  useImperativeHandle(ref, () => viewElementRef.current);
 
   useLayoutEffect(() => {
     if (isTooltipVisible && viewElementRef.current && tooltipElementRef.current) {

@@ -84,7 +84,7 @@ function Menu({
     style?: React.CSSProperties,
     cursor?: string,
     active?: boolean,
-    onClick: React.PointerEventHandler,
+    onClick: React.MouseEventHandler,
   }>,
   onItemSelect?: (value: string | undefined) => void,
   onVisibilityChange?: (visible: boolean) => void,
@@ -103,7 +103,9 @@ function Menu({
   };
 
   const handleDocumentPointerDown = useCallback((event: PointerEvent) => {
-    if (!menuElementRef.current?.contains(event.target as HTMLElement)) {
+    // console.log(">>>", menuElementRef.current, event.target);
+
+    if (menuElementRef.current !== event.target && !menuElementRef.current?.contains(event.target as HTMLElement)) {
       setIsPopoverVisible(false);
       onVisibilityChange?.(false);
     }
@@ -152,8 +154,10 @@ function Menu({
         style: { ...onlyChild.props.style, ...style },
         cursor: "pointer",
         active: isPopoverVisible || onlyChild.props.active,
-        onClick: () => {
+        onClick: (event: React.MouseEvent) => {
           setIsPopoverVisible(isPopoverVisible => !isPopoverVisible);
+
+          onlyChild.props.onClick?.(event);
         }
       })}
     </Popover>

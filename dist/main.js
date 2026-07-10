@@ -1358,7 +1358,7 @@ function we(e) {
 	}, r[9] = f, r[10] = p, r[11] = y) : y = r[11];
 	let b = y, x;
 	r[12] === p ? x = r[13] : (x = (e) => {
-		v.current?.contains(e.target) || (_(!1), p?.(!1));
+		v.current !== e.target && !v.current?.contains(e.target) && (_(!1), p?.(!1));
 	}, r[12] = p, r[13] = x);
 	let S = x, C, w;
 	r[14] === S ? (C = r[15], w = r[16]) : (C = () => (document.addEventListener("pointerdown", S), () => {
@@ -1407,8 +1407,8 @@ function we(e) {
 				},
 				cursor: "pointer",
 				active: g || e.props.active,
-				onClick: () => {
-					_(Te);
+				onClick: (t) => {
+					_(Te), e.props.onClick?.(t);
 				}
 			})
 		}), r[32] = a, r[33] = g, r[34] = j, r[35] = m, r[36] = h, r[37] = M;
