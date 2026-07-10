@@ -1342,6 +1342,7 @@ function Ce(e) {
 		align: "middle left",
 		fontWeight: "400",
 		cornerRadius: "0px",
+		tooltipAnchor: "right",
 		style: d,
 		onClick: u,
 		...a,
@@ -1512,7 +1513,6 @@ function ke({ label: e, value: t, options: n, multiple: r, onValueChange: i, ...
 					label: e.label,
 					value: e.value,
 					tooltip: e.tooltip,
-					tooltipAnchor: "right",
 					onSelect: o
 				})),
 				r !== n.length - 1 && !("options" in n[r]) && /* @__PURE__ */ (0, R.jsx)(we.Divider, {})
@@ -1525,7 +1525,6 @@ function ke({ label: e, value: t, options: n, multiple: r, onValueChange: i, ...
 				label: e.label,
 				value: e.value,
 				tooltip: e.tooltip,
-				tooltipAnchor: e.tooltipAnchor,
 				onSelect: o
 			});
 		}

@@ -8,7 +8,6 @@ type OptionValueBase = {
     label: React.ComponentProps<typeof Menu.Item>["title"];
     value: string | number | null | undefined;
     tooltip?: React.ComponentProps<typeof Menu.Item>["tooltip"];
-    tooltipAnchor?: React.ComponentProps<typeof Menu.Item>["tooltipAnchor"];
 };
 type OptionValue = OptionValueBase | {
     label?: React.ComponentProps<typeof Menu.Item>["title"];

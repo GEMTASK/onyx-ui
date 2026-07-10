@@ -10,7 +10,6 @@ type OptionValueBase = {
   label: React.ComponentProps<typeof Menu.Item>["title"],
   value: string | number | null | undefined,
   tooltip?: React.ComponentProps<typeof Menu.Item>["tooltip"],
-  tooltipAnchor?: React.ComponentProps<typeof Menu.Item>["tooltipAnchor"],
 };
 
 type OptionValue = OptionValueBase | {
@@ -89,7 +88,6 @@ function Select({
               label={innerOption.label}
               value={innerOption.value}
               tooltip={innerOption.tooltip}
-              tooltipAnchor={"right"}
               onSelect={handleOptionSelect}
             />
           )),
@@ -107,7 +105,6 @@ function Select({
             label={option.label}
             value={option.value}
             tooltip={option.tooltip}
-            tooltipAnchor={option.tooltipAnchor}
             onSelect={handleOptionSelect}
           />
         );

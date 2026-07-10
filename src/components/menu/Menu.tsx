@@ -45,7 +45,16 @@ function MenuItem({
   };
 
   return (
-    <Button hover align="middle left" fontWeight="400" cornerRadius="0px" style={{ whiteSpace: "nowrap", ...style }} onClick={handleClick} {...props}>
+    <Button
+      hover
+      align="middle left"
+      fontWeight="400"
+      cornerRadius="0px"
+      tooltipAnchor="right"
+      style={{ whiteSpace: "nowrap", ...style }}
+      onClick={handleClick}
+      {...props}
+    >
       {title ?? children}
     </Button>
   );
