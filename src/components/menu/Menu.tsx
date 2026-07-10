@@ -97,19 +97,15 @@ function Menu({
 
   const handleItemSelect = (value: string | undefined) => {
     setIsPopoverVisible(false);
-    onVisibilityChange?.(false);
 
     onItemSelect?.(value);
   };
 
   const handleDocumentPointerDown = useCallback((event: PointerEvent) => {
-    // console.log(">>>", menuElementRef.current, event.target);
-
-    if (menuElementRef.current !== event.target && !menuElementRef.current?.contains(event.target as HTMLElement)) {
+    if (menuElementRef.current && menuElementRef.current !== event.target && !menuElementRef.current?.contains(event.target as HTMLElement)) {
       setIsPopoverVisible(false);
-      onVisibilityChange?.(false);
     }
-  }, [onVisibilityChange]);
+  }, []);
 
   //
 
@@ -120,6 +116,10 @@ function Menu({
       document.removeEventListener("pointerdown", handleDocumentPointerDown);
     };
   }, [handleDocumentPointerDown]);
+
+  useEffect(() => {
+    onVisibilityChange?.(isPopoverVisible);
+  }, [isPopoverVisible, onVisibilityChange]);
 
   //
 
