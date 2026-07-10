@@ -1401,7 +1401,10 @@ function we(e) {
 			content: j,
 			...m,
 			children: t.isValidElement(e) && t.cloneElement(e, {
-				style: h,
+				style: {
+					...e.props.style,
+					...h
+				},
 				cursor: "pointer",
 				active: g || e.props.active,
 				onClick: () => {
