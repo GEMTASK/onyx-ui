@@ -61,7 +61,7 @@ function Markdown() {
   const [markdown, setMarkdown] = useState<string>();
 
   useEffect(() => {
-    (async () => {
+    void (async () => {
       // const markdown = await fetch(`/docs/${teamKeySeqId ? "item-details" : page}.md`);
       const markdown = await fetch("https://webdav.mike-austin.com/Learning Kopi.md");
 
