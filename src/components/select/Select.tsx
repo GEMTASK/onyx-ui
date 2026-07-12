@@ -14,7 +14,7 @@ type OptionValueBase = {
 
 type OptionValue = OptionValueBase | {
   label?: React.ComponentProps<typeof Menu.Item>["title"],
-  options: OptionValueBase[],
+  options: readonly OptionValueBase[],
 };
 
 function SelectOption({
@@ -51,7 +51,7 @@ function Select({
 }: Delegate<{
   label?: string,
   value?: FieldValue,
-  options: OptionValue[],
+  options: readonly OptionValue[],
   multiple?: boolean,
   onValueChange?: (value: FieldValue) => void,
 }, typeof Menu, "items" | "children">) {

@@ -11,12 +11,12 @@ type OptionValueBase = {
 };
 type OptionValue = OptionValueBase | {
     label?: React.ComponentProps<typeof Menu.Item>["title"];
-    options: OptionValueBase[];
+    options: readonly OptionValueBase[];
 };
 declare function Select({ label, value, options, multiple, onValueChange, ...props }: Delegate<{
     label?: string;
     value?: FieldValue;
-    options: OptionValue[];
+    options: readonly OptionValue[];
     multiple?: boolean;
     onValueChange?: (value: FieldValue) => void;
 }, typeof Menu, "items" | "children">): import("react").JSX.Element;
