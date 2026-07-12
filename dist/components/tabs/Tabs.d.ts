@@ -4,6 +4,7 @@ declare function Tabs({ selectedTabIndex, children, onTabSelect, ...props }: Del
     selectedTabIndex: number;
     children: {
         title: string;
+        badge?: React.ReactNode;
     }[];
     onTabSelect: (index: number) => void;
 }, typeof View<"div">>): import("react").JSX.Element;

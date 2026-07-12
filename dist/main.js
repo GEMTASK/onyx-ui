@@ -1815,28 +1815,42 @@ function Be(e) {
 //#endregion
 //#region src/components/tabs/Tabs.tsx
 function Ve(e) {
-	let t = (0, D.c)(16), n, r, i, a, o;
-	t[0] === e ? (n = t[1], r = t[2], i = t[3], a = t[4], o = t[5]) : ({index: r, selected: o, children: n, onTabSelect: i, ...a} = e, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o);
-	let s;
-	t[6] !== r || t[7] !== i ? (s = () => {
-		i(r);
-	}, t[6] = r, t[7] = i, t[8] = s) : s = t[8];
-	let c = s, l = !o, u = o ? "primary" : void 0, d;
-	t[9] === Symbol.for("react.memo_cache_sentinel") ? (d = { paddingBottom: 8 }, t[9] = d) : d = t[9];
-	let f;
-	return t[10] !== n || t[11] !== c || t[12] !== a || t[13] !== l || t[14] !== u ? (f = /* @__PURE__ */ (0, z.jsx)(W, {
-		opacityOnPress: !0,
-		light: l,
+	let t = (0, D.c)(22), n, r, i, a, o, s;
+	t[0] === e ? (n = t[1], r = t[2], i = t[3], a = t[4], o = t[5], s = t[6]) : ({index: i, badge: n, selected: s, children: r, onTabSelect: a, ...o} = e, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o, t[6] = s);
+	let c;
+	t[7] !== i || t[8] !== a ? (c = () => {
+		a(i);
+	}, t[7] = i, t[8] = a, t[9] = c) : c = t[9];
+	let l = c, u = s ? "primary" : void 0, d;
+	t[10] === Symbol.for("react.memo_cache_sentinel") ? (d = { paddingBottom: 8 }, t[10] = d) : d = t[10];
+	let f = !s, p;
+	t[11] !== r || t[12] !== o || t[13] !== f ? (p = /* @__PURE__ */ (0, z.jsx)(W, {
+		light: f,
 		fontSize: "18px",
-		cursor: "pointer",
+		...o,
+		children: r
+	}), t[11] = r, t[12] = o, t[13] = f, t[14] = p) : p = t[14];
+	let m;
+	t[15] === n ? m = t[16] : (m = n && /* @__PURE__ */ (0, z.jsx)(Be, {
+		bold: !0,
+		fontSize: "14px",
+		fillColor: "highlight",
+		children: n
+	}), t[15] = n, t[16] = m);
+	let h;
+	return t[17] !== l || t[18] !== u || t[19] !== p || t[20] !== m ? (h = /* @__PURE__ */ (0, z.jsxs)(B, {
+		horizontal: !0,
+		opacityOnPress: !0,
+		spacing: "4px",
+		align: "middle left",
 		negativeBorder: !0,
 		border: "bottom",
 		borderColor: u,
 		style: d,
-		onClick: c,
-		...a,
-		children: n
-	}), t[10] = n, t[11] = c, t[12] = a, t[13] = l, t[14] = u, t[15] = f) : f = t[15], f;
+		cursor: "pointer",
+		onClick: l,
+		children: [p, m]
+	}), t[17] = l, t[18] = u, t[19] = p, t[20] = m, t[21] = h) : h = t[21], h;
 }
 function He(e) {
 	let t = (0, D.c)(15), n, r, i, a;
@@ -1845,9 +1859,10 @@ function He(e) {
 	if (t[5] !== n || t[6] !== r || t[7] !== a) {
 		let e;
 		t[9] !== r || t[10] !== a ? (e = (e, t) => {
-			let { title: n } = e;
+			let { title: n, badge: i } = e;
 			return /* @__PURE__ */ (0, z.jsx)(Ve, {
 				index: t,
+				badge: i,
 				selected: t === a,
 				onTabSelect: r,
 				children: n

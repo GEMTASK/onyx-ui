@@ -1,14 +1,16 @@
-import { Text, View } from "..";
+import { Chip, Text, View } from "..";
 import type { Delegate } from "../../types/Delegate";
 
 function Tab({
   index,
+  badge,
   selected,
   children,
   onTabSelect,
   ...props
 }: Delegate<{
   index: number,
+  badge?: React.ReactNode,
   selected: boolean,
   onTabSelect: (index: number) => void,
 }, typeof Text<"div">>) {
@@ -17,45 +19,52 @@ function Tab({
   };
 
   return (
-    <Text
+    <View
+      horizontal
       opacityOnPress
-      light={!selected}
-      fontSize="18px"
-      cursor="pointer"
+      spacing="4px"
+      align="middle left"
       negativeBorder
       border="bottom"
       borderColor={selected ? "primary" : undefined}
       style={{ paddingBottom: 8 }}
+      cursor="pointer"
       onClick={handleClick}
-      {...props}
     >
-      {children}
-    </Text>
-
+      <Text
+        light={!selected}
+        fontSize="18px"
+        {...props}
+      >
+        {children}
+      </Text>
+      {badge && (
+        <Chip bold fontSize="14px" fillColor="highlight">
+          {badge}
+        </Chip>
+      )}
+    </View>
   );
 }
 
 function Tabs({
-  // tabs,
   selectedTabIndex,
   children,
   onTabSelect,
   ...props
 }: Delegate<{
-  // tabs: {
-  //   title: string,
-  // }[],
   selectedTabIndex: number,
   children: {
     title: string,
+    badge?: React.ReactNode,
   }[],
   onTabSelect: (index: number) => void,
 }, typeof View<"div">>) {
 
   return (
     <View horizontal spacing="16px" {...props}>
-      {children.map(({ title }, index) => (
-        <Tab key={index} index={index} selected={index === selectedTabIndex} onTabSelect={onTabSelect}>
+      {children.map(({ title, badge }, index) => (
+        <Tab key={index} index={index} badge={badge} selected={index === selectedTabIndex} onTabSelect={onTabSelect}>
           {title}
         </Tab>
       ))
