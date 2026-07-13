@@ -41,7 +41,7 @@ const getTextColor = ({ primary, solid }: ButtonStyle) => {
       return "primary";
   }
 
-  return undefined;
+  return "text";
 };
 
 function Button({

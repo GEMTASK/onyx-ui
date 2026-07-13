@@ -9,7 +9,7 @@
   }
 
   &:not(.primary):not(.solid):not(.hover) {
-    box-shadow: inset 0 0 0 1px hsl(210, 15%, 88%);
+    box-shadow: inset 0 0 0 1px var(--divider-color);
 
     &:active {
       background: white;
@@ -18,7 +18,7 @@
   }
 
   &.primary:not(.solid):not(.hover) {
-    box-shadow: inset 0 0 0 1px hsl(210, 85%, 60%);
+    box-shadow: inset 0 0 0 1px var(--primary-color);
 
     &:active {
       background: hsl(210, 100%, 93%);
