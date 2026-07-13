@@ -15,8 +15,10 @@ const Input = ({
   multiline,
   icon,
   inputRef,
+  hidden,
   placeholder,
   autoFocus,
+  name,
   changeOnEnter,
   innerStyle,
   onKeyDown,
@@ -33,6 +35,7 @@ const Input = ({
   inputRef?: React.ComponentProps<"input">["ref"],
   placeholder?: React.ComponentProps<"input">["placeholder"],
   autoFocus?: React.ComponentProps<"input">["autoFocus"],
+  name?: React.ComponentProps<"input">["name"],
   innerStyle?: React.ComponentProps<"textarea">["style"],
   changeOnEnter?: boolean,
   onValueChange?: (value: string) => void,
@@ -101,6 +104,7 @@ const Input = ({
     <textarea
       ref={textAreaElementRef}
       autoFocus={autoFocus}
+      name={name}
       value={value}
       placeholder={placeholder}
       style={{ background: "transparent", ...innerStyle }}
@@ -112,6 +116,7 @@ const Input = ({
     <input
       ref={textAreaElementRef}
       autoFocus={autoFocus}
+      name={name}
       value={value}
       placeholder={placeholder}
       style={{ background: "transparent", ...innerStyle }}
@@ -122,7 +127,7 @@ const Input = ({
   );
 
   return (
-    <Label flex label={label}>
+    <Label flex label={label} hidden={hidden}>
       <View horizontal border={border} align="middle left" spacing="4px" className={inputClassName} {...props}>
         {icon && (
           <Icon icon={icon} size={16} />

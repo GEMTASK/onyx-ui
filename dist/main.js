@@ -626,26 +626,26 @@ var m = Object.create, h = Object.defineProperty, g = Object.getOwnPropertyDescr
 function B(e) {
 	let t = (0, D.c)(80), n, r, i, o, f, p, m, h, g, _, v, y, b, x, S, C, w, T, E, L, R, B, V, H, ne, re;
 	if (t[0] !== e) {
-		let { ref: a, as: s, flex: c, wrap: l, horizontal: u, absolute: d, sticky: D, active: O, opacityOnPress: k, zIndex: A, shadow: j, cursor: M, padding: N, spacing: P, border: F, borderOnFocus: I, negativeBorder: z, align: ee, fillColor: te, borderColor: U, cornerRadius: W, tooltip: ie, tooltipAnchor: ae, tooltipOffset: G, className: K, children: oe, ...se } = e;
-		T = a, i = s, y = c, ne = l, b = u, n = d, R = D, S = k, re = A, E = j, _ = M, C = N, L = P, o = F, p = I, x = z, r = ee, v = te, f = U, g = W, H = ie, B = ae, V = G, h = K, m = oe, w = se, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = o, t[5] = f, t[6] = p, t[7] = m, t[8] = h, t[9] = g, t[10] = _, t[11] = v, t[12] = y, t[13] = b, t[14] = x, t[15] = S, t[16] = C, t[17] = w, t[18] = T, t[19] = E, t[20] = L, t[21] = R, t[22] = B, t[23] = V, t[24] = H, t[25] = ne, t[26] = re;
+		let { ref: a, as: s, flex: c, wrap: l, horizontal: u, absolute: d, sticky: D, active: O, opacityOnPress: k, zIndex: A, shadow: j, cursor: M, padding: N, spacing: P, border: F, borderOnFocus: I, negativeBorder: z, align: ee, fillColor: te, borderColor: ie, cornerRadius: U, tooltip: ae, tooltipAnchor: W, tooltipOffset: G, className: K, children: oe, ...se } = e;
+		T = a, i = s, y = c, ne = l, b = u, n = d, R = D, S = k, re = A, E = j, _ = M, C = N, L = P, o = F, p = I, x = z, r = ee, v = te, f = ie, g = U, H = ae, B = W, V = G, h = K, m = oe, w = se, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = o, t[5] = f, t[6] = p, t[7] = m, t[8] = h, t[9] = g, t[10] = _, t[11] = v, t[12] = y, t[13] = b, t[14] = x, t[15] = S, t[16] = C, t[17] = w, t[18] = T, t[19] = E, t[20] = L, t[21] = R, t[22] = B, t[23] = V, t[24] = H, t[25] = ne, t[26] = re;
 	} else n = t[1], r = t[2], i = t[3], o = t[4], f = t[5], p = t[6], m = t[7], h = t[8], g = t[9], _ = t[10], v = t[11], y = t[12], b = t[13], x = t[14], S = t[15], C = t[16], w = t[17], T = t[18], E = t[19], L = t[20], R = t[21], B = t[22], V = t[23], H = t[24], ne = t[25], re = t[26];
-	let U = B === void 0 ? "top" : B, [W, ie] = u(!1), ae = l(null), G = l(null), { parentFillColor: K } = a(ee), oe;
+	let ie = B === void 0 ? "top" : B, [U, ae] = u(!1), W = l(null), G = l(null), { parentFillColor: K } = a(ee), oe;
 	t[27] === H ? oe = t[28] : (oe = () => {
-		H && ie(!0);
+		H && ae(!0);
 	}, t[27] = H, t[28] = oe);
 	let se = oe, ce;
 	t[29] === H ? ce = t[30] : (ce = () => {
-		H && ie(!1);
+		H && ae(!1);
 	}, t[29] = H, t[30] = ce);
 	let le = ce, ue;
-	t[31] === Symbol.for("react.memo_cache_sentinel") ? (ue = () => ae.current, t[31] = ue) : ue = t[31], s(T, ue);
+	t[31] === Symbol.for("react.memo_cache_sentinel") ? (ue = () => W.current, t[31] = ue) : ue = t[31], s(T, ue);
 	let de, fe;
-	t[32] !== W || t[33] !== U ? (de = () => {
-		if (W && ae.current && G.current) {
-			let e = ae.current.getBoundingClientRect(), t = G.current.getBoundingClientRect();
-			U === "top" ? (G.current.style.left = `${e.left - (t.width - e.width) / 2}px`, G.current.style.top = `${e.top - t.height - 8}px`) : U === "right" && (G.current.style.left = `${e.right + 8}px`, G.current.style.top = `${e.top - (t.height - e.height) / 2}px`);
+	t[32] !== U || t[33] !== ie ? (de = () => {
+		if (U && W.current && G.current) {
+			let e = W.current.getBoundingClientRect(), t = G.current.getBoundingClientRect();
+			ie === "top" ? (G.current.style.left = `${e.left - (t.width - e.width) / 2}px`, G.current.style.top = `${e.top - t.height - 8}px`) : ie === "right" && (G.current.style.left = `${e.right + 8}px`, G.current.style.top = `${e.top - (t.height - e.height) / 2}px`);
 		}
-	}, fe = [W, U], t[32] = W, t[33] = U, t[34] = de, t[35] = fe) : (de = t[34], fe = t[35]), c(de, fe);
+	}, fe = [U, ie], t[32] = U, t[33] = ie, t[34] = de, t[35] = fe) : (de = t[34], fe = t[35]), c(de, fe);
 	let pe = i ?? "div", me = y && O.flex, he = ne && O.wrap, ge = n && O.absolute, _e = R && O.sticky, ve = S && O.opacityOnPress, ye = re && O[`zindex_${re}`], be = b && O.horizontal, xe = E === "heavy" ? O.heavyShadow : E && O.shadow, Se = _ && O[_], Ce = C && A[`_${C.replace(/ /, "_")}`], we = L && j[`_${L.replace(/ /, "_")}`], Te = o && M[o === !0 ? "top_right_bottom_left" : o.replace(/ /, "_")], Ee = p && O.borderOnFocus, De = x && M.negative, Oe = r && (b ? P[r.replace(/ /, "_")] : F[r.replace(/ /, "_")]), ke = v && k[v], Ae = g && N[`_${g}`], je = f && I[f], Me;
 	t[36] !== h || t[37] !== ge || t[38] !== _e || t[39] !== ve || t[40] !== ye || t[41] !== be || t[42] !== xe || t[43] !== Se || t[44] !== Ce || t[45] !== we || t[46] !== Te || t[47] !== Ee || t[48] !== De || t[49] !== Oe || t[50] !== ke || t[51] !== Ae || t[52] !== je || t[53] !== me || t[54] !== he ? (Me = [
 		O.View,
@@ -672,7 +672,7 @@ function B(e) {
 	let Ne = Me.join(" "), Pe = v || K, Fe;
 	t[56] === Pe ? Fe = t[57] : (Fe = { parentFillColor: Pe }, t[56] = Pe, t[57] = Fe);
 	let Ie = Fe, Le;
-	if (t[58] !== pe || t[59] !== m || t[60] !== se || t[61] !== le || t[62] !== W || t[63] !== w || t[64] !== H || t[65] !== Ne || t[66] !== Ie) {
+	if (t[58] !== pe || t[59] !== m || t[60] !== se || t[61] !== le || t[62] !== U || t[63] !== w || t[64] !== H || t[65] !== Ne || t[66] !== Ie) {
 		let e = document.querySelector("#overlay"), n;
 		t[68] === H ? n = t[69] : (n = /* @__PURE__ */ (0, z.jsx)("div", {
 			ref: G,
@@ -681,7 +681,7 @@ function B(e) {
 		}), t[68] = H, t[69] = n);
 		let r = n, i;
 		t[70] !== pe || t[71] !== m || t[72] !== se || t[73] !== le || t[74] !== w || t[75] !== Ne ? (i = /* @__PURE__ */ (0, z.jsx)(pe, {
-			ref: ae,
+			ref: W,
 			className: Ne,
 			onPointerEnter: se,
 			onPointerLeave: le,
@@ -692,7 +692,7 @@ function B(e) {
 		t[77] !== i || t[78] !== Ie ? (a = /* @__PURE__ */ (0, z.jsx)(ee, {
 			value: Ie,
 			children: i
-		}), t[77] = i, t[78] = Ie, t[79] = a) : a = t[79], Le = /* @__PURE__ */ (0, z.jsxs)(z.Fragment, { children: [a, W && e && d(r, e)] }), t[58] = pe, t[59] = m, t[60] = se, t[61] = le, t[62] = W, t[63] = w, t[64] = H, t[65] = Ne, t[66] = Ie, t[67] = Le;
+		}), t[77] = i, t[78] = Ie, t[79] = a) : a = t[79], Le = /* @__PURE__ */ (0, z.jsxs)(z.Fragment, { children: [a, U && e && d(r, e)] }), t[58] = pe, t[59] = m, t[60] = se, t[61] = le, t[62] = U, t[63] = w, t[64] = H, t[65] = Ne, t[66] = Ie, t[67] = Le;
 	} else Le = t[67];
 	return Le;
 }
@@ -862,11 +862,11 @@ var V = {
 	"gray-7": "_onyx-ui_gray-7_rSy7P",
 	"gray-8": "_onyx-ui_gray-8_JlZRp",
 	"gray-9": "_onyx-ui_gray-9_goyha"
-}, U = t.createContext({ textParent: !1 });
-function W(e) {
+}, ie = t.createContext({ textParent: !1 });
+function U(e) {
 	let t = (0, D.c)(49), n, r, i, o, s, c, l, u, d, f, p, m, h, g;
 	t[0] === e ? (n = t[1], r = t[2], i = t[3], o = t[4], s = t[5], c = t[6], l = t[7], u = t[8], d = t[9], f = t[10], p = t[11], m = t[12], h = t[13], g = t[14]) : ({as: n, light: f, caps: i, bold: r, select: h, ellipsis: s, noWrap: p, fontSize: c, fontWeight: l, textColor: g, highlight: u, innerStyle: d, children: o, ...m} = e, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = o, t[5] = s, t[6] = c, t[7] = l, t[8] = u, t[9] = d, t[10] = f, t[11] = p, t[12] = m, t[13] = h, t[14] = g);
-	let { textParent: _ } = a(U), v = r && ne.bold, y = f && V.light, b = i && V.caps, x = c && H[`_${c}`], S = l && ne[`_${l}`], C = g && re[g], w = u && V.highlight, T;
+	let { textParent: _ } = a(ie), v = r && ne.bold, y = f && V.light, b = i && V.caps, x = c && H[`_${c}`], S = l && ne[`_${l}`], C = g && re[g], w = u && V.highlight, T;
 	t[15] !== v || t[16] !== y || t[17] !== b || t[18] !== x || t[19] !== S || t[20] !== C || t[21] !== w ? (T = [
 		v,
 		y,
@@ -875,7 +875,7 @@ function W(e) {
 		S,
 		C,
 		w
-	].filter(ae), t[15] = v, t[16] = y, t[17] = b, t[18] = x, t[19] = S, t[20] = C, t[21] = w, t[22] = T) : T = t[22];
+	].filter(W), t[15] = v, t[16] = y, t[17] = b, t[18] = x, t[19] = S, t[20] = C, t[21] = w, t[22] = T) : T = t[22];
 	let E = T.join(" ");
 	if (_) {
 		let e = n ?? "span", r;
@@ -897,12 +897,12 @@ function W(e) {
 		P,
 		F,
 		I
-	].filter(ie), t[28] = k, t[29] = A, t[30] = j, t[31] = M, t[32] = N, t[33] = P, t[34] = F, t[35] = I, t[36] = O, t[37] = L) : L = t[37];
-	let R = L.join(" "), ee = n, te = R + " " + E, W;
-	t[38] === Symbol.for("react.memo_cache_sentinel") ? (W = { textParent: !0 }, t[38] = W) : W = t[38];
+	].filter(ae), t[28] = k, t[29] = A, t[30] = j, t[31] = M, t[32] = N, t[33] = P, t[34] = F, t[35] = I, t[36] = O, t[37] = L) : L = t[37];
+	let R = L.join(" "), ee = n, te = R + " " + E, U;
+	t[38] === Symbol.for("react.memo_cache_sentinel") ? (U = { textParent: !0 }, t[38] = U) : U = t[38];
 	let G;
-	t[39] === o ? G = t[40] : (G = /* @__PURE__ */ (0, z.jsx)(U, {
-		value: W,
+	t[39] === o ? G = t[40] : (G = /* @__PURE__ */ (0, z.jsx)(ie, {
+		value: U,
 		children: o
 	}), t[39] = o, t[40] = G);
 	let K;
@@ -918,10 +918,10 @@ function W(e) {
 		children: K
 	}), t[45] = m, t[46] = ee, t[47] = K, t[48] = oe) : oe = t[48], oe;
 }
-function ie(e) {
+function ae(e) {
 	return e;
 }
-function ae(e) {
+function W(e) {
 	return e;
 }
 var G = {
@@ -1012,8 +1012,8 @@ function ue(e) {
 	}, t[39] = F, t[40] = H);
 	let ne;
 	t[41] !== L || t[42] !== F ? (ne = [L, F], t[41] = L, t[42] = F, t[43] = ne) : ne = t[43], c(H, ne);
-	let re = r ? "8px 12px" : "8px", U = y ? "max" : "2px", ie;
-	t[44] !== r || t[45] !== d || t[46] !== f || t[47] !== p || t[48] !== m || t[49] !== te ? (ie = d && /* @__PURE__ */ (0, z.jsx)(K, {
+	let re = r ? "8px 12px" : "8px", ie = y ? "max" : "2px", ae;
+	t[44] !== r || t[45] !== d || t[46] !== f || t[47] !== p || t[48] !== m || t[49] !== te ? (ae = d && /* @__PURE__ */ (0, z.jsx)(K, {
 		bleed: !0,
 		absoluteStrokeWidth: !0,
 		strokeWidth: 1.5,
@@ -1025,15 +1025,15 @@ function ue(e) {
 			marginLeft: r ? 0 : -2,
 			marginRight: 0
 		}
-	}), t[44] = r, t[45] = d, t[46] = f, t[47] = p, t[48] = m, t[49] = te, t[50] = ie) : ie = t[50];
-	let ae;
-	t[51] !== E || t[52] !== r || t[53] !== o || t[54] !== te ? (ae = typeof r == "string" ? /* @__PURE__ */ (0, z.jsx)(W, {
+	}), t[44] = r, t[45] = d, t[46] = f, t[47] = p, t[48] = m, t[49] = te, t[50] = ae) : ae = t[50];
+	let W;
+	t[51] !== E || t[52] !== r || t[53] !== o || t[54] !== te ? (W = typeof r == "string" ? /* @__PURE__ */ (0, z.jsx)(U, {
 		bold: !o && E,
 		fontWeight: o,
 		textColor: te,
 		style: { textAlign: "left" },
 		children: r
-	}) : r, t[51] = E, t[52] = r, t[53] = o, t[54] = te, t[55] = ae) : ae = t[55];
+	}) : r, t[51] = E, t[52] = r, t[53] = o, t[54] = te, t[55] = W) : W = t[55];
 	let G;
 	t[56] !== r || t[57] !== v || t[58] !== te ? (G = v && /* @__PURE__ */ (0, z.jsx)(B, {
 		flex: !0,
@@ -1051,7 +1051,7 @@ function ue(e) {
 		})
 	}), t[56] = r, t[57] = v, t[58] = te, t[59] = G) : G = t[59];
 	let oe;
-	return t[60] !== P || t[61] !== L || t[62] !== g || t[63] !== re || t[64] !== U || t[65] !== ie || t[66] !== ae || t[67] !== G || t[68] !== T ? (oe = /* @__PURE__ */ (0, z.jsxs)(B, {
+	return t[60] !== P || t[61] !== L || t[62] !== g || t[63] !== re || t[64] !== ie || t[65] !== ae || t[66] !== W || t[67] !== G || t[68] !== T ? (oe = /* @__PURE__ */ (0, z.jsxs)(B, {
 		ref: O,
 		horizontal: !0,
 		as: "button",
@@ -1060,16 +1060,16 @@ function ue(e) {
 		padding: re,
 		spacing: "8px",
 		align: "middle center",
-		cornerRadius: U,
+		cornerRadius: ie,
 		fillColor: L,
 		className: P,
 		...g,
 		children: [
-			ie,
 			ae,
+			W,
 			G
 		]
-	}), t[60] = P, t[61] = L, t[62] = g, t[63] = re, t[64] = U, t[65] = ie, t[66] = ae, t[67] = G, t[68] = T, t[69] = oe) : oe = t[69], oe;
+	}), t[60] = P, t[61] = L, t[62] = g, t[63] = re, t[64] = ie, t[65] = ae, t[66] = W, t[67] = G, t[68] = T, t[69] = oe) : oe = t[69], oe;
 }
 function de(e) {
 	return e;
@@ -1107,88 +1107,91 @@ var fe = {
 	borderOnFocus: "_onyx-ui_borderOnFocus_HBU4h",
 	flush: "_onyx-ui_flush_4zQD9"
 }, pe = (e) => {
-	let t = (0, D.c)(56), n, r, i, a, o, d, f, p, m, h, g, _, v, y, b;
+	let t = (0, D.c)(60), n, r, i, a, o, d, f, p, m, h, g, _, v, y, b, x, S;
 	if (t[0] !== e) {
-		let { label: s, value: c, lines: l, border: u, flush: x, borderOnFocus: S, multiline: C, icon: w, inputRef: T, placeholder: E, autoFocus: D, changeOnEnter: O, innerStyle: k, onKeyDown: A, onValueChange: j, ...M } = e;
-		m = s, n = c, b = u, o = x, i = S, h = C, d = w, p = T, v = E, r = D, a = O, f = k, g = A, _ = j, y = M, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o, t[6] = d, t[7] = f, t[8] = p, t[9] = m, t[10] = h, t[11] = g, t[12] = _, t[13] = v, t[14] = y, t[15] = b;
-	} else n = t[1], r = t[2], i = t[3], a = t[4], o = t[5], d = t[6], f = t[7], p = t[8], m = t[9], h = t[10], g = t[11], _ = t[12], v = t[13], y = t[14], b = t[15];
-	let x = b === void 0 ? !0 : b, [S, C] = u(n), [w, T] = u(n), E = l(null), O;
-	t[16] === Symbol.for("react.memo_cache_sentinel") ? (O = () => E.current, t[16] = O) : O = t[16], s(p, O), n !== w && (T(S), C(n));
-	let k;
-	t[17] !== g || t[18] !== _ || t[19] !== S ? (k = (e) => {
-		g?.(e), e.key === "Enter" && S !== void 0 && _?.(S);
-	}, t[17] = g, t[18] = _, t[19] = S, t[20] = k) : k = t[20];
-	let A = k, j;
-	t[21] !== a || t[22] !== _ || t[23] !== S ? (j = (e) => {
-		let t = e.currentTarget;
-		a === !0 && e.key === "Enter" && S !== void 0 && (e.preventDefault(), _?.(S), t.value = "");
-	}, t[21] = a, t[22] = _, t[23] = S, t[24] = j) : j = t[24];
+		let { label: s, value: c, lines: l, border: u, flush: C, borderOnFocus: w, multiline: T, icon: E, inputRef: D, hidden: O, placeholder: k, autoFocus: A, name: j, changeOnEnter: M, innerStyle: N, onKeyDown: P, onValueChange: F, ...I } = e;
+		h = s, n = c, S = u, o = C, i = w, g = T, f = E, m = D, d = O, b = k, r = A, _ = j, a = M, p = N, v = P, y = F, x = I, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o, t[6] = d, t[7] = f, t[8] = p, t[9] = m, t[10] = h, t[11] = g, t[12] = _, t[13] = v, t[14] = y, t[15] = b, t[16] = x, t[17] = S;
+	} else n = t[1], r = t[2], i = t[3], a = t[4], o = t[5], d = t[6], f = t[7], p = t[8], m = t[9], h = t[10], g = t[11], _ = t[12], v = t[13], y = t[14], b = t[15], x = t[16], S = t[17];
+	let C = S === void 0 ? !0 : S, [w, T] = u(n), [E, O] = u(n), k = l(null), A;
+	t[18] === Symbol.for("react.memo_cache_sentinel") ? (A = () => k.current, t[18] = A) : A = t[18], s(m, A), n !== E && (O(w), T(n));
+	let j;
+	t[19] !== v || t[20] !== y || t[21] !== w ? (j = (e) => {
+		v?.(e), e.key === "Enter" && w !== void 0 && y?.(w);
+	}, t[19] = v, t[20] = y, t[21] = w, t[22] = j) : j = t[22];
 	let M = j, N;
-	t[25] === Symbol.for("react.memo_cache_sentinel") ? (N = (e) => {
-		C(e.currentTarget.value);
-	}, t[25] = N) : N = t[25];
+	t[23] !== a || t[24] !== y || t[25] !== w ? (N = (e) => {
+		let t = e.currentTarget;
+		a === !0 && e.key === "Enter" && w !== void 0 && (e.preventDefault(), y?.(w), t.value = "");
+	}, t[23] = a, t[24] = y, t[25] = w, t[26] = N) : N = t[26];
 	let P = N, F;
-	t[26] !== n || t[27] !== _ || t[28] !== S ? (F = () => {
-		S !== void 0 && S !== n && _?.(S);
-	}, t[26] = n, t[27] = _, t[28] = S, t[29] = F) : F = t[29];
+	t[27] === Symbol.for("react.memo_cache_sentinel") ? (F = (e) => {
+		T(e.currentTarget.value);
+	}, t[27] = F) : F = t[27];
 	let I = F, L;
-	t[30] === h ? L = t[31] : (L = () => {
-		h === !0 && E.current && (E.current.style.height = "", E.current.style.height = `${E.current.scrollHeight}px`);
-	}, t[30] = h, t[31] = L), c(L);
-	let R = o === !0 && fe.flush, ee = x && fe[x === !0 ? "top_right_bottom_left" : x.replace(/ /, "_")], te = i && fe.borderOnFocus, V;
-	t[32] !== te || t[33] !== R || t[34] !== ee ? (V = [
+	t[28] !== n || t[29] !== y || t[30] !== w ? (L = () => {
+		w !== void 0 && w !== n && y?.(w);
+	}, t[28] = n, t[29] = y, t[30] = w, t[31] = L) : L = t[31];
+	let R = L, ee;
+	t[32] === g ? ee = t[33] : (ee = () => {
+		g === !0 && k.current && (k.current.style.height = "", k.current.style.height = `${k.current.scrollHeight}px`);
+	}, t[32] = g, t[33] = ee), c(ee);
+	let te = o === !0 && fe.flush, V = C && fe[C === !0 ? "top_right_bottom_left" : C.replace(/ /, "_")], H = i && fe.borderOnFocus, ne;
+	t[34] !== H || t[35] !== te || t[36] !== V ? (ne = [
 		fe.Input,
-		R,
-		ee,
-		te
-	].filter(me), t[32] = te, t[33] = R, t[34] = ee, t[35] = V) : V = t[35];
-	let H = V.join(" "), ne;
-	t[36] !== r || t[37] !== I || t[38] !== A || t[39] !== M || t[40] !== f || t[41] !== h || t[42] !== v || t[43] !== S ? (ne = h === !0 ? /* @__PURE__ */ (0, z.jsx)("textarea", {
-		ref: E,
+		te,
+		V,
+		H
+	].filter(me), t[34] = H, t[35] = te, t[36] = V, t[37] = ne) : ne = t[37];
+	let re = ne.join(" "), ie;
+	t[38] !== r || t[39] !== R || t[40] !== M || t[41] !== P || t[42] !== p || t[43] !== g || t[44] !== _ || t[45] !== b || t[46] !== w ? (ie = g === !0 ? /* @__PURE__ */ (0, z.jsx)("textarea", {
+		ref: k,
 		autoFocus: r,
-		value: S,
-		placeholder: v,
+		name: _,
+		value: w,
+		placeholder: b,
 		style: {
 			background: "transparent",
-			...f
+			...p
+		},
+		onKeyDown: P,
+		onChange: I,
+		onBlur: R
+	}) : /* @__PURE__ */ (0, z.jsx)("input", {
+		ref: k,
+		autoFocus: r,
+		name: _,
+		value: w,
+		placeholder: b,
+		style: {
+			background: "transparent",
+			...p
 		},
 		onKeyDown: M,
-		onChange: P,
-		onBlur: I
-	}) : /* @__PURE__ */ (0, z.jsx)("input", {
-		ref: E,
-		autoFocus: r,
-		value: S,
-		placeholder: v,
-		style: {
-			background: "transparent",
-			...f
-		},
-		onKeyDown: A,
-		onChange: P,
-		onBlur: I
-	}), t[36] = r, t[37] = I, t[38] = A, t[39] = M, t[40] = f, t[41] = h, t[42] = v, t[43] = S, t[44] = ne) : ne = t[44];
-	let re = ne, U;
-	t[45] === d ? U = t[46] : (U = d && /* @__PURE__ */ (0, z.jsx)(K, {
-		icon: d,
+		onChange: I,
+		onBlur: R
+	}), t[38] = r, t[39] = R, t[40] = M, t[41] = P, t[42] = p, t[43] = g, t[44] = _, t[45] = b, t[46] = w, t[47] = ie) : ie = t[47];
+	let U = ie, ae;
+	t[48] === f ? ae = t[49] : (ae = f && /* @__PURE__ */ (0, z.jsx)(K, {
+		icon: f,
 		size: 16
-	}), t[45] = d, t[46] = U);
+	}), t[48] = f, t[49] = ae);
 	let W;
-	t[47] !== x || t[48] !== H || t[49] !== re || t[50] !== y || t[51] !== U ? (W = /* @__PURE__ */ (0, z.jsxs)(B, {
+	t[50] !== C || t[51] !== re || t[52] !== U || t[53] !== x || t[54] !== ae ? (W = /* @__PURE__ */ (0, z.jsxs)(B, {
 		horizontal: !0,
-		border: x,
+		border: C,
 		align: "middle left",
 		spacing: "4px",
-		className: H,
-		...y,
-		children: [U, re]
-	}), t[47] = x, t[48] = H, t[49] = re, t[50] = y, t[51] = U, t[52] = W) : W = t[52];
-	let ie;
-	return t[53] !== m || t[54] !== W ? (ie = /* @__PURE__ */ (0, z.jsx)(Pe, {
+		className: re,
+		...x,
+		children: [ae, U]
+	}), t[50] = C, t[51] = re, t[52] = U, t[53] = x, t[54] = ae, t[55] = W) : W = t[55];
+	let G;
+	return t[56] !== d || t[57] !== h || t[58] !== W ? (G = /* @__PURE__ */ (0, z.jsx)(Pe, {
 		flex: !0,
-		label: m,
+		label: h,
+		hidden: d,
 		children: W
-	}), t[53] = m, t[54] = W, t[55] = ie) : ie = t[55], ie;
+	}), t[56] = d, t[57] = h, t[58] = W, t[59] = G) : G = t[59], G;
 };
 function me(e) {
 	return e !== !1;
@@ -1209,7 +1212,7 @@ function he(e) {
 		color: u
 	}), t[3] = r, t[4] = l, t[5] = u, t[6] = d) : d = t[6];
 	let f = !n, p;
-	t[7] !== a || t[8] !== f ? (p = /* @__PURE__ */ (0, z.jsx)(W, {
+	t[7] !== a || t[8] !== f ? (p = /* @__PURE__ */ (0, z.jsx)(U, {
 		light: f,
 		ellipsis: !0,
 		children: a
@@ -1312,7 +1315,7 @@ function xe(e) {
 		whiteSpace: "nowrap"
 	}, t[0] = r, t[1] = i) : (r = t[0], i = t[1]);
 	let a;
-	return t[2] === n ? a = t[3] : (a = /* @__PURE__ */ (0, z.jsx)(W, {
+	return t[2] === n ? a = t[3] : (a = /* @__PURE__ */ (0, z.jsx)(U, {
 		light: !0,
 		caps: !0,
 		style: r,
@@ -1461,7 +1464,7 @@ function De(e) {
 		children: [g, _]
 	}), t[18] = m, t[19] = h, t[20] = g, t[21] = _, t[22] = v) : v = t[22];
 	let y;
-	t[23] === r ? y = t[24] : (y = r && /* @__PURE__ */ (0, z.jsx)(W, { children: r }), t[23] = r, t[24] = y);
+	t[23] === r ? y = t[24] : (y = r && /* @__PURE__ */ (0, z.jsx)(U, { children: r }), t[23] = r, t[24] = y);
 	let b;
 	t[25] !== i || t[26] !== s || t[27] !== v || t[28] !== y ? (b = /* @__PURE__ */ (0, z.jsxs)(B, {
 		ref: s,
@@ -1555,14 +1558,14 @@ function ke({ label: e, value: t, options: n, multiple: r, onValueChange: i, ...
 						fill: e.iconFill ? "currentColor" : "none",
 						size: 14,
 						style: { margin: "-2px 0" }
-					}), /* @__PURE__ */ (0, z.jsx)(W, {
+					}), /* @__PURE__ */ (0, z.jsx)(U, {
 						noWrap: !0,
 						children: e.label
 					})]
 				}, String(e.value)))
 			}) : /* @__PURE__ */ (0, z.jsx)(B, {
 				horizontal: !0,
-				children: /* @__PURE__ */ (0, z.jsxs)(W, {
+				children: /* @__PURE__ */ (0, z.jsxs)(U, {
 					noWrap: !0,
 					children: [t, " — Value"]
 				})
@@ -1630,7 +1633,7 @@ function Pe(e) {
 		horizontal: !0,
 		spacing: "4px",
 		align: "middle left",
-		children: [/* @__PURE__ */ (0, z.jsx)(W, {
+		children: [/* @__PURE__ */ (0, z.jsx)(U, {
 			light: !0,
 			caps: !0,
 			noWrap: !0,
@@ -1677,7 +1680,7 @@ function Ie(e) {
 	let f = d, m = i && Fe.border, h;
 	t[11] === m ? h = t[12] : (h = [Fe.Image, m].filter(Le), t[11] = m, t[12] = h);
 	let g = h.join(" "), _;
-	t[13] === f ? _ = t[14] : (_ = /* @__PURE__ */ (0, z.jsx)(W, {
+	t[13] === f ? _ = t[14] : (_ = /* @__PURE__ */ (0, z.jsx)(U, {
 		fontSize: "12px",
 		fontWeight: "600",
 		children: f
@@ -1712,7 +1715,7 @@ function Ie(e) {
 			horizontal: !0,
 			spacing: "4px",
 			align: "middle left",
-			children: [/* @__PURE__ */ (0, z.jsx)(W, {
+			children: [/* @__PURE__ */ (0, z.jsx)(U, {
 				noWrap: !0,
 				children: s
 			}), r && /* @__PURE__ */ (0, z.jsx)(K, {
@@ -1723,7 +1726,7 @@ function Ie(e) {
 					strokeWidth: 1
 				}
 			})]
-		}), o && /* @__PURE__ */ (0, z.jsx)(W, {
+		}), o && /* @__PURE__ */ (0, z.jsx)(U, {
 			light: !0,
 			noWrap: !0,
 			fontSize: "12px",
@@ -1789,7 +1792,7 @@ function Be(e) {
 		...h
 	}, t[24] = h, t[25] = w, t[26] = T) : T = t[26];
 	let E;
-	t[27] !== n || t[28] !== r || t[29] !== p || t[30] !== C || t[31] !== T ? (E = /* @__PURE__ */ (0, z.jsx)(W, {
+	t[27] !== n || t[28] !== r || t[29] !== p || t[30] !== C || t[31] !== T ? (E = /* @__PURE__ */ (0, z.jsx)(U, {
 		ref: y,
 		fillColor: r,
 		cornerRadius: "2px",
@@ -1824,7 +1827,7 @@ function Ve(e) {
 	let l = c, u = s ? "primary" : void 0, d;
 	t[10] === Symbol.for("react.memo_cache_sentinel") ? (d = { paddingBottom: 8 }, t[10] = d) : d = t[10];
 	let f = !s, p;
-	t[11] !== r || t[12] !== o || t[13] !== f ? (p = /* @__PURE__ */ (0, z.jsx)(W, {
+	t[11] !== r || t[12] !== o || t[13] !== f ? (p = /* @__PURE__ */ (0, z.jsx)(U, {
 		light: f,
 		fontSize: "18px",
 		...o,
@@ -5507,19 +5510,19 @@ function da(e) {
 			blockQuote: a(re),
 			characterEscape: T,
 			characterReference: T,
-			codeFenced: a(U),
+			codeFenced: a(ie),
 			codeFencedFenceInfo: o,
 			codeFencedFenceMeta: o,
-			codeIndented: a(U, o),
-			codeText: a(W, o),
+			codeIndented: a(ie, o),
+			codeText: a(U, o),
 			codeTextData: T,
 			data: T,
 			codeFlowValue: T,
-			definition: a(ie),
+			definition: a(ae),
 			definitionDestinationString: o,
 			definitionLabelString: o,
 			definitionTitleString: o,
-			emphasis: a(ae),
+			emphasis: a(W),
 			hardBreakEscape: a(K),
 			hardBreakTrailing: a(K),
 			htmlFlow: a(oe, o),
@@ -5883,7 +5886,7 @@ function da(e) {
 			children: []
 		};
 	}
-	function U() {
+	function ie() {
 		return {
 			type: "code",
 			lang: null,
@@ -5891,13 +5894,13 @@ function da(e) {
 			value: ""
 		};
 	}
-	function W() {
+	function U() {
 		return {
 			type: "inlineCode",
 			value: ""
 		};
 	}
-	function ie() {
+	function ae() {
 		return {
 			type: "definition",
 			identifier: "",
@@ -5906,7 +5909,7 @@ function da(e) {
 			url: ""
 		};
 	}
-	function ae() {
+	function W() {
 		return {
 			type: "emphasis",
 			children: []
@@ -7585,7 +7588,7 @@ function ws(e) {
 }
 var Ts = { Markdown: "_onyx-ui_Markdown_4qDhu" }, Es = {
 	h1({ node: e, className: t, children: n, ...r }) {
-		return /* @__PURE__ */ (0, z.jsx)(W, {
+		return /* @__PURE__ */ (0, z.jsx)(U, {
 			as: "h1",
 			fontSize: "32px",
 			fontWeight: "300",
@@ -7593,7 +7596,7 @@ var Ts = { Markdown: "_onyx-ui_Markdown_4qDhu" }, Es = {
 		});
 	},
 	h2({ node: e, className: t, children: n, ...r }) {
-		return /* @__PURE__ */ (0, z.jsx)(W, {
+		return /* @__PURE__ */ (0, z.jsx)(U, {
 			as: "h2",
 			fontSize: "24px",
 			fontWeight: "600",
@@ -7601,7 +7604,7 @@ var Ts = { Markdown: "_onyx-ui_Markdown_4qDhu" }, Es = {
 		});
 	},
 	h3({ node: e, className: t, children: n, ...r }) {
-		return /* @__PURE__ */ (0, z.jsx)(W, {
+		return /* @__PURE__ */ (0, z.jsx)(U, {
 			as: "h2",
 			fontSize: "18px",
 			fontWeight: "500",
@@ -7609,7 +7612,7 @@ var Ts = { Markdown: "_onyx-ui_Markdown_4qDhu" }, Es = {
 		});
 	},
 	p({ node: e, className: t, children: n, ...r }) {
-		return /* @__PURE__ */ (0, z.jsx)(W, {
+		return /* @__PURE__ */ (0, z.jsx)(U, {
 			as: "p",
 			children: n
 		});
@@ -7621,13 +7624,13 @@ var Ts = { Markdown: "_onyx-ui_Markdown_4qDhu" }, Es = {
 		});
 	},
 	li({ node: e, className: t, children: n, ...r }) {
-		return /* @__PURE__ */ (0, z.jsx)(W, {
+		return /* @__PURE__ */ (0, z.jsx)(U, {
 			as: "li",
 			children: n
 		});
 	},
 	code({ node: e, className: t, children: n, ...r }) {
-		return /* @__PURE__ */ (0, z.jsx)(W, {
+		return /* @__PURE__ */ (0, z.jsx)(U, {
 			border: !0,
 			as: "code",
 			fillColor: "panel",
@@ -7656,4 +7659,4 @@ function Ds() {
 	}), e[1] = t, e[2] = i), i;
 }
 //#endregion
-export { Ie as Avatar, ue as Button, De as Checkbox, Be as Chip, ge as Divider, Ne as Form, K as Icon, pe as Input, Pe as Label, ve as List, Ds as Markdown, we as Menu, be as Popover, ke as Select, He as Tabs, W as Text, he as Toggle, B as View };
+export { Ie as Avatar, ue as Button, De as Checkbox, Be as Chip, ge as Divider, Ne as Form, K as Icon, pe as Input, Pe as Label, ve as List, Ds as Markdown, we as Menu, be as Popover, ke as Select, He as Tabs, U as Text, he as Toggle, B as View };
