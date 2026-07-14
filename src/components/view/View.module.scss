@@ -101,8 +101,8 @@
 
 :root[data-theme="dark"] .shadow {
   box-shadow:
-    0 4px 8px hsla(0, 0%, 100%, 0.1),
-    0 0 0 1px hsla(0, 0%, 50%, 0.1);
+    0 4px 8px hsla(0, 0%, 0%, 0.2),
+    0 0 0 1px hsla(0, 0%, 50%, 0.2);
 }
 
 .pointer {
