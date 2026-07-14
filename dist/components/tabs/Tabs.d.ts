@@ -10,7 +10,7 @@ declare function Tabs({ selectedTabIndex, children, onTabSelect, ...props }: Del
 }, typeof View<"div">>): import("react").JSX.Element;
 declare namespace Tabs {
     var Panel: ({ active, children, ...props }: Delegate<{
-        active: boolean;
+        active?: boolean;
     }, typeof View<"div">>) => import("react").JSX.Element;
 }
 export default Tabs;

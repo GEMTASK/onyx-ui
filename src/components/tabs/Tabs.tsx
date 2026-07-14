@@ -26,8 +26,8 @@ function Tab({
       align="middle left"
       negativeBorder
       border="bottom"
-      borderColor={selected ? "primary" : undefined}
-      style={{ paddingBottom: 8 }}
+      borderColor={selected ? "primary" : "transparent"}
+      style={{ paddingBottom: 8, borderWidth: 1.5 }}
       cursor="pointer"
       onClick={handleClick}
     >
@@ -74,11 +74,11 @@ function Tabs({
 }
 
 Tabs.Panel = function ({
-  active,
+  active = true,
   children,
   ...props
 }: Delegate<{
-  active: boolean,
+  active?: boolean,
 }, typeof View<"div">>) {
   return (
     <View style={{ flexShrink: 0, flexBasis: "100%", overflowY: "auto", scrollSnapAlign: "start" }} {...props}>

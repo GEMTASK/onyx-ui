@@ -184,6 +184,7 @@ var m = Object.create, h = Object.defineProperty, g = Object.getOwnPropertyDescr
 	highlight: "_onyx-ui_highlight_fdlLN",
 	black: "_onyx-ui_black_A7jCG",
 	white: "_onyx-ui_white_SeOJx",
+	transparent: "_onyx-ui_transparent_XGFPp",
 	"gray-0": "_onyx-ui_gray-0_cNbkJ",
 	"gray-1": "_onyx-ui_gray-1_SZKzT",
 	"gray-2": "_onyx-ui_gray-2_3JetF",
@@ -435,6 +436,7 @@ var m = Object.create, h = Object.defineProperty, g = Object.getOwnPropertyDescr
 	gutter: "_onyx-ui_gutter_Zs0-C",
 	selected: "_onyx-ui_selected_dssRO",
 	highlight: "_onyx-ui_highlight_VM6hc",
+	transparent: "_onyx-ui_transparent_-IhEN",
 	"gray-0": "_onyx-ui_gray-0_gq2kw",
 	"gray-1": "_onyx-ui_gray-1_FmiDf",
 	"gray-2": "_onyx-ui_gray-2_KYZNn",
@@ -852,6 +854,7 @@ var V = {
 	highlight: "_onyx-ui_highlight_i7woj",
 	black: "_onyx-ui_black_Kk3sT",
 	white: "_onyx-ui_white_fi2iy",
+	transparent: "_onyx-ui_transparent_EFDgW",
 	"gray-0": "_onyx-ui_gray-0_B2s7p",
 	"gray-1": "_onyx-ui_gray-1_qm8JY",
 	"gray-2": "_onyx-ui_gray-2_as6tW",
@@ -1825,8 +1828,11 @@ function Ve(e) {
 	t[7] !== i || t[8] !== a ? (c = () => {
 		a(i);
 	}, t[7] = i, t[8] = a, t[9] = c) : c = t[9];
-	let l = c, u = s ? "primary" : void 0, d;
-	t[10] === Symbol.for("react.memo_cache_sentinel") ? (d = { paddingBottom: 8 }, t[10] = d) : d = t[10];
+	let l = c, u = s ? "primary" : "transparent", d;
+	t[10] === Symbol.for("react.memo_cache_sentinel") ? (d = {
+		paddingBottom: 8,
+		borderWidth: 1.5
+	}, t[10] = d) : d = t[10];
 	let f = !s, p;
 	t[11] !== r || t[12] !== o || t[13] !== f ? (p = /* @__PURE__ */ (0, z.jsx)(U, {
 		light: f,
@@ -1881,7 +1887,7 @@ function He(e) {
 		children: o
 	}), t[12] = i, t[13] = o, t[14] = s) : s = t[14], s;
 }
-He.Panel = function({ active: e, children: t, ...n }) {
+He.Panel = function({ active: e = !0, children: t, ...n }) {
 	return /* @__PURE__ */ (0, z.jsx)(B, {
 		style: {
 			flexShrink: 0,
