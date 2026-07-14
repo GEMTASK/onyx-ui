@@ -973,7 +973,7 @@ var se = {
 	}
 }, le = ({ primary: e, solid: t }) => {
 	switch (!0) {
-		case t && e: return "content";
+		case t && e: return "white";
 		case e: return "primary";
 	}
 	return "text";

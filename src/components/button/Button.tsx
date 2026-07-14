@@ -36,7 +36,7 @@ const getFillColor = ({ parentFillColor, solid, primary, hover, selected }: Butt
 const getTextColor = ({ primary, solid }: ButtonStyle) => {
   switch (true) {
     case solid && primary:
-      return "content";
+      return "white";
     case primary:
       return "primary";
   }
