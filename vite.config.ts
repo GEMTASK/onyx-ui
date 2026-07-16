@@ -2,7 +2,7 @@ import { resolve } from "path";
 import { defineConfig } from "vite";
 import react, { reactCompilerPreset } from "@vitejs/plugin-react";
 import babel from "@rolldown/plugin-babel";
-// import { esmExternalRequirePlugin } from "rolldown/plugins";
+import { esmExternalRequirePlugin } from "rolldown/plugins";
 import dts from "vite-plugin-dts";
 
 // https://vite.dev/config/
@@ -18,12 +18,12 @@ export default defineConfig({
         "react",
         "react-dom",
         "lucide-react"
+      ],
+      plugins: [
+        esmExternalRequirePlugin({
+          external: ["react", "react-dom", "lucide-react"]
+        })
       ]
-      // plugins: [
-      //   esmExternalRequirePlugin({
-      //     external: ["react", "react-dom", "lucide-react"]
-      //   })
-      // ]
     }
   },
   css: {
