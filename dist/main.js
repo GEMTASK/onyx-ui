@@ -1630,10 +1630,10 @@ Ne.Field = Me;
 //#endregion
 //#region src/components/label/Label.tsx
 function Pe(e) {
-	let t = (0, D.c)(18), n, r, i, a, o, s;
-	t[0] === e ? (n = t[1], r = t[2], i = t[3], a = t[4], o = t[5], s = t[6]) : ({label: i, chevron: n, children: r, onPointerDown: o, onClick: a, ...s} = e, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o, t[6] = s);
-	let c;
-	t[7] !== n || t[8] !== i ? (c = i && /* @__PURE__ */ (0, z.jsxs)(B, {
+	let t = (0, D.c)(20), n, r, i, a, o, s, c;
+	t[0] === e ? (n = t[1], r = t[2], i = t[3], a = t[4], o = t[5], s = t[6], c = t[7]) : ({flex: i, label: a, chevron: n, children: r, onPointerDown: s, onClick: o, ...c} = e, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o, t[6] = s, t[7] = c);
+	let l;
+	t[8] !== n || t[9] !== a ? (l = a && /* @__PURE__ */ (0, z.jsxs)(B, {
 		horizontal: !0,
 		spacing: "4px",
 		align: "middle left",
@@ -1645,7 +1645,7 @@ function Pe(e) {
 				fontSize: 11,
 				lineHeight: "17px"
 			},
-			children: i
+			children: a
 		}), n && /* @__PURE__ */ (0, z.jsx)(K, {
 			icon: p,
 			size: 16,
@@ -1655,20 +1655,21 @@ function Pe(e) {
 				strokeWidth: 1
 			}
 		})]
-	}), t[7] = n, t[8] = i, t[9] = c) : c = t[9];
-	let l;
-	t[10] !== r || t[11] !== s ? (l = /* @__PURE__ */ (0, z.jsx)(B, {
-		flex: !0,
-		...s,
-		children: r
-	}), t[10] = r, t[11] = s, t[12] = l) : l = t[12];
+	}), t[8] = n, t[9] = a, t[10] = l) : l = t[10];
 	let u;
-	return t[13] !== a || t[14] !== o || t[15] !== c || t[16] !== l ? (u = /* @__PURE__ */ (0, z.jsxs)(B, {
+	t[11] !== r || t[12] !== c ? (u = /* @__PURE__ */ (0, z.jsx)(B, {
+		flex: !0,
+		...c,
+		children: r
+	}), t[11] = r, t[12] = c, t[13] = u) : u = t[13];
+	let d;
+	return t[14] !== i || t[15] !== o || t[16] !== s || t[17] !== l || t[18] !== u ? (d = /* @__PURE__ */ (0, z.jsxs)(B, {
+		flex: i,
 		spacing: "8px",
-		onPointerDown: o,
-		onClick: a,
-		children: [c, l]
-	}), t[13] = a, t[14] = o, t[15] = c, t[16] = l, t[17] = u) : u = t[17], u;
+		onPointerDown: s,
+		onClick: o,
+		children: [l, u]
+	}), t[14] = i, t[15] = o, t[16] = s, t[17] = l, t[18] = u, t[19] = d) : d = t[19], d;
 }
 var Fe = {
 	Image: "_onyx-ui_Image_FmDOS",

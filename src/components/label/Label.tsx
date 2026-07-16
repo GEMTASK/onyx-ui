@@ -5,6 +5,7 @@ import type { Delegate } from "../../types/Delegate";
 import { Icon, Text, View } from "..";
 
 function Label({
+  flex,
   label,
   chevron,
   children,
@@ -16,7 +17,7 @@ function Label({
   chevron?: boolean,
 }, typeof View<"div">>) {
   return (
-    <View spacing="8px" onPointerDown={onPointerDown} onClick={onClick}>
+    <View flex={flex} spacing="8px" onPointerDown={onPointerDown} onClick={onClick}>
       {label && (
         <View horizontal spacing="4px" align="middle left">
           <Text light caps noWrap innerStyle={{ fontSize: 11, lineHeight: "17px" }}>
