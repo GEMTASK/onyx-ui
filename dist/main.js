@@ -1779,48 +1779,49 @@ var ze = { text: "_onyx-ui_text_-bQVx" };
 //#endregion
 //#region src/components/chip/Chip.tsx
 function Be(e) {
-	let t = (0, D.c)(41), n, r, i, a, s, c, u, d, f, p, m, h, g, _;
-	t[0] === e ? (n = t[1], r = t[2], i = t[3], a = t[4], s = t[5], c = t[6], u = t[7], d = t[8], f = t[9], p = t[10], m = t[11], h = t[12], g = t[13], _ = t[14]) : ({ref: m, icon: i, iconSize: c, iconColor: a, iconLight: s, fillColor: r, outlineColor: g, tooltip: _, opacityOnPress: f, children: n, style: h, onPointerDown: d, onClick: u, ...p} = e, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = s, t[6] = c, t[7] = u, t[8] = d, t[9] = f, t[10] = p, t[11] = m, t[12] = h, t[13] = g, t[14] = _);
-	let v = g === void 0 ? "content" : g, y = l(null), b, x;
-	t[15] !== r || t[16] !== v ? (b = () => {
-		y.current && r && y.current.style.setProperty("--outline-color", `var(--${v}-color)`);
-	}, x = [r, v], t[15] = r, t[16] = v, t[17] = b, t[18] = x) : (b = t[17], x = t[18]), o(b, x);
-	let S;
-	t[19] !== i || t[20] !== a || t[21] !== s || t[22] !== c ? (S = i && /* @__PURE__ */ (0, z.jsx)(K, {
+	let t = (0, D.c)(43), n, r, i, a, s, c, u, d, f, p, m, h, g, _, v;
+	t[0] === e ? (n = t[1], r = t[2], i = t[3], a = t[4], s = t[5], c = t[6], u = t[7], d = t[8], f = t[9], p = t[10], m = t[11], h = t[12], g = t[13], _ = t[14], v = t[15]) : ({ref: h, icon: a, fontSize: i, iconSize: u, iconColor: s, iconLight: c, fillColor: r, outlineColor: _, tooltip: v, opacityOnPress: p, children: n, style: g, onPointerDown: f, onClick: d, ...m} = e, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = s, t[6] = c, t[7] = u, t[8] = d, t[9] = f, t[10] = p, t[11] = m, t[12] = h, t[13] = g, t[14] = _, t[15] = v);
+	let y = _ === void 0 ? "content" : _, b = l(null), x, S;
+	t[16] !== r || t[17] !== y ? (x = () => {
+		b.current && r && b.current.style.setProperty("--outline-color", `var(--${y}-color)`);
+	}, S = [r, y], t[16] = r, t[17] = y, t[18] = x, t[19] = S) : (x = t[18], S = t[19]), o(x, S);
+	let C;
+	t[20] !== a || t[21] !== s || t[22] !== c || t[23] !== u ? (C = a && /* @__PURE__ */ (0, z.jsx)(K, {
 		bleed: !0,
-		icon: i,
-		size: c ?? 14,
-		color: a,
-		style: { opacity: s ? .6 : void 0 }
-	}), t[19] = i, t[20] = a, t[21] = s, t[22] = c, t[23] = S) : S = t[23];
-	let C = r ? "2px 4px" : void 0, w = r ? "-2px 0" : void 0, T;
-	t[24] !== h || t[25] !== w ? (T = {
-		margin: w,
-		...h
-	}, t[24] = h, t[25] = w, t[26] = T) : T = t[26];
-	let E;
-	t[27] !== n || t[28] !== r || t[29] !== p || t[30] !== C || t[31] !== T ? (E = /* @__PURE__ */ (0, z.jsx)(U, {
-		ref: y,
+		icon: a,
+		size: u ?? 14,
+		color: s,
+		style: { opacity: c ? .6 : void 0 }
+	}), t[20] = a, t[21] = s, t[22] = c, t[23] = u, t[24] = C) : C = t[24];
+	let w = r ? i === "12px" ? "2px 4px" : "4px" : void 0, T = r ? "-2px 0" : void 0, E;
+	t[25] !== g || t[26] !== T ? (E = {
+		margin: T,
+		...g
+	}, t[25] = g, t[26] = T, t[27] = E) : E = t[27];
+	let O;
+	t[28] !== n || t[29] !== r || t[30] !== i || t[31] !== m || t[32] !== w || t[33] !== E ? (O = /* @__PURE__ */ (0, z.jsx)(U, {
+		ref: b,
+		fontSize: i,
 		fillColor: r,
 		cornerRadius: "2px",
-		padding: C,
+		padding: w,
 		className: ze.text,
-		style: T,
-		...p,
+		style: E,
+		...m,
 		children: n
-	}), t[27] = n, t[28] = r, t[29] = p, t[30] = C, t[31] = T, t[32] = E) : E = t[32];
-	let O;
-	return t[33] !== u || t[34] !== d || t[35] !== f || t[36] !== m || t[37] !== S || t[38] !== E || t[39] !== _ ? (O = /* @__PURE__ */ (0, z.jsxs)(B, {
+	}), t[28] = n, t[29] = r, t[30] = i, t[31] = m, t[32] = w, t[33] = E, t[34] = O) : O = t[34];
+	let k;
+	return t[35] !== d || t[36] !== f || t[37] !== p || t[38] !== h || t[39] !== C || t[40] !== O || t[41] !== v ? (k = /* @__PURE__ */ (0, z.jsxs)(B, {
 		horizontal: !0,
-		ref: m,
+		ref: h,
 		spacing: "4px",
 		align: "middle left",
-		tooltip: _,
-		opacityOnPress: f,
-		onPointerDown: d,
-		onClick: u,
-		children: [S, E]
-	}), t[33] = u, t[34] = d, t[35] = f, t[36] = m, t[37] = S, t[38] = E, t[39] = _, t[40] = O) : O = t[40], O;
+		tooltip: v,
+		opacityOnPress: p,
+		onPointerDown: f,
+		onClick: d,
+		children: [C, O]
+	}), t[35] = d, t[36] = f, t[37] = p, t[38] = h, t[39] = C, t[40] = O, t[41] = v, t[42] = k) : k = t[42], k;
 }
 //#endregion
 //#region src/components/tabs/Tabs.tsx
