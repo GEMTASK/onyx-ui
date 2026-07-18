@@ -718,6 +718,7 @@ var V = {
 	_32px: "_onyx-ui__32px_mh4EG"
 }, ne = {
 	_300: "_onyx-ui__300_imdej",
+	_350: "_onyx-ui__350_rju-U",
 	_400: "_onyx-ui__400_9-vuA",
 	_500: "_onyx-ui__500_9rCUP",
 	_600: "_onyx-ui__600_8vDNo",
