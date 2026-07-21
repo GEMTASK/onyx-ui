@@ -44,7 +44,7 @@ function SelectOption({
 function Select({
   label,
   value,
-  options,
+  options = [],
   multiple,
   fallback,
   onValueChange,
@@ -52,7 +52,7 @@ function Select({
 }: Delegate<{
   label?: string,
   value?: FieldValue,
-  options: readonly OptionValue[],
+  options?: readonly OptionValue[],
   multiple?: boolean,
   fallback?: OptionValueBase,
   onValueChange?: (value: FieldValue) => void,
@@ -113,14 +113,6 @@ function Select({
       }
     }
   });
-
-  // const selectedOptions = multiple
-  //   ? options.flatMap(option => (
-  //     "options" in option ? option.options : [option]
-  //   )).filter(option => Array.isArray(value) ? value.includes(value) : option.value === value)
-  //   : options.flatMap(option => (
-  //     "options" in option ? option.options : [option]
-  //   )).filter(option => option.value === value);
 
   const selectedOptions = options.flatMap(option => (
     "options" in option ? option.options : [option]

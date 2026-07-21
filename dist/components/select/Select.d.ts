@@ -16,7 +16,7 @@ type OptionValue = OptionValueBase | {
 declare function Select({ label, value, options, multiple, fallback, onValueChange, ...props }: Delegate<{
     label?: string;
     value?: FieldValue;
-    options: readonly OptionValue[];
+    options?: readonly OptionValue[];
     multiple?: boolean;
     fallback?: OptionValueBase;
     onValueChange?: (value: FieldValue) => void;

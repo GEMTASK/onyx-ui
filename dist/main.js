@@ -1507,7 +1507,7 @@ function Oe(e) {
 		...i
 	}), t[8] = s, t[9] = n, t[10] = i, t[11] = c) : c = t[11], c;
 }
-function ke({ label: e, value: t, options: n, multiple: r, fallback: i, onValueChange: a, ...o }) {
+function ke({ label: e, value: t, options: n = [], multiple: r, fallback: i, onValueChange: a, ...o }) {
 	let s = (e) => {
 		if (r) {
 			e === void 0 ? a?.(e) : a?.([...Array.isArray(t) ? t : t === void 0 ? [] : [t], e]);
