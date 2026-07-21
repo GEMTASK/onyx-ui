@@ -142,7 +142,16 @@ function Select({
               ))}
             </View>
           ) : (
-            <View horizontal>
+            <View horizontal spacing="4px" align="middle left">
+              {fallback?.icon && (
+                <Icon
+                  icon={fallback.icon}
+                  color={fallback.iconColor}
+                  fill={fallback.iconFill ? "currentColor" : "none"}
+                  size={14}
+                  style={{ margin: "-2px 0" }}
+                />
+              )}
               <Text noWrap>
                 {fallback?.label}
               </Text>

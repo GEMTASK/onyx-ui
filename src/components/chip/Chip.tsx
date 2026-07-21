@@ -58,7 +58,7 @@ function Chip({
         cornerRadius="2px"
         padding={fillColor ? fontSize === "12px" ? "2px 4px" : "4px" : undefined}
         className={styles.text}
-        style={{ margin: fillColor ? "-2px 0" : undefined, ...style }}
+        style={{ margin: fillColor ? fontSize === "12px" ? "-2px 0" : "-4px 0" : undefined, ...style }}
         {...props}
       >
         {children}

@@ -1568,12 +1568,20 @@ function ke({ label: e, value: t, options: n = [], multiple: r, fallback: i, onV
 						children: e.label
 					})]
 				}, String(e.value)))
-			}) : /* @__PURE__ */ (0, z.jsx)(B, {
+			}) : /* @__PURE__ */ (0, z.jsxs)(B, {
 				horizontal: !0,
-				children: /* @__PURE__ */ (0, z.jsx)(U, {
+				spacing: "4px",
+				align: "middle left",
+				children: [i?.icon && /* @__PURE__ */ (0, z.jsx)(K, {
+					icon: i.icon,
+					color: i.iconColor,
+					fill: i.iconFill ? "currentColor" : "none",
+					size: 14,
+					style: { margin: "-2px 0" }
+				}), /* @__PURE__ */ (0, z.jsx)(U, {
 					noWrap: !0,
 					children: i?.label
-				})
+				})]
 			})
 		})
 	}) });
@@ -1795,7 +1803,7 @@ function Be(e) {
 		color: s,
 		style: { opacity: c ? .6 : void 0 }
 	}), t[20] = a, t[21] = s, t[22] = c, t[23] = u, t[24] = C) : C = t[24];
-	let w = r ? i === "12px" ? "2px 4px" : "4px" : void 0, T = r ? "-2px 0" : void 0, E;
+	let w = r ? i === "12px" ? "2px 4px" : "4px" : void 0, T = r ? i === "12px" ? "-2px 0" : "-4px 0" : void 0, E;
 	t[25] !== g || t[26] !== T ? (E = {
 		margin: T,
 		...g
