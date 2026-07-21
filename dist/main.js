@@ -1507,14 +1507,14 @@ function Oe(e) {
 		...i
 	}), t[8] = s, t[9] = n, t[10] = i, t[11] = c) : c = t[11], c;
 }
-function ke({ label: e, value: t, options: n, multiple: r, onValueChange: i, ...a }) {
-	let o = (e) => {
+function ke({ label: e, value: t, options: n, multiple: r, fallback: i, onValueChange: a, ...o }) {
+	let s = (e) => {
 		if (r) {
-			e === void 0 ? i?.(e) : i?.([...Array.isArray(t) ? t : t === void 0 ? [] : [t], e]);
+			e === void 0 ? a?.(e) : a?.([...Array.isArray(t) ? t : t === void 0 ? [] : [t], e]);
 			return;
 		}
-		e !== t && i?.(e);
-	}, s = n.flatMap((e, r) => {
+		e !== t && a?.(e);
+	}, c = n.flatMap((e, r) => {
 		switch (!0) {
 			case "options" in e: return [
 				r !== 0 && /* @__PURE__ */ (0, z.jsx)(we.Divider, {}),
@@ -1527,7 +1527,7 @@ function ke({ label: e, value: t, options: n, multiple: r, onValueChange: i, ...
 					label: e.label,
 					value: e.value,
 					tooltip: e.tooltip,
-					onSelect: o
+					onSelect: s
 				})),
 				r !== n.length - 1 && !("options" in n[r]) && /* @__PURE__ */ (0, z.jsx)(we.Divider, {})
 			].filter((e) => e !== !1);
@@ -1539,21 +1539,21 @@ function ke({ label: e, value: t, options: n, multiple: r, onValueChange: i, ...
 				label: e.label,
 				value: e.value,
 				tooltip: e.tooltip,
-				onSelect: o
+				onSelect: s
 			});
 		}
-	}), c = n.flatMap((e) => "options" in e ? e.options : [e]).filter((e) => Array.isArray(t) ? t.includes(e.value) : e.value === t);
+	}), l = n.flatMap((e) => "options" in e ? e.options : [e]).filter((e) => Array.isArray(t) ? t.includes(e.value) : e.value === t);
 	return /* @__PURE__ */ (0, z.jsx)(B, { children: /* @__PURE__ */ (0, z.jsx)(we, {
-		items: s,
+		items: c,
 		offsetTop: 8,
-		...a,
+		...o,
 		children: /* @__PURE__ */ (0, z.jsx)(Pe, {
 			chevron: !0,
 			label: e,
-			children: c.length > 0 ? /* @__PURE__ */ (0, z.jsx)(B, {
+			children: l.length > 0 ? /* @__PURE__ */ (0, z.jsx)(B, {
 				horizontal: !0,
 				spacing: "12px",
-				children: c.map((e) => /* @__PURE__ */ (0, z.jsxs)(B, {
+				children: l.map((e) => /* @__PURE__ */ (0, z.jsxs)(B, {
 					horizontal: !0,
 					spacing: "4px",
 					align: "middle left",
@@ -1570,9 +1570,9 @@ function ke({ label: e, value: t, options: n, multiple: r, onValueChange: i, ...
 				}, String(e.value)))
 			}) : /* @__PURE__ */ (0, z.jsx)(B, {
 				horizontal: !0,
-				children: /* @__PURE__ */ (0, z.jsxs)(U, {
+				children: /* @__PURE__ */ (0, z.jsx)(U, {
 					noWrap: !0,
-					children: [t, " — Value"]
+					children: i?.label
 				})
 			})
 		})

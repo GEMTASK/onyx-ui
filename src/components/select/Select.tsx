@@ -46,6 +46,7 @@ function Select({
   value,
   options,
   multiple,
+  fallback,
   onValueChange,
   ...props
 }: Delegate<{
@@ -53,6 +54,7 @@ function Select({
   value?: FieldValue,
   options: readonly OptionValue[],
   multiple?: boolean,
+  fallback?: OptionValueBase,
   onValueChange?: (value: FieldValue) => void,
 }, typeof Menu, "items" | "children">) {
   const handleOptionSelect = (newValue: FieldValue) => {
@@ -150,7 +152,7 @@ function Select({
           ) : (
             <View horizontal>
               <Text noWrap>
-                {value} — Value
+                {fallback?.label}
               </Text>
             </View>
           )}
