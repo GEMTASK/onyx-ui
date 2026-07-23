@@ -1639,7 +1639,7 @@ Ne.Field = Me;
 //#endregion
 //#region src/components/label/Label.tsx
 function Pe(e) {
-	let t = (0, D.c)(21), n, r, i, a, o, s, c;
+	let t = (0, D.c)(22), n, r, i, a, o, s, c;
 	t[0] === e ? (n = t[1], r = t[2], i = t[3], a = t[4], o = t[5], s = t[6], c = t[7]) : ({flex: i, label: a, chevron: n, children: r, onPointerDown: s, onClick: o, ...c} = e, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o, t[6] = s, t[7] = c);
 	let l;
 	t[8] !== n || t[9] !== a ? (l = a && /* @__PURE__ */ (0, z.jsxs)(B, {
@@ -1672,14 +1672,15 @@ function Pe(e) {
 		children: r
 	}), t[11] = r, t[12] = c, t[13] = u) : u = t[13];
 	let d;
-	return t[14] !== i || t[15] !== o || t[16] !== s || t[17] !== c.cursor || t[18] !== l || t[19] !== u ? (d = /* @__PURE__ */ (0, z.jsxs)(B, {
+	return t[14] !== i || t[15] !== o || t[16] !== s || t[17] !== c.cursor || t[18] !== c.opacityOnPress || t[19] !== l || t[20] !== u ? (d = /* @__PURE__ */ (0, z.jsxs)(B, {
 		flex: i,
 		spacing: "8px",
 		cursor: c.cursor,
+		opacityOnPress: c.opacityOnPress,
 		onPointerDown: s,
 		onClick: o,
 		children: [l, u]
-	}), t[14] = i, t[15] = o, t[16] = s, t[17] = c.cursor, t[18] = l, t[19] = u, t[20] = d) : d = t[20], d;
+	}), t[14] = i, t[15] = o, t[16] = s, t[17] = c.cursor, t[18] = c.opacityOnPress, t[19] = l, t[20] = u, t[21] = d) : d = t[21], d;
 }
 var Fe = {
 	Image: "_onyx-ui_Image_FmDOS",
