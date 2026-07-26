@@ -6,6 +6,7 @@ import { Icon, Label, View } from "..";
 import styles from "./Input.module.scss";
 
 const Input = ({
+  type,
   label,
   value: _value,
   lines,
@@ -25,6 +26,7 @@ const Input = ({
   onValueChange,
   ...props
 }: Delegate<{
+  type?: React.ComponentProps<"input">["type"],
   label?: React.ComponentProps<typeof Label>["label"],
   value?: string,
   lines?: number,
@@ -103,9 +105,9 @@ const Input = ({
   const inputElement = multiline === true ? (
     <textarea
       ref={textAreaElementRef}
-      autoFocus={autoFocus}
       name={name}
       value={value}
+      autoFocus={autoFocus}
       placeholder={placeholder}
       style={{ background: "transparent", ...innerStyle }}
       onKeyDown={handleTextAreaKeyDown}
@@ -115,9 +117,10 @@ const Input = ({
   ) : (
     <input
       ref={textAreaElementRef}
-      autoFocus={autoFocus}
+      type={type}
       name={name}
       value={value}
+      autoFocus={autoFocus}
       placeholder={placeholder}
       style={{ background: "transparent", ...innerStyle }}
       onKeyDown={handleInputKeyDown}

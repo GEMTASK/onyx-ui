@@ -1,6 +1,7 @@
 import { Delegate } from '../../types/Delegate';
 import { Icon, Label, View } from '..';
-declare const Input: ({ label, value: _value, lines, border, flush, borderOnFocus, multiline, icon, inputRef, hidden, placeholder, autoFocus, name, changeOnEnter, innerStyle, onKeyDown, onValueChange, ...props }: Delegate<{
+declare const Input: ({ type, label, value: _value, lines, border, flush, borderOnFocus, multiline, icon, inputRef, hidden, placeholder, autoFocus, name, changeOnEnter, innerStyle, onKeyDown, onValueChange, ...props }: Delegate<{
+    type?: React.ComponentProps<"input">["type"];
     label?: React.ComponentProps<typeof Label>["label"];
     value?: string;
     lines?: number;
