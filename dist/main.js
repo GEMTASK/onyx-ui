@@ -1781,11 +1781,7 @@ Ie.Empty = function({ ...e }) {
 		horizontal: !0,
 		className: Fe.Stack,
 		...n,
-		children: [t.Children.map(e, (e) => t.isValidElement(e) && t.cloneElement(e, { className: Fe.StackItem })), r.length === 0 && /* @__PURE__ */ (0, z.jsx)(B, {
-			cornerRadius: "max",
-			className: [Fe.Image, Fe.StackItem].join(" "),
-			style: { border: "1px dashed var(--divider-color)" }
-		})]
+		children: [t.Children.map(e, (e) => t.isValidElement(e) && t.cloneElement(e, { className: Fe.StackItem })), r.length === 0 && /* @__PURE__ */ (0, z.jsx)(Ie.Empty, {})]
 	});
 };
 var ze = { text: "_onyx-ui_text_-bQVx" };

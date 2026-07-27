@@ -95,7 +95,7 @@ Avatar.Stack = function ({
         })
       ))}
       {childrenArray.length === 0 && (
-        <View cornerRadius="max" className={[styles.Image, styles.StackItem].join(" ")} style={{ border: "1px dashed var(--divider-color)" }} />
+        <Avatar.Empty />
       )}
     </View>
   );
