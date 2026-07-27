@@ -130,7 +130,7 @@ const Input = ({
   );
 
   return (
-    <Label flex label={label} hidden={hidden}>
+    <Label flex label={label} hidden={hidden} chevron={type === "date"}>
       <View horizontal border={border} align="middle left" spacing="4px" className={inputClassName} {...props}>
         {icon && (
           <Icon icon={icon} size={16} />

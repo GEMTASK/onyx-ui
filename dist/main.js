@@ -1112,7 +1112,7 @@ var fe = {
 	borderOnFocus: "_onyx-ui_borderOnFocus_HBU4h",
 	flush: "_onyx-ui_flush_4zQD9"
 }, pe = (e) => {
-	let t = (0, D.c)(62), n, r, i, a, o, d, f, p, m, h, g, _, v, y, b, x, S, C;
+	let t = (0, D.c)(63), n, r, i, a, o, d, f, p, m, h, g, _, v, y, b, x, S, C;
 	if (t[0] !== e) {
 		let { type: s, label: c, value: l, lines: u, border: w, flush: T, borderOnFocus: E, multiline: D, icon: O, inputRef: k, hidden: A, placeholder: j, autoFocus: M, name: N, changeOnEnter: P, innerStyle: F, onKeyDown: I, onValueChange: L, ...R } = e;
 		C = s, h = c, n = l, S = w, o = T, i = E, g = D, f = O, m = k, d = A, b = j, r = M, _ = N, a = P, p = F, v = I, y = L, x = R, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o, t[6] = d, t[7] = f, t[8] = p, t[9] = m, t[10] = h, t[11] = g, t[12] = _, t[13] = v, t[14] = y, t[15] = b, t[16] = x, t[17] = S, t[18] = C;
@@ -1176,28 +1176,29 @@ var fe = {
 		onChange: L,
 		onBlur: ee
 	}), t[39] = r, t[40] = ee, t[41] = N, t[42] = F, t[43] = p, t[44] = g, t[45] = _, t[46] = b, t[47] = C, t[48] = T, t[49] = U) : U = t[49];
-	let ae = U, oe;
-	t[50] === f ? oe = t[51] : (oe = f && /* @__PURE__ */ (0, z.jsx)(G, {
+	let ae = U, oe = C === "date", W;
+	t[50] === f ? W = t[51] : (W = f && /* @__PURE__ */ (0, z.jsx)(G, {
 		icon: f,
 		size: 16
-	}), t[50] = f, t[51] = oe);
-	let W;
-	t[52] !== w || t[53] !== ie || t[54] !== ae || t[55] !== x || t[56] !== oe ? (W = /* @__PURE__ */ (0, z.jsxs)(B, {
+	}), t[50] = f, t[51] = W);
+	let K;
+	t[52] !== w || t[53] !== ie || t[54] !== ae || t[55] !== x || t[56] !== W ? (K = /* @__PURE__ */ (0, z.jsxs)(B, {
 		horizontal: !0,
 		border: w,
 		align: "middle left",
 		spacing: "4px",
 		className: ie,
 		...x,
-		children: [oe, ae]
-	}), t[52] = w, t[53] = ie, t[54] = ae, t[55] = x, t[56] = oe, t[57] = W) : W = t[57];
-	let K;
-	return t[58] !== d || t[59] !== h || t[60] !== W ? (K = /* @__PURE__ */ (0, z.jsx)(Pe, {
+		children: [W, ae]
+	}), t[52] = w, t[53] = ie, t[54] = ae, t[55] = x, t[56] = W, t[57] = K) : K = t[57];
+	let se;
+	return t[58] !== d || t[59] !== h || t[60] !== oe || t[61] !== K ? (se = /* @__PURE__ */ (0, z.jsx)(Pe, {
 		flex: !0,
 		label: h,
 		hidden: d,
-		children: W
-	}), t[58] = d, t[59] = h, t[60] = W, t[61] = K) : K = t[61], K;
+		chevron: oe,
+		children: K
+	}), t[58] = d, t[59] = h, t[60] = oe, t[61] = K, t[62] = se) : se = t[62], se;
 };
 function me(e) {
 	return e !== !1;
