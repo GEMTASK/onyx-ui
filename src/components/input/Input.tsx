@@ -23,6 +23,7 @@ const Input = ({
   changeOnEnter,
   innerStyle,
   onKeyDown,
+  onChange,
   onValueChange,
   ...props
 }: Delegate<{
@@ -40,8 +41,9 @@ const Input = ({
   name?: React.ComponentProps<"input">["name"],
   innerStyle?: React.ComponentProps<"textarea">["style"],
   changeOnEnter?: boolean,
+  onChange?: React.ComponentProps<"input">["onChange"],
   onValueChange?: (value: string) => void,
-}, typeof View<"div">>) => {
+}, typeof View<"div">, "onChange">) => {
   const [value, setValue] = useState(_value);
   const [previousValue, setPreviousValue] = useState(_value);
 
@@ -80,6 +82,8 @@ const Input = ({
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement & HTMLTextAreaElement>) => {
     setValue(event.currentTarget.value);
+
+    onChange?.(event);
   };
 
   const handleBlur = () => {
