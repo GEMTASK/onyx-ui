@@ -1,3 +1,13 @@
+$hues: "red", "pink", "grape", "violet", "indigo", "blue", "cyan", "teal", "green", "lime", "yellow", "orange";
+
+@each $hue in $hues {
+  @for $level from 0 through 9 {
+    .#{$hue}-#{$level} {
+      border-color: var(--onyx-#{$hue}-#{$level});
+    }
+  }
+}
+
 .primary {
   border-color: var(--primary-color);
 }
