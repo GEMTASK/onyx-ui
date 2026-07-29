@@ -1627,14 +1627,14 @@ function Oe(e) {
 		...i
 	}), t[8] = s, t[9] = n, t[10] = i, t[11] = c) : c = t[11], c;
 }
-function ke({ label: e, value: t, options: n = [], multiple: r, fallback: i, onValueChange: a, ...o }) {
-	let s = (e) => {
+function ke({ label: e, value: t, options: n = [], multiple: r, flipped: i, fallback: a, onValueChange: o, ...s }) {
+	let c = (e) => {
 		if (r) {
-			e === void 0 ? a?.(e) : a?.([...Array.isArray(t) ? t : t === void 0 ? [] : [t], e]);
+			e === void 0 ? o?.(e) : o?.([...Array.isArray(t) ? t : t === void 0 ? [] : [t], e]);
 			return;
 		}
-		e !== t && a?.(e);
-	}, c = n.flatMap((e, r) => {
+		e !== t && o?.(e);
+	}, l = n.flatMap((e, r) => {
 		switch (!0) {
 			case "options" in e: return [
 				r !== 0 && /* @__PURE__ */ (0, z.jsx)(we.Divider, {}),
@@ -1647,7 +1647,7 @@ function ke({ label: e, value: t, options: n = [], multiple: r, fallback: i, onV
 					label: e.label,
 					value: e.value,
 					tooltip: e.tooltip,
-					onSelect: s
+					onSelect: c
 				})),
 				r !== n.length - 1 && !("options" in n[r]) && /* @__PURE__ */ (0, z.jsx)(we.Divider, {})
 			].filter((e) => e !== !1);
@@ -1659,21 +1659,23 @@ function ke({ label: e, value: t, options: n = [], multiple: r, fallback: i, onV
 				label: e.label,
 				value: e.value,
 				tooltip: e.tooltip,
-				onSelect: s
+				onSelect: c
 			});
 		}
-	}), l = n.flatMap((e) => "options" in e ? e.options : [e]).filter((e) => Array.isArray(t) ? t.includes(e.value) : e.value === t);
+	}), u = n.flatMap((e) => "options" in e ? e.options : [e]).filter((e) => Array.isArray(t) ? t.includes(e.value) : e.value === t);
 	return /* @__PURE__ */ (0, z.jsx)(B, { children: /* @__PURE__ */ (0, z.jsx)(we, {
-		items: c,
+		items: l,
 		offsetTop: 8,
-		...o,
+		anchor: i ? "bottom right" : void 0,
+		...s,
 		children: /* @__PURE__ */ (0, z.jsx)(Pe, {
 			chevron: !0,
 			label: e,
-			children: l.length > 0 ? /* @__PURE__ */ (0, z.jsx)(B, {
+			flipped: i,
+			children: u.length > 0 ? /* @__PURE__ */ (0, z.jsx)(B, {
 				horizontal: !0,
 				spacing: "12px",
-				children: l.map((e) => /* @__PURE__ */ (0, z.jsxs)(B, {
+				children: u.map((e) => /* @__PURE__ */ (0, z.jsxs)(B, {
 					horizontal: !0,
 					spacing: "4px",
 					align: "middle left",
@@ -1692,15 +1694,15 @@ function ke({ label: e, value: t, options: n = [], multiple: r, fallback: i, onV
 				horizontal: !0,
 				spacing: "4px",
 				align: "middle left",
-				children: [i?.icon && /* @__PURE__ */ (0, z.jsx)(G, {
-					icon: i.icon,
-					color: i.iconColor,
-					fill: i.iconFill ? "currentColor" : "none",
+				children: [a?.icon && /* @__PURE__ */ (0, z.jsx)(G, {
+					icon: a.icon,
+					color: a.iconColor,
+					fill: a.iconFill ? "currentColor" : "none",
 					size: 14,
 					style: { margin: "-2px 0" }
 				}), /* @__PURE__ */ (0, z.jsx)(U, {
 					noWrap: !0,
-					children: i?.label
+					children: a?.label
 				})]
 			})
 		})
@@ -1759,13 +1761,14 @@ Ne.Field = Me;
 //#endregion
 //#region src/components/label/Label.tsx
 function Pe(e) {
-	let t = (0, D.c)(22), n, r, i, a, o, s, c;
-	t[0] === e ? (n = t[1], r = t[2], i = t[3], a = t[4], o = t[5], s = t[6], c = t[7]) : ({flex: i, label: a, chevron: n, children: r, onPointerDown: s, onClick: o, ...c} = e, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o, t[6] = s, t[7] = c);
-	let l;
-	t[8] !== n || t[9] !== a ? (l = a && /* @__PURE__ */ (0, z.jsxs)(B, {
+	let t = (0, D.c)(24), n, r, i, a, o, s, c, l;
+	t[0] === e ? (n = t[1], r = t[2], i = t[3], a = t[4], o = t[5], s = t[6], c = t[7], l = t[8]) : ({flex: i, label: o, chevron: n, flipped: a, children: r, onPointerDown: c, onClick: s, ...l} = e, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o, t[6] = s, t[7] = c, t[8] = l);
+	let u;
+	t[9] !== n || t[10] !== a || t[11] !== o ? (u = o && /* @__PURE__ */ (0, z.jsxs)(B, {
 		horizontal: !0,
 		spacing: "4px",
 		align: "middle left",
+		style: a ? { flexDirection: "row-reverse" } : void 0,
 		children: [/* @__PURE__ */ (0, z.jsx)(U, {
 			light: !0,
 			caps: !0,
@@ -1774,7 +1777,7 @@ function Pe(e) {
 				fontSize: 11,
 				lineHeight: "17px"
 			},
-			children: a
+			children: o
 		}), n && /* @__PURE__ */ (0, z.jsx)(G, {
 			icon: p,
 			size: 16,
@@ -1784,23 +1787,23 @@ function Pe(e) {
 				strokeWidth: 1
 			}
 		})]
-	}), t[8] = n, t[9] = a, t[10] = l) : l = t[10];
-	let u;
-	t[11] !== r || t[12] !== c ? (u = /* @__PURE__ */ (0, z.jsx)(B, {
-		flex: !0,
-		...c,
-		children: r
-	}), t[11] = r, t[12] = c, t[13] = u) : u = t[13];
+	}), t[9] = n, t[10] = a, t[11] = o, t[12] = u) : u = t[12];
 	let d;
-	return t[14] !== i || t[15] !== o || t[16] !== s || t[17] !== c.cursor || t[18] !== c.opacityOnPress || t[19] !== l || t[20] !== u ? (d = /* @__PURE__ */ (0, z.jsxs)(B, {
+	t[13] !== r || t[14] !== l ? (d = /* @__PURE__ */ (0, z.jsx)(B, {
+		flex: !0,
+		...l,
+		children: r
+	}), t[13] = r, t[14] = l, t[15] = d) : d = t[15];
+	let f;
+	return t[16] !== i || t[17] !== s || t[18] !== c || t[19] !== l.cursor || t[20] !== l.opacityOnPress || t[21] !== u || t[22] !== d ? (f = /* @__PURE__ */ (0, z.jsxs)(B, {
 		flex: i,
 		spacing: "8px",
-		cursor: c.cursor,
-		opacityOnPress: c.opacityOnPress,
-		onPointerDown: s,
-		onClick: o,
-		children: [l, u]
-	}), t[14] = i, t[15] = o, t[16] = s, t[17] = c.cursor, t[18] = c.opacityOnPress, t[19] = l, t[20] = u, t[21] = d) : d = t[21], d;
+		cursor: l.cursor,
+		opacityOnPress: l.opacityOnPress,
+		onPointerDown: c,
+		onClick: s,
+		children: [u, d]
+	}), t[16] = i, t[17] = s, t[18] = c, t[19] = l.cursor, t[20] = l.opacityOnPress, t[21] = u, t[22] = d, t[23] = f) : f = t[23], f;
 }
 var Fe = {
 	Image: "_onyx-ui_Image_FmDOS",

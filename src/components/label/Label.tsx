@@ -8,6 +8,7 @@ function Label({
   flex,
   label,
   chevron,
+  flipped,
   children,
   onPointerDown,
   onClick,
@@ -15,11 +16,19 @@ function Label({
 }: Delegate<{
   label?: string,
   chevron?: boolean,
+  flipped?: boolean,
 }, typeof View<"div">>) {
   return (
-    <View flex={flex} spacing="8px" cursor={props.cursor} opacityOnPress={props.opacityOnPress} onPointerDown={onPointerDown} onClick={onClick}>
+    <View
+      flex={flex}
+      spacing="8px"
+      cursor={props.cursor}
+      opacityOnPress={props.opacityOnPress}
+      onPointerDown={onPointerDown}
+      onClick={onClick}
+    >
       {label && (
-        <View horizontal spacing="4px" align="middle left">
+        <View horizontal spacing="4px" align="middle left" style={flipped ? { flexDirection: "row-reverse" } : undefined}>
           <Text light caps noWrap innerStyle={{ fontSize: 11, lineHeight: "17px" }}>
             {label}
           </Text>
