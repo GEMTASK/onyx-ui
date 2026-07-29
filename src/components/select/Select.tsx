@@ -46,6 +46,7 @@ function Select({
   value,
   options = [],
   multiple,
+  flipped,
   fallback,
   onValueChange,
   ...props
@@ -54,6 +55,7 @@ function Select({
   value?: FieldValue,
   options?: readonly OptionValue[],
   multiple?: boolean,
+  flipped?: boolean,
   fallback?: OptionValueBase,
   onValueChange?: (value: FieldValue) => void,
 }, typeof Menu, "items" | "children">) {
@@ -120,8 +122,8 @@ function Select({
 
   return (
     <View>
-      <Menu items={menuItems} offsetTop={8} {...props}>
-        <Label chevron label={label}>
+      <Menu items={menuItems} offsetTop={8} anchor={flipped ? "bottom right" : undefined} {...props}>
+        <Label chevron label={label} flipped={flipped}>
           {selectedOptions.length > 0 ? (
             <View horizontal spacing="12px">
               {selectedOptions.map(selectedOption => (
