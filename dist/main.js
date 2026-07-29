@@ -1356,20 +1356,43 @@ function he(e) {
 //#endregion
 //#region src/components/divider/Divider.tsx
 function ge(e) {
-	let t = (0, D.c)(8), n, r;
-	t[0] === e ? (n = t[1], r = t[2]) : ({style: r, ...n} = e, t[0] = e, t[1] = n, t[2] = r);
-	let i;
-	t[3] === r ? i = t[4] : (i = {
-		...r,
+	let t = (0, D.c)(22), n, r, i;
+	if (t[0] === e ? (n = t[1], r = t[2], i = t[3]) : ({size: r, style: i, ...n} = e, t[0] = e, t[1] = n, t[2] = r, t[3] = i), r) {
+		let e;
+		t[4] === r ? e = t[5] : (e = /* @__PURE__ */ (0, z.jsx)(B, { padding: r }), t[4] = r, t[5] = e);
+		let a;
+		t[6] === i ? a = t[7] : (a = {
+			...i,
+			minWidth: 1,
+			minHeight: 1
+		}, t[6] = i, t[7] = a);
+		let o;
+		t[8] !== n || t[9] !== a ? (o = /* @__PURE__ */ (0, z.jsx)(B, {
+			fillColor: "divider",
+			style: a,
+			...n
+		}), t[8] = n, t[9] = a, t[10] = o) : o = t[10];
+		let s;
+		t[11] === r ? s = t[12] : (s = /* @__PURE__ */ (0, z.jsx)(B, { padding: r }), t[11] = r, t[12] = s);
+		let c;
+		return t[13] !== e || t[14] !== o || t[15] !== s ? (c = /* @__PURE__ */ (0, z.jsxs)(z.Fragment, { children: [
+			e,
+			o,
+			s
+		] }), t[13] = e, t[14] = o, t[15] = s, t[16] = c) : c = t[16], c;
+	}
+	let a;
+	t[17] === i ? a = t[18] : (a = {
+		...i,
 		minWidth: 1,
 		minHeight: 1
-	}, t[3] = r, t[4] = i);
-	let a;
-	return t[5] !== n || t[6] !== i ? (a = /* @__PURE__ */ (0, z.jsx)(B, {
+	}, t[17] = i, t[18] = a);
+	let o;
+	return t[19] !== n || t[20] !== a ? (o = /* @__PURE__ */ (0, z.jsx)(B, {
 		fillColor: "divider",
-		style: i,
+		style: a,
 		...n
-	}), t[5] = n, t[6] = i, t[7] = a) : a = t[7], a;
+	}), t[19] = n, t[20] = a, t[21] = o) : o = t[21], o;
 }
 var _e = { List: "_onyx-ui_List_FXNAH" };
 //#endregion
