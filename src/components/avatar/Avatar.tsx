@@ -71,7 +71,7 @@ Avatar.Empty = function ({
   ...props
 }: React.ComponentProps<typeof View<"div">>) {
   return (
-    <View cornerRadius="max" className={[styles.Image, styles.StackItem].join(" ")} style={{ border: "1px dashed var(--divider-color)" }} {...props} />
+    <View cornerRadius="max" className={[styles.Image, styles.StackItem].join(" ")} style={{ border: "1.5px dashed var(--divider-color)" }} {...props} />
   );
 };
 

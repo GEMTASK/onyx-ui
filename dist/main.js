@@ -1890,7 +1890,7 @@ Ie.Empty = function({ ...e }) {
 	return /* @__PURE__ */ (0, z.jsx)(B, {
 		cornerRadius: "max",
 		className: [Fe.Image, Fe.StackItem].join(" "),
-		style: { border: "1px dashed var(--divider-color)" },
+		style: { border: "1.5px dashed var(--divider-color)" },
 		...e
 	});
 }, Ie.Stack = function({ children: e, ...n }) {
