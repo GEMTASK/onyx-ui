@@ -12,10 +12,10 @@ function Tab({
   index: number,
   badge?: React.ReactNode,
   selected: boolean,
-  onTabSelect: (index: number) => void,
+  onTabSelect?: (index: number) => void,
 }, typeof Text<"div">>) {
   const handleClick = () => {
-    onTabSelect(index);
+    onTabSelect?.(index);
   };
 
   return (
@@ -58,7 +58,7 @@ function Tabs({
     title: string,
     badge?: React.ReactNode,
   }[],
-  onTabSelect: (index: number) => void,
+  onTabSelect?: (index: number) => void,
 }, typeof View<"div">>) {
 
   return (

@@ -1983,7 +1983,7 @@ function Ve(e) {
 	t[0] === e ? (n = t[1], r = t[2], i = t[3], a = t[4], o = t[5], s = t[6]) : ({index: i, badge: n, selected: s, children: r, onTabSelect: a, ...o} = e, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o, t[6] = s);
 	let c;
 	t[7] !== i || t[8] !== a ? (c = () => {
-		a(i);
+		a?.(i);
 	}, t[7] = i, t[8] = a, t[9] = c) : c = t[9];
 	let l = c, u = s ? "primary" : "transparent", d;
 	t[10] === Symbol.for("react.memo_cache_sentinel") ? (d = {

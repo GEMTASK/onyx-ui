@@ -6,7 +6,7 @@ declare function Tabs({ selectedTabIndex, children, onTabSelect, ...props }: Del
         title: string;
         badge?: React.ReactNode;
     }[];
-    onTabSelect: (index: number) => void;
+    onTabSelect?: (index: number) => void;
 }, typeof View<"div">>): import("react").JSX.Element;
 declare namespace Tabs {
     var Panel: ({ active, children, ...props }: Delegate<{
