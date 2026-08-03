@@ -10,8 +10,9 @@ type OptionValueBase = {
     tooltip?: React.ComponentProps<typeof Menu.Item>["tooltip"];
 };
 type OptionValue = OptionValueBase | {
-    label?: React.ComponentProps<typeof Menu.Item>["title"];
     options: readonly OptionValueBase[];
+    label?: React.ComponentProps<typeof Menu.Item>["title"];
+    divider?: boolean;
 };
 declare function Select({ label, value, options, multiple, flipped, fallback, onValueChange, ...props }: Delegate<{
     label?: string;

@@ -13,8 +13,9 @@ type OptionValueBase = {
 };
 
 type OptionValue = OptionValueBase | {
-  label?: React.ComponentProps<typeof Menu.Item>["title"],
   options: readonly OptionValueBase[],
+  label?: React.ComponentProps<typeof Menu.Item>["title"],
+  divider?: boolean,
 };
 
 function SelectOption({
@@ -79,7 +80,7 @@ function Select({
     switch (true) {
       case "options" in option:
         return [
-          index !== 0 && (
+          option.divider && index !== 0 && (
             <Menu.Divider />
           ),
           ...(option.label ? [<Menu.Group label={option.label as string} />] : []),
@@ -95,7 +96,7 @@ function Select({
               onSelect={handleOptionSelect}
             />
           )),
-          index !== options.length - 1 && !("options" in options[index]) && (
+          option.divider && index !== options.length - 1 && (
             <Menu.Divider />
           )
         ].filter(item => item !== false);

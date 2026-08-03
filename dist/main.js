@@ -1660,7 +1660,7 @@ function ke({ label: e, value: t, options: n = [], multiple: r, flipped: i, fall
 	}, l = n.flatMap((e, r) => {
 		switch (!0) {
 			case "options" in e: return [
-				r !== 0 && /* @__PURE__ */ (0, z.jsx)(we.Divider, {}),
+				e.divider && r !== 0 && /* @__PURE__ */ (0, z.jsx)(we.Divider, {}),
 				...e.label ? [/* @__PURE__ */ (0, z.jsx)(we.Group, { label: e.label })] : [],
 				...e.options.map((e) => /* @__PURE__ */ (0, z.jsx)(Oe, {
 					selected: Array.isArray(t) ? t.includes(e.value) : e.value === t,
@@ -1672,7 +1672,7 @@ function ke({ label: e, value: t, options: n = [], multiple: r, flipped: i, fall
 					tooltip: e.tooltip,
 					onSelect: c
 				})),
-				r !== n.length - 1 && !("options" in n[r]) && /* @__PURE__ */ (0, z.jsx)(we.Divider, {})
+				e.divider && r !== n.length - 1 && /* @__PURE__ */ (0, z.jsx)(we.Divider, {})
 			].filter((e) => e !== !1);
 			default: return /* @__PURE__ */ (0, z.jsx)(Oe, {
 				selected: e.value === t,
