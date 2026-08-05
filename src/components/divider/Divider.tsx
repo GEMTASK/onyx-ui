@@ -13,14 +13,14 @@ function Divider({
     return (
       <>
         <View padding={size} />
-        <View fillColor="divider" style={{ ...style, minWidth: 1, minHeight: 1 }} {...props} />
+        <View fillColor="divider" style={{ ...style, minWidth: 1, minHeight: 1, alignSelf: "stretch" }} {...props} />
         <View padding={size} />
       </>
     );
   }
 
   return (
-    <View fillColor="divider" style={{ ...style, minWidth: 1, minHeight: 1 }} {...props} />
+    <View fillColor="divider" style={{ ...style, minWidth: 1, minHeight: 1, alignSelf: "stretch" }} {...props} />
   );
 }
 

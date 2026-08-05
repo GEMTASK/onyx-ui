@@ -1364,7 +1364,8 @@ function ge(e) {
 		t[6] === i ? a = t[7] : (a = {
 			...i,
 			minWidth: 1,
-			minHeight: 1
+			minHeight: 1,
+			alignSelf: "stretch"
 		}, t[6] = i, t[7] = a);
 		let o;
 		t[8] !== n || t[9] !== a ? (o = /* @__PURE__ */ (0, z.jsx)(B, {
@@ -1385,7 +1386,8 @@ function ge(e) {
 	t[17] === i ? a = t[18] : (a = {
 		...i,
 		minWidth: 1,
-		minHeight: 1
+		minHeight: 1,
+		alignSelf: "stretch"
 	}, t[17] = i, t[18] = a);
 	let o;
 	return t[19] !== n || t[20] !== a ? (o = /* @__PURE__ */ (0, z.jsx)(B, {
@@ -1685,7 +1687,7 @@ function ke({ label: e, value: t, options: n = [], multiple: r, flipped: i, fall
 				onSelect: c
 			});
 		}
-	}), u = n.flatMap((e) => "options" in e ? e.options : [e]).filter((e) => Array.isArray(t) ? t.includes(e.value) : e.value === t);
+	}).filter((e) => e !== void 0), u = n.flatMap((e) => "options" in e ? e.options : [e]).filter((e) => Array.isArray(t) ? t.includes(e.value) : e.value === t);
 	return /* @__PURE__ */ (0, z.jsx)(B, { children: /* @__PURE__ */ (0, z.jsx)(we, {
 		items: l,
 		offsetTop: 8,

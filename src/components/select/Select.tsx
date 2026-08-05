@@ -115,7 +115,7 @@ function Select({
         );
       }
     }
-  });
+  }).filter(option => option !== undefined);
 
   const selectedOptions = options.flatMap(option => (
     "options" in option ? option.options : [option]
