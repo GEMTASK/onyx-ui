@@ -1786,10 +1786,10 @@ Ne.Field = Me;
 //#endregion
 //#region src/components/label/Label.tsx
 function Pe(e) {
-	let t = (0, D.c)(24), n, r, i, a, o, s, c, l;
-	t[0] === e ? (n = t[1], r = t[2], i = t[3], a = t[4], o = t[5], s = t[6], c = t[7], l = t[8]) : ({flex: i, label: o, chevron: n, flipped: a, children: r, onPointerDown: c, onClick: s, ...l} = e, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o, t[6] = s, t[7] = c, t[8] = l);
-	let u;
-	t[9] !== n || t[10] !== a || t[11] !== o ? (u = o && /* @__PURE__ */ (0, z.jsxs)(B, {
+	let t = (0, D.c)(26), n, r, i, a, o, s, c, l, u;
+	t[0] === e ? (n = t[1], r = t[2], i = t[3], a = t[4], o = t[5], s = t[6], c = t[7], l = t[8], u = t[9]) : ({flex: i, label: s, chevron: n, flipped: a, hidden: o, children: r, onPointerDown: l, onClick: c, ...u} = e, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o, t[6] = s, t[7] = c, t[8] = l, t[9] = u);
+	let d;
+	t[10] !== n || t[11] !== a || t[12] !== s ? (d = s && /* @__PURE__ */ (0, z.jsxs)(B, {
 		horizontal: !0,
 		spacing: "4px",
 		align: "middle left",
@@ -1802,7 +1802,7 @@ function Pe(e) {
 				fontSize: 11,
 				lineHeight: "17px"
 			},
-			children: o
+			children: s
 		}), n && /* @__PURE__ */ (0, z.jsx)(G, {
 			icon: p,
 			size: 16,
@@ -1812,23 +1812,24 @@ function Pe(e) {
 				strokeWidth: 1
 			}
 		})]
-	}), t[9] = n, t[10] = a, t[11] = o, t[12] = u) : u = t[12];
-	let d;
-	t[13] !== r || t[14] !== l ? (d = /* @__PURE__ */ (0, z.jsx)(B, {
-		flex: !0,
-		...l,
-		children: r
-	}), t[13] = r, t[14] = l, t[15] = d) : d = t[15];
+	}), t[10] = n, t[11] = a, t[12] = s, t[13] = d) : d = t[13];
 	let f;
-	return t[16] !== i || t[17] !== s || t[18] !== c || t[19] !== l.cursor || t[20] !== l.opacityOnPress || t[21] !== u || t[22] !== d ? (f = /* @__PURE__ */ (0, z.jsxs)(B, {
+	t[14] !== r || t[15] !== u ? (f = /* @__PURE__ */ (0, z.jsx)(B, {
+		flex: !0,
+		...u,
+		children: r
+	}), t[14] = r, t[15] = u, t[16] = f) : f = t[16];
+	let m;
+	return t[17] !== i || t[18] !== o || t[19] !== c || t[20] !== l || t[21] !== u.cursor || t[22] !== u.opacityOnPress || t[23] !== d || t[24] !== f ? (m = /* @__PURE__ */ (0, z.jsxs)(B, {
 		flex: i,
 		spacing: "8px",
-		cursor: l.cursor,
-		opacityOnPress: l.opacityOnPress,
-		onPointerDown: c,
-		onClick: s,
-		children: [u, d]
-	}), t[16] = i, t[17] = s, t[18] = c, t[19] = l.cursor, t[20] = l.opacityOnPress, t[21] = u, t[22] = d, t[23] = f) : f = t[23], f;
+		cursor: u.cursor,
+		hidden: o,
+		opacityOnPress: u.opacityOnPress,
+		onPointerDown: l,
+		onClick: c,
+		children: [d, f]
+	}), t[17] = i, t[18] = o, t[19] = c, t[20] = l, t[21] = u.cursor, t[22] = u.opacityOnPress, t[23] = d, t[24] = f, t[25] = m) : m = t[25], m;
 }
 var Fe = {
 	Image: "_onyx-ui_Image_FmDOS",
@@ -1839,20 +1840,23 @@ var Fe = {
 //#endregion
 //#region src/components/avatar/Avatar.tsx
 function Ie(e) {
-	let t = (0, D.c)(32), n, r, i, a, o, s, c, l;
-	t[0] === e ? (n = t[1], r = t[2], i = t[3], a = t[4], o = t[5], s = t[6], c = t[7], l = t[8]) : ({name: s, label: o, badge: n, chevron: r, imageOnly: a, imageBorder: i, imageFillColor: l, ...c} = e, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o, t[6] = s, t[7] = c, t[8] = l);
-	let u = l === void 0 ? "icon" : l, d;
-	t[9] === s ? d = t[10] : (d = s?.split(" ").map(Re).join(""), t[9] = s, t[10] = d);
-	let f = d, m = i && Fe.border, h;
-	t[11] === m ? h = t[12] : (h = [Fe.Image, m].filter(Le), t[11] = m, t[12] = h);
-	let g = h.join(" "), _;
-	t[13] === f ? _ = t[14] : (_ = /* @__PURE__ */ (0, z.jsx)(U, {
+	let t = (0, D.c)(39), n, r, i, a, o, s, c, l, u, d;
+	t[0] === e ? (n = t[1], r = t[2], i = t[3], a = t[4], o = t[5], s = t[6], c = t[7], l = t[8], u = t[9], d = t[10]) : ({name: l, label: c, badge: n, chevron: r, flipped: i, imageOnly: o, imageBorder: a, imageFillColor: d, imageTextColor: s, ...u} = e, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = o, t[6] = s, t[7] = c, t[8] = l, t[9] = u, t[10] = d);
+	let f = d === void 0 ? "icon" : d, m;
+	t[11] === l ? m = t[12] : (m = l?.split(" ").map(Re).join(""), t[11] = l, t[12] = m);
+	let h = m, g = a && Fe.border, _;
+	t[13] === g ? _ = t[14] : (_ = [Fe.Image, g].filter(Le), t[13] = g, t[14] = _);
+	let v = _.join(" "), y;
+	t[15] === i ? y = t[16] : (y = i ? { flexDirection: "row-reverse" } : void 0, t[15] = i, t[16] = y);
+	let b;
+	t[17] !== s || t[18] !== h ? (b = /* @__PURE__ */ (0, z.jsx)(U, {
 		fontSize: "12px",
 		fontWeight: "600",
-		children: f
-	}), t[13] = f, t[14] = _);
-	let v;
-	t[15] === n ? v = t[16] : (v = n && /* @__PURE__ */ (0, z.jsx)(G, {
+		textColor: s,
+		children: h
+	}), t[17] = s, t[18] = h, t[19] = b) : b = t[19];
+	let x;
+	t[20] === n ? x = t[21] : (x = n && /* @__PURE__ */ (0, z.jsx)(G, {
 		icon: n,
 		size: 14,
 		color: "primary",
@@ -1862,28 +1866,29 @@ function Ie(e) {
 			top: -1,
 			left: -1
 		}
-	}), t[15] = n, t[16] = v);
-	let y;
-	t[17] !== i || t[18] !== g || t[19] !== u || t[20] !== _ || t[21] !== v ? (y = /* @__PURE__ */ (0, z.jsxs)(B, {
-		border: i,
+	}), t[20] = n, t[21] = x);
+	let S;
+	t[22] !== a || t[23] !== v || t[24] !== f || t[25] !== b || t[26] !== x ? (S = /* @__PURE__ */ (0, z.jsxs)(B, {
+		border: a,
 		borderColor: "primary",
 		cornerRadius: "max",
-		fillColor: u,
+		fillColor: f,
 		align: "middle center",
-		className: g,
-		children: [_, v]
-	}), t[17] = i, t[18] = g, t[19] = u, t[20] = _, t[21] = v, t[22] = y) : y = t[22];
-	let b;
-	t[23] !== r || t[24] !== a || t[25] !== o || t[26] !== s ? (b = !a && /* @__PURE__ */ (0, z.jsxs)(B, {
+		className: v,
+		children: [b, x]
+	}), t[22] = a, t[23] = v, t[24] = f, t[25] = b, t[26] = x, t[27] = S) : S = t[27];
+	let C;
+	t[28] !== r || t[29] !== i || t[30] !== o || t[31] !== c || t[32] !== l ? (C = !o && /* @__PURE__ */ (0, z.jsxs)(B, {
 		spacing: "8px",
-		align: "middle left",
+		align: i ? "middle right" : "middle left",
 		children: [/* @__PURE__ */ (0, z.jsxs)(B, {
 			horizontal: !0,
 			spacing: "4px",
 			align: "middle left",
+			style: i ? { flexDirection: "row-reverse" } : void 0,
 			children: [/* @__PURE__ */ (0, z.jsx)(U, {
 				noWrap: !0,
-				children: s
+				children: l
 			}), r && /* @__PURE__ */ (0, z.jsx)(G, {
 				icon: p,
 				size: 16,
@@ -1892,21 +1897,22 @@ function Ie(e) {
 					strokeWidth: 1
 				}
 			})]
-		}), o && /* @__PURE__ */ (0, z.jsx)(U, {
+		}), c && /* @__PURE__ */ (0, z.jsx)(U, {
 			light: !0,
 			noWrap: !0,
 			fontSize: "12px",
-			children: o
+			children: c
 		})]
-	}), t[23] = r, t[24] = a, t[25] = o, t[26] = s, t[27] = b) : b = t[27];
-	let x;
-	return t[28] !== c || t[29] !== y || t[30] !== b ? (x = /* @__PURE__ */ (0, z.jsxs)(B, {
+	}), t[28] = r, t[29] = i, t[30] = o, t[31] = c, t[32] = l, t[33] = C) : C = t[33];
+	let w;
+	return t[34] !== u || t[35] !== y || t[36] !== S || t[37] !== C ? (w = /* @__PURE__ */ (0, z.jsxs)(B, {
 		horizontal: !0,
 		spacing: "8px",
 		align: "middle left",
-		...c,
-		children: [y, b]
-	}), t[28] = c, t[29] = y, t[30] = b, t[31] = x) : x = t[31], x;
+		...u,
+		style: y,
+		children: [S, C]
+	}), t[34] = u, t[35] = y, t[36] = S, t[37] = C, t[38] = w) : w = t[38], w;
 }
 function Le(e) {
 	return e;

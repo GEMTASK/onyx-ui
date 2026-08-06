@@ -9,6 +9,7 @@ function Label({
   label,
   chevron,
   flipped,
+  hidden,
   children,
   onPointerDown,
   onClick,
@@ -23,6 +24,7 @@ function Label({
       flex={flex}
       spacing="8px"
       cursor={props.cursor}
+      hidden={hidden}
       opacityOnPress={props.opacityOnPress}
       onPointerDown={onPointerDown}
       onClick={onClick}

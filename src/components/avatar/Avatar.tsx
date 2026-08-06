@@ -11,18 +11,22 @@ function Avatar({
   label,
   badge,
   chevron,
+  flipped,
   imageOnly,
   imageBorder,
   imageFillColor = "icon",
+  imageTextColor,
   ...props
 }: Delegate<{
   name?: string,
   label?: string,
   badge?: React.ComponentProps<typeof Icon>["icon"],
   chevron?: boolean,
+  flipped?: boolean,
   imageOnly?: boolean,
   imageBorder?: boolean,
   imageFillColor?: React.ComponentProps<typeof View<"div">>["fillColor"],
+  imageTextColor?: React.ComponentProps<typeof Text<"div">>["textColor"],
 }, typeof View<"div">>) {
   const initials = name?.split(" ").map(name => name[0].toUpperCase()).join("");
 
@@ -32,7 +36,7 @@ function Avatar({
   ].filter(className => className).join(" ");
 
   return (
-    <View horizontal spacing="8px" align="middle left" {...props}>
+    <View horizontal spacing="8px" align={"middle left"} {...props} style={flipped ? { flexDirection: "row-reverse" } : undefined}>
       <View
         border={imageBorder}
         borderColor="primary"
@@ -41,7 +45,7 @@ function Avatar({
         align="middle center"
         className={imageClassName}
       >
-        <Text fontSize="12px" fontWeight="600">
+        <Text fontSize="12px" fontWeight="600" textColor={imageTextColor}>
           {initials}
         </Text>
         {badge && (
@@ -49,8 +53,8 @@ function Avatar({
         )}
       </View>
       {!imageOnly && (
-        <View spacing="8px" align="middle left">
-          <View horizontal spacing="4px" align="middle left">
+        <View spacing="8px" align={flipped ? "middle right" : "middle left"}>
+          <View horizontal spacing="4px" align="middle left" style={flipped ? { flexDirection: "row-reverse" } : undefined}>
             <Text noWrap>
               {name}
             </Text>
@@ -59,7 +63,9 @@ function Avatar({
             )}
           </View>
           {label && (
-            <Text light noWrap fontSize="12px">{label}</Text>
+            <Text light noWrap fontSize="12px">
+              {label}
+            </Text>
           )}
         </View>
       )}

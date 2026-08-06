@@ -1,14 +1,16 @@
 import { default as React } from 'react';
 import { Delegate } from '../../types/Delegate';
-import { Icon, View } from '..';
-declare function Avatar({ name, label, badge, chevron, imageOnly, imageBorder, imageFillColor, ...props }: Delegate<{
+import { Icon, Text, View } from '..';
+declare function Avatar({ name, label, badge, chevron, flipped, imageOnly, imageBorder, imageFillColor, imageTextColor, ...props }: Delegate<{
     name?: string;
     label?: string;
     badge?: React.ComponentProps<typeof Icon>["icon"];
     chevron?: boolean;
+    flipped?: boolean;
     imageOnly?: boolean;
     imageBorder?: boolean;
     imageFillColor?: React.ComponentProps<typeof View<"div">>["fillColor"];
+    imageTextColor?: React.ComponentProps<typeof Text<"div">>["textColor"];
 }, typeof View<"div">>): React.JSX.Element;
 declare namespace Avatar {
     var Empty: ({ ...props }: React.ComponentProps<typeof View<"div">>) => React.JSX.Element;
