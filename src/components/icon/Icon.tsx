@@ -9,7 +9,7 @@ function Icon({
   ref,
   light,
   icon: Component,
-  color = "gray-7",
+  color = "text",
   size,
   bleed,
   className,
