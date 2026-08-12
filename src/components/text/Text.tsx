@@ -53,7 +53,7 @@ function Text<TDelegate extends React.ElementType = "div">({
 
   const spanClassName = [
     // thin && fontWeightStyles.thin,
-    bold && fontWeightStyles.bold,
+    bold && fontWeightStyles._600,
     light && styles.light,
     caps && styles.caps,
     // highlight && textStyles.highlight,

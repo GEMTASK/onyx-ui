@@ -11,6 +11,7 @@ function Label({
   flipped,
   hidden,
   children,
+  style,
   onPointerDown,
   onClick,
   ...props
@@ -39,7 +40,7 @@ function Label({
           )}
         </View>
       )}
-      <View flex {...props}>
+      <View flex {...props} style={{ ...style, flexDirection: flipped ? "row-reverse" : undefined }}>
         {children}
       </View>
     </View>
