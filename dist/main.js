@@ -1966,49 +1966,54 @@ var ze = { text: "_onyx-ui_text_-bQVx" };
 //#endregion
 //#region src/components/chip/Chip.tsx
 function Be(e) {
-	let t = (0, D.c)(43), n, r, i, a, s, c, u, d, f, p, m, h, g, _, v;
-	t[0] === e ? (n = t[1], r = t[2], i = t[3], a = t[4], s = t[5], c = t[6], u = t[7], d = t[8], f = t[9], p = t[10], m = t[11], h = t[12], g = t[13], _ = t[14], v = t[15]) : ({ref: h, icon: a, fontSize: i, iconSize: u, iconColor: s, iconLight: c, fillColor: r, outlineColor: _, tooltip: v, opacityOnPress: p, children: n, style: g, onPointerDown: f, onClick: d, ...m} = e, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = s, t[6] = c, t[7] = u, t[8] = d, t[9] = f, t[10] = p, t[11] = m, t[12] = h, t[13] = g, t[14] = _, t[15] = v);
-	let y = _ === void 0 ? "content" : _, b = l(null), x, S;
-	t[16] !== r || t[17] !== y ? (x = () => {
-		b.current && r && b.current.style.setProperty("--outline-color", `var(--${y}-color)`);
-	}, S = [r, y], t[16] = r, t[17] = y, t[18] = x, t[19] = S) : (x = t[18], S = t[19]), o(x, S);
-	let C;
-	t[20] !== a || t[21] !== s || t[22] !== c || t[23] !== u ? (C = a && /* @__PURE__ */ (0, z.jsx)(G, {
-		bleed: !0,
-		icon: a,
-		size: u ?? 14,
-		color: s,
-		style: { opacity: c ? .6 : void 0 }
-	}), t[20] = a, t[21] = s, t[22] = c, t[23] = u, t[24] = C) : C = t[24];
-	let w = r ? i === "12px" ? "2px 4px" : "4px" : void 0, T = r ? i === "12px" ? "-2px 0" : "-4px 0" : void 0, E;
-	t[25] !== g || t[26] !== T ? (E = {
-		margin: T,
-		...g
-	}, t[25] = g, t[26] = T, t[27] = E) : E = t[27];
+	let t = (0, D.c)(48), n, r, i, a, s, c, u, d, f, p, m, h, g, _, v, y, b;
+	t[0] === e ? (n = t[1], r = t[2], i = t[3], a = t[4], s = t[5], c = t[6], u = t[7], d = t[8], f = t[9], p = t[10], m = t[11], h = t[12], g = t[13], _ = t[14], v = t[15], y = t[16], b = t[17]) : ({ref: g, as: n, to: y, icon: s, fontSize: a, iconSize: d, iconColor: c, iconLight: u, fillColor: i, outlineColor: v, tooltip: b, opacityOnPress: m, children: r, style: _, onPointerDown: p, onClick: f, ...h} = e, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = a, t[5] = s, t[6] = c, t[7] = u, t[8] = d, t[9] = f, t[10] = p, t[11] = m, t[12] = h, t[13] = g, t[14] = _, t[15] = v, t[16] = y, t[17] = b);
+	let x = v === void 0 ? "content" : v, S = l(null), C, w;
+	t[18] !== i || t[19] !== x ? (C = () => {
+		S.current && i && S.current.style.setProperty("--outline-color", `var(--${x}-color)`);
+	}, w = [i, x], t[18] = i, t[19] = x, t[20] = C, t[21] = w) : (C = t[20], w = t[21]), o(C, w);
+	let T = n, E;
+	t[22] === Symbol.for("react.memo_cache_sentinel") ? (E = { textDecoration: "none" }, t[22] = E) : E = t[22];
 	let O;
-	t[28] !== n || t[29] !== r || t[30] !== i || t[31] !== m || t[32] !== w || t[33] !== E ? (O = /* @__PURE__ */ (0, z.jsx)(U, {
-		ref: b,
-		fontSize: i,
-		fillColor: r,
+	t[23] !== s || t[24] !== c || t[25] !== u || t[26] !== d ? (O = s && /* @__PURE__ */ (0, z.jsx)(G, {
+		bleed: !0,
+		icon: s,
+		size: d ?? 14,
+		color: c,
+		style: { opacity: u ? .6 : void 0 }
+	}), t[23] = s, t[24] = c, t[25] = u, t[26] = d, t[27] = O) : O = t[27];
+	let k = i ? a === "12px" ? "2px 4px" : "4px" : void 0, A = i ? a === "12px" ? "-2px 0" : "-4px 0" : void 0, j;
+	t[28] !== _ || t[29] !== A ? (j = {
+		margin: A,
+		..._
+	}, t[28] = _, t[29] = A, t[30] = j) : j = t[30];
+	let M;
+	t[31] !== r || t[32] !== i || t[33] !== a || t[34] !== h || t[35] !== k || t[36] !== j ? (M = /* @__PURE__ */ (0, z.jsx)(U, {
+		ref: S,
+		fontSize: a,
+		fillColor: i,
 		cornerRadius: "2px",
-		padding: w,
+		padding: k,
 		className: ze.text,
-		style: E,
-		...m,
-		children: n
-	}), t[28] = n, t[29] = r, t[30] = i, t[31] = m, t[32] = w, t[33] = E, t[34] = O) : O = t[34];
-	let k;
-	return t[35] !== d || t[36] !== f || t[37] !== p || t[38] !== h || t[39] !== C || t[40] !== O || t[41] !== v ? (k = /* @__PURE__ */ (0, z.jsxs)(B, {
+		style: j,
+		...h,
+		children: r
+	}), t[31] = r, t[32] = i, t[33] = a, t[34] = h, t[35] = k, t[36] = j, t[37] = M) : M = t[37];
+	let N;
+	return t[38] !== f || t[39] !== p || t[40] !== m || t[41] !== g || t[42] !== M || t[43] !== T || t[44] !== O || t[45] !== y || t[46] !== b ? (N = /* @__PURE__ */ (0, z.jsxs)(B, {
 		horizontal: !0,
-		ref: h,
+		ref: g,
+		as: T,
+		to: y,
 		spacing: "4px",
 		align: "middle left",
-		tooltip: v,
-		opacityOnPress: p,
-		onPointerDown: f,
-		onClick: d,
-		children: [C, O]
-	}), t[35] = d, t[36] = f, t[37] = p, t[38] = h, t[39] = C, t[40] = O, t[41] = v, t[42] = k) : k = t[42], k;
+		tooltip: b,
+		style: E,
+		opacityOnPress: m,
+		onPointerDown: p,
+		onClick: f,
+		children: [O, M]
+	}), t[38] = f, t[39] = p, t[40] = m, t[41] = g, t[42] = M, t[43] = T, t[44] = O, t[45] = y, t[46] = b, t[47] = N) : N = t[47], N;
 }
 //#endregion
 //#region src/components/tabs/Tabs.tsx

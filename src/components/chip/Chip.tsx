@@ -6,8 +6,10 @@ import { View, Text, Icon } from "..";
 
 import styles from "./Chip.module.scss";
 
-function Chip({
+function Chip<TDelegate extends React.ElementType = "div">({
   ref,
+  as,
+  to,
   icon,
   fontSize,
   iconSize,
@@ -28,7 +30,7 @@ function Chip({
   iconColor?: React.ComponentProps<typeof Icon>["color"],
   iconLight?: React.ComponentProps<typeof Icon>["light"],
   outlineColor?: Color,
-}, typeof Text<"div">>) {
+}, typeof Text<TDelegate>>) {
   const textElementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -41,9 +43,12 @@ function Chip({
     <View
       horizontal
       ref={ref}
+      as={as as React.ElementType}
+      to={to}
       spacing="4px"
       align="middle left"
       tooltip={tooltip}
+      style={{ textDecoration: "none" }}
       opacityOnPress={opacityOnPress}
       onPointerDown={onPointerDown}
       onClick={onClick}
