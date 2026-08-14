@@ -6,6 +6,7 @@
   &.hover:hover:not(.selected) {
     // background: hsl(210, 15%, 93%);
     background: var(--hover-color);
+    z-index: 1;
   }
 
   &:not(.primary):not(.solid):not(.hover) {
