@@ -3,8 +3,7 @@
   // padding: 9px 16px;
   min-height: 28px;
 
-  &.hover:hover:not(.selected) {
-    // background: hsl(210, 15%, 93%);
+  &.hover:hover:not(.selected):not(:disabled) {
     background: var(--hover-color);
     z-index: 1;
   }
