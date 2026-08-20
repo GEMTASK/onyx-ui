@@ -1164,10 +1164,7 @@ function ue(e) {
 		size: m ?? 16,
 		color: f ?? te,
 		fill: p ? "currentColor" : "none",
-		style: {
-			marginLeft: r ? 0 : -2,
-			marginRight: 0
-		}
+		style: { margin: r ? 0 : -1 }
 	}), t[44] = r, t[45] = d, t[46] = f, t[47] = p, t[48] = m, t[49] = te, t[50] = ae) : ae = t[50];
 	let oe;
 	t[51] !== E || t[52] !== r || t[53] !== o || t[54] !== te ? (oe = typeof r == "string" ? /* @__PURE__ */ (0, z.jsx)(U, {

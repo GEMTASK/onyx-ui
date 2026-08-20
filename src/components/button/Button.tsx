@@ -132,7 +132,7 @@ function Button({
           size={iconSize ?? 16}
           color={iconColor ?? textColor as Color}
           fill={iconFill ? "currentColor" : "none"}
-          style={{ marginLeft: children ? 0 : -2, marginRight: 0 }}
+          style={{ margin: children ? 0 : -1 }}
         />
       )}
       {typeof children !== "string" ? children : (
