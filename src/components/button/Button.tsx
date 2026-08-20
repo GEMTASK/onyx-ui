@@ -48,6 +48,7 @@ function Button({
   ref,
   type = "button",
   //
+  bleed,
   solid,
   primary,
   hover,
@@ -74,6 +75,7 @@ function Button({
   iconFill?: boolean,
   iconSize?: React.ComponentProps<typeof Icon>["size"],
   rightIcon?: React.ComponentProps<typeof Icon>["icon"],
+  bleed?: boolean,
   active?: boolean,
   round?: boolean,
   bold?: boolean,
@@ -89,6 +91,7 @@ function Button({
     primary && styles.primary,
     hover && styles.hover,
     selected && styles.selected,
+    bleed && styles.bleed,
     className
   ].filter(className => className).join(" ");
 
@@ -132,7 +135,7 @@ function Button({
           size={iconSize ?? 16}
           color={iconColor ?? textColor as Color}
           fill={iconFill ? "currentColor" : "none"}
-          style={{ margin: children ? 0 : -1 }}
+          style={!children ? { marginLeft: -1, marginRight: -1 } : undefined}
         />
       )}
       {typeof children !== "string" ? children : (

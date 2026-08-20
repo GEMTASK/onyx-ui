@@ -3,6 +3,11 @@
   // padding: 9px 16px;
   min-height: 28px;
 
+  &.bleed {
+    min-height: 30px;
+    margin: -1px 0;
+  }
+
   &.hover:hover:not(.selected):not(:disabled) {
     background: var(--hover-color);
     z-index: 1;

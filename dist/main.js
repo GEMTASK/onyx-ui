@@ -1099,6 +1099,7 @@ function K(e) {
 }
 var se = {
 	Button: "_onyx-ui_Button_2sngS",
+	bleed: "_onyx-ui_bleed_vgtDf",
 	hover: "_onyx-ui_hover_kN2-Z",
 	selected: "_onyx-ui_selected_LLwtV",
 	primary: "_onyx-ui_primary_b-5q5",
@@ -1118,98 +1119,102 @@ var se = {
 	return "text";
 };
 function ue(e) {
-	let t = (0, D.c)(70), n, r, i, o, u, d, f, p, m, h, g, _, v, y, b, x, S, C, w;
+	let t = (0, D.c)(72), n, r, i, o, u, d, f, p, m, h, g, _, v, y, b, x, S, C, w, T;
 	if (t[0] !== e) {
-		let { ref: a, type: s, solid: c, primary: l, hover: T, active: E, icon: D, iconColor: O, iconFill: k, iconSize: A, rightIcon: j, round: M, bold: N, titleColor: P, fontWeight: F, selected: I, opacityOnPress: L, className: R, children: z, ...ee } = e;
-		_ = a, S = s, x = c, h = l, u = T, n = E, d = D, f = O, p = k, m = A, v = j, y = M, C = N, w = P, o = F, b = I, i = R, r = z, g = ee, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = o, t[5] = u, t[6] = d, t[7] = f, t[8] = p, t[9] = m, t[10] = h, t[11] = g, t[12] = _, t[13] = v, t[14] = y, t[15] = b, t[16] = x, t[17] = S, t[18] = C, t[19] = w;
-	} else n = t[1], r = t[2], i = t[3], o = t[4], u = t[5], d = t[6], f = t[7], p = t[8], m = t[9], h = t[10], g = t[11], _ = t[12], v = t[13], y = t[14], b = t[15], x = t[16], S = t[17], C = t[18], w = t[19];
-	let T = S === void 0 ? "button" : S, E = C === void 0 || C, O = l(null), k = (x || n) && se.solid, A = h && se.primary, j = u && se.hover, M = b && se.selected, N;
-	t[20] !== i || t[21] !== k || t[22] !== A || t[23] !== j || t[24] !== M ? (N = [
+		let { ref: a, type: s, bleed: c, solid: l, primary: E, hover: D, active: O, icon: k, iconColor: A, iconFill: j, iconSize: M, rightIcon: N, round: P, bold: F, titleColor: I, fontWeight: L, selected: R, opacityOnPress: z, className: ee, children: B, ...te } = e;
+		v = a, C = s, r = c, S = l, g = E, d = D, n = O, f = k, p = A, m = j, h = M, y = N, b = P, w = F, T = I, u = L, x = R, o = ee, i = B, _ = te, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = o, t[5] = u, t[6] = d, t[7] = f, t[8] = p, t[9] = m, t[10] = h, t[11] = g, t[12] = _, t[13] = v, t[14] = y, t[15] = b, t[16] = x, t[17] = S, t[18] = C, t[19] = w, t[20] = T;
+	} else n = t[1], r = t[2], i = t[3], o = t[4], u = t[5], d = t[6], f = t[7], p = t[8], m = t[9], h = t[10], g = t[11], _ = t[12], v = t[13], y = t[14], b = t[15], x = t[16], S = t[17], C = t[18], w = t[19], T = t[20];
+	let E = C === void 0 ? "button" : C, O = w === void 0 || w, k = l(null), A = (S || n) && se.solid, j = g && se.primary, M = d && se.hover, N = x && se.selected, P = r && se.bleed, F;
+	t[21] !== o || t[22] !== A || t[23] !== j || t[24] !== M || t[25] !== N || t[26] !== P ? (F = [
 		se.Button,
-		k,
 		A,
 		j,
 		M,
-		i
-	].filter(de), t[20] = i, t[21] = k, t[22] = A, t[23] = j, t[24] = M, t[25] = N) : N = t[25];
-	let P = N.join(" "), { parentFillColor: F } = a(ee), I;
-	t[26] !== u || t[27] !== F || t[28] !== h || t[29] !== b || t[30] !== x ? (I = ce({
-		parentFillColor: F,
-		solid: x,
-		primary: h,
-		hover: u,
-		selected: b
-	}), t[26] = u, t[27] = F, t[28] = h, t[29] = b, t[30] = x, t[31] = I) : I = t[31];
-	let L = I, R;
-	t[32] !== u || t[33] !== h || t[34] !== b || t[35] !== x || t[36] !== w ? (R = w ?? le({
-		solid: x,
-		primary: h,
-		hover: u,
-		selected: b
-	}), t[32] = u, t[33] = h, t[34] = b, t[35] = x, t[36] = w, t[37] = R) : R = t[37];
+		N,
+		P,
+		o
+	].filter(de), t[21] = o, t[22] = A, t[23] = j, t[24] = M, t[25] = N, t[26] = P, t[27] = F) : F = t[27];
+	let I = F.join(" "), { parentFillColor: L } = a(ee), R;
+	t[28] !== d || t[29] !== L || t[30] !== g || t[31] !== x || t[32] !== S ? (R = ce({
+		parentFillColor: L,
+		solid: S,
+		primary: g,
+		hover: d,
+		selected: x
+	}), t[28] = d, t[29] = L, t[30] = g, t[31] = x, t[32] = S, t[33] = R) : R = t[33];
 	let te = R, V;
-	t[38] === Symbol.for("react.memo_cache_sentinel") ? (V = () => O.current, t[38] = V) : V = t[38], s(_, V);
-	let H;
-	t[39] === F ? H = t[40] : (H = () => {
-		O.current && O.current.style.setProperty("--hover-color", `var(--${F === "panel" ? "icon" : "gutter"}-color)`);
-	}, t[39] = F, t[40] = H);
-	let ne;
-	t[41] !== L || t[42] !== F ? (ne = [L, F], t[41] = L, t[42] = F, t[43] = ne) : ne = t[43], c(H, ne);
-	let re = r ? "8px 12px" : "8px", ie = y ? "max" : "2px", ae;
-	t[44] !== r || t[45] !== d || t[46] !== f || t[47] !== p || t[48] !== m || t[49] !== te ? (ae = d && /* @__PURE__ */ (0, z.jsx)(G, {
+	t[34] !== d || t[35] !== g || t[36] !== x || t[37] !== S || t[38] !== T ? (V = T ?? le({
+		solid: S,
+		primary: g,
+		hover: d,
+		selected: x
+	}), t[34] = d, t[35] = g, t[36] = x, t[37] = S, t[38] = T, t[39] = V) : V = t[39];
+	let H = V, ne;
+	t[40] === Symbol.for("react.memo_cache_sentinel") ? (ne = () => k.current, t[40] = ne) : ne = t[40], s(v, ne);
+	let re;
+	t[41] === L ? re = t[42] : (re = () => {
+		k.current && k.current.style.setProperty("--hover-color", `var(--${L === "panel" ? "icon" : "gutter"}-color)`);
+	}, t[41] = L, t[42] = re);
+	let ie;
+	t[43] !== te || t[44] !== L ? (ie = [te, L], t[43] = te, t[44] = L, t[45] = ie) : ie = t[45], c(re, ie);
+	let ae = i ? "8px 12px" : "8px", oe = b ? "max" : "2px", W;
+	t[46] !== i || t[47] !== f || t[48] !== p || t[49] !== m || t[50] !== h || t[51] !== H ? (W = f && /* @__PURE__ */ (0, z.jsx)(G, {
 		bleed: !0,
 		absoluteStrokeWidth: !0,
 		strokeWidth: 1.5,
-		icon: d,
-		size: m ?? 16,
-		color: f ?? te,
-		fill: p ? "currentColor" : "none",
-		style: { margin: r ? 0 : -1 }
-	}), t[44] = r, t[45] = d, t[46] = f, t[47] = p, t[48] = m, t[49] = te, t[50] = ae) : ae = t[50];
-	let oe;
-	t[51] !== E || t[52] !== r || t[53] !== o || t[54] !== te ? (oe = typeof r == "string" ? /* @__PURE__ */ (0, z.jsx)(U, {
-		bold: !o && E,
-		fontWeight: o,
-		textColor: te,
+		icon: f,
+		size: h ?? 16,
+		color: p ?? H,
+		fill: m ? "currentColor" : "none",
+		style: i ? void 0 : {
+			marginLeft: -1,
+			marginRight: -1
+		}
+	}), t[46] = i, t[47] = f, t[48] = p, t[49] = m, t[50] = h, t[51] = H, t[52] = W) : W = t[52];
+	let K;
+	t[53] !== O || t[54] !== i || t[55] !== u || t[56] !== H ? (K = typeof i == "string" ? /* @__PURE__ */ (0, z.jsx)(U, {
+		bold: !u && O,
+		fontWeight: u,
+		textColor: H,
 		style: { textAlign: "left" },
-		children: r
-	}) : r, t[51] = E, t[52] = r, t[53] = o, t[54] = te, t[55] = oe) : oe = t[55];
-	let W;
-	t[56] !== r || t[57] !== v || t[58] !== te ? (W = v && /* @__PURE__ */ (0, z.jsx)(B, {
+		children: i
+	}) : i, t[53] = O, t[54] = i, t[55] = u, t[56] = H, t[57] = K) : K = t[57];
+	let ue;
+	t[58] !== i || t[59] !== y || t[60] !== H ? (ue = y && /* @__PURE__ */ (0, z.jsx)(B, {
 		flex: !0,
 		align: "middle right",
 		children: /* @__PURE__ */ (0, z.jsx)(G, {
 			bleed: !0,
-			icon: v,
+			icon: y,
 			size: 16,
-			color: te,
+			color: H,
 			strokeWidth: 2.5,
 			style: {
-				marginRight: r ? -3 : 0,
+				marginRight: i ? -3 : 0,
 				justifySelf: "flex-end"
 			}
 		})
-	}), t[56] = r, t[57] = v, t[58] = te, t[59] = W) : W = t[59];
-	let K;
-	return t[60] !== P || t[61] !== L || t[62] !== g || t[63] !== re || t[64] !== ie || t[65] !== ae || t[66] !== oe || t[67] !== W || t[68] !== T ? (K = /* @__PURE__ */ (0, z.jsxs)(B, {
-		ref: O,
+	}), t[58] = i, t[59] = y, t[60] = H, t[61] = ue) : ue = t[61];
+	let fe;
+	return t[62] !== I || t[63] !== te || t[64] !== _ || t[65] !== ae || t[66] !== oe || t[67] !== W || t[68] !== K || t[69] !== ue || t[70] !== E ? (fe = /* @__PURE__ */ (0, z.jsxs)(B, {
+		ref: k,
 		horizontal: !0,
 		as: "button",
-		type: T,
+		type: E,
 		cursor: "pointer",
-		padding: re,
+		padding: ae,
 		spacing: "8px",
 		align: "middle center",
-		cornerRadius: ie,
-		fillColor: L,
-		className: P,
-		...g,
+		cornerRadius: oe,
+		fillColor: te,
+		className: I,
+		..._,
 		children: [
-			ae,
-			oe,
-			W
+			W,
+			K,
+			ue
 		]
-	}), t[60] = P, t[61] = L, t[62] = g, t[63] = re, t[64] = ie, t[65] = ae, t[66] = oe, t[67] = W, t[68] = T, t[69] = K) : K = t[69], K;
+	}), t[62] = I, t[63] = te, t[64] = _, t[65] = ae, t[66] = oe, t[67] = W, t[68] = K, t[69] = ue, t[70] = E, t[71] = fe) : fe = t[71], fe;
 }
 function de(e) {
 	return e;
