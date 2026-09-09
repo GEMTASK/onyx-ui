@@ -62,10 +62,16 @@ function Select({
 }, typeof Menu, "items" | "children">) {
   const handleOptionSelect = (newValue: FieldValue) => {
     if (multiple) {
-      if (newValue === undefined) {
+      if (Array.isArray(value)) {
+        const updatedValue = value.includes(newValue)
+          ? value.filter(value => value !== newValue)
+          : [...value, newValue];
+
+        onValueChange?.(updatedValue.length === 0 ? undefined : updatedValue);
+      } else if (newValue === undefined) {
         onValueChange?.(newValue);
       } else {
-        onValueChange?.([...(Array.isArray(value) ? value : value === undefined ? [] : [value]), newValue]);
+        onValueChange?.([newValue]);
       }
 
       return;

@@ -1677,7 +1677,10 @@ function Oe(e) {
 function ke({ label: e, value: t, options: n = [], multiple: r, flipped: i, fallback: a, onValueChange: o, ...s }) {
 	let c = (e) => {
 		if (r) {
-			e === void 0 ? o?.(e) : o?.([...Array.isArray(t) ? t : t === void 0 ? [] : [t], e]);
+			if (Array.isArray(t)) {
+				let n = t.includes(e) ? t.filter((t) => t !== e) : [...t, e];
+				o?.(n.length === 0 ? void 0 : n);
+			} else e === void 0 ? o?.(e) : o?.([e]);
 			return;
 		}
 		e !== t && o?.(e);
