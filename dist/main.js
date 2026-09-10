@@ -1108,7 +1108,7 @@ var se = {
 	switch (!0) {
 		case i: return "selected";
 		case !r && t && n: return "primary";
-		case t: return e === "panel" ? "icon" : "gutter";
+		case t: return "icon";
 		case r: return;
 	}
 }, le = ({ primary: e, solid: t }) => {
@@ -1119,7 +1119,7 @@ var se = {
 	return "text";
 };
 function ue(e) {
-	let t = (0, D.c)(72), n, r, i, o, u, d, f, p, m, h, g, _, v, y, b, x, S, C, w, T;
+	let t = (0, D.c)(71), n, r, i, o, u, d, f, p, m, h, g, _, v, y, b, x, S, C, w, T;
 	if (t[0] !== e) {
 		let { ref: a, type: s, bleed: c, solid: l, primary: E, hover: D, active: O, icon: k, iconColor: A, iconFill: j, iconSize: M, rightIcon: N, round: P, bold: F, titleColor: I, fontWeight: L, selected: R, opacityOnPress: z, className: ee, children: B, ...te } = e;
 		v = a, C = s, r = c, S = l, g = E, d = D, n = O, f = k, p = A, m = j, h = M, y = N, b = P, w = F, T = I, u = L, x = R, o = ee, i = B, _ = te, t[0] = e, t[1] = n, t[2] = r, t[3] = i, t[4] = o, t[5] = u, t[6] = d, t[7] = f, t[8] = p, t[9] = m, t[10] = h, t[11] = g, t[12] = _, t[13] = v, t[14] = y, t[15] = b, t[16] = x, t[17] = S, t[18] = C, t[19] = w, t[20] = T;
@@ -1152,13 +1152,13 @@ function ue(e) {
 	let H = V, ne;
 	t[40] === Symbol.for("react.memo_cache_sentinel") ? (ne = () => k.current, t[40] = ne) : ne = t[40], s(v, ne);
 	let re;
-	t[41] === L ? re = t[42] : (re = () => {
-		k.current && k.current.style.setProperty("--hover-color", `var(--${L === "panel" ? "icon" : "gutter"}-color)`);
-	}, t[41] = L, t[42] = re);
+	t[41] === Symbol.for("react.memo_cache_sentinel") ? (re = () => {
+		k.current && k.current.style.setProperty("--hover-color", "var(--icon-color)");
+	}, t[41] = re) : re = t[41];
 	let ie;
-	t[43] !== te || t[44] !== L ? (ie = [te, L], t[43] = te, t[44] = L, t[45] = ie) : ie = t[45], c(re, ie);
+	t[42] !== te || t[43] !== L ? (ie = [te, L], t[42] = te, t[43] = L, t[44] = ie) : ie = t[44], c(re, ie);
 	let ae = i ? "8px 12px" : "8px", oe = b ? "max" : "2px", W;
-	t[46] !== i || t[47] !== f || t[48] !== p || t[49] !== m || t[50] !== h || t[51] !== H ? (W = f && /* @__PURE__ */ (0, z.jsx)(G, {
+	t[45] !== i || t[46] !== f || t[47] !== p || t[48] !== m || t[49] !== h || t[50] !== H ? (W = f && /* @__PURE__ */ (0, z.jsx)(G, {
 		bleed: !0,
 		absoluteStrokeWidth: !0,
 		strokeWidth: 1.5,
@@ -1170,17 +1170,17 @@ function ue(e) {
 			marginLeft: -1,
 			marginRight: -1
 		}
-	}), t[46] = i, t[47] = f, t[48] = p, t[49] = m, t[50] = h, t[51] = H, t[52] = W) : W = t[52];
+	}), t[45] = i, t[46] = f, t[47] = p, t[48] = m, t[49] = h, t[50] = H, t[51] = W) : W = t[51];
 	let K;
-	t[53] !== O || t[54] !== i || t[55] !== u || t[56] !== H ? (K = typeof i == "string" ? /* @__PURE__ */ (0, z.jsx)(U, {
+	t[52] !== O || t[53] !== i || t[54] !== u || t[55] !== H ? (K = typeof i == "string" ? /* @__PURE__ */ (0, z.jsx)(U, {
 		bold: !u && O,
 		fontWeight: u,
 		textColor: H,
 		style: { textAlign: "left" },
 		children: i
-	}) : i, t[53] = O, t[54] = i, t[55] = u, t[56] = H, t[57] = K) : K = t[57];
+	}) : i, t[52] = O, t[53] = i, t[54] = u, t[55] = H, t[56] = K) : K = t[56];
 	let ue;
-	t[58] !== i || t[59] !== y || t[60] !== H ? (ue = y && /* @__PURE__ */ (0, z.jsx)(B, {
+	t[57] !== i || t[58] !== y || t[59] !== H ? (ue = y && /* @__PURE__ */ (0, z.jsx)(B, {
 		flex: !0,
 		align: "middle right",
 		children: /* @__PURE__ */ (0, z.jsx)(G, {
@@ -1194,9 +1194,9 @@ function ue(e) {
 				justifySelf: "flex-end"
 			}
 		})
-	}), t[58] = i, t[59] = y, t[60] = H, t[61] = ue) : ue = t[61];
+	}), t[57] = i, t[58] = y, t[59] = H, t[60] = ue) : ue = t[60];
 	let fe;
-	return t[62] !== I || t[63] !== te || t[64] !== _ || t[65] !== ae || t[66] !== oe || t[67] !== W || t[68] !== K || t[69] !== ue || t[70] !== E ? (fe = /* @__PURE__ */ (0, z.jsxs)(B, {
+	return t[61] !== I || t[62] !== te || t[63] !== _ || t[64] !== ae || t[65] !== oe || t[66] !== W || t[67] !== K || t[68] !== ue || t[69] !== E ? (fe = /* @__PURE__ */ (0, z.jsxs)(B, {
 		ref: k,
 		horizontal: !0,
 		as: "button",
@@ -1214,7 +1214,7 @@ function ue(e) {
 			K,
 			ue
 		]
-	}), t[62] = I, t[63] = te, t[64] = _, t[65] = ae, t[66] = oe, t[67] = W, t[68] = K, t[69] = ue, t[70] = E, t[71] = fe) : fe = t[71], fe;
+	}), t[61] = I, t[62] = te, t[63] = _, t[64] = ae, t[65] = oe, t[66] = W, t[67] = K, t[68] = ue, t[69] = E, t[70] = fe) : fe = t[70], fe;
 }
 function de(e) {
 	return e;
